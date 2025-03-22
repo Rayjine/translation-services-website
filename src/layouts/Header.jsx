@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   AppBar,
   Box,
@@ -11,26 +12,34 @@ import {
   MenuItem,
   Container,
   useMediaQuery,
-  useTheme
+  useTheme,
+  Divider
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 // Import logo images
 import logoWebp from '../assets/images/logo.webp';
 import logoPng from '../assets/images/logo.png';
+// Import language switcher
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
-const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'Services', path: '/services' },
-  { name: 'Team', path: '/team' },
-  { name: 'Portfolio', path: '/portfolio' },
-  { name: 'Pricing', path: '/pricing' },
-  { name: 'Contact', path: '/contact' }
+// Navigation items defined with translation keys
+const getNavItems = (t) => [
+  { name: t('common.menu.home'), path: '/' },
+  { name: t('common.menu.services'), path: '/services' },
+  { name: t('common.menu.team'), path: '/team' },
+  { name: t('common.menu.portfolio'), path: '/portfolio' },
+  { name: t('common.menu.pricing'), path: '/pricing' },
+  { name: t('common.menu.contact'), path: '/contact' }
 ];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const { t } = useTranslation();
+  
+  // Get navigation items with translations
+  const navItems = getNavItems(t);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -175,7 +184,10 @@ const Header = () => {
             ))}
           </Box>
 
-          {/* Language selector can be added here later */}
+          {/* Language Switcher */}
+          <Box sx={{ ml: 2, display: 'flex', alignItems: 'center' }}>
+            <LanguageSwitcher variant={isMobile ? 'icon' : 'text'} />
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>

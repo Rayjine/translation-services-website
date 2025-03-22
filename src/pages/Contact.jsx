@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { useTranslation } from 'react-i18next';
 import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
@@ -27,25 +29,43 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
-const languages = [
-  'English', 'French', 'German', 'Italian', 'Romansh', 'Spanish', 'Portuguese',
-  'Russian', 'Ukrainian', 'Mandarin', 'Japanese', 'Arabic'
+// Languages and service types will be loaded from translation files
+const getLanguages = (t) => [
+  t('contact.languages.english'),
+  t('contact.languages.french'),
+  t('contact.languages.german'),
+  t('contact.languages.italian'),
+  t('contact.languages.romansh'),
+  t('contact.languages.spanish'),
+  t('contact.languages.portuguese'),
+  t('contact.languages.russian'),
+  t('contact.languages.ukrainian'),
+  t('contact.languages.mandarin'),
+  t('contact.languages.japanese'),
+  t('contact.languages.arabic'),
+  t('contact.languages.czech'),
+  t('contact.languages.turkish')
 ];
 
-const serviceTypes = [
-  'Document Translation',
-  'Website Localization',
-  'Technical Translation',
-  'Legal Translation',
-  'Medical Translation',
-  'Marketing Materials',
-  'Subtitling',
-  'Content Creation',
-  'Software Localization',
-  'Other'
+const getServiceTypes = (t) => [
+  t('contact.serviceTypes.documentTranslation'),
+  t('contact.serviceTypes.websiteLocalization'),
+  t('contact.serviceTypes.technicalTranslation'),
+  t('contact.serviceTypes.legalTranslation'),
+  t('contact.serviceTypes.medicalTranslation'),
+  t('contact.serviceTypes.marketingMaterials'),
+  t('contact.serviceTypes.subtitling'),
+  t('contact.serviceTypes.contentCreation'),
+  t('contact.serviceTypes.softwareLocalization'),
+  t('contact.serviceTypes.other')
 ];
 
 const Contact = () => {
+  const { t } = useTranslation();
+  
+  // Get translated languages and service types
+  const languages = getLanguages(t);
+  const serviceTypes = getServiceTypes(t);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -61,6 +81,12 @@ const Contact = () => {
     howDidYouHear: '',
     agreeToTerms: false
   });
+  
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const recaptchaRef = useRef(null);
+  
+  const [selectedFile, setSelectedFile] = useState(null);
+  const fileInputRef = useRef(null);
 
   const [formErrors, setFormErrors] = useState({});
   const [snackbar, setSnackbar] = useState({
@@ -84,28 +110,51 @@ const Contact = () => {
       });
     }
   };
+  
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setSelectedFile(file);
+    
+    // Clear file upload error if it exists
+    if (formErrors.fileUpload) {
+      setFormErrors({
+        ...formErrors,
+        fileUpload: null
+      });
+    }
+  };
+  
+  const handleFileButtonClick = () => {
+    fileInputRef.current.click();
+  };
+  
+  const clearSelectedFile = () => {
+    setSelectedFile(null);
+    fileInputRef.current.value = '';
+  };
 
   const validateForm = () => {
     const errors = {};
-    if (!formData.firstName.trim()) errors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) errors.lastName = 'Last name is required';
+    if (!formData.firstName.trim()) errors.firstName = t('contact.form.errors.firstNameRequired');
+    if (!formData.lastName.trim()) errors.lastName = t('contact.form.errors.lastNameRequired');
     
     if (!formData.email.trim()) {
-      errors.email = 'Email is required';
+      errors.email = t('contact.form.errors.emailRequired');
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)) {
-      errors.email = 'Invalid email address';
+      errors.email = t('contact.form.errors.emailInvalid');
     }
     
-    if (!formData.sourceLanguage) errors.sourceLanguage = 'Source language is required';
-    if (!formData.targetLanguage) errors.targetLanguage = 'Target language is required';
-    if (!formData.serviceType) errors.serviceType = 'Service type is required';
-    if (!formData.projectDetails.trim()) errors.projectDetails = 'Project details are required';
-    if (!formData.agreeToTerms) errors.agreeToTerms = 'You must agree to the terms';
+    if (!formData.sourceLanguage) errors.sourceLanguage = t('contact.form.errors.sourceLanguageRequired');
+    if (!formData.targetLanguage) errors.targetLanguage = t('contact.form.errors.targetLanguageRequired');
+    if (!formData.serviceType) errors.serviceType = t('contact.form.errors.serviceTypeRequired');
+    if (!formData.projectDetails.trim()) errors.projectDetails = t('contact.form.errors.projectDetailsRequired');
+    if (!formData.agreeToTerms) errors.agreeToTerms = t('contact.form.errors.termsRequired');
+    if (!captchaValue) errors.captcha = t('contact.form.errors.captchaRequired') || 'Please verify that you are not a robot';
     
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     const validationErrors = validateForm();
@@ -113,38 +162,107 @@ const Contact = () => {
       setFormErrors(validationErrors);
       setSnackbar({
         open: true,
-        message: 'Please correct the errors in the form',
+        message: t('contact.form.errors.formHasErrors'),
         severity: 'error'
       });
       return;
     }
     
-    // Here would be the code to submit the form to a backend API
-    console.log('Form submitted:', formData);
-    
-    // Show success message
+    // Show loading state
     setSnackbar({
       open: true,
-      message: 'Your inquiry has been submitted successfully! We will contact you soon.',
-      severity: 'success'
+      message: t('contact.form.sending') || 'Sending your message...',
+      severity: 'info'
     });
     
-    // Reset form
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      company: '',
-      sourceLanguage: '',
-      targetLanguage: '',
-      serviceType: '',
+    try {
+      // Prepare the data to be sent
+      const submissionData = {
+        ...formData,
+        recaptchaToken: captchaValue
+      };
+      
+      // If we have a file, use FormData to handle multipart/form-data
+      if (selectedFile) {
+        const formDataToSubmit = new FormData();
+        
+        // Add the JSON data as a string
+        formDataToSubmit.append('data', JSON.stringify(submissionData));
+        
+        // Add the file
+        formDataToSubmit.append('file', selectedFile);
+        
+        // Send the form data with the file
+        const response = await fetch('/send-email.php', {
+          method: 'POST',
+          body: formDataToSubmit
+        });
+        
+        const result = await response.json();
+        
+        if (!result.success) {
+          throw new Error(result.message || 'Failed to send message');
+        }
+      } else {
+        // No file, just send JSON data
+        const response = await fetch('/send-email.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(submissionData)
+        });
+        
+        const result = await response.json();
+        
+        if (!result.success) {
+          throw new Error(result.message || 'Failed to send message');
+        }
+      }
+      
+      // Show success message
+      setSnackbar({
+        open: true,
+        message: t('contact.form.success'),
+        severity: 'success'
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        company: '',
+        sourceLanguage: '',
+        targetLanguage: '',
+        serviceType: '',
       projectDetails: '',
       deadline: '',
       budget: '',
       howDidYouHear: '',
       agreeToTerms: false
     });
+    
+    // Reset captcha
+    setCaptchaValue(null);
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+    }
+    
+    // Reset file input
+    setSelectedFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSnackbar({
+        open: true,
+        message: t('contact.form.error') || 'An error occurred. Please try again later.',
+        severity: 'error'
+      });
+    }
   };
 
   const handleCloseSnackbar = () => {
@@ -160,10 +278,10 @@ const Contact = () => {
       <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h2" component="h1" gutterBottom>
-            Contact Us
+            {t('contact.pageTitle')}
           </Typography>
           <Typography variant="h5" sx={{ mb: 4, fontWeight: 300 }}>
-            Get in touch for a quote or to discuss your translation needs
+            {t('contact.pageSubtitle')}
           </Typography>
         </Container>
       </Box>
@@ -174,10 +292,10 @@ const Contact = () => {
           <Grid item xs={12} md={7}>
             <Paper sx={{ p: 4, borderRadius: 2, boxShadow: 3 }}>
               <Typography variant="h4" component="h2" gutterBottom>
-                Request a Quote
+                {t('contact.form.title')}
               </Typography>
               <Typography variant="body1" paragraph sx={{ mb: 4 }}>
-                Fill out the form below and we'll get back to you with a quote for your translation project.
+                {t('contact.form.subtitle')}
               </Typography>
 
               <form onSubmit={handleSubmit}>
@@ -185,7 +303,7 @@ const Contact = () => {
                   {/* Personal Information */}
                   <Grid item xs={12}>
                     <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
-                      Contact Information
+                      {t('contact.form.sections.contactInfo')}
                     </Typography>
                     <Divider sx={{ mb: 2 }} />
                   </Grid>
@@ -193,7 +311,7 @@ const Contact = () => {
                     <TextField
                       required
                       fullWidth
-                      label="First Name"
+                      label={t('contact.form.fields.firstName')}
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
@@ -205,7 +323,7 @@ const Contact = () => {
                     <TextField
                       required
                       fullWidth
-                      label="Last Name"
+                      label={t('contact.form.fields.lastName')}
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
@@ -217,7 +335,7 @@ const Contact = () => {
                     <TextField
                       required
                       fullWidth
-                      label="Email"
+                      label={t('contact.form.fields.email')}
                       name="email"
                       type="email"
                       value={formData.email}
@@ -229,7 +347,7 @@ const Contact = () => {
                   <Grid item xs={12} sm={6}>
                     <TextField
                       fullWidth
-                      label="Phone"
+                      label={t('contact.form.fields.phone')}
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
@@ -238,7 +356,7 @@ const Contact = () => {
                   <Grid item xs={12}>
                     <TextField
                       fullWidth
-                      label="Company (if applicable)"
+                      label={t('contact.form.fields.company')}
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
@@ -248,7 +366,7 @@ const Contact = () => {
                   {/* Project Requirements */}
                   <Grid item xs={12} sx={{ mt: 2 }}>
                     <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
-                      Project Details
+                      {t('contact.form.sections.projectDetails')}
                     </Typography>
                     <Divider sx={{ mb: 2 }} />
                   </Grid>
@@ -257,7 +375,7 @@ const Contact = () => {
                       required
                       select
                       fullWidth
-                      label="Source Language"
+                      label={t('contact.form.fields.sourceLanguage')}
                       name="sourceLanguage"
                       value={formData.sourceLanguage}
                       onChange={handleChange}
@@ -276,7 +394,7 @@ const Contact = () => {
                       required
                       select
                       fullWidth
-                      label="Target Language"
+                      label={t('contact.form.fields.targetLanguage')}
                       name="targetLanguage"
                       value={formData.targetLanguage}
                       onChange={handleChange}
@@ -295,7 +413,7 @@ const Contact = () => {
                       required
                       select
                       fullWidth
-                      label="Service Type"
+                      label={t('contact.form.fields.serviceType')}
                       name="serviceType"
                       value={formData.serviceType}
                       onChange={handleChange}
@@ -315,19 +433,67 @@ const Contact = () => {
                       fullWidth
                       multiline
                       rows={4}
-                      label="Project Details"
+                      label={t('contact.form.fields.projectDetails')}
                       name="projectDetails"
                       value={formData.projectDetails}
                       onChange={handleChange}
-                      placeholder="Please describe your project in detail (word count, document type, subject matter, etc.)"
+                      placeholder={t('contact.form.placeholders.projectDetails')}
                       error={!!formErrors.projectDetails}
                       helperText={formErrors.projectDetails}
                     />
                   </Grid>
+                  
+                  {/* File Upload */}
+                  <Grid item xs={12}>
+                    <Typography variant="subtitle1" gutterBottom>
+                      {t('contact.form.fields.fileUpload')}
+                    </Typography>
+                    <input
+                      type="file"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                      style={{ display: 'none' }}
+                      accept=".pdf,.doc,.docx,.txt,.xls,.xlsx,.ppt,.pptx,.odt,.rtf"
+                    />
+                    <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
+                      <Button
+                        variant="outlined"
+                        onClick={handleFileButtonClick}
+                        startIcon={<i className="fas fa-file-upload"></i>}
+                      >
+                        {t('contact.form.actions.chooseFile')}
+                      </Button>
+                      
+                      {selectedFile && (
+                        <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, bgcolor: 'background.paper', p: 1, borderRadius: 1 }}>
+                          <Typography variant="body2" sx={{ mr: 1, flexGrow: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                            {selectedFile.name} ({Math.round(selectedFile.size / 1024)} KB)
+                          </Typography>
+                          <Button 
+                            size="small" 
+                            onClick={clearSelectedFile}
+                            sx={{ minWidth: 'auto', p: 0.5 }}
+                          >
+                            ✕
+                          </Button>
+                        </Box>
+                      )}
+                    </Box>
+                    {!selectedFile && (
+                      <Typography variant="caption" sx={{ display: 'block', mt: 1 }}>
+                        {t('contact.form.placeholders.fileUpload')}
+                      </Typography>
+                    )}
+                    {formErrors.fileUpload && (
+                      <Typography variant="caption" color="error">
+                        {formErrors.fileUpload}
+                      </Typography>
+                    )}
+                  </Grid>
                   <Grid item xs={12} sm={6}>
                     <TextField
                       fullWidth
-                      label="Deadline (if any)"
+                      label={t('contact.form.fields.deadline')}
                       name="deadline"
                       type="date"
                       value={formData.deadline}
@@ -340,17 +506,17 @@ const Contact = () => {
                   <Grid item xs={12} sm={6}>
                     <TextField
                       fullWidth
-                      label="Budget (approximate)"
+                      label={t('contact.form.fields.budget')}
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      placeholder="e.g. $500-1000"
+                      placeholder={t('contact.form.placeholders.budget')}
                     />
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
                       fullWidth
-                      label="How did you hear about us?"
+                      label={t('contact.form.fields.howDidYouHear')}
                       name="howDidYouHear"
                       value={formData.howDidYouHear}
                       onChange={handleChange}
@@ -368,15 +534,37 @@ const Contact = () => {
                           color="primary"
                         />
                       }
-                      label={
-                        <>
-                          I agree to the <Link component={RouterLink} to="/terms" color="primary">Terms & Conditions</Link> and <Link component={RouterLink} to="/privacy" color="primary">Privacy Policy</Link>
-                        </>
-                      }
+                      label={t('contact.form.termsAgreement')}
                     />
                     {formErrors.agreeToTerms && (
                       <Typography variant="caption" color="error">
                         {formErrors.agreeToTerms}
+                      </Typography>
+                    )}
+                  </Grid>
+                  
+                  {/* reCAPTCHA */}
+                  <Grid item xs={12} sx={{ mt: 2 }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                        onChange={(value) => {
+                          setCaptchaValue(value);
+                          // Clear error when captcha is verified
+                          if (formErrors.captcha) {
+                            setFormErrors({
+                              ...formErrors,
+                              captcha: null
+                            });
+                          }
+                        }}
+                        theme="light"
+                      />
+                    </Box>
+                    {formErrors.captcha && (
+                      <Typography variant="caption" color="error" sx={{ display: 'block', textAlign: 'center', mt: 1 }}>
+                        {formErrors.captcha}
                       </Typography>
                     )}
                   </Grid>
@@ -389,7 +577,7 @@ const Contact = () => {
                       fullWidth
                       sx={{ py: 1.5 }}
                     >
-                      Submit Request
+                      {t('contact.form.submitRequest')}
                     </Button>
                   </Grid>
                 </Grid>
@@ -402,10 +590,10 @@ const Contact = () => {
             <Card sx={{ mb: 4, borderRadius: 2, boxShadow: 3 }}>
               <CardContent>
                 <Typography variant="h4" component="h2" gutterBottom>
-                  Contact Information
+                  {t('contact.contactInfo.title')}
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ mb: 4 }}>
-                  Feel free to reach out to us directly:
+                  {t('contact.contactInfo.reachOut')}
                 </Typography>
 
                 <Grid container spacing={3}>
@@ -414,7 +602,7 @@ const Contact = () => {
                       <EmailIcon sx={{ mr: 2, color: 'primary.main', fontSize: 28 }} />
                       <Box>
                         <Typography variant="h6" gutterBottom>
-                          Email
+                          {t('common.footer.email')}
                         </Typography>
                         <Typography variant="body1">
                           <Link href="mailto:info@oghamtranslations.com" color="inherit" underline="hover">
@@ -429,16 +617,16 @@ const Contact = () => {
                       <AccessTimeIcon sx={{ mr: 2, color: 'primary.main', fontSize: 28 }} />
                       <Box>
                         <Typography variant="h6" gutterBottom>
-                          Business Hours
+                          {t('contact.contactInfo.businessHours')}
                         </Typography>
                         <Typography variant="body1">
-                          Monday - Friday: 8:00 AM - 6:00 PM
+                          {t('contact.contactInfo.weekdays')}
                         </Typography>
                         <Typography variant="body1">
-                          Saturday: 10:00 AM - 2:00 PM
+                          {t('contact.contactInfo.saturday')}
                         </Typography>
                         <Typography variant="body1">
-                          Sunday: Closed
+                          {t('contact.contactInfo.sunday')}
                         </Typography>
                       </Box>
                     </Box>
@@ -450,18 +638,18 @@ const Contact = () => {
             {/* FAQ or Support Box */}
             <Paper sx={{ p: 4, borderRadius: 2, bgcolor: 'primary.light', color: 'white', boxShadow: 3 }}>
               <Typography variant="h5" gutterBottom>
-                Need Immediate Assistance?
+                {t('contact.contactInfo.immediateAssistance')}
               </Typography>
               <Typography variant="body1" paragraph>
-                For urgent translation needs or questions about our services:
+                {t('contact.contactInfo.urgentNeeds')}
               </Typography>
               <Typography variant="body1" paragraph>
                 • <Link href="mailto:urgent@oghamtranslations.com" color="inherit" underline="hover">
-                    Email: urgent@oghamtranslations.com
+                    {t('contact.contactInfo.urgentEmail')}
                   </Link>
               </Typography>
               <Typography variant="body1">
-                We aim to respond to all inquiries within 2 business hours during our working hours.
+                {t('contact.contactInfo.responseTime')}
               </Typography>
             </Paper>
           </Grid>

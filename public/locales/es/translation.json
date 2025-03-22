@@ -1,0 +1,1271 @@
+{
+  "common": {
+    "language": "Spanish",
+    "languageNative": "Español",
+    "and": ",",
+    "menu": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "team": "Equipo",
+      "portfolio": "Portafolio",
+      "pricing": "Precios",
+      "contact": "Contacto"
+    },
+    "footer": {
+      "about": "Servicios de traducción profesional en múltiples idiomas. Calidad, precisión y puntualidad garantizadas.",
+      "quickLinks": "Enlaces Rápidos",
+      "contactUs": "Contáctenos",
+      "address": "Ginebra, Zúrich, Lugano - Suiza",
+      "email": "Correo Electrónico",
+      "allRightsReserved": "Todos los derechos reservados",
+      "termsConditions": "Términos y Condiciones",
+      "privacyPolicy": "Política de Privacidad"
+    },
+    "buttons": {
+      "getQuote": "Solicitar una Cotización",
+      "ourServices": "Nuestros Servicios",
+      "readMore": "Leer Más",
+      "viewAll": "Ver Todo",
+      "submit": "Enviar",
+      "send": "Enviar",
+      "accept": "Aceptar"
+    },
+    "cookieConsent": {
+      "message": "Este sitio web utiliza cookies para mejorar la experiencia del usuario. Vea nuestro",
+      "moreInfo": "para más información."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Conectando Idiomas, Preservando Culturas",
+      "subtitle": "Servicios de traducción precisos y culturalmente adaptados a sus necesidades — en más de 10 idiomas."
+    },
+    "portfolioShowcase": {
+      "title": "Nuestro Portafolio de Traducción",
+      "paragraph1": "Explore nuestra muestra de trabajos de traducción en diversas industrias y pares de idiomas. Vea de primera mano la calidad y atención al detalle que distingue a Ogham Translation Services.",
+      "paragraph2": "Nuestro portafolio presenta muestras de documentos legales, manuales técnicos, materiales de marketing y contenido creativo traducidos con meticulosa precisión y sensibilidad cultural.",
+      "viewButton": "Ver Nuestro Portafolio"
+    },
+    "about": {
+      "title": "Sobre Ogham Translations",
+      "paragraph1": "Fundada en 2022, Ogham Translations es una empresa de traducción boutique comprometida a ofrecer soluciones lingüísticas excepcionales con meticulosa atención al detalle. Proporcionamos servicios de traducción personalizados y de alta calidad para empresas e individuos en todo el mundo.",
+      "paragraph2": "Nuestro equipo de traductores profesionales son hablantes nativos con experiencia en sus respectivos campos, asegurando traducciones precisas y culturalmente apropiadas para todas sus necesidades.",
+      "meetTeam": "Conozca a Nuestro Equipo"
+    },
+    "whyChooseUs": {
+      "title": "¿Por Qué Elegirnos?",
+      "multipleLanguages": {
+        "title": "Múltiples Idiomas",
+        "description": "Más de 10 idiomas disponibles"
+      },
+      "documentExpertise": {
+        "title": "Experiencia en Documentos",
+        "description": "Técnico, legal, médico y más"
+      },
+      "certifiedTranslators": {
+        "title": "Traductores Certificados",
+        "description": "Equipo profesional y calificado"
+      }
+    },
+    "languages": {
+      "title": "Idiomas que Ofrecemos",
+      "subtitle": "Nuestro equipo de traductores profesionales cubre una amplia gama de idiomas de todo el mundo.",
+      "list": {
+        "english": "Inglés",
+        "french": "Francés",
+        "german": "Alemán",
+        "italian": "Italiano",
+        "romansh": "Romanche",
+        "spanish": "Español",
+        "portuguese": "Portugués",
+        "russian": "Ruso",
+        "ukrainian": "Ucraniano",
+        "mandarin": "Mandarín",
+        "japanese": "Japonés",
+        "arabic": "Árabe",
+        "czech": "Checo",
+        "turkish": "Turco"
+      }
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Ofrecemos una gama completa de servicios de traducción para satisfacer todas sus necesidades.",
+      "documentTranslation": {
+        "title": "Traducción de Documentos",
+        "description": "Traducción profesional de documentos legales, contratos, certificados y más."
+      },
+      "websiteLocalization": {
+        "title": "Localización de Sitios Web",
+        "description": "Adapte el contenido de su sitio web para diferentes regiones e idiomas para alcanzar una audiencia global."
+      },
+      "technicalTranslation": {
+        "title": "Traducción Técnica",
+        "description": "Traducción precisa de manuales técnicos, guías y especificaciones."
+      },
+      "viewAllServices": "Ver Todos los Servicios"
+    },
+    "portfolio": {
+      "title": "Nuestro Portafolio de Traducción",
+      "paragraph1": "Explore nuestra muestra de trabajos de traducción en diversas industrias y pares de idiomas. Vea de primera mano la calidad y atención al detalle que distingue a Ogham Translation Services.",
+      "paragraph2": "Nuestro portafolio presenta muestras de documentos legales, manuales técnicos, materiales de marketing y contenido creativo traducidos con meticulosa precisión y sensibilidad cultural.",
+      "viewPortfolio": "Ver Nuestro Portafolio"
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar?",
+      "subtitle": "Contáctenos hoy para obtener una cotización gratuita para su proyecto de traducción.",
+      "button": "Solicitar una Cotización"
+    }
+  },
+  "services": {
+    "pageTitle": "Nuestros Servicios",
+    "pageSubtitle": "Ofrecemos una gama completa de servicios de traducción para satisfacer sus necesidades específicas.",
+    "process": {
+      "title": "Nuestro Proceso de Traducción",
+      "subtitle": "Seguimos un proceso riguroso para garantizar las traducciones de la más alta calidad para su contenido:",
+      "steps": [
+        {
+          "title": "Análisis del Proyecto",
+          "description": "Analizamos su contenido, requisitos y público objetivo para determinar el mejor enfoque."
+        },
+        {
+          "title": "Traducción",
+          "description": "Nuestros traductores nativos convierten expertamente su contenido al idioma objetivo."
+        },
+        {
+          "title": "Edición y Revisión",
+          "description": "Un segundo lingüista revisa la traducción para garantizar precisión, consistencia y estilo."
+        },
+        {
+          "title": "Garantía de Calidad",
+          "description": "Rigurosos controles de calidad aseguran que su traducción cumpla con nuestros altos estándares."
+        },
+        {
+          "title": "Revisión del Cliente",
+          "description": "Implementamos sus comentarios y realizamos los ajustes necesarios."
+        },
+        {
+          "title": "Entrega",
+          "description": "Su traducción finalizada se entrega en el formato de su preferencia, a tiempo y dentro del presupuesto."
+        }
+      ]
+    },
+    "categories": {
+      "document": {
+        "title": "Traducción de Documentos",
+        "description": "Traducción profesional de varios tipos de documentos con precisión y atención al detalle.",
+        "services": {
+          "legal": {
+            "title": "Documentos Legales",
+            "description": "Contratos, acuerdos, documentos judiciales, opiniones legales, patentes y certificaciones.",
+            "features": [
+              "Traducciones certificadas",
+              "Experiencia en terminología legal",
+              "Confidencialidad garantizada"
+            ]
+          },
+          "business": {
+            "title": "Documentos Empresariales",
+            "description": "Informes financieros, planes de negocio, materiales de marketing y comunicaciones corporativas.",
+            "features": [
+              "Terminología específica de la industria",
+              "Consistencia de marca",
+              "Preservación del formato"
+            ]
+          },
+          "technical": {
+            "title": "Documentos Técnicos",
+            "description": "Manuales de usuario, especificaciones técnicas, guías de instrucciones e informes técnicos.",
+            "features": [
+              "Precisión técnica",
+              "Lenguaje simplificado cuando sea necesario",
+              "Expertos en la materia"
+            ]
+          },
+          "academic": {
+            "title": "Documentos Académicos",
+            "description": "Diplomas, transcripciones, trabajos de investigación, tesis y certificaciones académicas.",
+            "features": [
+              "Experiencia en terminología académica",
+              "Traducción de nivel investigativo",
+              "Formato de citas"
+            ]
+          }
+        }
+      },
+      "website": {
+        "title": "Traducción de Sitios Web",
+        "description": "Servicios integrales de localización de sitios web para ayudar a su negocio a alcanzar audiencias globales.",
+        "services": {
+          "localization": {
+            "title": "Localización de Sitios Web",
+            "description": "Traducción completa y adaptación cultural del contenido de su sitio web para mercados internacionales.",
+            "features": [
+              "Adaptación cultural",
+              "Optimización SEO",
+              "Ajuste de interfaz de usuario"
+            ]
+          },
+          "ecommerce": {
+            "title": "Traducción de Comercio Electrónico",
+            "description": "Descripciones de productos, categorías, procesos de pago y contenido de atención al cliente.",
+            "features": [
+              "Terminología de productos consistente",
+              "Localización de métodos de pago",
+              "Lenguaje centrado en el cliente"
+            ]
+          },
+          "cms": {
+            "title": "Integración con CMS",
+            "description": "Integración con WordPress, Shopify y otros sistemas de gestión de contenido.",
+            "features": [
+              "Compatibilidad con plugins",
+              "Configuración multilingüe",
+              "Sincronización automática de contenido"
+            ]
+          },
+          "seo": {
+            "title": "SEO Multilingüe",
+            "description": "Investigación y optimización de palabras clave para múltiples mercados objetivo.",
+            "features": [
+              "Investigación de palabras clave locales",
+              "Optimización de metaetiquetas",
+              "URLs amigables para SEO"
+            ]
+          }
+        }
+      },
+      "specialized": {
+        "title": "Traducciones Especializadas",
+        "description": "Traducciones expertas para industrias específicas que requieren conocimientos y terminología especializada.",
+        "services": {
+          "medical": {
+            "title": "Traducción Médica",
+            "description": "Registros médicos, documentos farmacéuticos, ensayos clínicos y materiales de salud.",
+            "features": [
+              "Experiencia en terminología médica",
+              "Cumplimiento normativo",
+              "Lenguaje amigable para el paciente"
+            ]
+          },
+          "financial": {
+            "title": "Traducción Financiera",
+            "description": "Estados financieros, informes de inversión, documentos bancarios y materiales de seguros.",
+            "features": [
+              "Precisión en terminología financiera",
+              "Formato numérico",
+              "Cumplimiento normativo"
+            ]
+          },
+          "marketing": {
+            "title": "Traducción de Marketing",
+            "description": "Campañas de marketing, folletos, anuncios y materiales promocionales.",
+            "features": [
+              "Adaptación creativa",
+              "Relevancia cultural",
+              "Preservación de la voz de la marca"
+            ]
+          },
+          "literary": {
+            "title": "Traducción Literaria",
+            "description": "Libros, poesía, guiones y obras creativas que mantienen el estilo e intención del autor.",
+            "features": [
+              "Fidelidad estilística",
+              "Matiz cultural",
+              "Adaptación creativa"
+            ]
+          }
+        }
+      },
+      "additional": {
+        "title": "Servicios Adicionales",
+        "description": "Servicios lingüísticos complementarios para satisfacer sus necesidades de comunicación digital.",
+        "services": {
+          "content": {
+            "title": "Creación de Contenido",
+            "description": "Creación de contenido multilingüe original adaptado a sus mercados objetivo.",
+            "features": [
+              "Redactores nativos",
+              "Contenido específico del mercado",
+              "Optimización SEO"
+            ]
+          },
+          "software": {
+            "title": "Localización de Software",
+            "description": "Traducción y adaptación de interfaces de software, aplicaciones y juegos.",
+            "features": [
+              "Consideración de UI/UX",
+              "Gestión de cadenas",
+              "Pruebas y aseguramiento de calidad"
+            ]
+          },
+          "subtitling": {
+            "title": "Subtitulación",
+            "description": "Servicios de traducción multimedia para videos y películas que requieren traducciones de texto.",
+            "features": [
+              "Sincronización de tiempos",
+              "Adaptación cultural",
+              "Soporte multilingüe"
+            ]
+          }
+        }
+      }
+    },
+    "documentTranslation": {
+      "title": "Traducción de Documentos",
+      "description": "Traducción profesional de documentos legales, contratos, certificados y más.",
+      "features": [
+        "Traducción de documentos legales",
+        "Traducción de documentos corporativos",
+        "Traducción de documentos personales",
+        "Traducción de certificados",
+        "Traducción de documentos académicos"
+      ]
+    },
+    "websiteLocalization": {
+      "title": "Localización de Sitios Web",
+      "description": "Adapte el contenido de su sitio web para diferentes regiones e idiomas para alcanzar una audiencia global.",
+      "features": [
+        "Traducción de contenido web",
+        "Adaptación cultural para mercados objetivo",
+        "Traducciones optimizadas para SEO",
+        "Localización multimedia",
+        "Localización de comercio electrónico"
+      ]
+    },
+    "technicalTranslation": {
+      "title": "Traducción Técnica",
+      "description": "Traducción precisa de manuales técnicos, guías y especificaciones.",
+      "features": [
+        "Traducción de manuales técnicos",
+        "Documentación de software",
+        "Traducción de patentes",
+        "Especificaciones técnicas",
+        "Guías de usuario y manuales de instrucciones"
+      ]
+    }
+  },
+  "portfolio": {
+    "pageTitle": "Nuestro Portafolio de Traducción",
+    "pageSubtitle": "Muestras de nuestro trabajo de traducción en diversas industrias e idiomas",
+    "categories": {
+      "all": "Todos los Proyectos",
+      "featured": "Destacados",
+      "legal": "Legal",
+      "medical": "Médico",
+      "technical": "Técnico",
+      "marketing": "Marketing",
+      "literary": "Literario y Creativo"
+    },
+    "featuredChip": "Destacado",
+    "viewProject": "Ver Proyecto",
+    "dialogTitle": "Proyecto de Traducción",
+    "languages": {
+      "english": "Inglés",
+      "french": "Francés",
+      "german": "Alemán",
+      "italian": "Italiano",
+      "japanese": "Japonés",
+      "mandarin": "Mandarín",
+      "russian": "Ruso"
+    },
+    "preview": {
+      "title": "Vista Previa del Proyecto",
+      "sourceDocument": "Documento Fuente",
+      "translatedDocument": "Documento Traducido",
+      "sourceDocumentPlaceholder": "El documento fuente se mostraría aquí. En una implementación real, esto mostraría el contenido real del PDF.",
+      "translatedDocumentPlaceholder": "El documento traducido se mostraría aquí. En una implementación real, esto mostraría el contenido real del PDF.",
+      "downloadSource": "Descargar Fuente",
+      "downloadTranslation": "Descargar Traducción",
+      "sideBySide": "Lado a Lado",
+      "original": "Original",
+      "translation": "Traducción",
+      "loading": "Cargando PDF...",
+      "noData": "No hay PDF disponible",
+      "errorLoading": "Error al cargar el PDF",
+      "prevPage": "Anterior",
+      "nextPage": "Siguiente"
+    },
+    "viewModes": {
+      "comparison": "Lado a Lado",
+      "before": "Solo Original",
+      "after": "Solo Traducción"
+    },
+    "previewPlaceholder": {
+      "sourceMessage": "El documento original se mostraría aquí.",
+      "translatedMessage": "El documento traducido se mostraría aquí.",
+      "implementationNote": "En una implementación real, esto mostraría el contenido real del PDF."
+    },
+    "beforeAfter": "Antes y Después",
+    "showcaseItems": [
+      {
+        "title": "Traducción de Contrato",
+        "description": "Traducción de contrato de inglés a francés."
+      },
+      {
+        "title": "Traducción de Artículo de Investigación Médica",
+        "description": "Traducción de artículo de investigación médica de alemán a inglés."
+      },
+      {
+        "title": "Traducción de Informe Financiero",
+        "description": "Traducción de informe financiero de francés a japonés."
+      },
+      {
+        "title": "Traducción de Material de Marketing",
+        "description": "Traducción de material de marketing de inglés a mandarín."
+      },
+      {
+        "title": "Traducción Literaria",
+        "description": "Traducción literaria de ruso a italiano."
+      }
+    ]
+  },
+  "team": {
+    "pageTitle": "Nuestro Equipo",
+    "pageSubtitle": "Conozca a nuestro dedicado equipo de traductores profesionales y especialistas en idiomas.",
+    "professionalTranslators": "Traductores Profesionales con Base en Suiza",
+    "description": "Los profesionales presentados aquí son nuestros líderes de equipo, cada uno liderando el trabajo en torno a un idioma principal que es su lengua materna. También contamos con colaboradores adicionales, asegurando que tengamos al menos dos expertos para traducir y luego revisar cualquier posible combinación de idiomas. Este enfoque de doble experto garantiza la más alta calidad y precisión cultural en todas nuestras traducciones. Con base en Suiza, aprovechamos nuestro entorno multicultural para ofrecer traducciones precisas y culturalmente apropiadas en múltiples idiomas europeos y globales.",
+    "languages": "Idiomas",
+    "specialties": "Especialidades",
+    "educationExperience": "Educación y Experiencia",
+    "experienceLabel": "Experiencia",
+    "ourFounders": "Nuestros Fundadores",
+    "ourTranslators": "Nuestros Traductores",
+    "ourPartners": "Nuestros Socios",
+    "philosophy": {
+      "title": "Nuestra Filosofía de Traducción",
+      "subtitle": "En Ogham Translations, creemos que una traducción efectiva va más allá de las palabras: se trata de transmitir significado, contexto y matices culturales. Con sede en Suiza, un país con cuatro idiomas oficiales, entendemos el multilingüismo en nuestro núcleo y aportamos esta perspectiva única a cada proyecto.",
+      "values": [
+        {
+          "title": "Experiencia Cultural",
+          "description": "Nuestros traductores no solo conocen los idiomas con los que trabajan, sino que también entienden las culturas detrás de ellos, asegurando que su mensaje siga siendo apropiado y efectivo."
+        },
+        {
+          "title": "Conocimiento del Tema",
+          "description": "Asignamos traductores según su experiencia en su campo específico, ya sea contenido legal, médico, técnico o creativo."
+        },
+        {
+          "title": "Garantía de Calidad",
+          "description": "Cada traducción pasa por un riguroso proceso de control de calidad, que incluye la revisión por un segundo lingüista para garantizar precisión y consistencia."
+        },
+        {
+          "title": "Aprendizaje Continuo",
+          "description": "Nuestros traductores participan regularmente en desarrollo profesional para mantenerse actualizados con la última terminología y técnicas de traducción."
+        }
+      ]
+    },
+    "members": [
+      {
+        "name": "Célia Brodard",
+        "role": "Traductora Senior - Francés",
+        "bio": "Nacida y criada en Ginebra, Céline tiene una gran pasión por los idiomas y se especializa en documentos legales, financieros y empresariales. Exalumna de las principales instituciones suizas, combina su formación académica con años de experiencia profesional en traducción. Su herencia suiza y profundo entendimiento de entornos multiculturales le permiten asegurar precisión y sensibilidad cultural en cada proyecto.",
+        "languages": [
+          "Francés",
+          "Inglés",
+          "Alemán"
+        ],
+        "specialties": [
+          "Legal",
+          "Negocios",
+          "Financiero"
+        ],
+        "experience": "Más de 8 años",
+        "education": "Licenciatura en Comunicación Multilingüe – Universidad de Ginebra, Suiza; Maestría en Traducción Especializada (Legal y Financiera) – Universidad de Ginebra, Facultad de Traducción e Interpretación (FTI), Suiza"
+      },
+      {
+        "name": "Markus Brunner",
+        "role": "Traductor Senior - Alemán",
+        "bio": "Con sede en Zúrich, Markus ha estado traduciendo documentos técnicos y científicos durante más de una década. Con formación en ingeniería y lingüística, aporta experiencia interdisciplinaria a su trabajo de traducción. Su formación en una de las principales universidades técnicas de Suiza le permite manejar traducciones altamente complejas y técnicas con una precisión y claridad inigualables.",
+        "languages": [
+          "Alemán",
+          "Inglés",
+          "Francés"
+        ],
+        "specialties": [
+          "Técnico",
+          "Científico",
+          "Ingeniería"
+        ],
+        "experience": "Más de 12 años",
+        "education": "Licenciatura en Ingeniería Mecánica – ETH Zúrich, Suiza; Maestría en Lenguaje y Comunicación – Universidad de Zúrich, Suiza"
+      },
+      {
+        "name": "Inês Ferreira",
+        "role": "Traductora Senior - Portugués y Español",
+        "bio": "Originaria de Lisboa, Inês ahora llama a Lugano su hogar. Se especializa en traducciones creativas y de marketing, con una profunda pasión por la literatura y la narración. Su formación académica en lingüística y estudios literarios de una de las mejores universidades de Portugal le permite traducir con matices culturales y creatividad.",
+        "languages": [
+          "Portugués",
+          "Español",
+          "Italiano",
+          "Francés"
+        ],
+        "specialties": [
+          "Marketing",
+          "Creativo",
+          "Literario"
+        ],
+        "experience": "Más de 7 años",
+        "education": "Licenciatura en Lingüística – Universidad de Lisboa, Portugal; Maestría en Traducción, Interpretación y Estudios Interculturales – Universidad Autónoma de Barcelona (UAB), España"
+      },
+      {
+        "name": "Jian Chen",
+        "role": "Traductor Senior - Mandarín",
+        "bio": "Jian es un experto en traducciones de mandarín a inglés con un enfoque en documentos empresariales y técnicos. Con formación formal en traducción y comunicación intercultural de una universidad líder en China y estudios adicionales en Suiza, él cierra las brechas culturales y lingüísticas para las empresas suizas que ingresan al mercado chino.",
+        "languages": [
+          "Mandarín",
+          "Inglés",
+          "Francés"
+        ],
+        "specialties": [
+          "Negocios",
+          "Técnico",
+          "Comercio Electrónico"
+        ],
+        "experience": "Más de 11 años",
+        "education": "Licenciatura en Estudios de Lengua Inglesa – Universidad de Fudan, China; Maestría en Traducción e Interpretación – Universidad de Zúrich, Suiza"
+      },
+      {
+        "name": "Alessandra Conti",
+        "role": "Traductora Senior - Italiano",
+        "bio": "Desde Ticino, el cantón de habla italiana de Suiza, Alessandra se destaca en la traducción de documentos relacionados con el arte, la cultura y el turismo. Su profundo conocimiento de la literatura italiana y el patrimonio suizo hace que sus traducciones sean culturalmente ricas y precisas. Su formación académica en estudios interculturales e historia del arte añade profundidad a su experiencia.",
+        "languages": [
+          "Italiano",
+          "Alemán",
+          "Inglés"
+        ],
+        "specialties": [
+          "Arte",
+          "Cultura",
+          "Turismo",
+          "Bienes de Lujo"
+        ],
+        "experience": "Más de 9 años",
+        "education": "Licenciatura en Historia del Arte – Universidad de Bolonia, Italia; Maestría en Estudios Avanzados en Comunicación Intercultural – Universidad de Lugano, Suiza"
+      },
+      {
+        "name": "Emiko Shimizu",
+        "role": "Traductora Senior - Japonés",
+        "bio": "Emiko tiene una amplia experiencia en la traducción de manuales técnicos, patentes y literatura científica para importantes empresas farmacéuticas y relojeras suizas. Su rigurosa formación académica en Japón, combinada con su experiencia en Suiza, la convierte en una experta indispensable para traducciones altamente especializadas y técnicas en diversas industrias.",
+        "languages": [
+          "Japonés",
+          "Inglés",
+          "Alemán"
+        ],
+        "specialties": [
+          "Técnico",
+          "Patentes",
+          "Farmacéutico",
+          "Médico"
+        ],
+        "experience": "Más de 10 años",
+        "education": "Licenciatura en Ciencias Farmacéuticas – Universidad de Tokio, Japón; Maestría en Traducción Técnica – Universidad de Estudios Extranjeros de Tokio (TUFS), Japón"
+      },
+      {
+        "name": "Olena Kovalenko",
+        "role": "Traductora Senior - Ucraniano y Ruso",
+        "bio": "Originaria de Kiev, Olena se especializa en traducciones literarias, académicas y legales. Con formación en filología y estudios literarios, ha traducido numerosas obras literarias y artículos académicos, asegurando autenticidad y riqueza cultural en cada traducción.",
+        "languages": [
+          "Ucraniano",
+          "Ruso",
+          "Inglés",
+          "Alemán"
+        ],
+        "specialties": [
+          "Literario",
+          "Académico",
+          "Legal"
+        ],
+        "experience": "Más de 8 años",
+        "education": "Licenciatura en Filología – Universidad Nacional Taras Shevchenko de Kiev, Ucrania; Maestría en Traducción – Universidad de Viena, Austria"
+      },
+      {
+        "name": "Robert Ainsworth",
+        "role": "Traductor Senior - Inglés",
+        "bio": "Hablante nativo de inglés con habilidades excepcionales de escritura, Robert asegura la más alta calidad en todas las traducciones al inglés. Con experiencia en periodismo y traducción, crea contenido convincente y preciso en una amplia variedad de industrias, desde informes empresariales hasta investigaciones académicas y materiales de marketing.",
+        "languages": [
+          "Inglés",
+          "Francés",
+          "Alemán"
+        ],
+        "specialties": [
+          "Negocios",
+          "Marketing",
+          "Periodismo",
+          "Académico"
+        ],
+        "experience": "Más de 14 años",
+        "education": "Licenciatura en Lengua y Literatura Inglesa – Universidad de Oxford, Reino Unido; Maestría en Traducción e Interpretación – Universidad de Westminster, Reino Unido"
+      },
+      {
+        "name": "Claudio Cereghetti",
+        "role": "Traductor Senior - Romanche",
+        "bio": "Como uno de los pocos traductores profesionales de romanche, Claudio preserva y promueve este raro idioma suizo a través de sus traducciones. Con una profunda base académica en filología y patrimonio lingüístico, es un experto confiable para documentación oficial suiza y proyectos de preservación cultural.",
+        "languages": [
+          "Romanche",
+          "Alemán",
+          "Italiano",
+          "Francés",
+          "Inglés"
+        ],
+        "specialties": [
+          "Documentación Oficial",
+          "Cultural",
+          "Patrimonio"
+        ],
+        "experience": "Más de 12 años",
+        "education": "Licenciatura en Literatura y Lingüística Romanche – Universidad de Zúrich, Suiza; Maestría en Filología Clásica – Universidad de Friburgo, Suiza"
+      },
+      {
+        "name": "Amine Benchekroun",
+        "role": "Traductor Senior - Árabe",
+        "bio": "Amine se especializa en traducciones al árabe para contextos diplomáticos, empresariales y legales. Con formación en relaciones internacionales y estudios de traducción especializada, conecta las regiones de habla árabe con el diverso panorama empresarial y diplomático de Suiza, asegurando que las traducciones sean precisas y culturalmente sensibles.",
+        "languages": [
+          "Árabe",
+          "Francés",
+          "Inglés"
+        ],
+        "specialties": [
+          "Diplomático",
+          "Legal",
+          "Relaciones Internacionales"
+        ],
+        "experience": "Más de 9 años",
+        "education": "Licenciatura en Estudios de Traducción – Université Hassan II, Marruecos; Maestría en Relaciones Internacionales – Graduate Institute Geneva (IHEID), Suiza"
+      }
+    ]
+  },
+  "portfolioDetails": {
+    "projectDescription": "Descripción del Proyecto",
+    "languages": "Idiomas",
+    "industry": "Industria",
+    "tags": "Etiquetas"
+  },
+  "pricing": {
+    "pageTitle": "Precios",
+    "pageSubtitle": "Opciones de precios transparentes y flexibles",
+    "guarantee": {
+      "title": "Nuestra Garantía de Satisfacción",
+      "description": "Estamos comprometidos a entregar traducciones de alta calidad que cumplan con sus expectativas. Si no está completamente satisfecho con nuestro trabajo, lo revisaremos sin costo adicional. Si en algún momento siente que la traducción no cumple con sus expectativas, puede solicitar una cancelación y le reembolsaremos — sin preguntas.",
+      "provisions": "Para todos los proyectos, proporcionamos:",
+      "points": {
+        "accurate": "Traducciones precisas y contextualmente apropiadas",
+        "onTime": "Entrega puntual según lo acordado en el alcance del proyecto",
+        "consistent": "Terminología consistente en todos sus documentos",
+        "responsive": "Servicio al cliente receptivo y actualizaciones del proyecto"
+      }
+    },
+    "standard": "Estándar",
+    "professional": "Profesional",
+    "premium": "Premium",
+    "perWord": "por palabra",
+    "startingAt": "A partir de",
+    "contactForPricing": "Contactar para precios",
+    "customSolution": "Solución Personalizada",
+    "paymentTerms": "Términos de Pago",
+    "termsDescription": "Aceptamos PayPal y transferencias bancarias. Para clientes corporativos, podemos organizar facturación con términos de pago. Para proyectos grandes, podemos requerir un porcentaje del pago por adelantado.",
+    "packages": {
+      "title": "Paquetes de Traducción",
+      "subtitle": "Elija el paquete adecuado para sus necesidades de traducción. Todos los precios están en CHF.",
+      "plans": [
+        {
+          "title": "Estándar",
+          "price": "0.08",
+          "unit": "por palabra",
+          "description": "Para contenido general y documentos básicos",
+          "features": [
+            {
+              "text": "Traducción de alta calidad"
+            },
+            {
+              "text": "Revisión completa"
+            },
+            {
+              "text": "Tiempo de entrega estándar"
+            },
+            {
+              "text": "Terminología específica del contexto"
+            },
+            {
+              "text": "Opción de entrega urgente"
+            },
+            {
+              "text": "Equipo dedicado"
+            }
+          ]
+        },
+        {
+          "title": "Profesional",
+          "price": "0.12",
+          "unit": "por palabra",
+          "description": "Para contenido empresarial y especializado",
+          "features": [
+            {
+              "text": "Traducción de alta calidad"
+            },
+            {
+              "text": "Revisión mejorada"
+            },
+            {
+              "text": "Tiempo de entrega más rápido"
+            },
+            {
+              "text": "Terminología específica del contexto"
+            },
+            {
+              "text": "Opción de entrega urgente"
+            },
+            {
+              "text": "Equipo dedicado"
+            }
+          ]
+        },
+        {
+          "title": "Premium",
+          "price": "0.16",
+          "unit": "por palabra",
+          "description": "Para contenido crítico y de alta visibilidad",
+          "features": [
+            {
+              "text": "Traducción de alta calidad"
+            },
+            {
+              "text": "Múltiples rondas de revisión"
+            },
+            {
+              "text": "Tiempo de entrega prioritario"
+            },
+            {
+              "text": "Terminología específica del contexto"
+            },
+            {
+              "text": "Opción de entrega urgente"
+            },
+            {
+              "text": "Equipo dedicado"
+            }
+          ]
+        }
+      ]
+    },
+    "rates": {
+      "title": "Tarifas Detalladas de Servicio",
+      "subtitle": "La siguiente tabla proporciona información más detallada sobre los precios para tipos de servicios específicos.",
+      "note": "Las tarifas están en CHF por palabra a menos que se indique lo contrario.",
+      "headers": {
+        "service": "Servicio",
+        "standard": "Estándar",
+        "professional": "Profesional",
+        "premium": "Premium"
+      },
+      "services": [
+        {
+          "service": "Traducción de Documentos",
+          "standard": "0.08-0.10",
+          "professional": "0.12-0.14",
+          "premium": "0.16-0.20"
+        },
+        {
+          "service": "Localización de Sitios Web",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.16",
+          "premium": "0.18-0.22"
+        },
+        {
+          "service": "Traducción Técnica",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.18",
+          "premium": "0.20-0.25"
+        },
+        {
+          "service": "Traducción Legal",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "Traducción Médica",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "Contenido de Marketing",
+          "standard": "0.09-0.11",
+          "professional": "0.13-0.15",
+          "premium": "0.17-0.22"
+        },
+        {
+          "service": "Subtitulación",
+          "standard": "6-8",
+          "professional": "9-12",
+          "premium": "14-18",
+          "note": "Precio por minuto de video"
+        }
+      ]
+    },
+    "process": {
+      "title": "Nuestro Proceso de Precios",
+      "subtitle": "Entendiendo cómo fijamos el precio de nuestros servicios de traducción",
+      "steps": [
+        {
+          "title": "Evaluación",
+          "description": "Evaluamos el conteo de palabras de su documento, el par de idiomas, la complejidad técnica y los requisitos de plazo."
+        },
+        {
+          "title": "Cotización",
+          "description": "Proporcionamos una cotización detallada con precios transparentes basados en sus necesidades específicas."
+        },
+        {
+          "title": "Aprobación",
+          "description": "Una vez que apruebe la cotización, comenzamos el proceso de traducción."
+        },
+        {
+          "title": "Entrega",
+          "description": "Entregamos la traducción completa en o antes del plazo acordado."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Preguntas Frecuentes sobre Precios",
+      "subtitle": "Respuestas a preguntas comunes sobre nuestros precios",
+      "questions": [
+        {
+          "question": "¿Cómo calculan el costo de un proyecto de traducción?",
+          "answer": "Normalmente cobramos por palabra en el texto fuente. Las tarifas varían según el par de idiomas, la complejidad del contenido, la experiencia requerida y el tiempo de entrega. Para algunos servicios como subtitulado, cobramos por minuto de video."
+        },
+        {
+          "question": "¿Hay tarifas adicionales más allá de la tarifa por palabra?",
+          "answer": "En la mayoría de los casos, la tarifa por palabra cubre el servicio completo. Sin embargo, pueden aplicarse tarifas adicionales para pedidos urgentes (típicamente +25-50%), requisitos de formato especializado o rondas adicionales de revisión más allá de lo incluido en su paquete."
+        },
+        {
+          "question": "¿Qué métodos de pago aceptan?",
+          "answer": "Aceptamos PayPal, transferencias bancarias y para clientes corporativos, podemos organizar facturación con términos de pago."
+        },
+        {
+          "question": "¿Ofrecen descuentos para proyectos grandes?",
+          "answer": "Sí, ofrecemos descuentos por volumen para proyectos grandes. El porcentaje de descuento aumenta con el tamaño del proyecto, comenzando típicamente en un 5% para proyectos de más de 10,000 palabras y hasta un 15% para proyectos de más de 50,000 palabras."
+        },
+        {
+          "question": "¿Cuál es su política sobre revisiones?",
+          "answer": "Nuestro paquete Estándar incluye una ronda de revisiones, el paquete Profesional incluye dos rondas de revisiones y el paquete Premium incluye revisiones ilimitadas dentro de un alcance razonable. Se pueden adquirir rondas adicionales de revisión si es necesario."
+        },
+        {
+          "question": "¿Qué tan rápido pueden entregar traducciones?",
+          "answer": "Nuestro tiempo de entrega estándar es de aproximadamente 2,000-2,500 palabras por día hábil. Los servicios urgentes están disponibles a un costo adicional, lo que puede reducir el tiempo de entrega en un 30-50%. Para proyectos grandes y urgentes, podemos asignar varios traductores para cumplir con plazos ajustados."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar?",
+      "subtitle": "Contáctanos hoy para obtener una cotización gratuita para tu proyecto de traducción.",
+      "button": "Solicitar una Cotización"
+    }
+  },
+  "contact": {
+    "pageTitle": "Contáctanos",
+    "pageSubtitle": "Estamos aquí para ayudarte con tus necesidades de traducción. Ponte en contacto con nosotros hoy.",
+    "standardPackage": {
+      "title": "Estándar",
+      "description": "Para traducción de contenido general con tiempo de entrega estándar.",
+      "features": [
+        "Traducción de alta calidad",
+        "Revisión básica",
+        "Tiempo de entrega estándar",
+        "Soporte por correo electrónico"
+      ]
+    },
+    "professionalPackage": {
+      "title": "Profesional",
+      "description": "Para contenido profesional que requiere experiencia técnica.",
+      "features": [
+        "Traducción de alta calidad",
+        "Revisión completa",
+        "Tiempo de entrega más rápido",
+        "Terminología específica del contexto",
+        "Soporte prioritario por correo electrónico"
+      ]
+    },
+    "premiumPackage": {
+      "title": "Premium",
+      "description": "Para proyectos de alta prioridad que requieren calidad excepcional.",
+      "features": [
+        "Traducción de calidad premium",
+        "Revisión completa",
+        "Entrega acelerada",
+        "Gerente de proyecto dedicado",
+        "Soporte telefónico y por correo electrónico",
+        "Experiencia técnica"
+      ]
+    },
+    "form": {
+      "title": "Solicitar una Cotización",
+      "subtitle": "Rellena el formulario a continuación y te responderemos con una cotización para tu proyecto de traducción.",
+      "name": "Tu Nombre",
+      "email": "Dirección de Correo Electrónico",
+      "phone": "Número de Teléfono (opcional)",
+      "subject": "Asunto",
+      "message": "Tu Mensaje",
+      "submit": "Enviar Mensaje",
+      "submitRequest": "Enviar Solicitud",
+      "agreeTerms": "Estoy de acuerdo con",
+      "termsAgreement": "Estoy de acuerdo con los Términos y Condiciones y la Política de Privacidad",
+      "actions": {
+        "chooseFile": "Elegir Archivo"
+      },
+      "sections": {
+        "contactInfo": "Información de Contacto",
+        "projectDetails": "Detalles del Proyecto",
+        "additionalInfo": "Información Adicional"
+      },
+      "fields": {
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "company": "Empresa (si aplica)",
+        "sourceLanguage": "Idioma de Origen",
+        "targetLanguage": "Idioma de Destino",
+        "serviceType": "Tipo de Servicio",
+        "projectDetails": "Detalles del Proyecto",
+        "fileUpload": "Adjuntar Documento (opcional)",
+        "deadline": "Fecha límite (si hay alguna)",
+        "budget": "Presupuesto (aproximado)",
+        "howDidYouHear": "¿Cómo nos conociste?",
+        "agreeToTerms": "Estoy de acuerdo con los términos y condiciones"
+      },
+      "placeholders": {
+        "projectDetails": "Por favor describe tu proyecto en detalle (recuento de palabras, tipo de documento, tema, etc.)",
+        "fileUpload": "Tipos de archivo soportados: PDF, DOC, DOCX, TXT, XLS, XLSX, PPT, PPTX, ODT, RTF (Máx 10MB)",
+        "budget": "p. ej. $500-1000"
+      },
+      "errors": {
+        "firstNameRequired": "Se requiere el nombre",
+        "lastNameRequired": "Se requiere el apellido",
+        "emailRequired": "Se requiere el correo electrónico",
+        "emailInvalid": "Dirección de correo electrónico no válida",
+        "sourceLanguageRequired": "Se requiere el idioma de origen",
+        "targetLanguageRequired": "Se requiere el idioma de destino",
+        "serviceTypeRequired": "Se requiere el tipo de servicio",
+        "projectDetailsRequired": "Se requieren los detalles del proyecto",
+        "fileTooBig": "El tamaño del archivo excede el límite de 10MB",
+        "fileTypeInvalid": "Tipo de archivo no válido. Por favor sube un formato de documento soportado",
+        "termsRequired": "Debes aceptar los términos",
+        "formHasErrors": "Por favor corrige los errores en el formulario"
+      },
+      "success": "¡Tu consulta ha sido enviada con éxito! Nos pondremos en contacto contigo pronto."
+    },
+    "contactInfo": {
+      "title": "Información de Contacto",
+      "address": "Ginebra, Zúrich, Lugano - Suiza",
+      "email": "info@oghamtranslations.com",
+      "hours": "Lunes-Viernes: 9:00 AM - 6:00 PM CET",
+      "reachOut": "No dude en contactarnos directamente:",
+      "businessHours": "Horario de Atención",
+      "weekdays": "Lunes - Viernes: 8:00 AM - 6:00 PM",
+      "saturday": "Sábado: 10:00 AM - 2:00 PM",
+      "sunday": "Domingo: Cerrado",
+      "immediateAssistance": "¿Necesita Asistencia Inmediata?",
+      "urgentNeeds": "Para necesidades urgentes de traducción o preguntas sobre nuestros servicios:",
+      "urgentEmail": "Correo electrónico: urgent@oghamtranslations.com",
+      "responseTime": "Nos esforzamos por responder a todas las consultas dentro de las 2 horas hábiles durante nuestro horario de trabajo."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "questions": [
+        {
+          "question": "¿Cómo obtengo un presupuesto para mi proyecto de traducción?",
+          "answer": "Puede solicitar un presupuesto completando nuestro formulario de contacto o enviándonos un correo electrónico directamente a info@oghamtranslations.com con detalles sobre su proyecto, incluyendo el par de idiomas, tipo de documento y fecha límite."
+        },
+        {
+          "question": "¿Cuál es su tiempo de entrega típico?",
+          "answer": "Nuestro tiempo de entrega depende de la longitud del documento, la complejidad y el par de idiomas. Generalmente, traducimos aproximadamente 2,000-2,500 palabras por día para proyectos estándar."
+        },
+        {
+          "question": "¿Ofrecen traducciones certificadas?",
+          "answer": "Sí, proporcionamos traducciones certificadas para documentos oficiales como certificados de nacimiento, certificados de matrimonio, expedientes académicos y documentos legales."
+        }
+      ]
+    },
+    "languages": {
+      "english": "Inglés",
+      "french": "Francés",
+      "german": "Alemán",
+      "italian": "Italiano",
+      "romansh": "Romanche",
+      "spanish": "Español",
+      "portuguese": "Portugués",
+      "russian": "Ruso",
+      "ukrainian": "Ucraniano",
+      "mandarin": "Mandarín",
+      "japanese": "Japonés",
+      "arabic": "Árabe",
+      "czech": "Checo",
+      "turkish": "Turco"
+    },
+    "serviceTypes": {
+      "documentTranslation": "Traducción de Documentos",
+      "websiteLocalization": "Localización de Sitios Web",
+      "technicalTranslation": "Traducción Técnica",
+      "legalTranslation": "Traducción Legal",
+      "medicalTranslation": "Traducción Médica",
+      "marketingMaterials": "Materiales de Marketing",
+      "subtitling": "Subtitulación",
+      "contentCreation": "Creación de Contenido",
+      "softwareLocalization": "Localización de Software",
+      "other": "Otro"
+    }
+  },
+  "portfolioExtra": {
+    "viewSample": "Ver Muestra",
+    "allProjects": "Todos los Proyectos",
+    "categories": {
+      "legal": "Legal",
+      "technical": "Técnico",
+      "marketing": "Marketing",
+      "website": "Sitio Web",
+      "corporate": "Corporativo",
+      "medical": "Médico",
+      "creative": "Contenido Creativo"
+    }
+  },
+  "terms": {
+    "pageTitle": "Términos y Condiciones",
+    "lastUpdated": "Última actualización",
+    "date": "9 de marzo de 2025",
+    "breadcrumbs": {
+      "home": "Inicio",
+      "terms": "Términos y Condiciones"
+    },
+    "sections": {
+      "introduction": "Introducción",
+      "services": "Descripción de Servicios",
+      "ordering": "Pedido y Entrega de Servicios",
+      "payment": "Precios y Pago",
+      "revisions": "Revisiones y Garantía de Calidad",
+      "confidentiality": "Confidencialidad y Protección de Datos",
+      "intellectual": "Propiedad Intelectual",
+      "liability": "Limitación de Responsabilidad",
+      "termination": "Terminación",
+      "governing": "Ley Aplicable y Resolución de Disputas",
+      "modifications": "Modificaciones a los Términos",
+      "contact": "Información de Contacto"
+    },
+    "content": {
+      "intro": {
+        "title": "1. Introducción",
+        "welcome": "Bienvenido a Ogham Translation Services (\"Compañía\", \"nosotros\", \"nuestro\"). Estos Términos y Condiciones rigen el uso de nuestro sitio web ubicado en www.oghamtranslations.com y los servicios proporcionados por Ogham Translation Services.",
+        "agreement": "Al acceder a nuestro sitio web o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos y Condiciones y a nuestra Política de Privacidad. Si no está de acuerdo con alguna parte de estos términos, no podrá acceder al sitio web ni utilizar nuestros servicios."
+      },
+      "services": {
+        "title": "2. Descripción de los Servicios",
+        "description": "Ogham Translation Services ofrece servicios de traducción profesional en más de 10 idiomas. Nuestros servicios incluyen traducción de documentos, localización de sitios web, traducción técnica y otros servicios lingüísticos como se describe en nuestro sitio web.",
+        "translators": "Todas las traducciones son realizadas por traductores profesionales que son hablantes nativos en sus respectivos idiomas y expertos en sus campos. Cada traducción pasa por un proceso de revisión por un segundo profesional para garantizar calidad y precisión."
+      },
+      "ordering": {
+        "title": "3. Pedido y Entrega de Servicios",
+        "quotes": "3.1. <strong>Presupuestos:</strong> Todos los presupuestos proporcionados por Ogham Translation Services son válidos por 30 días desde la fecha de emisión, a menos que se especifique lo contrario. Los presupuestos se basan en la información proporcionada por el cliente en el momento de la solicitud.",
+        "confirmation": "3.2. <strong>Confirmación del Pedido:</strong> Los servicios solo comenzarán después de recibir la confirmación por escrito del cliente aceptando el presupuesto y estos Términos y Condiciones.",
+        "delivery": "3.3. <strong>Entrega:</strong> La fecha de entrega se acordará en el momento de la confirmación del pedido. Ogham Translation Services hará todo lo posible para cumplir con los plazos de entrega acordados, pero no puede garantizar la entrega en caso de circunstancias fuera de nuestro control.",
+        "format": "3.4. <strong>Formato de Entrega:</strong> A menos que se especifique lo contrario, las traducciones se entregarán en el mismo formato que el texto original. Los servicios de formato adicional pueden incurrir en cargos extra."
+      },
+      "payment": {
+        "title": "4. Precios y Pago",
+        "pricing": "4.1. <strong>Precios:</strong> Nuestros precios se basan en el conteo de palabras, el par de idiomas, la complejidad y el tiempo de entrega. Servicios especiales como traducciones certificadas o temas técnicos pueden incurrir en cargos adicionales.",
+        "terms": "4.2. <strong>Términos de Pago:</strong> Aceptamos PayPal y transferencias bancarias. Para clientes corporativos, podemos organizar facturación con términos de pago. Para proyectos grandes, podemos requerir un porcentaje del pago por adelantado."
+      },
+      "revisions": {
+        "title": "5. Revisiones y Garantía de Calidad",
+        "guarantee": "5.1. <strong>Garantía de Calidad:</strong> Estamos comprometidos a proporcionar traducciones de alta calidad. Si no está satisfecho con nuestro trabajo, puede solicitar revisiones dentro de los 14 días posteriores a la entrega.",
+        "scope": "5.2. <strong>Alcance de la Revisión:</strong> Las revisiones gratuitas se limitan a correcciones de errores de traducción o interpretaciones erróneas. Los cambios en el texto fuente o preferencias estilísticas que no fueron especificadas en el informe original pueden incurrir en cargos adicionales.",
+        "refund": "5.3. <strong>Política de Reembolso:</strong> Si no podemos satisfacer sus requisitos después de intentos razonables de revisión, tiene derecho a un reembolso completo."
+      },
+      "confidentiality": {
+        "title": "6. Confidencialidad y Protección de Datos",
+        "confidentiality": "6.1. <strong>Confidencialidad:</strong> Tratamos todos los documentos e información del cliente como estrictamente confidenciales. Nuestros traductores y personal están sujetos a acuerdos de confidencialidad.",
+        "dataProtection": "6.2. <strong>Protección de Datos:</strong> Procesamos datos personales de acuerdo con nuestra Política de Privacidad y las leyes de protección de datos aplicables.",
+        "security": "6.3. <strong>Seguridad de Datos:</strong> Implementamos medidas técnicas y organizativas apropiadas para proteger sus datos contra acceso no autorizado, alteración, divulgación o destrucción."
+      },
+      "intellectual": {
+        "title": "7. Propiedad Intelectual",
+        "ownership": "7.1. <strong>Propiedad:</strong> El cliente conserva todos los derechos de propiedad intelectual sobre el contenido original. El contenido traducido se convierte en propiedad del cliente tras el pago completo.",
+        "memory": "7.2. <strong>Memoria de Traducción:</strong> A menos que se acuerde lo contrario, podemos almacenar traducciones en nuestra memoria de traducción para propósitos de calidad y consistencia en futuros proyectos para el mismo cliente.",
+        "reference": "7.3. <strong>Referencia:</strong> Podemos incluir el nombre del cliente en nuestra lista de clientes a menos que el cliente solicite lo contrario."
+      },
+      "liability": {
+        "title": "8. Limitación de Responsabilidad",
+        "service": "8.1. <strong>Responsabilidad del Servicio:</strong> Nuestra responsabilidad se limita al monto pagado por los servicios de traducción. No somos responsables de daños indirectos, consecuentes o incidentales.",
+        "content": "8.2. <strong>Responsabilidad del Contenido:</strong> El cliente es responsable de asegurarse de que tiene el derecho de traducir el contenido original. No somos responsables de ninguna infracción de derechos de autor u otros problemas legales relacionados con el contenido de las traducciones.",
+        "timeSensitive": "8.3. <strong>Material Sensible al Tiempo:</strong> Para materiales sensibles al tiempo, el cliente debe notificarnos con anticipación. No somos responsables de pérdidas resultantes de retrasos en la entrega a menos que se acuerde expresamente por escrito."
+      },
+      "termination": {
+        "title": "9. Terminación",
+        "byClient": "9.1. <strong>Por el Cliente:</strong> El cliente puede terminar los servicios en cualquier momento proporcionando un aviso por escrito. El cliente será responsable del pago por todo el trabajo completado hasta el punto de terminación.",
+        "byCompany": "9.2. <strong>Por Ogham Translation Services:</strong> Nos reservamos el derecho de terminar los servicios si el cliente incumple estos Términos y Condiciones, particularmente en lo que respecta a los términos de pago."
+      },
+      "governing": {
+        "title": "10. Ley Aplicable y Resolución de Disputas",
+        "law": "10.1. <strong>Ley Aplicable:</strong> Estos Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes de Suiza.",
+        "resolution": "10.2. <strong>Resolución de Disputas:</strong> Cualquier disputa que surja de o en conexión con estos Términos y Condiciones se resolverá mediante negociación de buena fe. Si la disputa no puede resolverse mediante negociación, se someterá a la jurisdicción exclusiva de los tribunales de Zúrich, Suiza."
+      },
+      "modifications": {
+        "title": "11. Modificaciones a los Términos",
+        "description": "Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Los cambios serán efectivos al ser publicados en el sitio web. Es su responsabilidad revisar estos Términos y Condiciones periódicamente. Su uso continuo de nuestros servicios después de la publicación de los Términos y Condiciones revisados significa que acepta y está de acuerdo con los cambios."
+      },
+      "contact": {
+        "title": "12. Información de Contacto",
+        "description": "Si tiene alguna pregunta sobre estos Términos y Condiciones, por favor contáctenos en:",
+        "email": "Correo electrónico:",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "privacy": {
+    "pageTitle": "Política de Privacidad",
+    "lastUpdated": "Última actualización",
+    "date": "9 de marzo de 2025",
+    "breadcrumbs": {
+      "home": "Inicio",
+      "privacy": "Política de Privacidad"
+    },
+    "sections": {
+      "introduction": "Introducción",
+      "collectedInfo": "Información que Recopilamos",
+      "useOfInfo": "Cómo Usamos Su Información",
+      "infoSharing": "Compartición de Información",
+      "cookies": "Cookies y Tecnologías de Seguimiento",
+      "dataProtection": "Derechos de Protección de Datos",
+      "thirdPartyLinks": "Enlaces de Terceros",
+      "childrenPrivacy": "Privacidad de los Niños",
+      "changes": "Cambios en Esta Política de Privacidad",
+      "contact": "Contáctenos"
+    },
+    "content": {
+      "intro": {
+        "title": "1. Introducción",
+        "description1": "Ogham Translation Services (\"nosotros\", \"nuestro\" o \"nos\") se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información cuando visita nuestro sitio web www.oghamtranslations.com o utiliza nuestros servicios de traducción.",
+        "description2": "Por favor, lea esta Política de Privacidad detenidamente. Si no está de acuerdo con los términos de esta Política de Privacidad, no acceda al sitio ni utilice nuestros servicios. Al acceder a nuestro sitio web o utilizar nuestros servicios de traducción, usted acepta esta Política de Privacidad."
+      },
+      "collect": {
+        "title": "2. Información que Recopilamos",
+        "personal": {
+          "title": "2.1 Información Personal",
+          "intro": "Podemos recopilar información personal que usted nos proporciona voluntariamente cuando:",
+          "list": [
+            "Se registra en nuestro sitio web",
+            "Solicita un presupuesto o realiza un pedido",
+            "Se suscribe a nuestro boletín",
+            "Responde a una encuesta o completa un formulario",
+            "Nos contacta con consultas o comentarios"
+          ],
+          "details": "La información personal puede incluir su nombre, dirección de correo electrónico, dirección postal, número de teléfono, información de la empresa y detalles de pago."
+        },
+        "nonPersonal": {
+          "title": "2.2 Información No Personal",
+          "intro": "Podemos recopilar automáticamente cierta información no personal cuando visita nuestro sitio web, incluyendo:",
+          "list": [
+            "Dirección IP",
+            "Tipo de navegador",
+            "Sistema operativo",
+            "Páginas visitadas y tiempo pasado en nuestro sitio web",
+            "Direcciones de sitios web de referencia"
+          ]
+        },
+        "translation": {
+          "title": "2.3 Contenido para Traducción",
+          "description": "Cuando utiliza nuestros servicios de traducción, necesariamente recopilamos y procesamos el contenido que proporciona para traducción. Esto puede incluir datos personales contenidos en los documentos o materiales que envía."
+        }
+      },
+      "usage": {
+        "title": "3. Cómo Usamos Su Información",
+        "intro": "Podemos usar la información que recopilamos para varios propósitos, incluyendo:",
+        "list": [
+          "Proporcionar, operar y mantener nuestros servicios",
+          "Procesar y cumplir con sus solicitudes de traducción",
+          "Mejorar, personalizar y expandir nuestros servicios",
+          "Entender y analizar cómo utiliza nuestro sitio web",
+          "Desarrollar nuevos productos, servicios, características y funcionalidades",
+          "Comunicarnos con usted sobre nuestros servicios, actualizaciones y otra información",
+          "Enviar comunicaciones de marketing y promocionales (solo con su consentimiento)",
+          "Detectar y prevenir fraudes",
+          "Para cumplimiento, procesos legales y propósitos de aplicación de la ley"
+        ]
+      },
+      "sharing": {
+        "title": "4. Cómo Compartimos Su Información",
+        "intro": "Podemos compartir su información en las siguientes situaciones:",
+        "providers": {
+          "title": "4.1 Proveedores de Servicios",
+          "description": "Podemos compartir su información con proveedores de servicios y traductores que realizan servicios para nosotros o en nuestro nombre, incluyendo procesamiento de pagos, análisis de datos, entrega de correos electrónicos, servicios de alojamiento y servicio al cliente. Estos proveedores de servicios están obligados por contratos a mantener la confidencialidad de la información personal y usarla solo para los fines para los que se la divulgamos."
+        },
+        "transfers": {
+          "title": "4.2 Transferencias Comerciales",
+          "description": "Si estamos involucrados en una fusión, adquisición o venta de la totalidad o una parte de nuestros activos, su información puede ser transferida como parte de esa transacción. Le notificaremos por correo electrónico y/o un aviso destacado en nuestro sitio web sobre cualquier cambio en la propiedad o usos de su información personal."
+        },
+        "legal": {
+          "title": "4.3 Requisitos Legales",
+          "description": "Podemos divulgar su información cuando estemos legalmente obligados a hacerlo para cumplir con la ley aplicable, solicitudes gubernamentales, un procedimiento judicial, orden judicial o proceso legal."
+        },
+        "consent": {
+          "title": "4.4 Con Su Consentimiento",
+          "description": "Podemos divulgar su información personal para cualquier otro propósito con su consentimiento."
+        }
+      },
+      "security": {
+        "title": "5. Seguridad de los Datos",
+        "measures": "Hemos implementado medidas de seguridad técnicas y organizativas apropiadas diseñadas para proteger la seguridad de cualquier información personal que procesamos. Sin embargo, también recuerde que no podemos garantizar que internet en sí sea 100% seguro. Aunque haremos nuestro mejor esfuerzo para proteger su información personal, la transmisión de información personal hacia y desde nuestro sitio web es bajo su propio riesgo.",
+        "confidentiality": "Para el proceso de traducción en sí, empleamos estrictas medidas de confidencialidad. Todos nuestros traductores firman acuerdos de confidencialidad y utilizamos sistemas seguros para la transferencia de documentos."
+      },
+      "retention": {
+        "title": "6. Retención de Datos",
+        "period": "Solo conservaremos su información personal durante el tiempo que sea necesario para los fines establecidos en esta Política de Privacidad, a menos que se requiera o permita un período de retención más largo por ley. Cuando no tengamos una necesidad comercial legítima en curso para procesar su información personal, la eliminaremos o la anonimizaremos.",
+        "translation": "Para el contenido de traducción, generalmente conservamos sus documentos hasta 3 meses después de la finalización del proyecto para abordar cualquier posible pregunta de seguimiento o solicitud de revisión, después de lo cual se eliminan de forma segura. Si requiere la eliminación inmediata de su contenido después de la finalización del proyecto, por favor háganoslo saber."
+      },
+      "rights": {
+        "title": "7. Sus Derechos de Privacidad",
+        "intro": "Dependiendo de su ubicación, puede tener ciertos derechos con respecto a su información personal. Estos pueden incluir:",
+        "list": [
+          "El derecho a acceder a la información personal que tenemos sobre usted",
+          "El derecho a solicitar la corrección de información personal inexacta",
+          "El derecho a solicitar la eliminación de su información personal",
+          "El derecho a oponerse al procesamiento de su información personal",
+          "El derecho a la portabilidad de datos",
+          "El derecho a retirar el consentimiento"
+        ],
+        "exercise": "Para ejercer estos derechos, por favor contáctenos utilizando los detalles proporcionados en la sección \"Contáctenos\" a continuación."
+      },
+      "cookies": {
+        "title": "8. Cookies y Tecnologías de Seguimiento",
+        "description": "Utilizamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestro sitio web y almacenar cierta información. Las cookies son archivos con una pequeña cantidad de datos que pueden incluir un identificador único anónimo. Las cookies se envían a su navegador desde un sitio web y se almacenan en su dispositivo.",
+        "types": "Utilizamos los siguientes tipos de cookies:",
+        "list": [
+          "<strong>Cookies esenciales:</strong> Necesarias para el funcionamiento de nuestro sitio web. Permiten funciones básicas como la navegación de páginas y el acceso a áreas seguras del sitio web.",
+          "<strong>Cookies de análisis:</strong> Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web al recopilar y reportar información de manera anónima.",
+          "<strong>Cookies de preferencia:</strong> Permiten que nuestro sitio web recuerde información que cambia la forma en que el sitio se comporta o se ve, como su idioma preferido."
+        ],
+        "management": "Puede instruir a su navegador para que rechace todas las cookies o para que indique cuándo se está enviando una cookie. Sin embargo, si no acepta cookies, es posible que no pueda usar algunas partes de nuestro sitio web."
+      },
+      "thirdParty": {
+        "title": "9. Sitios Web de Terceros",
+        "description": "Nuestro sitio web puede contener enlaces a otros sitios web que no son operados por nosotros. Si hace clic en un enlace de terceros, será dirigido al sitio de ese tercero. Le recomendamos encarecidamente que revise la Política de Privacidad de cada sitio que visite. No tenemos control ni asumimos responsabilidad por el contenido, las políticas de privacidad o las prácticas de sitios o servicios de terceros."
+      },
+      "children": {
+        "title": "10. Privacidad de los Niños",
+        "description": "Nuestros servicios no están destinados para el uso de niños menores de 16 años. No recopilamos conscientemente información personal de niños menores de 16 años. Si usted es un padre o tutor y tiene conocimiento de que su hijo nos ha proporcionado información personal, por favor contáctenos para que podamos tomar las acciones necesarias."
+      },
+      "changes": {
+        "title": "11. Cambios en Esta Política de Privacidad",
+        "description": "Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos de cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de \"Última actualización\" en la parte superior de esta Política de Privacidad. Se le aconseja revisar esta Política de Privacidad periódicamente para cualquier cambio. Los cambios en esta Política de Privacidad son efectivos cuando se publican en esta página."
+      },
+      "contact": {
+        "title": "12. Contáctenos",
+        "description": "Si tiene alguna pregunta sobre esta Política de Privacidad, por favor contáctenos en:",
+        "email": "Correo electrónico:",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "notFound": {
+    "title": "404 - Página No Encontrada",
+    "message": "La página que está buscando no existe.",
+    "returnHome": "Volver a Inicio"
+  }
+}

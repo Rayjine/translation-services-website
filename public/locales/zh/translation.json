@@ -1,0 +1,1266 @@
+{
+  "common": {
+    "language": "Chinese",
+    "languageNative": "英语",
+    "and": "，",
+    "menu": {
+      "home": "首页",
+      "services": "服务",
+      "team": "团队",
+      "portfolio": "作品集",
+      "pricing": "定价",
+      "contact": "联系"
+    },
+    "footer": {
+      "about": "提供多语言的专业翻译服务。保证质量、准确性和及时性。",
+      "quickLinks": "快速链接",
+      "contactUs": "联系我们",
+      "address": "日内瓦，苏黎世，卢加诺 - 瑞士",
+      "email": "电子邮件",
+      "allRightsReserved": "版权所有",
+      "termsConditions": "条款和条件",
+      "privacyPolicy": "隐私政策"
+    },
+    "buttons": {
+      "getQuote": "获取报价",
+      "ourServices": "我们的服务",
+      "readMore": "阅读更多",
+      "viewAll": "查看全部",
+      "submit": "提交",
+      "send": "发送",
+      "accept": "接受"
+    },
+    "cookieConsent": {
+      "message": "本网站使用cookies以提升用户体验。请参阅我们的",
+      "moreInfo": "了解更多信息。"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "连接语言，传承文化",
+      "subtitle": "准确且文化敏感的翻译服务，满足您的需求——涵盖10多种语言。"
+    },
+    "portfolioShowcase": {
+      "title": "我们的翻译作品集",
+      "paragraph1": "探索我们在各个行业和语言对的翻译作品集。亲眼见证Ogham翻译服务的质量和细致入微的关注。",
+      "paragraph2": "我们的作品集展示了法律文件、技术手册、营销材料和创意内容的翻译样本，均以精确和文化敏感性著称。",
+      "viewButton": "查看我们的作品集"
+    },
+    "about": {
+      "title": "关于Ogham翻译",
+      "paragraph1": "Ogham翻译成立于2022年，是一家致力于提供卓越语言解决方案的精品翻译公司，注重细节。我们为全球企业和个人提供个性化的高质量翻译服务。",
+      "paragraph2": "我们的专业翻译团队由母语为目标语言的专家组成，确保为您提供准确且文化适宜的翻译服务。",
+      "meetTeam": "认识我们的团队"
+    },
+    "whyChooseUs": {
+      "title": "为什么选择我们？",
+      "multipleLanguages": {
+        "title": "多种语言",
+        "description": "提供超过10种语言"
+      },
+      "documentExpertise": {
+        "title": "文档专业知识",
+        "description": "技术、法律、医学及更多"
+      },
+      "certifiedTranslators": {
+        "title": "认证译员",
+        "description": "专业且合格的团队"
+      }
+    },
+    "languages": {
+      "title": "我们提供的语言",
+      "subtitle": "我们的专业翻译团队涵盖来自世界各地的多种语言。",
+      "list": {
+        "english": "英语",
+        "french": "法语",
+        "german": "德语",
+        "italian": "意大利语",
+        "romansh": "罗曼什语",
+        "spanish": "西班牙语",
+        "portuguese": "葡萄牙语",
+        "russian": "俄语",
+        "ukrainian": "乌克兰语",
+        "mandarin": "普通话",
+        "japanese": "日语",
+        "arabic": "阿拉伯语",
+        "czech": "捷克语",
+        "turkish": "土耳其语"
+      }
+    },
+    "services": {
+      "title": "我们的服务",
+      "subtitle": "我们提供全面的翻译服务，以满足您的所有需求。",
+      "documentTranslation": {
+        "title": "文件翻译",
+        "description": "专业翻译法律文件、合同、证书等。"
+      },
+      "websiteLocalization": {
+        "title": "网站本地化",
+        "description": "调整您的网站内容以适应不同地区和语言，拓展全球受众。"
+      },
+      "technicalTranslation": {
+        "title": "技术翻译",
+        "description": "准确翻译技术手册、指南和规格说明。"
+      },
+      "viewAllServices": "查看所有服务"
+    },
+    "portfolio": {
+      "title": "我们的翻译作品集",
+      "paragraph1": "探索我们在各个行业和语言对的翻译作品展示。亲眼见证奥格姆翻译服务的质量和细节关注。",
+      "paragraph2": "我们的作品集展示了法律文件、技术手册、营销材料和创意内容的样本，这些作品以精确的翻译和文化敏感性为特色。",
+      "viewPortfolio": "查看我们的作品集"
+    },
+    "cta": {
+      "title": "准备好开始了吗？",
+      "subtitle": "今天就联系我们，获取您的翻译项目的免费报价。",
+      "button": "请求报价"
+    }
+  },
+  "services": {
+    "pageTitle": "我们的服务",
+    "pageSubtitle": "我们提供全面的翻译服务，以满足您的特定需求。",
+    "process": {
+      "title": "我们的翻译流程",
+      "subtitle": "我们遵循严格的流程，以确保为您的内容提供最高质量的翻译：",
+      "steps": [
+        {
+          "title": "项目分析",
+          "description": "我们分析您的内容、需求和目标受众，以确定最佳方法。"
+        },
+        {
+          "title": "翻译",
+          "description": "我们的母语翻译员将您的内容专业地转换为目标语言。"
+        },
+        {
+          "title": "编辑与审校",
+          "description": "第二位语言专家会审查翻译的准确性、一致性和风格。"
+        },
+        {
+          "title": "质量保证",
+          "description": "严格的质量检查确保您的翻译符合我们的高标准。"
+        },
+        {
+          "title": "客户审阅",
+          "description": "我们根据您的反馈进行必要的调整。"
+        },
+        {
+          "title": "交付",
+          "description": "您的最终翻译将按时按预算以您偏好的格式交付。"
+        }
+      ]
+    },
+    "categories": {
+      "document": {
+        "title": "文件翻译",
+        "description": "对各种文件类型进行专业翻译，确保准确性和细节关注。",
+        "services": {
+          "legal": {
+            "title": "法律文件",
+            "description": "合同、协议、法院文件、法律意见、专利和认证。",
+            "features": [
+              "认证翻译",
+              "法律术语专业知识",
+              "保密性保证"
+            ]
+          },
+          "business": {
+            "title": "商业文件",
+            "description": "财务报告、商业计划、营销材料和公司通讯。",
+            "features": [
+              "行业特定术语",
+              "品牌一致性",
+              "格式保留"
+            ]
+          },
+          "technical": {
+            "title": "技术文件",
+            "description": "用户手册、技术规格、说明指南和技术报告。",
+            "features": [
+              "技术准确性",
+              "必要时简化语言",
+              "主题专家"
+            ]
+          },
+          "academic": {
+            "title": "学术文件",
+            "description": "文凭、成绩单、研究论文、论文和学术认证。",
+            "features": [
+              "学术术语专业知识",
+              "研究级翻译",
+              "引用格式"
+            ]
+          }
+        }
+      },
+      "website": {
+        "title": "网站翻译",
+        "description": "全面的网站本地化服务，帮助您的业务覆盖全球受众。",
+        "services": {
+          "localization": {
+            "title": "网站本地化",
+            "description": "为国际市场提供完整的网站内容翻译和文化适应。",
+            "features": [
+              "文化适应",
+              "SEO优化",
+              "用户界面调整"
+            ]
+          },
+          "ecommerce": {
+            "title": "电子商务翻译",
+            "description": "产品描述、类别、结账流程和客户支持内容。",
+            "features": [
+              "一致的产品术语",
+              "支付方式本地化",
+              "以客户为中心的语言"
+            ]
+          },
+          "cms": {
+            "title": "CMS集成",
+            "description": "与WordPress、Shopify和其他内容管理系统的集成。",
+            "features": [
+              "插件兼容性",
+              "多语言设置",
+              "自动内容同步"
+            ]
+          },
+          "seo": {
+            "title": "多语言SEO",
+            "description": "针对多个目标市场的关键词研究和优化。",
+            "features": [
+              "本地关键词研究",
+              "元标签优化",
+              "SEO友好的URL"
+            ]
+          }
+        }
+      },
+      "specialized": {
+        "title": "专业翻译",
+        "description": "为需要专业知识和术语的特定行业提供专家翻译。",
+        "services": {
+          "medical": {
+            "title": "医学翻译",
+            "description": "医疗记录、制药文件、临床试验和医疗保健材料。",
+            "features": [
+              "医学术语专长",
+              "法规合规性",
+              "患者友好语言"
+            ]
+          },
+          "financial": {
+            "title": "金融翻译",
+            "description": "财务报表、投资报告、银行文件和保险材料。",
+            "features": [
+              "金融术语准确性",
+              "数字格式",
+              "法规合规性"
+            ]
+          },
+          "marketing": {
+            "title": "市场营销翻译",
+            "description": "营销活动、宣传册、广告和促销材料。",
+            "features": [
+              "创意改编",
+              "文化相关性",
+              "品牌语调保持"
+            ]
+          },
+          "literary": {
+            "title": "文学翻译",
+            "description": "书籍、诗歌、剧本和保持作者风格和意图的创意作品。",
+            "features": [
+              "风格忠实",
+              "文化细微差别",
+              "创意改编"
+            ]
+          }
+        }
+      },
+      "additional": {
+        "title": "附加服务",
+        "description": "满足您数字通信需求的补充语言服务。",
+        "services": {
+          "content": {
+            "title": "内容创作",
+            "description": "为您的目标市场量身定制的原创多语言内容创作。",
+            "features": [
+              "母语撰稿人",
+              "市场特定内容",
+              "SEO优化"
+            ]
+          },
+          "software": {
+            "title": "软件本地化",
+            "description": "软件界面、应用程序和游戏的翻译和改编。",
+            "features": [
+              "UI/UX考量",
+              "字符串管理",
+              "测试和质量保证"
+            ]
+          },
+          "subtitling": {
+            "title": "字幕制作",
+            "description": "需要文本翻译的视频和电影的多媒体翻译服务。",
+            "features": [
+              "时间同步",
+              "文化适应",
+              "多语言支持"
+            ]
+          }
+        }
+      }
+    },
+    "documentTranslation": {
+      "title": "文件翻译",
+      "description": "法律文件、合同、证书等的专业翻译。",
+      "features": [
+        "法律文件翻译",
+        "公司文件翻译",
+        "个人文件翻译",
+        "证书翻译",
+        "学术文件翻译"
+      ]
+    },
+    "websiteLocalization": {
+      "title": "网站本地化",
+      "description": "调整您的网站内容以适应不同地区和语言，触及全球受众。",
+      "features": [
+        "网站内容翻译",
+        "目标市场的文化适应",
+        "SEO优化翻译",
+        "多媒体本地化",
+        "电子商务本地化"
+      ]
+    },
+    "technicalTranslation": {
+      "title": "技术翻译",
+      "description": "技术手册、指南和规格的准确翻译。",
+      "features": [
+        "技术手册翻译",
+        "软件文档",
+        "专利翻译",
+        "技术规格",
+        "用户指南和说明手册"
+      ]
+    }
+  },
+  "portfolio": {
+    "pageTitle": "我们的翻译作品集",
+    "pageSubtitle": "我们在各个行业和语言中的翻译作品样本",
+    "categories": {
+      "all": "所有项目",
+      "featured": "精选",
+      "legal": "法律",
+      "medical": "医学",
+      "technical": "技术",
+      "marketing": "市场营销",
+      "literary": "文学与创意"
+    },
+    "featuredChip": "精选",
+    "viewProject": "查看项目",
+    "dialogTitle": "翻译项目",
+    "languages": {
+      "english": "英语",
+      "french": "法语",
+      "german": "德语",
+      "italian": "意大利语",
+      "japanese": "日语",
+      "mandarin": "普通话",
+      "russian": "俄语"
+    },
+    "preview": {
+      "title": "项目预览",
+      "sourceDocument": "源文件",
+      "translatedDocument": "翻译文件",
+      "sourceDocumentPlaceholder": "源文件将在此显示。在实际应用中，这将显示实际的PDF内容。",
+      "translatedDocumentPlaceholder": "翻译文件将在此显示。在实际应用中，这将显示实际的PDF内容。",
+      "downloadSource": "下载源文件",
+      "downloadTranslation": "下载翻译",
+      "sideBySide": "并排",
+      "original": "原文",
+      "translation": "翻译"
+    },
+    "viewModes": {
+      "comparison": "并排",
+      "before": "仅原文",
+      "after": "仅翻译"
+    },
+    "previewPlaceholder": {
+      "sourceMessage": "源文档将在此显示。",
+      "translatedMessage": "翻译文档将在此显示。",
+      "implementationNote": "在实际应用中，这将显示实际的PDF内容。"
+    },
+    "beforeAfter": "前后对比",
+    "showcaseItems": [
+      {
+        "title": "合同翻译",
+        "description": "从英语到法语的合同翻译。"
+      },
+      {
+        "title": "医学研究文章翻译",
+        "description": "从德语到英语的医学研究文章翻译。"
+      },
+      {
+        "title": "财务报告翻译",
+        "description": "从法语到日语的财务报告翻译。"
+      },
+      {
+        "title": "营销材料翻译",
+        "description": "从英语到普通话的营销材料翻译。"
+      },
+      {
+        "title": "文学翻译",
+        "description": "从俄语到意大利语的文学翻译。"
+      }
+    ]
+  },
+  "team": {
+    "pageTitle": "我们的团队",
+    "pageSubtitle": "认识我们敬业的专业翻译和语言专家团队。",
+    "professionalTranslators": "总部位于瑞士的专业翻译",
+    "description": "这里展示的专业人员是我们的团队负责人，每位负责一种主要语言的工作，该语言是他们的母语。我们还有其他合作者，确保至少有两位专家翻译并审阅任何可能的语言组合。这种双专家方法保证了我们所有翻译的最高质量和文化准确性。总部位于瑞士，我们利用我们的多元文化环境，提供精确且文化适宜的多种欧洲和全球语言翻译。",
+    "languages": "语言",
+    "specialties": "专业领域",
+    "educationExperience": "教育与经验",
+    "experienceLabel": "经验",
+    "ourFounders": "我们的创始人",
+    "ourTranslators": "我们的译者",
+    "ourPartners": "我们的合作伙伴",
+    "philosophy": {
+      "title": "我们的翻译理念",
+      "subtitle": "在Ogham翻译公司，我们相信有效的翻译不仅仅是文字的转换——它关乎传达意义、背景和文化细微差别。我们位于瑞士，一个拥有四种官方语言的国家，我们从根本上理解多语言环境，并将这种独特视角带入每一个项目。",
+      "values": [
+        {
+          "title": "文化专长",
+          "description": "我们的译者不仅了解他们所使用的语言，还理解背后的文化，确保您的信息保持适当和有效。"
+        },
+        {
+          "title": "专业知识",
+          "description": "我们根据译者在您特定领域的专业知识分配任务，无论是法律、医学、技术还是创意内容。"
+        },
+        {
+          "title": "质量保证",
+          "description": "每个翻译都经过严格的质量控制流程，包括由第二位语言学家进行审核，以确保准确性和一致性。"
+        },
+        {
+          "title": "持续学习",
+          "description": "我们的译者定期参加专业发展，以保持最新的术语和翻译技术。"
+        }
+      ]
+    },
+    "members": [
+      {
+        "name": "Célia Brodard",
+        "role": "高级译者 - 法语",
+        "bio": "Célia出生并成长于日内瓦，对语言充满热情，专注于法律、金融和商业文件。作为瑞士顶尖学府的校友，她将学术背景与多年的专业翻译经验相结合。她的瑞士血统和对多元文化环境的深刻理解使她能够在每个项目中确保精确和文化敏感性。",
+        "languages": [
+          "法语",
+          "英语",
+          "德语"
+        ],
+        "specialties": [
+          "法律",
+          "商务",
+          "金融"
+        ],
+        "experience": "8年以上",
+        "education": "多语言传播学士 - 瑞士日内瓦大学；专业翻译硕士（法律和金融） - 瑞士日内瓦大学翻译与口译学院 (FTI)"
+      },
+      {
+        "name": "马克斯·布伦纳",
+        "role": "高级翻译 - 德语",
+        "bio": "马克斯常驻苏黎世，从事技术和科学文件翻译已有十多年。凭借工程和语言学背景，他在翻译工作中带来了跨学科的专业知识。他在瑞士顶尖技术大学的培训使他能够以无与伦比的精确度和清晰度处理高度复杂和技术性的翻译。",
+        "languages": [
+          "德语",
+          "英语",
+          "法语"
+        ],
+        "specialties": [
+          "技术",
+          "科学",
+          "工程"
+        ],
+        "experience": "12年以上",
+        "education": "机械工程学士 - 瑞士苏黎世联邦理工学院 (ETH Zurich)；语言与传播硕士 - 瑞士苏黎世大学"
+      },
+      {
+        "name": "伊内斯·费雷拉",
+        "role": "高级翻译 - 葡萄牙语和西班牙语",
+        "bio": "伊内斯来自里斯本，现在居住在卢加诺。她专注于创意和市场营销翻译，对文学和故事讲述充满热情。她在葡萄牙顶尖大学之一的语言学和文学研究的学术基础，使她能够以文化细腻和创意的方式进行翻译。",
+        "languages": [
+          "葡萄牙语",
+          "西班牙语",
+          "意大利语",
+          "法语"
+        ],
+        "specialties": [
+          "市场营销",
+          "创意",
+          "文学"
+        ],
+        "experience": "7年以上",
+        "education": "语言学学士 - 葡萄牙里斯本大学；翻译、口译与跨文化研究硕士 - 西班牙巴塞罗那自治大学 (UAB)"
+      },
+      {
+        "name": "陈健",
+        "role": "高级翻译 - 普通话",
+        "bio": "Jian是一位专注于商业和技术文件的中英翻译专家。他在中国一所著名大学接受了翻译和跨文化交流的正规培训，并在瑞士进一步深造，为进入中国市场的瑞士公司弥合文化和语言差距。",
+        "languages": [
+          "普通话",
+          "英语",
+          "法语"
+        ],
+        "specialties": [
+          "商业",
+          "技术",
+          "电子商务"
+        ],
+        "experience": "11年以上",
+        "education": "英语语言研究学士 - 中国复旦大学；翻译与口译硕士 - 瑞士苏黎世大学"
+      },
+      {
+        "name": "Alessandra Conti",
+        "role": "高级翻译 - 意大利语",
+        "bio": "来自瑞士意大利语区提契诺的Alessandra擅长翻译与艺术、文化和旅游相关的文件。她对意大利文学和瑞士遗产的深刻了解使她的翻译文化丰富且精准。她在跨文化研究和艺术史方面的学术背景为她的专业知识增添了深度。",
+        "languages": [
+          "意大利语",
+          "德语",
+          "英语"
+        ],
+        "specialties": [
+          "艺术",
+          "文化",
+          "旅游",
+          "奢侈品"
+        ],
+        "experience": "9年以上",
+        "education": "艺术史学士 - 意大利博洛尼亚大学；高级跨文化交流研究硕士 - 瑞士卢加诺大学"
+      },
+      {
+        "name": "Emiko Shimizu",
+        "role": "高级翻译 - 日语",
+        "bio": "Emiko在为瑞士主要制药和钟表公司翻译技术手册、专利和科学文献方面拥有丰富经验。她在日本接受的严格学术培训，加上在瑞士的经验，使她成为跨行业高度专业化和技术翻译的不可或缺的专家。",
+        "languages": [
+          "日语",
+          "英语",
+          "德语"
+        ],
+        "specialties": [
+          "技术",
+          "专利",
+          "制药",
+          "医学"
+        ],
+        "experience": "10年以上",
+        "education": "药学学士 - 日本东京大学；技术翻译硕士 - 日本东京外国语大学"
+      },
+      {
+        "name": "Olena Kovalenko",
+        "role": "高级翻译 - 乌克兰语和俄语",
+        "bio": "Olena 来自基辅，专注于文学、学术和法律翻译。她拥有语言学和文学研究背景，翻译了众多文学作品和学术论文，确保每次翻译都具有真实性和文化丰富性。",
+        "languages": [
+          "乌克兰语",
+          "俄语",
+          "英语",
+          "德语"
+        ],
+        "specialties": [
+          "文学",
+          "学术",
+          "法律"
+        ],
+        "experience": "8年以上",
+        "education": "语言学学士 - 乌克兰基辅塔拉斯·舍甫琴科国立大学；翻译硕士 - 奥地利维也纳大学"
+      },
+      {
+        "name": "罗伯特·艾因斯沃斯",
+        "role": "高级翻译 - 英语",
+        "bio": "作为一名以英语为母语的人，罗伯特具备卓越的写作能力，确保所有英语翻译的最高质量。凭借新闻和翻译背景，他在从商业报告到学术研究和营销材料的广泛行业中创作出引人入胜且准确的内容。",
+        "languages": [
+          "英语",
+          "法语",
+          "德语"
+        ],
+        "specialties": [
+          "商业",
+          "营销",
+          "新闻",
+          "学术"
+        ],
+        "experience": "14年以上",
+        "education": "英语语言文学学士 - 英国牛津大学；翻译与口译硕士 - 英国威斯敏斯特大学"
+      },
+      {
+        "name": "克劳迪奥·切雷盖蒂",
+        "role": "高级翻译 - 罗曼什语",
+        "bio": "作为少数专业的罗曼什语翻译之一，克劳迪奥通过他的翻译工作保护和推广这种稀有的瑞士语言。凭借深厚的语言学和语言遗产学术基础，他是瑞士官方文件和文化保护项目的可信赖专家。",
+        "languages": [
+          "罗曼什语",
+          "德语",
+          "意大利语",
+          "法语",
+          "英语"
+        ],
+        "specialties": [
+          "官方文件",
+          "文化",
+          "遗产"
+        ],
+        "experience": "12年以上",
+        "education": "罗曼什文学与语言学学士 - 瑞士苏黎世大学；古典语言学硕士 - 瑞士弗里堡大学"
+      },
+      {
+        "name": "阿明·本切克鲁恩",
+        "role": "高级翻译 - 阿拉伯语",
+        "bio": "阿明专注于外交、商业和法律领域的阿拉伯语翻译。通过国际关系和专业翻译研究的培训，他在阿拉伯语地区与瑞士多元化的商业和外交环境之间架起桥梁，确保翻译既准确又具有文化敏感性。",
+        "languages": [
+          "阿拉伯语",
+          "法语",
+          "英语"
+        ],
+        "specialties": [
+          "外交",
+          "法律",
+          "国际关系"
+        ],
+        "experience": "9年以上",
+        "education": "翻译学学士 – 摩洛哥哈桑二世大学；国际关系硕士 – 瑞士日内瓦高等国际关系及发展研究院 (IHEID)"
+      }
+    ]
+  },
+  "portfolioDetails": {
+    "projectDescription": "项目描述",
+    "languages": "语言",
+    "industry": "行业",
+    "tags": "标签"
+  },
+  "pricing": {
+    "pageTitle": "定价",
+    "pageSubtitle": "透明且灵活的定价选项",
+    "guarantee": {
+      "title": "我们的满意保证",
+      "description": "我们致力于提供符合您期望的高质量翻译。如果您对我们的工作不完全满意，我们将免费进行修改。如果您在任何时候觉得翻译不符合您的期望，您可以申请取消，我们将退款——无需任何理由。",
+      "provisions": "对于所有项目，我们提供：",
+      "points": {
+        "accurate": "准确且符合语境的翻译",
+        "onTime": "按项目范围内商定的时间准时交付",
+        "consistent": "文件中术语的一致性",
+        "responsive": "响应迅速的客户服务和项目更新"
+      }
+    },
+    "standard": "标准",
+    "professional": "专业",
+    "premium": "高级",
+    "perWord": "每字",
+    "startingAt": "起价",
+    "contactForPricing": "联系获取报价",
+    "customSolution": "定制解决方案",
+    "paymentTerms": "付款条款",
+    "termsDescription": "我们接受PayPal和银行转账。对于企业客户，我们可以安排带有付款条款的发票。对于大型项目，我们可能需要预付部分款项。",
+    "packages": {
+      "title": "翻译套餐",
+      "subtitle": "选择适合您翻译需求的套餐。所有价格均为瑞士法郎。",
+      "plans": [
+        {
+          "title": "标准",
+          "price": "0.08",
+          "unit": "每字",
+          "description": "适用于一般内容和基础文件",
+          "features": [
+            {
+              "text": "高质量翻译"
+            },
+            {
+              "text": "全面校对"
+            },
+            {
+              "text": "标准交付时间"
+            },
+            {
+              "text": "特定语境术语"
+            },
+            {
+              "text": "加急选项"
+            },
+            {
+              "text": "专属团队"
+            }
+          ]
+        },
+        {
+          "title": "专业",
+          "price": "0.12",
+          "unit": "每字",
+          "description": "适用于商业和专业内容",
+          "features": [
+            {
+              "text": "高质量翻译"
+            },
+            {
+              "text": "增强校对"
+            },
+            {
+              "text": "更快的交付时间"
+            },
+            {
+              "text": "上下文特定术语"
+            },
+            {
+              "text": "加急选项"
+            },
+            {
+              "text": "专属团队"
+            }
+          ]
+        },
+        {
+          "title": "高级",
+          "price": "0.16",
+          "unit": "每字",
+          "description": "适用于关键和高曝光内容",
+          "features": [
+            {
+              "text": "高质量翻译"
+            },
+            {
+              "text": "多轮修订"
+            },
+            {
+              "text": "优先交付时间"
+            },
+            {
+              "text": "上下文特定术语"
+            },
+            {
+              "text": "加急选项"
+            },
+            {
+              "text": "专属团队"
+            }
+          ]
+        }
+      ]
+    },
+    "rates": {
+      "title": "详细服务费率",
+      "subtitle": "下表提供了特定服务类型的更详细定价信息。",
+      "note": "除非另有说明，费率以每字瑞士法郎（CHF）计算。",
+      "headers": {
+        "service": "服务",
+        "standard": "标准",
+        "professional": "专业",
+        "premium": "高级"
+      },
+      "services": [
+        {
+          "service": "文件翻译",
+          "standard": "0.08-0.10",
+          "professional": "0.12-0.14",
+          "premium": "0.16-0.20"
+        },
+        {
+          "service": "网站本地化",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.16",
+          "premium": "0.18-0.22"
+        },
+        {
+          "service": "技术翻译",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.18",
+          "premium": "0.20-0.25"
+        },
+        {
+          "service": "法律翻译",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "医学翻译",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "市场内容",
+          "standard": "0.09-0.11",
+          "professional": "0.13-0.15",
+          "premium": "0.17-0.22"
+        },
+        {
+          "service": "字幕翻译",
+          "standard": "6-8",
+          "professional": "9-12",
+          "premium": "14-18",
+          "note": "每分钟视频的价格"
+        }
+      ]
+    },
+    "process": {
+      "title": "我们的定价流程",
+      "subtitle": "了解我们如何为翻译服务定价",
+      "steps": [
+        {
+          "title": "评估",
+          "description": "我们评估您的文件字数、语言对、技术复杂性和截止日期要求。"
+        },
+        {
+          "title": "报价",
+          "description": "我们根据您的具体需求提供详细的报价，价格透明。"
+        },
+        {
+          "title": "批准",
+          "description": "一旦您批准报价，我们就开始翻译过程。"
+        },
+        {
+          "title": "交付",
+          "description": "我们在约定的截止日期或之前交付完成的翻译。"
+        }
+      ]
+    },
+    "faqs": {
+      "title": "定价常见问题",
+      "subtitle": "关于我们定价的常见问题解答",
+      "questions": [
+        {
+          "question": "您如何计算翻译项目的费用？",
+          "answer": "我们通常按源文本的字数收费。费率因语言对、内容复杂性、所需专业知识和交付时间而异。对于一些服务，如字幕，我们按视频分钟收费。"
+        },
+        {
+          "question": "除了每字费率外，还有其他费用吗？",
+          "answer": "在大多数情况下，每字费率涵盖完整服务。然而，加急订单（通常+25-50%）、特殊格式要求或超出套餐包含的额外修订轮次可能会产生额外费用。"
+        },
+        {
+          "question": "您接受哪些付款方式？",
+          "answer": "我们接受PayPal、银行转账，对于企业客户，我们可以安排带有付款条款的发票。"
+        },
+        {
+          "question": "您是否为大型项目提供折扣？",
+          "answer": "是的，我们为大型项目提供批量折扣。折扣百分比随着项目规模的增加而增加，通常从超过10,000字的项目开始提供5%的折扣，超过50,000字的项目可提供高达15%的折扣。"
+        },
+        {
+          "question": "您对修订的政策是什么？",
+          "answer": "我们的标准套餐包括一次修订，专业套餐包括两次修订，尊享套餐在合理范围内提供无限次修订。如有需要，可以购买额外的修订轮次。"
+        },
+        {
+          "question": "您能多快交付翻译？",
+          "answer": "我们的标准交付时间大约为每个工作日2,000-2,500字。加急服务需额外收费，可以将交付时间缩短30-50%。对于大型紧急项目，我们可以安排多名译员以满足紧迫的截止日期。"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好开始了吗？",
+      "subtitle": "今天就联系我们，获取您的翻译项目的免费报价。",
+      "button": "请求报价"
+    }
+  },
+  "contact": {
+    "pageTitle": "联系我们",
+    "pageSubtitle": "我们随时准备帮助您满足翻译需求。今天就与我们联系。",
+    "standardPackage": {
+      "title": "标准",
+      "description": "适用于一般内容翻译，标准交付时间。",
+      "features": [
+        "高质量翻译",
+        "基础校对",
+        "标准交付时间",
+        "电子邮件支持"
+      ]
+    },
+    "professionalPackage": {
+      "title": "专业",
+      "description": "适用于需要技术专长的专业内容。",
+      "features": [
+        "高质量翻译",
+        "全面校对",
+        "更快交付时间",
+        "特定语境术语",
+        "优先电子邮件支持"
+      ]
+    },
+    "premiumPackage": {
+      "title": "高级",
+      "description": "适用于需要卓越质量的高优先级项目。",
+      "features": [
+        "高级质量翻译",
+        "全面校对",
+        "加急交付",
+        "专属项目经理",
+        "电话和电子邮件支持",
+        "技术专长"
+      ]
+    },
+    "form": {
+      "title": "请求报价",
+      "subtitle": "填写下面的表格，我们将为您的翻译项目提供报价。",
+      "name": "您的姓名",
+      "email": "电子邮件地址",
+      "phone": "电话号码（可选）",
+      "subject": "主题",
+      "message": "您的信息",
+      "submit": "发送信息",
+      "submitRequest": "提交请求",
+      "agreeTerms": "我同意",
+      "termsAgreement": "我同意条款和条件以及隐私政策",
+      "actions": {
+        "chooseFile": "选择文件"
+      },
+      "sections": {
+        "contactInfo": "联系信息",
+        "projectDetails": "项目详情",
+        "additionalInfo": "附加信息"
+      },
+      "fields": {
+        "firstName": "名字",
+        "lastName": "姓氏",
+        "email": "电子邮件",
+        "phone": "电话",
+        "company": "公司（如适用）",
+        "sourceLanguage": "源语言",
+        "targetLanguage": "目标语言",
+        "serviceType": "服务类型",
+        "projectDetails": "项目详情",
+        "fileUpload": "附加文件（可选）",
+        "deadline": "截止日期（如果有）",
+        "budget": "预算（大致）",
+        "howDidYouHear": "您是如何得知我们的？",
+        "agreeToTerms": "我同意条款和条件"
+      },
+      "placeholders": {
+        "projectDetails": "请详细描述您的项目（字数、文档类型、主题等）",
+        "fileUpload": "支持的文件类型：PDF, DOC, DOCX, TXT, XLS, XLSX, PPT, PPTX, ODT, RTF（最大10MB）",
+        "budget": "例如：$500-1000"
+      },
+      "errors": {
+        "firstNameRequired": "名字是必填项",
+        "lastNameRequired": "姓氏是必填项",
+        "emailRequired": "电子邮件是必填项",
+        "emailInvalid": "无效的电子邮件地址",
+        "sourceLanguageRequired": "源语言是必填项",
+        "targetLanguageRequired": "目标语言是必填项",
+        "serviceTypeRequired": "服务类型是必填项",
+        "projectDetailsRequired": "项目详情是必填项",
+        "fileTooBig": "文件大小超过10MB限制",
+        "fileTypeInvalid": "无效的文件类型。请上传支持的文档格式",
+        "termsRequired": "您必须同意条款",
+        "formHasErrors": "请更正表单中的错误"
+      },
+      "success": "您的询问已成功提交！我们将尽快与您联系。"
+    },
+    "contactInfo": {
+      "title": "联系信息",
+      "address": "日内瓦、苏黎世、卢加诺 - 瑞士",
+      "email": "info@oghamtranslations.com",
+      "hours": "周一至周五：上午9:00 - 下午6:00 CET",
+      "reachOut": "欢迎直接联系我们：",
+      "businessHours": "营业时间",
+      "weekdays": "周一至周五：上午8:00 - 下午6:00",
+      "saturday": "周六：上午10:00 - 下午2:00",
+      "sunday": "周日：休息",
+      "immediateAssistance": "需要立即帮助？",
+      "urgentNeeds": "如需紧急翻译或对我们的服务有疑问：",
+      "urgentEmail": "电子邮件：urgent@oghamtranslations.com",
+      "responseTime": "我们力求在工作时间内于2个工作小时内回复所有咨询。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "questions": [
+        {
+          "question": "如何获取翻译项目的报价？",
+          "answer": "您可以通过填写我们的联系表或直接发送电子邮件至 info@oghamtranslations.com 来请求报价，请提供项目详情，包括语言对、文件类型和截止日期。"
+        },
+        {
+          "question": "你们的通常交付时间是多久？",
+          "answer": "我们的交付时间取决于文件长度、复杂性和语言对。通常情况下，我们每天可翻译约2,000-2,500字的标准项目。"
+        },
+        {
+          "question": "你们提供认证翻译吗？",
+          "answer": "是的，我们提供官方文件的认证翻译，如出生证明、结婚证书、学术成绩单和法律文件。"
+        }
+      ]
+    },
+    "languages": {
+      "english": "英语",
+      "french": "法语",
+      "german": "德语",
+      "italian": "意大利语",
+      "romansh": "罗曼什语",
+      "spanish": "西班牙语",
+      "portuguese": "葡萄牙语",
+      "russian": "俄语",
+      "ukrainian": "乌克兰语",
+      "mandarin": "普通话",
+      "japanese": "日语",
+      "arabic": "阿拉伯语",
+      "czech": "捷克语",
+      "turkish": "土耳其语"
+    },
+    "serviceTypes": {
+      "documentTranslation": "文件翻译",
+      "websiteLocalization": "网站本地化",
+      "technicalTranslation": "技术翻译",
+      "legalTranslation": "法律翻译",
+      "medicalTranslation": "医学翻译",
+      "marketingMaterials": "营销材料",
+      "subtitling": "字幕制作",
+      "contentCreation": "内容创作",
+      "softwareLocalization": "软件本地化",
+      "other": "其他"
+    }
+  },
+  "portfolioExtra": {
+    "viewSample": "查看样本",
+    "allProjects": "所有项目",
+    "categories": {
+      "legal": "法律",
+      "technical": "技术",
+      "marketing": "市场营销",
+      "website": "网站",
+      "corporate": "企业",
+      "medical": "医疗",
+      "creative": "创意内容"
+    }
+  },
+  "terms": {
+    "pageTitle": "条款和条件",
+    "lastUpdated": "最后更新",
+    "date": "2025年3月9日",
+    "breadcrumbs": {
+      "home": "首页",
+      "terms": "条款和条件"
+    },
+    "sections": {
+      "introduction": "介绍",
+      "services": "服务描述",
+      "ordering": "服务订购和交付",
+      "payment": "定价和付款",
+      "revisions": "修订和质量保证",
+      "confidentiality": "保密和数据保护",
+      "intellectual": "知识产权",
+      "liability": "责任限制",
+      "termination": "终止",
+      "governing": "适用法律和争议解决",
+      "modifications": "条款修改",
+      "contact": "联系信息"
+    },
+    "content": {
+      "intro": {
+        "title": "1. 介绍",
+        "welcome": "欢迎来到Ogham翻译服务（“公司”、“我们”、“我们的”）。这些条款和条件约束您使用我们位于www.oghamtranslations.com的网站和Ogham翻译服务提供的服务。",
+        "agreement": "通过访问我们的网站或使用我们的服务，您同意受这些条款和条件以及我们的隐私政策的约束。如果您不同意这些条款的任何部分，您不得访问网站或使用我们的服务。"
+      },
+      "services": {
+        "title": "2. 服务描述",
+        "description": "Ogham翻译服务提供超过10种语言的专业翻译服务。我们的服务包括文件翻译、网站本地化、技术翻译以及网站上描述的其他语言服务。",
+        "translators": "所有翻译均由专业翻译人员完成，他们是各自语言的母语者，并且是其领域的主题专家。每个翻译都经过第二位专业人员的审核，以确保质量和准确性。"
+      },
+      "ordering": {
+        "title": "3. 服务订购和交付",
+        "quotes": "3.1. <strong>报价：</strong> Ogham翻译服务提供的所有报价自出具之日起30天内有效，除非另有说明。报价基于客户在请求时提供的信息。",
+        "confirmation": "3.2. <strong>订单确认：</strong> 服务仅在收到客户书面确认接受报价和这些条款和条件后开始。",
+        "delivery": "3.3. <strong>交付：</strong> 交付日期将在订单确认时商定。Ogham翻译服务将尽一切努力满足商定的交付期限，但在超出我们控制的情况下无法保证交付。",
+        "format": "3.4. <strong>交付格式：</strong> 除非另有说明，翻译将以与源文本相同的格式交付。额外的格式服务可能会产生额外费用。"
+      },
+      "payment": {
+        "title": "4. 定价和付款",
+        "pricing": "4.1. <strong>定价：</strong>我们的定价基于字数、语言对、复杂性和交付时间。认证翻译或技术主题等特殊服务可能会产生额外费用。",
+        "terms": "4.2. <strong>付款条款：</strong>我们接受PayPal和银行转账。对于企业客户，我们可以安排发票和付款条款。对于大型项目，我们可能需要预付部分款项。"
+      },
+      "revisions": {
+        "title": "5. 修订和质量保证",
+        "guarantee": "5.1. <strong>质量保证：</strong>我们致力于提供高质量的翻译。如果您对我们的工作不满意，可以在交付后14天内请求修订。",
+        "scope": "5.2. <strong>修订范围：</strong>免费修订仅限于翻译错误或误解的更正。对源文本的更改或未在原始简报中指定的风格偏好可能会产生额外费用。",
+        "refund": "5.3. <strong>退款政策：</strong>如果我们在合理的修订尝试后仍无法满足您的要求，您有资格获得全额退款。"
+      },
+      "confidentiality": {
+        "title": "6. 保密和数据保护",
+        "confidentiality": "6.1. <strong>保密：</strong>我们将所有客户文件和信息视为严格保密。我们的翻译人员和员工受保密协议的约束。",
+        "dataProtection": "6.2. <strong>数据保护：</strong>我们根据我们的隐私政策和适用的数据保护法律处理个人数据。",
+        "security": "6.3. <strong>数据安全：</strong>我们实施适当的技术和组织措施，以保护您的数据免受未经授权的访问、更改、披露或破坏。"
+      },
+      "intellectual": {
+        "title": "7. 知识产权",
+        "ownership": "7.1. <strong>所有权：</strong>客户保留对源内容的所有知识产权。翻译内容在全额付款后成为客户的财产。",
+        "memory": "7.2. <strong>翻译记忆：</strong>除非另有约定，我们可能会将翻译存储在我们的翻译记忆中，以便在未来为同一客户的项目中确保质量和一致性。",
+        "reference": "7.3. <strong>参考：</strong>除非客户另有要求，我们可能会将客户的名字列入我们的客户名单。"
+      },
+      "liability": {
+        "title": "8. 责任限制",
+        "service": "8.1. <strong>服务责任：</strong>我们的责任仅限于翻译服务的支付金额。我们不对任何间接、后果性或附带损害负责。",
+        "content": "8.2. <strong>内容责任：</strong>客户有责任确保他们有权翻译源内容。我们不对任何与翻译内容相关的版权侵权或其他法律问题负责。",
+        "timeSensitive": "8.3. <strong>时间敏感材料：</strong>对于时间敏感的材料，客户应提前通知我们。除非书面明确同意，我们不对因交付延迟而导致的损失负责。"
+      },
+      "termination": {
+        "title": "9. 终止",
+        "byClient": "9.1. <strong>由客户：</strong>客户可以随时通过书面通知终止服务。客户将负责支付终止前已完成的所有工作。",
+        "byCompany": "9.2. <strong>由Ogham翻译服务：</strong>如果客户违反这些条款和条件，特别是关于付款条款，我们保留终止服务的权利。"
+      },
+      "governing": {
+        "title": "10. 管辖法律和争议解决",
+        "law": "10.1. <strong>管辖法律：</strong>这些条款和条件应受瑞士法律管辖并根据其解释。",
+        "resolution": "10.2. <strong>争议解决：</strong>任何因这些条款和条件引起或与之相关的争议应通过诚信谈判解决。如果争议无法通过谈判解决，应提交瑞士苏黎世法院的专属管辖。"
+      },
+      "modifications": {
+        "title": "11. 条款修改",
+        "description": "我们保留随时修改这些条款和条件的权利。更改将在发布到网站后生效。您有责任定期查看这些条款和条件。您在修订后的条款和条件发布后继续使用我们的服务即表示您接受并同意这些更改。"
+      },
+      "contact": {
+        "title": "12. 联系信息",
+        "description": "如果您对这些条款和条件有任何疑问，请通过以下方式联系我们：",
+        "email": "电子邮件：",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "privacy": {
+    "pageTitle": "隐私政策",
+    "lastUpdated": "最后更新",
+    "date": "2025年3月9日",
+    "breadcrumbs": {
+      "home": "首页",
+      "privacy": "隐私政策"
+    },
+    "sections": {
+      "introduction": "介绍",
+      "collectedInfo": "我们收集的信息",
+      "useOfInfo": "我们如何使用您的信息",
+      "infoSharing": "信息共享",
+      "cookies": "Cookies和跟踪技术",
+      "dataProtection": "数据保护权利",
+      "thirdPartyLinks": "第三方链接",
+      "childrenPrivacy": "儿童隐私",
+      "changes": "隐私政策的变更",
+      "contact": "联系我们"
+    },
+    "content": {
+      "intro": {
+        "title": "1. 介绍",
+        "description1": "Ogham 翻译服务（“我们”或“我们的”）致力于保护您的隐私。本隐私政策解释了我们如何在您访问我们的网站 www.oghamtranslations.com 或使用我们的翻译服务时收集、使用、披露和保护您的信息。",
+        "description2": "请仔细阅读本隐私政策。如果您不同意本隐私政策的条款，请不要访问本网站或使用我们的服务。通过访问我们的网站或使用我们的翻译服务，您同意本隐私政策。"
+      },
+      "collect": {
+        "title": "2. 我们收集的信息",
+        "personal": {
+          "title": "2.1 个人信息",
+          "intro": "当您自愿向我们提供时，我们可能会收集个人信息：",
+          "list": [
+            "在我们的网站上注册",
+            "请求报价或下订单",
+            "订阅我们的新闻通讯",
+            "回应调查或填写表格",
+            "与我们联系询问或反馈"
+          ],
+          "details": "个人信息可能包括您的姓名、电子邮件地址、邮寄地址、电话号码、公司信息和支付详情。"
+        },
+        "nonPersonal": {
+          "title": "2.2 非个人信息",
+          "intro": "当您访问我们的网站时，我们可能会自动收集某些非个人信息，包括：",
+          "list": [
+            "IP 地址",
+            "浏览器类型",
+            "操作系统",
+            "访问的页面和在我们网站上停留的时间",
+            "推荐网站地址"
+          ]
+        },
+        "translation": {
+          "title": "2.3 翻译内容",
+          "description": "当您使用我们的翻译服务时，我们必然会收集和处理您提供的翻译内容。这可能包括您提交的文件或材料中包含的个人数据。"
+        }
+      },
+      "usage": {
+        "title": "3. 我们如何使用您的信息",
+        "intro": "我们可能会将收集到的信息用于各种目的，包括：",
+        "list": [
+          "提供、运营和维护我们的服务",
+          "处理和履行您的翻译请求",
+          "改进、个性化和扩展我们的服务",
+          "了解和分析您如何使用我们的网站",
+          "开发新产品、服务、功能和功能性",
+          "与您沟通我们的服务、更新和其他信息",
+          "向您发送营销和促销通信（仅在您同意的情况下）",
+          "发现和防止欺诈",
+          "用于合规、法律程序和执法目的"
+        ]
+      },
+      "sharing": {
+        "title": "4. 我们如何分享您的信息",
+        "intro": "我们可能在以下情况下分享您的信息：",
+        "providers": {
+          "title": "4.1 服务提供商",
+          "description": "我们可能会与为我们或代表我们提供服务的服务提供商和翻译人员分享您的信息，包括支付处理、数据分析、电子邮件发送、托管服务和客户服务。这些服务提供商有合同义务对个人信息保密，并仅将其用于我们向他们披露的目的。"
+        },
+        "transfers": {
+          "title": "4.2 业务转让",
+          "description": "如果我们参与合并、收购或出售我们全部或部分资产，您的信息可能会作为该交易的一部分被转让。我们将在网站上通过电子邮件和/或显著通知您任何所有权或个人信息使用的变更。"
+        },
+        "legal": {
+          "title": "4.3 法律要求",
+          "description": "我们可能会在法律要求的情况下披露您的信息，以遵守适用法律、政府要求、司法程序、法院命令或法律程序。"
+        },
+        "consent": {
+          "title": "4.4 您的同意",
+          "description": "我们可能会在您同意的情况下为任何其他目的披露您的个人信息。"
+        }
+      },
+      "security": {
+        "title": "5. 数据安全",
+        "measures": "我们已实施适当的技术和组织安全措施，以保护我们处理的任何个人信息的安全。然而，请记住，我们不能保证互联网本身是100%安全的。尽管我们会尽力保护您的个人信息，但个人信息在我们网站上的传输风险由您自行承担。",
+        "confidentiality": "在翻译过程中，我们采取严格的保密措施。我们所有的翻译人员都签署了保密协议，并使用安全系统进行文件传输。"
+      },
+      "retention": {
+        "title": "6. 数据保留",
+        "period": "我们只会在本隐私政策中规定的目的所需的时间内保留您的个人信息，除非法律要求或允许更长的保留期。当我们没有持续的合法业务需要处理您的个人信息时，我们将删除或匿名化它。",
+        "translation": "对于翻译内容，我们通常在项目完成后保留您的文件长达3个月，以解决任何潜在的后续问题或修订请求，然后安全删除。如果您需要在项目完成后立即删除您的内容，请告知我们。"
+      },
+      "rights": {
+        "title": "7. 您的隐私权利",
+        "intro": "根据您的所在地，您可能对您的个人信息享有某些权利。这些可能包括：",
+        "list": [
+          "访问我们持有的关于您的个人信息的权利",
+          "请求更正不准确个人信息的权利",
+          "请求删除您的个人信息的权利",
+          "反对处理您的个人信息的权利",
+          "数据可携权",
+          "撤回同意的权利"
+        ],
+        "exercise": "要行使这些权利，请使用下方“联系我们”部分提供的详细信息与我们联系。"
+      },
+      "cookies": {
+        "title": "8. Cookies 和跟踪技术",
+        "description": "我们使用 cookies 和类似的跟踪技术来跟踪我们网站上的活动并存储某些信息。Cookies 是包含少量数据的文件，可能包括一个匿名的唯一标识符。Cookies 从网站发送到您的浏览器并存储在您的设备上。",
+        "types": "我们使用以下类型的 cookies：",
+        "list": [
+          "<strong>必要 cookies：</strong> 对于我们网站的运行是必需的。它们启用基本功能，如页面导航和访问网站的安全区域。",
+          "<strong>分析 cookies：</strong> 通过匿名收集和报告信息，帮助我们了解访客如何与我们的网站互动。",
+          "<strong>偏好 cookies：</strong> 使我们的网站能够记住改变网站行为或外观的信息，例如您偏好的语言。"
+        ],
+        "management": "您可以指示您的浏览器拒绝所有 cookies 或指示何时发送 cookie。但是，如果您不接受 cookies，您可能无法使用我们网站的某些部分。"
+      },
+      "thirdParty": {
+        "title": "9. 第三方网站",
+        "description": "我们的网站可能包含指向其他非我们运营的网站的链接。如果您点击第三方链接，您将被引导到该第三方的网站。我们强烈建议您查看您访问的每个网站的隐私政策。我们对任何第三方网站或服务的内容、隐私政策或实践不承担任何责任。"
+      },
+      "children": {
+        "title": "10. 儿童隐私",
+        "description": "我们的服务不适用于16岁以下的儿童使用。我们不会故意收集16岁以下儿童的个人信息。如果您是家长或监护人，并且您知道您的孩子向我们提供了个人信息，请与我们联系，以便我们采取必要的措施。"
+      },
+      "changes": {
+        "title": "11. 本隐私政策的变更",
+        "description": "我们可能会不时更新我们的隐私政策。我们将在此页面上发布新的隐私政策并更新本隐私政策顶部的“最后更新”日期来通知您任何更改。建议您定期查看本隐私政策以了解任何更改。本隐私政策的更改在发布到此页面时生效。"
+      },
+      "contact": {
+        "title": "12. 联系我们",
+        "description": "如果您对本隐私政策有任何疑问，请通过以下方式联系我们：",
+        "email": "电子邮件：",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "notFound": {
+    "title": "404 - 页面未找到",
+    "message": "您查找的页面不存在。",
+    "returnHome": "返回首页"
+  }
+}

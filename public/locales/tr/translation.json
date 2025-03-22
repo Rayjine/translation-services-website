@@ -1,0 +1,1271 @@
+{
+  "common": {
+    "language": "Turkish",
+    "languageNative": "İngilizce",
+    "and": ",",
+    "menu": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetler",
+      "team": "Ekip",
+      "portfolio": "Portföy",
+      "pricing": "Fiyatlandırma",
+      "contact": "İletişim"
+    },
+    "footer": {
+      "about": "Birden fazla dilde profesyonel çeviri hizmetleri. Kalite, doğruluk ve zamanında teslimat garantisi.",
+      "quickLinks": "Hızlı Bağlantılar",
+      "contactUs": "Bize Ulaşın",
+      "address": "Cenevre, Zürih, Lugano - İsviçre",
+      "email": "E-posta",
+      "allRightsReserved": "Tüm hakları saklıdır",
+      "termsConditions": "Şartlar & Koşullar",
+      "privacyPolicy": "Gizlilik Politikası"
+    },
+    "buttons": {
+      "getQuote": "Teklif Alın",
+      "ourServices": "Hizmetlerimiz",
+      "readMore": "Daha Fazla Oku",
+      "viewAll": "Tümünü Gör",
+      "submit": "Gönder",
+      "send": "Gönder",
+      "accept": "Kabul Et"
+    },
+    "cookieConsent": {
+      "message": "Bu web sitesi, kullanıcı deneyimini geliştirmek için çerezler kullanır. Daha fazla bilgi için",
+      "moreInfo": "bakınız."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Dilleri Birleştiriyor, Kültürleri Koruyoruz",
+      "subtitle": "İhtiyaçlarınıza göre uyarlanmış, doğru ve kültürel olarak duyarlı çeviri hizmetleri — 10'dan fazla dilde."
+    },
+    "portfolioShowcase": {
+      "title": "Çeviri Portföyümüz",
+      "paragraph1": "Çeşitli sektörler ve dil çiftlerinde gerçekleştirdiğimiz çeviri çalışmalarını inceleyin. Ogham Çeviri Hizmetleri'ni ayıran kalite ve detaylara gösterilen özeni ilk elden görün.",
+      "paragraph2": "Portföyümüzde, hukuki belgeler, teknik kılavuzlar, pazarlama materyalleri ve yaratıcı içeriklerin titizlikle ve kültürel hassasiyetle çevrilmiş örnekleri yer almaktadır.",
+      "viewButton": "Portföyümüzü Görüntüle"
+    },
+    "about": {
+      "title": "Ogham Çevirileri Hakkında",
+      "paragraph1": "2022 yılında kurulan Ogham Çevirileri, detaylara titizlikle dikkat ederek olağanüstü dil çözümleri sunmaya kendini adamış butik bir çeviri şirketidir. Dünya çapında işletmelere ve bireylere kişiselleştirilmiş, yüksek kaliteli çeviri hizmetleri sunuyoruz.",
+      "paragraph2": "Profesyonel çevirmenlerden oluşan ekibimiz, kendi alanlarında uzman, ana dil konuşurlarıdır ve tüm ihtiyaçlarınız için doğru ve kültürel olarak uygun çeviriler sağlar.",
+      "meetTeam": "Ekibimizle Tanışın"
+    },
+    "whyChooseUs": {
+      "title": "Neden Bizi Seçmelisiniz?",
+      "multipleLanguages": {
+        "title": "Birden Fazla Dil",
+        "description": "10'dan fazla dil mevcut"
+      },
+      "documentExpertise": {
+        "title": "Belge Uzmanlığı",
+        "description": "Teknik, hukuki, tıbbi & daha fazlası"
+      },
+      "certifiedTranslators": {
+        "title": "Sertifikalı Çevirmenler",
+        "description": "Profesyonel ve nitelikli ekip"
+      }
+    },
+    "languages": {
+      "title": "Sunduğumuz Diller",
+      "subtitle": "Profesyonel çevirmen ekibimiz, dünya çapında geniş bir dil yelpazesini kapsamaktadır.",
+      "list": {
+        "english": "İngilizce",
+        "french": "Fransızca",
+        "german": "Almanca",
+        "italian": "İtalyanca",
+        "romansh": "Romanş",
+        "spanish": "İspanyolca",
+        "portuguese": "Portekizce",
+        "russian": "Rusça",
+        "ukrainian": "Ukraynaca",
+        "mandarin": "Mandarin",
+        "japanese": "Japonca",
+        "arabic": "Arapça",
+        "czech": "Çekçe",
+        "turkish": "Türkçe"
+      }
+    },
+    "services": {
+      "title": "Hizmetlerimiz",
+      "subtitle": "Tüm ihtiyaçlarınızı karşılamak için kapsamlı bir çeviri hizmetleri yelpazesi sunuyoruz.",
+      "documentTranslation": {
+        "title": "Belge Çevirisi",
+        "description": "Hukuki belgeler, sözleşmeler, sertifikalar ve daha fazlasının profesyonel çevirisi."
+      },
+      "websiteLocalization": {
+        "title": "Web Sitesi Yerelleştirme",
+        "description": "Web sitesi içeriğinizi farklı bölgeler ve diller için uyarlayarak küresel bir kitleye ulaşın."
+      },
+      "technicalTranslation": {
+        "title": "Teknik Çeviri",
+        "description": "Teknik kılavuzlar, rehberler ve spesifikasyonların doğru çevirisi."
+      },
+      "viewAllServices": "Tüm Hizmetleri Görüntüle"
+    },
+    "portfolio": {
+      "title": "Çeviri Portföyümüz",
+      "paragraph1": "Çeşitli sektörler ve dil çiftlerinde gerçekleştirdiğimiz çeviri çalışmalarımızı keşfedin. Ogham Çeviri Hizmetleri'ni ayıran kalite ve detaylara gösterilen özeni ilk elden görün.",
+      "paragraph2": "Portföyümüzde hukuki belgeler, teknik kılavuzlar, pazarlama materyalleri ve kültürel hassasiyetle çevrilmiş yaratıcı içerik örnekleri bulunmaktadır.",
+      "viewPortfolio": "Portföyümüzü Görüntüle"
+    },
+    "cta": {
+      "title": "Başlamaya Hazır mısınız?",
+      "subtitle": "Çeviri projeniz için ücretsiz teklif almak üzere bugün bizimle iletişime geçin.",
+      "button": "Teklif İste"
+    }
+  },
+  "services": {
+    "pageTitle": "Hizmetlerimiz",
+    "pageSubtitle": "Özel ihtiyaçlarınızı karşılamak için kapsamlı bir çeviri hizmetleri yelpazesi sunuyoruz.",
+    "process": {
+      "title": "Çeviri Sürecimiz",
+      "subtitle": "İçeriğiniz için en yüksek kalitede çevirileri sağlamak amacıyla titiz bir süreç izliyoruz:",
+      "steps": [
+        {
+          "title": "Proje Analizi",
+          "description": "İçeriğinizi, gereksinimlerinizi ve hedef kitlenizi analiz ederek en iyi yaklaşımı belirliyoruz."
+        },
+        {
+          "title": "Çeviri",
+          "description": "Ana dili konuşan çevirmenlerimiz içeriğinizi hedef dile ustalıkla çevirir."
+        },
+        {
+          "title": "Düzenleme & İnceleme",
+          "description": "İkinci bir dil uzmanı çeviriyi doğruluk, tutarlılık ve stil açısından inceler."
+        },
+        {
+          "title": "Kalite Güvencesi",
+          "description": "Titiz kalite kontrolleri, çevirinizin yüksek standartlarımıza uygun olmasını sağlar."
+        },
+        {
+          "title": "Müşteri İncelemesi",
+          "description": "Geri bildiriminizi uygular ve gerekli ayarlamaları yaparız."
+        },
+        {
+          "title": "Teslimat",
+          "description": "Son haline getirilmiş çeviriniz, tercih ettiğiniz formatta, zamanında ve bütçeye uygun olarak teslim edilir."
+        }
+      ]
+    },
+    "categories": {
+      "document": {
+        "title": "Belge Çevirisi",
+        "description": "Çeşitli belge türlerinin profesyonel çevirisi, doğruluk ve detaylara dikkatle yapılır.",
+        "services": {
+          "legal": {
+            "title": "Hukuki Belgeler",
+            "description": "Sözleşmeler, anlaşmalar, mahkeme belgeleri, hukuki görüşler, patentler ve sertifikalar.",
+            "features": [
+              "Onaylı çeviriler",
+              "Hukuki terminoloji uzmanlığı",
+              "Gizlilik garantisi"
+            ]
+          },
+          "business": {
+            "title": "İş Belgeleri",
+            "description": "Finansal raporlar, iş planları, pazarlama materyalleri ve kurumsal iletişim.",
+            "features": [
+              "Sektöre özgü terminoloji",
+              "Tutarlı marka kimliği",
+              "Format koruma"
+            ]
+          },
+          "technical": {
+            "title": "Teknik Belgeler",
+            "description": "Kullanıcı kılavuzları, teknik spesifikasyonlar, talimat kılavuzları ve teknik raporlar.",
+            "features": [
+              "Teknik doğruluk",
+              "Gerektiğinde basitleştirilmiş dil",
+              "Konu uzmanları"
+            ]
+          },
+          "academic": {
+            "title": "Akademik Belgeler",
+            "description": "Diplomalar, transkriptler, araştırma makaleleri, tezler ve akademik sertifikalar.",
+            "features": [
+              "Akademik terminoloji uzmanlığı",
+              "Araştırma düzeyinde çeviri",
+              "Atıf formatlama"
+            ]
+          }
+        }
+      },
+      "website": {
+        "title": "Web Sitesi Çevirisi",
+        "description": "İşletmenizin küresel kitlelere ulaşmasına yardımcı olacak kapsamlı web sitesi yerelleştirme hizmetleri.",
+        "services": {
+          "localization": {
+            "title": "Web Sitesi Yerelleştirme",
+            "description": "Web sitesi içeriğinizin uluslararası pazarlar için tam çevirisi ve kültürel uyarlaması.",
+            "features": [
+              "Kültürel uyarlama",
+              "SEO optimizasyonu",
+              "Kullanıcı arayüzü ayarlaması"
+            ]
+          },
+          "ecommerce": {
+            "title": "E-ticaret Çevirisi",
+            "description": "Ürün açıklamaları, kategoriler, ödeme süreçleri ve müşteri destek içeriği.",
+            "features": [
+              "Tutarlı ürün terminolojisi",
+              "Ödeme yöntemi yerelleştirmesi",
+              "Müşteri odaklı dil"
+            ]
+          },
+          "cms": {
+            "title": "CMS Entegrasyonu",
+            "description": "WordPress, Shopify ve diğer içerik yönetim sistemleri ile entegrasyon.",
+            "features": [
+              "Eklenti uyumluluğu",
+              "Çok dilli kurulum",
+              "Otomatik içerik senkronizasyonu"
+            ]
+          },
+          "seo": {
+            "title": "Çok Dilli SEO",
+            "description": "Birden fazla hedef pazar için anahtar kelime araştırması ve optimizasyonu.",
+            "features": [
+              "Yerel anahtar kelime araştırması",
+              "Meta etiket optimizasyonu",
+              "SEO dostu URL'ler"
+            ]
+          }
+        }
+      },
+      "specialized": {
+        "title": "Uzmanlaşmış Çeviriler",
+        "description": "Özel bilgi ve terminoloji gerektiren belirli sektörler için uzman çeviriler.",
+        "services": {
+          "medical": {
+            "title": "Tıbbi Çeviri",
+            "description": "Tıbbi kayıtlar, ilaç belgeleri, klinik deneyler ve sağlık materyalleri.",
+            "features": [
+              "Tıbbi terminoloji uzmanlığı",
+              "Düzenleyici uyumluluk",
+              "Hasta dostu dil"
+            ]
+          },
+          "financial": {
+            "title": "Finansal Çeviri",
+            "description": "Finansal tablolar, yatırım raporları, bankacılık belgeleri ve sigorta materyalleri.",
+            "features": [
+              "Finansal terminoloji doğruluğu",
+              "Sayısal formatlama",
+              "Düzenleyici uyumluluk"
+            ]
+          },
+          "marketing": {
+            "title": "Pazarlama Çevirisi",
+            "description": "Pazarlama kampanyaları, broşürler, reklamlar ve tanıtım materyalleri.",
+            "features": [
+              "Yaratıcı uyarlama",
+              "Kültürel uygunluk",
+              "Marka sesi korunumu"
+            ]
+          },
+          "literary": {
+            "title": "Edebi Çeviri",
+            "description": "Yazarın tarzını ve amacını koruyan kitaplar, şiirler, senaryolar ve yaratıcı eserler.",
+            "features": [
+              "Üslup sadakati",
+              "Kültürel nüans",
+              "Yaratıcı uyarlama"
+            ]
+          }
+        }
+      },
+      "additional": {
+        "title": "Ek Hizmetler",
+        "description": "Dijital iletişim ihtiyaçlarınızı karşılamak için tamamlayıcı dil hizmetleri.",
+        "services": {
+          "content": {
+            "title": "İçerik Oluşturma",
+            "description": "Hedef pazarlarınıza uygun orijinal çok dilli içerik oluşturma.",
+            "features": [
+              "Ana dili konuşan metin yazarları",
+              "Pazara özgü içerik",
+              "SEO optimizasyonu"
+            ]
+          },
+          "software": {
+            "title": "Yazılım Yerelleştirme",
+            "description": "Yazılım arayüzleri, uygulamalar ve oyunların çevirisi ve uyarlanması.",
+            "features": [
+              "UI/UX dikkate alma",
+              "Dize yönetimi",
+              "Test ve kalite güvencesi"
+            ]
+          },
+          "subtitling": {
+            "title": "Altyazı",
+            "description": "Metin çevirisi gerektiren video ve filmler için multimedya çeviri hizmetleri.",
+            "features": [
+              "Zamanlama senkronizasyonu",
+              "Kültürel uyarlama",
+              "Çok dilli destek"
+            ]
+          }
+        }
+      }
+    },
+    "documentTranslation": {
+      "title": "Belge Çevirisi",
+      "description": "Hukuki belgeler, sözleşmeler, sertifikalar ve daha fazlasının profesyonel çevirisi.",
+      "features": [
+        "Hukuki belge çevirisi",
+        "Kurumsal belge çevirisi",
+        "Kişisel belge çevirisi",
+        "Sertifika çevirisi",
+        "Akademik belge çevirisi"
+      ]
+    },
+    "websiteLocalization": {
+      "title": "Web Sitesi Yerelleştirme",
+      "description": "Web sitenizin içeriğini farklı bölgeler ve diller için uyarlayarak küresel bir kitleye ulaşın.",
+      "features": [
+        "Web sitesi içeriği çevirisi",
+        "Hedef pazarlar için kültürel uyarlama",
+        "SEO optimize edilmiş çeviriler",
+        "Multimedya yerelleştirme",
+        "E-ticaret yerelleştirme"
+      ]
+    },
+    "technicalTranslation": {
+      "title": "Teknik Çeviri",
+      "description": "Teknik kılavuzlar, rehberler ve spesifikasyonların doğru çevirisi.",
+      "features": [
+        "Teknik kılavuz çevirisi",
+        "Yazılım dokümantasyonu",
+        "Patent çevirisi",
+        "Teknik spesifikasyonlar",
+        "Kullanıcı kılavuzları ve talimat kitapçıkları"
+      ]
+    }
+  },
+  "portfolio": {
+    "pageTitle": "Çeviri Portföyümüz",
+    "pageSubtitle": "Çeşitli sektörler ve dillerdeki çeviri çalışmalarımızdan örnekler",
+    "categories": {
+      "all": "Tüm Projeler",
+      "featured": "Öne Çıkanlar",
+      "legal": "Hukuki",
+      "medical": "Tıbbi",
+      "technical": "Teknik",
+      "marketing": "Pazarlama",
+      "literary": "Edebi & Yaratıcı"
+    },
+    "featuredChip": "Öne Çıkan",
+    "viewProject": "Projeyi Görüntüle",
+    "dialogTitle": "Çeviri Projesi",
+    "languages": {
+      "english": "İngilizce",
+      "french": "Fransızca",
+      "german": "Almanca",
+      "italian": "İtalyanca",
+      "japanese": "Japonca",
+      "mandarin": "Mandarin",
+      "russian": "Rusça"
+    },
+    "preview": {
+      "title": "Proje Önizlemesi",
+      "sourceDocument": "Kaynak Belge",
+      "translatedDocument": "Çevrilmiş Belge",
+      "sourceDocumentPlaceholder": "Kaynak belge burada görüntülenecektir. Gerçek bir uygulamada, bu gerçek PDF içeriğini gösterecektir.",
+      "translatedDocumentPlaceholder": "Çevrilmiş belge burada görüntülenecektir. Gerçek bir uygulamada, bu gerçek PDF içeriğini gösterecektir.",
+      "downloadSource": "Kaynağı İndir",
+      "downloadTranslation": "Çeviriyi İndir",
+      "sideBySide": "Yan Yana",
+      "original": "Orijinal",
+      "translation": "Çeviri",
+      "loading": "PDF yükleniyor...",
+      "noData": "PDF mevcut değil",
+      "errorLoading": "PDF yüklenirken hata oluştu",
+      "prevPage": "Önceki",
+      "nextPage": "Sonraki"
+    },
+    "viewModes": {
+      "comparison": "Yan Yana",
+      "before": "Sadece Orijinal",
+      "after": "Sadece Çeviri"
+    },
+    "previewPlaceholder": {
+      "sourceMessage": "Kaynak belge burada görüntülenecektir.",
+      "translatedMessage": "Çevrilmiş belge burada görüntülenecektir.",
+      "implementationNote": "Gerçek bir uygulamada, bu alan gerçek PDF içeriğini gösterecektir."
+    },
+    "beforeAfter": "Önce & Sonra",
+    "showcaseItems": [
+      {
+        "title": "Sözleşme Çevirisi",
+        "description": "İngilizceden Fransızcaya sözleşme çevirisi."
+      },
+      {
+        "title": "Tıbbi Araştırma Makalesi Çevirisi",
+        "description": "Almancadan İngilizceye tıbbi araştırma makalesi çevirisi."
+      },
+      {
+        "title": "Finansal Rapor Çevirisi",
+        "description": "Fransızcadan Japoncaya finansal rapor çevirisi."
+      },
+      {
+        "title": "Pazarlama Materyali Çevirisi",
+        "description": "İngilizceden Mandarinceye pazarlama materyali çevirisi."
+      },
+      {
+        "title": "Edebi Çeviri",
+        "description": "Rusçadan İtalyancaya edebi çeviri."
+      }
+    ]
+  },
+  "team": {
+    "pageTitle": "Ekibimiz",
+    "pageSubtitle": "Profesyonel çevirmenler ve dil uzmanlarından oluşan özverili ekibimizle tanışın.",
+    "professionalTranslators": "İsviçre Merkezli Profesyonel Çevirmenler",
+    "description": "Burada tanıtılan profesyoneller, her biri ana dili olan bir ana dil etrafında çalışmayı yöneten ekip liderlerimizdir. Ayrıca, herhangi bir dil kombinasyonunu çevirmek ve ardından gözden geçirmek için en az iki uzmana sahip olmamızı sağlayan ek işbirlikçilerimiz de bulunmaktadır. Bu çift uzman yaklaşımı, tüm çevirilerimizde en yüksek kaliteyi ve kültürel doğruluğu garanti eder. İsviçre merkezli olarak, çok kültürlü ortamımızdan yararlanarak, birden fazla Avrupa ve küresel dilde kesin ve kültürel olarak uygun çeviriler sunuyoruz.",
+    "languages": "Diller",
+    "specialties": "Uzmanlıklar",
+    "educationExperience": "Eğitim ve Deneyim",
+    "experienceLabel": "Deneyim",
+    "ourFounders": "Kurucularımız",
+    "ourTranslators": "Çevirmenlerimiz",
+    "ourPartners": "Ortaklarımız",
+    "philosophy": {
+      "title": "Çeviri Felsefemiz",
+      "subtitle": "Ogham Çevirileri olarak, etkili çevirinin kelimelerin ötesine geçtiğine inanıyoruz - anlamı, bağlamı ve kültürel nüansları aktarmakla ilgilidir. Dört resmi dili olan İsviçre'de yerleşik olarak, çok dilliliği özümüzde anlıyor ve bu benzersiz bakış açısını her projeye taşıyoruz.",
+      "values": [
+        {
+          "title": "Kültürel Uzmanlık",
+          "description": "Çevirmenlerimiz sadece çalıştıkları dilleri bilmekle kalmaz, aynı zamanda bu dillerin arkasındaki kültürleri de anlarlar, böylece mesajınızın uygun ve etkili kalmasını sağlarlar."
+        },
+        {
+          "title": "Konu Uzmanlığı",
+          "description": "Çevirmenleri, ister hukuki, ister tıbbi, teknik veya yaratıcı içerik olsun, sizin özel alanınızdaki uzmanlıklarına göre atıyoruz."
+        },
+        {
+          "title": "Kalite Güvencesi",
+          "description": "Her çeviri, doğruluğu ve tutarlılığı sağlamak için ikinci bir dil uzmanı tarafından gözden geçirilmesi de dahil olmak üzere titiz bir kalite kontrol sürecinden geçer."
+        },
+        {
+          "title": "Sürekli Öğrenme",
+          "description": "Çevirmenlerimiz, en son terminoloji ve çeviri teknikleriyle güncel kalmak için düzenli olarak mesleki gelişim programlarına katılır."
+        }
+      ]
+    },
+    "members": [
+      {
+        "name": "Célia Brodard",
+        "role": "Kıdemli Çevirmen - Fransızca",
+        "bio": "Cenevre'de doğup büyüyen Céline, dillere büyük bir tutku duymakta ve hukuki, finansal ve ticari belgelerde uzmanlaşmıştır. İsviçre'nin önde gelen kurumlarından mezun olan Céline, akademik geçmişini yılların profesyonel çeviri deneyimiyle birleştirir. İsviçre kökeni ve çok kültürlü ortamları derinlemesine anlaması, her projede hassasiyet ve kültürel duyarlılığı sağlamasına olanak tanır.",
+        "languages": [
+          "Fransızca",
+          "İngilizce",
+          "Almanca"
+        ],
+        "specialties": [
+          "Hukuki",
+          "Ticari",
+          "Finansal"
+        ],
+        "experience": "8+ yıl",
+        "education": "Çok Dilli İletişim Lisansı – Cenevre Üniversitesi, İsviçre; Uzmanlaşmış Çeviri Yüksek Lisansı (Hukuki ve Finansal) – Cenevre Üniversitesi, Çeviri ve Tercümanlık Fakültesi (FTI), İsviçre"
+      },
+      {
+        "name": "Markus Brunner",
+        "role": "Kıdemli Çevirmen - Almanca",
+        "bio": "Zürih'te yaşayan Markus, on yılı aşkın süredir teknik ve bilimsel belgeleri çevirmektedir. Mühendislik ve dilbilim geçmişiyle, çeviri çalışmalarına disiplinler arası uzmanlık getirir. İsviçre'nin önde gelen teknik üniversitelerinden birinde aldığı eğitim, son derece karmaşık ve teknik çevirileri eşsiz bir hassasiyet ve netlikle ele alabilmesini sağlar.",
+        "languages": [
+          "Almanca",
+          "İngilizce",
+          "Fransızca"
+        ],
+        "specialties": [
+          "Teknik",
+          "Bilimsel",
+          "Mühendislik"
+        ],
+        "experience": "12+ yıl",
+        "education": "Makine Mühendisliği Lisansı – ETH Zürih, İsviçre; Dil ve İletişim Yüksek Lisansı – Zürih Üniversitesi, İsviçre"
+      },
+      {
+        "name": "Inês Ferreira",
+        "role": "Kıdemli Çevirmen - Portekizce & İspanyolca",
+        "bio": "Aslen Lizbonlu olan Inês, şimdi Lugano'yu evi olarak adlandırıyor. Yaratıcı ve pazarlama çevirilerinde uzmanlaşmış olup, edebiyat ve hikaye anlatımına derin bir tutku duymaktadır. Portekiz'in en iyi üniversitelerinden birinde dilbilim ve edebiyat çalışmaları üzerine aldığı akademik temel, kültürel nüans ve yaratıcı bir yetenekle çeviri yapmasına olanak tanır.",
+        "languages": [
+          "Portekizce",
+          "İspanyolca",
+          "İtalyanca",
+          "Fransızca"
+        ],
+        "specialties": [
+          "Pazarlama",
+          "Yaratıcı",
+          "Edebi"
+        ],
+        "experience": "7+ yıl",
+        "education": "Lisans - Dilbilim – Lizbon Üniversitesi, Portekiz; Yüksek Lisans - Çeviri, Tercümanlık ve Kültürlerarası Çalışmalar – Barselona Otonom Üniversitesi (UAB), İspanya"
+      },
+      {
+        "name": "Jian Chen",
+        "role": "Kıdemli Çevirmen - Mandarin",
+        "bio": "Jian, iş ve teknik belgeler üzerine odaklanarak Mandarin-İngilizce çevirilerinde uzmandır. Çin'in önde gelen bir üniversitesinde çeviri ve kültürlerarası iletişim üzerine aldığı resmi eğitim ve İsviçre'deki ileri çalışmaları sayesinde, Çin pazarına giren İsviçreli şirketler için kültürel ve dilsel boşlukları kapatır.",
+        "languages": [
+          "Mandarin",
+          "İngilizce",
+          "Fransızca"
+        ],
+        "specialties": [
+          "İş",
+          "Teknik",
+          "E-ticaret"
+        ],
+        "experience": "11+ yıl",
+        "education": "Lisans - İngiliz Dili Çalışmaları – Fudan Üniversitesi, Çin; Yüksek Lisans - Çeviri ve Tercümanlık – Zürih Üniversitesi, İsviçre"
+      },
+      {
+        "name": "Alessandra Conti",
+        "role": "Kıdemli Çevirmen - İtalyanca",
+        "bio": "İsviçre'nin İtalyanca konuşulan kantonu Ticino'dan gelen Alessandra, sanat, kültür ve turizmle ilgili belgelerin çevirisinde mükemmeldir. İtalyan edebiyatı ve İsviçre mirası konusundaki derin bilgisi, çevirilerini kültürel olarak zengin ve hassas kılar. Kültürlerarası çalışmalar ve sanat tarihi konusundaki akademik geçmişi, uzmanlığına derinlik katar.",
+        "languages": [
+          "İtalyanca",
+          "Almanca",
+          "İngilizce"
+        ],
+        "specialties": [
+          "Sanat",
+          "Kültür",
+          "Turizm",
+          "Lüks Ürünler"
+        ],
+        "experience": "9+ yıl",
+        "education": "Lisans - Sanat Tarihi – Bologna Üniversitesi, İtalya; Yüksek Lisans - İleri Düzey Kültürlerarası İletişim Çalışmaları – Lugano Üniversitesi, İsviçre"
+      },
+      {
+        "name": "Emiko Shimizu",
+        "role": "Kıdemli Çevirmen - Japonca",
+        "bio": "Emiko, büyük İsviçreli ilaç ve saat yapımı şirketleri için teknik kılavuzlar, patentler ve bilimsel literatür çevirisinde geniş deneyime sahiptir. Japonya'daki titiz akademik eğitimi, İsviçre'deki deneyimiyle birleştiğinde, onu endüstriler arasında son derece uzmanlaşmış ve teknik çeviriler için vazgeçilmez bir uzman yapmaktadır.",
+        "languages": [
+          "Japonca",
+          "İngilizce",
+          "Almanca"
+        ],
+        "specialties": [
+          "Teknik",
+          "Patentler",
+          "Farmasötik",
+          "Tıbbi"
+        ],
+        "experience": "10+ yıl",
+        "education": "Eczacılık Bilimleri Lisansı – Tokyo Üniversitesi, Japonya; Teknik Çeviri Yüksek Lisansı – Tokyo Yabancı Diller Üniversitesi (TUFS), Japonya"
+      },
+      {
+        "name": "Olena Kovalenko",
+        "role": "Kıdemli Çevirmen - Ukraynaca & Rusça",
+        "bio": "Kiev kökenli Olena, edebi, akademik ve hukuki çevirilerde uzmanlaşmıştır. Filoloji ve edebiyat çalışmaları geçmişiyle, birçok edebi eser ve akademik makale çevirmiştir, her çeviride özgünlük ve kültürel zenginlik sağlamaktadır.",
+        "languages": [
+          "Ukraynaca",
+          "Rusça",
+          "İngilizce",
+          "Almanca"
+        ],
+        "specialties": [
+          "Edebi",
+          "Akademik",
+          "Hukuki"
+        ],
+        "experience": "8+ yıl",
+        "education": "Filoloji Lisansı – Taras Shevchenko Ulusal Üniversitesi, Kiev, Ukrayna; Çeviri Yüksek Lisansı – Viyana Üniversitesi, Avusturya"
+      },
+      {
+        "name": "Robert Ainsworth",
+        "role": "Kıdemli Çevirmen - İngilizce",
+        "bio": "Ana dili İngilizce olan ve olağanüstü yazma becerilerine sahip Robert, tüm İngilizce çevirilerde en yüksek kaliteyi sağlar. Gazetecilik ve çeviri geçmişiyle, iş raporlarından akademik araştırmalara ve pazarlama materyallerine kadar geniş bir yelpazede etkileyici ve doğru içerikler üretir.",
+        "languages": [
+          "İngilizce",
+          "Fransızca",
+          "Almanca"
+        ],
+        "specialties": [
+          "İş",
+          "Pazarlama",
+          "Gazetecilik",
+          "Akademik"
+        ],
+        "experience": "14+ yıl",
+        "education": "İngiliz Dili ve Edebiyatı Lisansı – Oxford Üniversitesi, İngiltere; Çeviri ve Tercümanlık Yüksek Lisansı – Westminster Üniversitesi, İngiltere"
+      },
+      {
+        "name": "Claudio Cereghetti",
+        "role": "Kıdemli Çevirmen - Romansh",
+        "bio": "Az sayıdaki profesyonel Romansh çevirmenlerinden biri olarak Claudio, bu nadir İsviçre dilini çevirileriyle korur ve tanıtır. Filoloji ve dil mirası konusunda derin bir akademik temele sahip olan Claudio, resmi İsviçre belgeleri ve kültürel koruma projeleri için güvenilir bir uzmandır.",
+        "languages": [
+          "Romansh",
+          "Almanca",
+          "İtalyanca",
+          "Fransızca",
+          "İngilizce"
+        ],
+        "specialties": [
+          "Resmi Belgeler",
+          "Kültürel",
+          "Miras"
+        ],
+        "experience": "12+ yıl",
+        "education": "Romansh Edebiyatı ve Dilbilimi Lisansı – Zürih Üniversitesi, İsviçre; Klasik Filoloji Yüksek Lisansı – Fribourg Üniversitesi, İsviçre"
+      },
+      {
+        "name": "Amine Benchekroun",
+        "role": "Kıdemli Çevirmen - Arapça",
+        "bio": "Amine, diplomatik, ticari ve hukuki bağlamlarda Arapça çevirilerde uzmanlaşmıştır. Uluslararası ilişkiler ve uzman çeviri çalışmaları eğitimi ile Arapça konuşulan bölgeler ile İsviçre'nin çeşitli ticari ve diplomatik ortamını birbirine bağlar, çevirilerin hem doğru hem de kültürel olarak hassas olmasını sağlar.",
+        "languages": [
+          "Arapça",
+          "Fransızca",
+          "İngilizce"
+        ],
+        "specialties": [
+          "Diplomatik",
+          "Hukuki",
+          "Uluslararası İlişkiler"
+        ],
+        "experience": "9+ yıl",
+        "education": "Çeviri Çalışmaları Lisansı – Université Hassan II, Fas; Uluslararası İlişkiler Yüksek Lisansı – Cenevre Yüksek Öğrenim Enstitüsü (IHEID), İsviçre"
+      }
+    ]
+  },
+  "portfolioDetails": {
+    "projectDescription": "Proje Açıklaması",
+    "languages": "Diller",
+    "industry": "Sektör",
+    "tags": "Etiketler"
+  },
+  "pricing": {
+    "pageTitle": "Fiyatlandırma",
+    "pageSubtitle": "Şeffaf ve esnek fiyatlandırma seçenekleri",
+    "guarantee": {
+      "title": "Memnuniyet Garantimiz",
+      "description": "Beklentilerinizi karşılayan yüksek kaliteli çeviriler sunmaya kararlıyız. Çalışmamızdan tamamen memnun kalmazsanız, ek bir ücret almadan revize ederiz. Herhangi bir noktada çevirinin beklentilerinizi karşılamadığını düşünürseniz, iptal talep edebilir ve size sorgusuz sualsiz geri ödeme yaparız.",
+      "provisions": "Tüm projeler için sağladıklarımız:",
+      "points": {
+        "accurate": "Doğru ve bağlama uygun çeviriler",
+        "onTime": "Proje kapsamına göre zamanında teslimat",
+        "consistent": "Belgelerinizde tutarlı terminoloji",
+        "responsive": "Hızlı müşteri hizmetleri ve proje güncellemeleri"
+      }
+    },
+    "standard": "Standart",
+    "professional": "Profesyonel",
+    "premium": "Premium",
+    "perWord": "kelime başına",
+    "startingAt": "Başlangıç",
+    "contactForPricing": "Fiyat için iletişime geçin",
+    "customSolution": "Özel Çözüm",
+    "paymentTerms": "Ödeme Koşulları",
+    "termsDescription": "PayPal ve banka havalesi kabul ediyoruz. Kurumsal müşteriler için ödeme koşulları ile faturalandırma düzenleyebiliriz. Büyük projeler için ön ödeme olarak bir yüzde talep edebiliriz.",
+    "packages": {
+      "title": "Çeviri Paketleri",
+      "subtitle": "Çeviri ihtiyaçlarınız için doğru paketi seçin. Tüm fiyatlar CHF cinsindendir.",
+      "plans": [
+        {
+          "title": "Standart",
+          "price": "0.08",
+          "unit": "kelime başına",
+          "description": "Genel içerik ve temel belgeler için",
+          "features": [
+            {
+              "text": "Yüksek kaliteli çeviri"
+            },
+            {
+              "text": "Tam düzeltme"
+            },
+            {
+              "text": "Standart teslimat süresi"
+            },
+            {
+              "text": "Bağlama özgü terminoloji"
+            },
+            {
+              "text": "Acil teslimat seçeneği"
+            },
+            {
+              "text": "Özel ekip"
+            }
+          ]
+        },
+        {
+          "title": "Profesyonel",
+          "price": "0.12",
+          "unit": "kelime başına",
+          "description": "İş ve uzmanlaşmış içerik için",
+          "features": [
+            {
+              "text": "Yüksek kaliteli çeviri"
+            },
+            {
+              "text": "Geliştirilmiş düzeltme"
+            },
+            {
+              "text": "Daha hızlı teslimat süresi"
+            },
+            {
+              "text": "Bağlama özgü terminoloji"
+            },
+            {
+              "text": "Acil teslimat seçeneği"
+            },
+            {
+              "text": "Özel ekip"
+            }
+          ]
+        },
+        {
+          "title": "Premium",
+          "price": "0.16",
+          "unit": "kelime başına",
+          "description": "Kritik ve yüksek görünürlüklü içerikler için",
+          "features": [
+            {
+              "text": "Yüksek kaliteli çeviri"
+            },
+            {
+              "text": "Birden fazla revizyon turu"
+            },
+            {
+              "text": "Öncelikli teslimat süresi"
+            },
+            {
+              "text": "Bağlam özelinde terminoloji"
+            },
+            {
+              "text": "Acil teslimat seçeneği"
+            },
+            {
+              "text": "Özel ekip"
+            }
+          ]
+        }
+      ]
+    },
+    "rates": {
+      "title": "Detaylı Hizmet Ücretleri",
+      "subtitle": "Aşağıdaki tablo, belirli hizmet türleri için daha detaylı fiyat bilgisi sağlar.",
+      "note": "Ücretler aksi belirtilmedikçe kelime başına CHF cinsindendir.",
+      "headers": {
+        "service": "Hizmet",
+        "standard": "Standart",
+        "professional": "Profesyonel",
+        "premium": "Premium"
+      },
+      "services": [
+        {
+          "service": "Belge Çevirisi",
+          "standard": "0.08-0.10",
+          "professional": "0.12-0.14",
+          "premium": "0.16-0.20"
+        },
+        {
+          "service": "Web Sitesi Yerelleştirme",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.16",
+          "premium": "0.18-0.22"
+        },
+        {
+          "service": "Teknik Çeviri",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.18",
+          "premium": "0.20-0.25"
+        },
+        {
+          "service": "Hukuki Çeviri",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "Tıbbi Çeviri",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "Pazarlama İçeriği",
+          "standard": "0.09-0.11",
+          "professional": "0.13-0.15",
+          "premium": "0.17-0.22"
+        },
+        {
+          "service": "Altyazı Çevirisi",
+          "standard": "6-8",
+          "professional": "9-12",
+          "premium": "14-18",
+          "note": "Video başına dakika fiyatı"
+        }
+      ]
+    },
+    "process": {
+      "title": "Fiyatlandırma Sürecimiz",
+      "subtitle": "Çeviri hizmetlerimizin fiyatlandırmasını anlama",
+      "steps": [
+        {
+          "title": "Değerlendirme",
+          "description": "Belgenizin kelime sayısını, dil çiftini, teknik karmaşıklığını ve teslim süresi gereksinimlerini değerlendiriyoruz."
+        },
+        {
+          "title": "Teklif",
+          "description": "Özel ihtiyaçlarınıza göre şeffaf fiyatlandırma ile detaylı bir teklif sunuyoruz."
+        },
+        {
+          "title": "Onay",
+          "description": "Teklifi onayladığınızda, çeviri sürecine başlıyoruz."
+        },
+        {
+          "title": "Teslimat",
+          "description": "Tamamlanmış çeviriyi, kararlaştırılan teslim süresinde veya öncesinde teslim ediyoruz."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Fiyatlandırma SSS",
+      "subtitle": "Fiyatlandırmamız hakkında sıkça sorulan sorulara yanıtlar",
+      "questions": [
+        {
+          "question": "Bir çeviri projesinin maliyetini nasıl hesaplıyorsunuz?",
+          "answer": "Genellikle kaynak metindeki kelime başına ücret alıyoruz. Ücretler, dil çifti, içeriğin karmaşıklığı, gereken uzmanlık ve teslim süresine bağlı olarak değişir. Altyazı gibi bazı hizmetler için video başına dakika ücreti alıyoruz."
+        },
+        {
+          "question": "Kelime başına ücretin ötesinde ek ücretler var mı?",
+          "answer": "Çoğu durumda, kelime başına ücret tam hizmeti kapsar. Ancak, acil siparişler için (%25-50 arası), özel formatlama gereksinimleri veya paketinizde dahil olanın ötesinde ek revizyon turları için ek ücretler uygulanabilir."
+        },
+        {
+          "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+          "answer": "PayPal, banka havaleleri kabul ediyoruz ve kurumsal müşteriler için ödeme koşulları ile faturalandırma düzenleyebiliriz."
+        },
+        {
+          "question": "Büyük projeler için indirim sunuyor musunuz?",
+          "answer": "Evet, büyük projeler için hacim indirimleri sunuyoruz. İndirim yüzdesi, projenin büyüklüğüne göre artar, genellikle 10.000 kelimenin üzerindeki projeler için %5'ten başlayarak 50.000 kelimenin üzerindeki projeler için %15'e kadar çıkar."
+        },
+        {
+          "question": "Revizyon politikanız nedir?",
+          "answer": "Standart paketimiz bir revizyon turu içerir, Profesyonel paket iki revizyon turu içerir ve Premium paket makul bir kapsamda sınırsız revizyon içerir. Gerekirse ek revizyon turları satın alınabilir."
+        },
+        {
+          "question": "Çevirileri ne kadar hızlı teslim edebilirsiniz?",
+          "answer": "Standart teslimat süremiz iş günü başına yaklaşık 2.000-2.500 kelimedir. Ek bir maliyetle hızlı hizmetler sunulabilir, bu da teslimat süresini %30-50 oranında azaltabilir. Büyük acil projeler için sıkı teslim tarihlerini karşılamak üzere birden fazla çevirmen atayabiliriz."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Başlamaya Hazır mısınız?",
+      "subtitle": "Çeviri projeniz için ücretsiz bir teklif almak üzere bugün bizimle iletişime geçin.",
+      "button": "Teklif İste"
+    }
+  },
+  "contact": {
+    "pageTitle": "Bize Ulaşın",
+    "pageSubtitle": "Çeviri ihtiyaçlarınız için buradayız. Bugün bizimle iletişime geçin.",
+    "standardPackage": {
+      "title": "Standart",
+      "description": "Standart teslimat süresi ile genel içerik çevirisi için.",
+      "features": [
+        "Yüksek kaliteli çeviri",
+        "Temel düzeyde düzeltme",
+        "Standart teslimat süresi",
+        "E-posta desteği"
+      ]
+    },
+    "professionalPackage": {
+      "title": "Profesyonel",
+      "description": "Teknik uzmanlık gerektiren profesyonel içerik için.",
+      "features": [
+        "Yüksek kaliteli çeviri",
+        "Tam düzeyde düzeltme",
+        "Daha hızlı teslimat süresi",
+        "Kontekst-spesifik terminoloji",
+        "Öncelikli e-posta desteği"
+      ]
+    },
+    "premiumPackage": {
+      "title": "Premium",
+      "description": "Olağanüstü kalite gerektiren yüksek öncelikli projeler için.",
+      "features": [
+        "Premium kalite çeviri",
+        "Tam düzeltme",
+        "Hızlı teslimat",
+        "Özel proje yöneticisi",
+        "Telefon & e-posta desteği",
+        "Teknik uzmanlık"
+      ]
+    },
+    "form": {
+      "title": "Teklif İsteği",
+      "subtitle": "Aşağıdaki formu doldurun, çeviri projeniz için size bir teklif ile geri döneceğiz.",
+      "name": "Adınız",
+      "email": "E-posta Adresi",
+      "phone": "Telefon Numarası (isteğe bağlı)",
+      "subject": "Konu",
+      "message": "Mesajınız",
+      "submit": "Mesaj Gönder",
+      "submitRequest": "Talebi Gönder",
+      "agreeTerms": "Kabul ediyorum",
+      "termsAgreement": "Şartlar & Koşullar ve Gizlilik Politikasını kabul ediyorum",
+      "actions": {
+        "chooseFile": "Dosya Seç"
+      },
+      "sections": {
+        "contactInfo": "İletişim Bilgileri",
+        "projectDetails": "Proje Detayları",
+        "additionalInfo": "Ek Bilgi"
+      },
+      "fields": {
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "email": "E-posta",
+        "phone": "Telefon",
+        "company": "Şirket (varsa)",
+        "sourceLanguage": "Kaynak Dil",
+        "targetLanguage": "Hedef Dil",
+        "serviceType": "Hizmet Türü",
+        "projectDetails": "Proje Detayları",
+        "fileUpload": "Belge Ekle (isteğe bağlı)",
+        "deadline": "Teslim Tarihi (varsa)",
+        "budget": "Bütçe (tahmini)",
+        "howDidYouHear": "Bizi nereden duydunuz?",
+        "agreeToTerms": "Şartlar ve koşulları kabul ediyorum"
+      },
+      "placeholders": {
+        "projectDetails": "Lütfen projenizi detaylı bir şekilde tanımlayın (kelime sayısı, belge türü, konu, vb.)",
+        "fileUpload": "Desteklenen dosya türleri: PDF, DOC, DOCX, TXT, XLS, XLSX, PPT, PPTX, ODT, RTF (Maksimum 10MB)",
+        "budget": "ör. $500-1000"
+      },
+      "errors": {
+        "firstNameRequired": "Ad gerekli",
+        "lastNameRequired": "Soyad gerekli",
+        "emailRequired": "E-posta gerekli",
+        "emailInvalid": "Geçersiz e-posta adresi",
+        "sourceLanguageRequired": "Kaynak dil gerekli",
+        "targetLanguageRequired": "Hedef dil gerekli",
+        "serviceTypeRequired": "Hizmet türü gerekli",
+        "projectDetailsRequired": "Proje detayları gereklidir",
+        "fileTooBig": "Dosya boyutu 10MB sınırını aşıyor",
+        "fileTypeInvalid": "Geçersiz dosya türü. Lütfen desteklenen bir belge formatı yükleyin",
+        "termsRequired": "Şartları kabul etmelisiniz",
+        "formHasErrors": "Lütfen formdaki hataları düzeltin"
+      },
+      "success": "Sorgunuz başarıyla gönderildi! Yakında sizinle iletişime geçeceğiz."
+    },
+    "contactInfo": {
+      "title": "İletişim Bilgileri",
+      "address": "Cenevre, Zürih, Lugano - İsviçre",
+      "email": "info@oghamtranslations.com",
+      "hours": "Pazartesi-Cuma: 9:00 - 18:00 CET",
+      "reachOut": "Bizimle doğrudan iletişime geçmekten çekinmeyin:",
+      "businessHours": "Çalışma Saatleri",
+      "weekdays": "Pazartesi - Cuma: 8:00 - 18:00",
+      "saturday": "Cumartesi: 10:00 - 14:00",
+      "sunday": "Pazar: Kapalı",
+      "immediateAssistance": "Acil Yardıma mı İhtiyacınız Var?",
+      "urgentNeeds": "Acil çeviri ihtiyaçlarınız veya hizmetlerimizle ilgili sorularınız için:",
+      "urgentEmail": "E-posta: urgent@oghamtranslations.com",
+      "responseTime": "Çalışma saatlerimiz içinde tüm taleplere 2 iş saati içinde yanıt vermeyi hedefliyoruz."
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "questions": [
+        {
+          "question": "Çeviri projem için nasıl teklif alabilirim?",
+          "answer": "İletişim formumuzu doldurarak veya proje detaylarınızı, dil çifti, belge türü ve son teslim tarihi dahil olmak üzere, info@oghamtranslations.com adresine e-posta göndererek teklif isteyebilirsiniz."
+        },
+        {
+          "question": "Tipik teslim süreniz nedir?",
+          "answer": "Teslim süremiz belgenin uzunluğuna, karmaşıklığına ve dil çiftine bağlıdır. Genel olarak, standart projeler için günde yaklaşık 2.000-2.500 kelime çeviriyoruz."
+        },
+        {
+          "question": "Onaylı çeviri hizmeti sunuyor musunuz?",
+          "answer": "Evet, doğum belgeleri, evlilik belgeleri, akademik transkriptler ve yasal belgeler gibi resmi belgeler için onaylı çeviri hizmeti sunuyoruz."
+        }
+      ]
+    },
+    "languages": {
+      "english": "İngilizce",
+      "french": "Fransızca",
+      "german": "Almanca",
+      "italian": "İtalyanca",
+      "romansh": "Romanş",
+      "spanish": "İspanyolca",
+      "portuguese": "Portekizce",
+      "russian": "Rusça",
+      "ukrainian": "Ukraynaca",
+      "mandarin": "Mandarin",
+      "japanese": "Japonca",
+      "arabic": "Arapça",
+      "czech": "Çekçe",
+      "turkish": "Türkçe"
+    },
+    "serviceTypes": {
+      "documentTranslation": "Belge Çevirisi",
+      "websiteLocalization": "Web Sitesi Yerelleştirme",
+      "technicalTranslation": "Teknik Çeviri",
+      "legalTranslation": "Hukuki Çeviri",
+      "medicalTranslation": "Tıbbi Çeviri",
+      "marketingMaterials": "Pazarlama Materyalleri",
+      "subtitling": "Altyazı Çevirisi",
+      "contentCreation": "İçerik Oluşturma",
+      "softwareLocalization": "Yazılım Yerelleştirme",
+      "other": "Diğer"
+    }
+  },
+  "portfolioExtra": {
+    "viewSample": "Örneği Görüntüle",
+    "allProjects": "Tüm Projeler",
+    "categories": {
+      "legal": "Hukuki",
+      "technical": "Teknik",
+      "marketing": "Pazarlama",
+      "website": "Web Sitesi",
+      "corporate": "Kurumsal",
+      "medical": "Tıbbi",
+      "creative": "Yaratıcı İçerik"
+    }
+  },
+  "terms": {
+    "pageTitle": "Şartlar ve Koşullar",
+    "lastUpdated": "Son güncelleme",
+    "date": "9 Mart 2025",
+    "breadcrumbs": {
+      "home": "Ana Sayfa",
+      "terms": "Şartlar ve Koşullar"
+    },
+    "sections": {
+      "introduction": "Giriş",
+      "services": "Hizmet Tanımı",
+      "ordering": "Hizmet Siparişi ve Teslimatı",
+      "payment": "Fiyatlandırma ve Ödeme",
+      "revisions": "Revizyonlar ve Kalite Güvencesi",
+      "confidentiality": "Gizlilik ve Veri Koruma",
+      "intellectual": "Fikri Mülkiyet",
+      "liability": "Sorumluluğun Sınırlandırılması",
+      "termination": "Fesih",
+      "governing": "Geçerli Hukuk ve Uyuşmazlık Çözümü",
+      "modifications": "Şartlarda Değişiklikler",
+      "contact": "İletişim Bilgileri"
+    },
+    "content": {
+      "intro": {
+        "title": "1. Giriş",
+        "welcome": "Ogham Çeviri Hizmetleri'ne (\"Şirket\", \"biz\", \"bizim\", \"bize\") hoş geldiniz. Bu Şartlar ve Koşullar, www.oghamtranslations.com adresinde bulunan web sitemizin ve Ogham Çeviri Hizmetleri tarafından sağlanan hizmetlerin kullanımını düzenler.",
+        "agreement": "Web sitemize erişerek veya hizmetlerimizi kullanarak, bu Şartlar ve Koşullar ile Gizlilik Politikamıza bağlı kalmayı kabul etmiş olursunuz. Bu şartların herhangi bir kısmına katılmıyorsanız, web sitesine erişemez veya hizmetlerimizi kullanamazsınız."
+      },
+      "services": {
+        "title": "2. Hizmet Tanımı",
+        "description": "Ogham Çeviri Hizmetleri, 10'dan fazla dilde profesyonel çeviri hizmetleri sunmaktadır. Hizmetlerimiz, web sitemizde açıklandığı gibi belge çevirisi, web sitesi yerelleştirme, teknik çeviri ve diğer dil hizmetlerini içermektedir.",
+        "translators": "Tüm çeviriler, kendi dillerinde ana dil seviyesinde olan ve alanlarında uzman profesyonel çevirmenler tarafından yapılmaktadır. Her çeviri, kalite ve doğruluğu sağlamak için ikinci bir profesyonel tarafından gözden geçirilir."
+      },
+      "ordering": {
+        "title": "3. Hizmet Siparişi ve Teslimat",
+        "quotes": "3.1. <strong>Teklifler:</strong> Ogham Çeviri Hizmetleri tarafından sağlanan tüm teklifler, aksi belirtilmedikçe, düzenleme tarihinden itibaren 30 gün geçerlidir. Teklifler, müşterinin talep sırasında sağladığı bilgilere dayanır.",
+        "confirmation": "3.2. <strong>Sipariş Onayı:</strong> Hizmetler, yalnızca müşterinin teklifi ve bu Şartlar ve Koşulları kabul ettiğine dair yazılı onay alındıktan sonra başlatılacaktır.",
+        "delivery": "3.3. <strong>Teslimat:</strong> Teslimat tarihi, sipariş onayı sırasında kararlaştırılacaktır. Ogham Çeviri Hizmetleri, kararlaştırılan teslimat sürelerine uymak için her türlü çabayı gösterecektir, ancak kontrolümüz dışındaki durumlarda teslimat garantisi verilemez.",
+        "format": "3.4. <strong>Teslimat Formatı:</strong> Aksi belirtilmedikçe, çeviriler kaynak metinle aynı formatta teslim edilecektir. Ek formatlama hizmetleri ek ücretlere tabi olabilir."
+      },
+      "payment": {
+        "title": "4. Fiyatlandırma ve Ödeme",
+        "pricing": "4.1. <strong>Fiyatlandırma:</strong> Fiyatlarımız kelime sayısı, dil çifti, karmaşıklık ve teslim süresine dayanmaktadır. Yeminli çeviriler veya teknik konular gibi özel hizmetler ek ücretlere tabi olabilir.",
+        "terms": "4.2. <strong>Ödeme Koşulları:</strong> PayPal ve banka havalesi kabul ediyoruz. Kurumsal müşteriler için ödeme koşulları ile faturalandırma düzenleyebiliriz. Büyük projeler için ön ödeme olarak bir yüzde talep edebiliriz."
+      },
+      "revisions": {
+        "title": "5. Revizyonlar ve Kalite Güvencesi",
+        "guarantee": "5.1. <strong>Kalite Garantisi:</strong> Yüksek kaliteli çeviriler sağlamaya kararlıyız. Çalışmamızdan memnun kalmazsanız, teslimattan itibaren 14 gün içinde revizyon talep edebilirsiniz.",
+        "scope": "5.2. <strong>Revizyon Kapsamı:</strong> Ücretsiz revizyonlar, çeviri hatalarının veya yanlış yorumlamaların düzeltilmesiyle sınırlıdır. Orijinal brifingde belirtilmeyen kaynak metin değişiklikleri veya stil tercihleri ek ücretlere tabi olabilir.",
+        "refund": "5.3. <strong>İade Politikası:</strong> Makul revizyon denemelerinden sonra gereksinimlerinizi karşılayamazsak, tam iade almaya hak kazanırsınız."
+      },
+      "confidentiality": {
+        "title": "6. Gizlilik ve Veri Koruma",
+        "confidentiality": "6.1. <strong>Gizlilik:</strong> Tüm müşteri belgelerini ve bilgilerini kesinlikle gizli tutarız. Çevirmenlerimiz ve personelimiz gizlilik anlaşmaları ile bağlıdır.",
+        "dataProtection": "6.2. <strong>Veri Koruma:</strong> Kişisel verileri Gizlilik Politikamız ve geçerli veri koruma yasalarına uygun olarak işleriz.",
+        "security": "6.3. <strong>Veri Güvenliği:</strong> Verilerinizi yetkisiz erişim, değiştirme, ifşa veya imhaya karşı korumak için uygun teknik ve organizasyonel önlemler uygularız."
+      },
+      "intellectual": {
+        "title": "7. Fikri Mülkiyet",
+        "ownership": "7.1. <strong>Sahiplik:</strong> Müşteri, kaynak içeriğin tüm fikri mülkiyet haklarını elinde tutar. Çeviri içeriği, tam ödeme yapıldıktan sonra müşterinin mülkiyetine geçer.",
+        "memory": "7.2. <strong>Çeviri Belleği:</strong> Aksi kararlaştırılmadıkça, aynı müşteri için gelecekteki projelerde kalite ve tutarlılık amacıyla çevirileri çeviri belleğimizde saklayabiliriz.",
+        "reference": "7.3. <strong>Referans:</strong> Müşteri aksi talep etmedikçe, müşterinin adını müşteri listemize ekleyebiliriz."
+      },
+      "liability": {
+        "title": "8. Sorumluluğun Sınırlandırılması",
+        "service": "8.1. <strong>Hizmet Sorumluluğu:</strong> Sorumluluğumuz, çeviri hizmetleri için ödenen tutarla sınırlıdır. Dolaylı, sonuçsal veya tesadüfi zararlardan sorumlu değiliz.",
+        "content": "8.2. <strong>İçerik Sorumluluğu:</strong> Müşteri, kaynak içeriği çevirme hakkına sahip olduğundan emin olmakla sorumludur. Çevirilerin içeriğiyle ilgili herhangi bir telif hakkı ihlali veya diğer yasal sorunlardan sorumlu değiliz.",
+        "timeSensitive": "8.3. <strong>Zaman Duyarlı Materyal:</strong> Zaman duyarlı materyaller için müşteri önceden bizi bilgilendirmelidir. Yazılı olarak açıkça kabul edilmedikçe, teslimattaki gecikmelerden kaynaklanan kayıplardan sorumlu değiliz."
+      },
+      "termination": {
+        "title": "9. Fesih",
+        "byClient": "9.1. <strong>Müşteri Tarafından:</strong> Müşteri, yazılı bildirimde bulunarak hizmetleri istediği zaman sonlandırabilir. Müşteri, fesih noktasına kadar tamamlanan tüm işler için ödeme yapmaktan sorumlu olacaktır.",
+        "byCompany": "9.2. <strong>Ogham Çeviri Hizmetleri Tarafından:</strong> Müşteri, bu Şartlar ve Koşulları, özellikle ödeme koşullarını ihlal ederse, hizmetleri sonlandırma hakkımızı saklı tutarız."
+      },
+      "governing": {
+        "title": "10. Geçerli Hukuk ve Uyuşmazlık Çözümü",
+        "law": "10.1. <strong>Geçerli Hukuk:</strong> Bu Şartlar ve Koşullar, İsviçre yasalarına göre yönetilecek ve yorumlanacaktır.",
+        "resolution": "10.2. <strong>Uyuşmazlık Çözümü:</strong> Bu Şartlar ve Koşullardan kaynaklanan veya bunlarla bağlantılı herhangi bir uyuşmazlık, iyi niyetle müzakere yoluyla çözülecektir. Uyuşmazlık müzakere yoluyla çözülemezse, İsviçre'nin Zürih mahkemelerinin münhasır yargı yetkisine sunulacaktır."
+      },
+      "modifications": {
+        "title": "11. Şartlarda Değişiklikler",
+        "description": "Bu Şartlar ve Koşulları herhangi bir zamanda değiştirme hakkımızı saklı tutarız. Değişiklikler, web sitesine yüklendiğinde yürürlüğe girecektir. Bu Şartlar ve Koşulları periyodik olarak gözden geçirmek sizin sorumluluğunuzdadır. Revize edilmiş Şartlar ve Koşulların yayınlanmasının ardından hizmetlerimizi kullanmaya devam etmeniz, değişiklikleri kabul ettiğiniz ve onayladığınız anlamına gelir."
+      },
+      "contact": {
+        "title": "12. İletişim Bilgileri",
+        "description": "Bu Şartlar ve Koşullar hakkında herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin:",
+        "email": "E-posta:",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "privacy": {
+    "pageTitle": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme",
+    "date": "9 Mart 2025",
+    "breadcrumbs": {
+      "home": "Ana Sayfa",
+      "privacy": "Gizlilik Politikası"
+    },
+    "sections": {
+      "introduction": "Giriş",
+      "collectedInfo": "Topladığımız Bilgiler",
+      "useOfInfo": "Bilgilerinizi Nasıl Kullanıyoruz",
+      "infoSharing": "Bilgi Paylaşımı",
+      "cookies": "Çerezler ve İzleme Teknolojileri",
+      "dataProtection": "Veri Koruma Hakları",
+      "thirdPartyLinks": "Üçüncü Taraf Bağlantılar",
+      "childrenPrivacy": "Çocukların Gizliliği",
+      "changes": "Bu Gizlilik Politikasındaki Değişiklikler",
+      "contact": "Bize Ulaşın"
+    },
+    "content": {
+      "intro": {
+        "title": "1. Giriş",
+        "description1": "Ogham Çeviri Hizmetleri (\"biz\", \"bizim\" veya \"bize\") gizliliğinizi korumaya kararlıdır. Bu Gizlilik Politikası, www.oghamtranslations.com web sitemizi ziyaret ettiğinizde veya çeviri hizmetlerimizi kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı, ifşa ettiğimizi ve koruduğumuzu açıklar.",
+        "description2": "Lütfen bu Gizlilik Politikasını dikkatlice okuyun. Bu Gizlilik Politikasının şartlarını kabul etmiyorsanız, siteye erişmeyin veya hizmetlerimizi kullanmayın. Web sitemize erişerek veya çeviri hizmetlerimizi kullanarak bu Gizlilik Politikasını kabul etmiş olursunuz."
+      },
+      "collect": {
+        "title": "2. Topladığımız Bilgiler",
+        "personal": {
+          "title": "2.1 Kişisel Bilgiler",
+          "intro": "Aşağıdaki durumlarda bize gönüllü olarak sağladığınız kişisel bilgileri toplayabiliriz:",
+          "list": [
+            "Web sitemize kaydolun",
+            "Teklif isteyin veya sipariş verin",
+            "Bültenimize abone olun",
+            "Anket yanıtlayın veya form doldurun",
+            "Soru veya geri bildirimle bize ulaşın"
+          ],
+          "details": "Kişisel bilgiler adınız, e-posta adresiniz, posta adresiniz, telefon numaranız, şirket bilgileriniz ve ödeme detaylarınızı içerebilir."
+        },
+        "nonPersonal": {
+          "title": "2.2 Kişisel Olmayan Bilgiler",
+          "intro": "Web sitemizi ziyaret ettiğinizde otomatik olarak belirli kişisel olmayan bilgileri toplayabiliriz, bunlar arasında:",
+          "list": [
+            "IP adresi",
+            "Tarayıcı türü",
+            "İşletim sistemi",
+            "Ziyaret edilen sayfalar ve web sitemizde geçirilen süre",
+            "Yönlendiren web sitesi adresleri"
+          ]
+        },
+        "translation": {
+          "title": "2.3 Çeviri İçeriği",
+          "description": "Çeviri hizmetlerimizi kullandığınızda, sağladığınız çeviri içeriğini toplar ve işleriz. Bu, gönderdiğiniz belgeler veya materyallerde yer alan kişisel verileri içerebilir."
+        }
+      },
+      "usage": {
+        "title": "3. Bilgilerinizi Nasıl Kullanıyoruz",
+        "intro": "Topladığımız bilgileri çeşitli amaçlarla kullanabiliriz, bunlar arasında:",
+        "list": [
+          "Hizmetlerimizi sağlamak, işletmek ve sürdürmek",
+          "Çeviri taleplerinizi işlemek ve yerine getirmek",
+          "Hizmetlerimizi geliştirmek, kişiselleştirmek ve genişletmek",
+          "Web sitemizi nasıl kullandığınızı anlamak ve analiz etmek",
+          "Yeni ürünler, hizmetler, özellikler ve işlevsellik geliştirmek",
+          "Hizmetlerimiz, güncellemeler ve diğer bilgiler hakkında sizinle iletişim kurmak",
+          "Pazarlama ve tanıtım iletişimleri göndermek (yalnızca onayınızla)",
+          "Dolandırıcılığı tespit etmek ve önlemek",
+          "Uyumluluk, yasal süreç ve kolluk kuvvetleri amaçları için"
+        ]
+      },
+      "sharing": {
+        "title": "4. Bilgilerinizi Nasıl Paylaşıyoruz",
+        "intro": "Bilgilerinizi aşağıdaki durumlarda paylaşabiliriz:",
+        "providers": {
+          "title": "4.1 Hizmet Sağlayıcılar",
+          "description": "Bilgilerinizi, bizim için veya adımıza hizmet veren hizmet sağlayıcılar ve çevirmenlerle paylaşabiliriz. Bu hizmetler arasında ödeme işleme, veri analizi, e-posta teslimi, barındırma hizmetleri ve müşteri hizmetleri yer alır. Bu hizmet sağlayıcılar, kişisel bilgileri gizli tutma ve yalnızca onlara açıkladığımız amaçlar için kullanma yükümlülüğü altındadır."
+        },
+        "transfers": {
+          "title": "4.2 İş Transferleri",
+          "description": "Bir birleşme, devralma veya varlıklarımızın tamamının veya bir kısmının satışı durumunda, bilgileriniz bu işlemin bir parçası olarak aktarılabilir. Mülkiyet değişikliği veya kişisel bilgilerinizin kullanımı hakkında sizi e-posta ve/veya web sitemizde belirgin bir bildirimle bilgilendireceğiz."
+        },
+        "legal": {
+          "title": "4.3 Yasal Gereklilikler",
+          "description": "Geçerli yasalara, hükümet taleplerine, yargı süreçlerine, mahkeme emirlerine veya yasal süreçlere uymak için yasal olarak gerekli olduğunda bilgilerinizi açıklayabiliriz."
+        },
+        "consent": {
+          "title": "4.4 Onayınızla",
+          "description": "Kişisel bilgilerinizi başka bir amaçla onayınızla açıklayabiliriz."
+        }
+      },
+      "security": {
+        "title": "5. Veri Güvenliği",
+        "measures": "İşlediğimiz kişisel bilgilerin güvenliğini korumak için uygun teknik ve organizasyonel güvenlik önlemleri uyguladık. Ancak, internetin kendisinin %100 güvenli olduğunu garanti edemeyeceğimizi lütfen unutmayın. Kişisel bilgilerinizi korumak için elimizden gelenin en iyisini yapacağız, ancak kişisel bilgilerin web sitemize ve web sitemizden iletilmesi kendi sorumluluğunuzdadır.",
+        "confidentiality": "Çeviri süreci için katı gizlilik önlemleri uyguluyoruz. Tüm çevirmenlerimiz gizlilik sözleşmeleri imzalar ve belge transferleri için güvenli sistemler kullanırız."
+      },
+      "retention": {
+        "title": "6. Veri Saklama",
+        "period": "Kişisel bilgilerinizi, bu Gizlilik Politikasında belirtilen amaçlar için gerekli olduğu sürece saklayacağız, aksi takdirde yasalarca daha uzun bir saklama süresi gerekmedikçe veya izin verilmedikçe. Kişisel bilgilerinizi işlememiz için geçerli bir ticari ihtiyacımız kalmadığında, ya sileriz ya da anonim hale getiririz.",
+        "translation": "Çeviri içeriği için, projeyi tamamladıktan sonra olası takip soruları veya revizyon taleplerini karşılamak amacıyla belgelerinizi genellikle 3 aya kadar saklarız, ardından güvenli bir şekilde silinirler. Proje tamamlandıktan sonra içeriğinizin hemen silinmesini isterseniz, lütfen bize bildirin."
+      },
+      "rights": {
+        "title": "7. Gizlilik Haklarınız",
+        "intro": "Konumunuza bağlı olarak, kişisel bilgilerinizle ilgili belirli haklara sahip olabilirsiniz. Bunlar şunları içerebilir:",
+        "list": [
+          "Hakkınızda tuttuğumuz kişisel bilgilere erişim hakkı",
+          "Yanlış kişisel bilgilerin düzeltilmesini talep etme hakkı",
+          "Kişisel bilgilerinizin silinmesini talep etme hakkı",
+          "Kişisel bilgilerinizin işlenmesine itiraz etme hakkı",
+          "Veri taşınabilirliği hakkı",
+          "Rızayı geri çekme hakkı"
+        ],
+        "exercise": "Bu hakları kullanmak için lütfen aşağıdaki \"Bize Ulaşın\" bölümünde verilen iletişim bilgilerini kullanarak bizimle iletişime geçin."
+      },
+      "cookies": {
+        "title": "8. Çerezler ve İzleme Teknolojileri",
+        "description": "Web sitemizdeki etkinlikleri izlemek ve belirli bilgileri saklamak için çerezler ve benzeri izleme teknolojileri kullanıyoruz. Çerezler, anonim bir benzersiz tanımlayıcı içerebilecek küçük miktarda veri içeren dosyalardır. Çerezler, bir web sitesinden tarayıcınıza gönderilir ve cihazınızda saklanır.",
+        "types": "Aşağıdaki türde çerezleri kullanıyoruz:",
+        "list": [
+          "<strong>Gerekli çerezler:</strong> Web sitemizin çalışması için gereklidir. Sayfa gezinme ve web sitesinin güvenli alanlarına erişim gibi temel işlevleri etkinleştirirler.",
+          "<strong>Analitik çerezler:</strong> Ziyaretçilerin web sitemizle nasıl etkileşimde bulunduğunu anlamamıza yardımcı olur, bilgileri anonim olarak toplar ve raporlar.",
+          "<strong>Tercih çerezleri:</strong> Web sitemizin davranışını veya görünümünü değiştiren bilgileri hatırlamasını sağlar, örneğin tercih ettiğiniz dil."
+        ],
+        "management": "Tarayıcınıza tüm çerezleri reddetmesini veya bir çerez gönderildiğinde bunu belirtmesini talimat verebilirsiniz. Ancak, çerezleri kabul etmezseniz, web sitemizin bazı bölümlerini kullanamayabilirsiniz."
+      },
+      "thirdParty": {
+        "title": "9. Üçüncü Taraf Web Siteleri",
+        "description": "Web sitemiz, bizim tarafımızdan işletilmeyen diğer web sitelerine bağlantılar içerebilir. Bir üçüncü taraf bağlantısına tıkladığınızda, o üçüncü tarafın sitesine yönlendirilirsiniz. Ziyaret ettiğiniz her sitenin Gizlilik Politikasını incelemenizi şiddetle tavsiye ederiz. Üçüncü taraf sitelerin veya hizmetlerin içeriği, gizlilik politikaları veya uygulamaları üzerinde hiçbir kontrolümüz yoktur ve sorumluluk kabul etmiyoruz."
+      },
+      "children": {
+        "title": "10. Çocukların Gizliliği",
+        "description": "Hizmetlerimiz, 16 yaşın altındaki çocuklar tarafından kullanım için tasarlanmamıştır. 16 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. Eğer bir ebeveyn veya vasi iseniz ve çocuğunuzun bize kişisel bilgi sağladığını fark ederseniz, gerekli önlemleri alabilmemiz için lütfen bizimle iletişime geçin."
+      },
+      "changes": {
+        "title": "11. Bu Gizlilik Politikasındaki Değişiklikler",
+        "description": "Gizlilik Politikamızı zaman zaman güncelleyebiliriz. Herhangi bir değişiklik olduğunda, bu sayfada yeni Gizlilik Politikasını yayınlayarak ve bu Gizlilik Politikasının üst kısmındaki \"Son güncelleme\" tarihini güncelleyerek sizi bilgilendireceğiz. Bu Gizlilik Politikasını periyodik olarak incelemeniz önerilir. Bu Gizlilik Politikasındaki değişiklikler, bu sayfada yayınlandığında geçerli olur."
+      },
+      "contact": {
+        "title": "12. Bize Ulaşın",
+        "description": "Bu Gizlilik Politikası hakkında herhangi bir sorunuz varsa, lütfen bizimle şu adresten iletişime geçin:",
+        "email": "E-posta:",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "notFound": {
+    "title": "404 - Sayfa Bulunamadı",
+    "message": "Aradığınız sayfa mevcut değil.",
+    "returnHome": "Ana Sayfaya Dön"
+  }
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   Box, 
   Container, 
@@ -17,29 +18,32 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import TranslateIcon from '@mui/icons-material/Translate';
 import PublicIcon from '@mui/icons-material/Public';
 
-const languages = [
-  'English', 'French', 'German', 'Italian',
-  'Romansh', 'Spanish', 'Portuguese', 'Russian',
-  'Ukrainian', 'Mandarin', 'Japanese', 'Arabic'
+// Language keys for translations
+const languageKeys = [
+  'english', 'french', 'german', 'italian',
+  'romansh', 'spanish', 'portuguese', 'russian',
+  'ukrainian', 'mandarin', 'japanese', 'arabic',
+  'czech', 'turkish'
 ];
 
 // Different scripts for "Ogham Translation Services"
 const scriptExamples = [
-  'Ogham Translation Services',                        // English
-  'Огам Сервисы Переводов',  // Cyrillic (Russian)
-  'خدمات الترجمة أوغام',              // Arabic
-  '奥甘翻译服务',                                        // Mandarin
+  'Ogham Translation Services',                 // English
+  'Огам Сервисы Переводов',                     // Cyrillic (Russian)
+  'خدمات الترجمة أوغام',                            // Arabic
+  '奥甘翻译服务',                                 // Mandarin
   'オーガム翻訳サービス',                          // Japanese
-  'Services de Traduction Ogham',                     // French
-  'Ogham Übersetzungsdienste',                     // German
-  'Servizi di Traduzione Ogham',                     // Italian
-  'Servicios de Traducción Ogham'                   // Spanish
+  'Services de Traduction Ogham',               // French
+  'Ogham Übersetzungsdienste',                  // German
+  'Servizi di Traduzione Ogham',                // Italian
+  'Servicios de Traducción Ogham'               // Spanish
 ];
 
 const Home = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+  const { t } = useTranslation();
   
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -112,7 +116,7 @@ const Home = () => {
                   fontSize: { xs: '2.5rem', md: '3.5rem' }
                 }}
               >
-                Bridging Languages, Preserving Cultures
+                {t('home.hero.title')}
               </Typography>
               <Typography 
                 variant="h5" 
@@ -122,7 +126,7 @@ const Home = () => {
                   fontSize: { xs: '1.2rem', md: '1.5rem' }
                 }}
               >
-                Accurate, culturally attuned translation services tailored to your needs — in over 10 languages.
+                {t('home.hero.subtitle')}
               </Typography>
               <Button 
                 variant="contained" 
@@ -138,7 +142,7 @@ const Home = () => {
                   px: 3 
                 }}
               >
-                Get a Quote
+                {t('common.buttons.getQuote')}
               </Button>
               <Button 
                 variant="outlined" 
@@ -157,7 +161,7 @@ const Home = () => {
                   }
                 }}
               >
-                Our Services
+                {t('common.buttons.ourServices')}
               </Button>
             </Grid>
             <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
@@ -215,15 +219,13 @@ const Home = () => {
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
             <Typography variant="h3" component="h2" gutterBottom>
-              About Ogham Translations
+              {t('home.about.title')}
             </Typography>
             <Typography variant="body1" paragraph>
-              Founded in 2022, Ogham Translations is a boutique translation company committed to delivering exceptional language solutions with meticulous attention to detail.
-              We provide personalized, high-quality translation services for businesses and individuals worldwide.
+              {t('home.about.paragraph1')}
             </Typography>
             <Typography variant="body1" paragraph>
-              Our team of professional translators are native speakers with expertise in their respective fields,
-              ensuring accurate and culturally appropriate translations for all your needs.
+              {t('home.about.paragraph2')}
             </Typography>
             <Button 
               variant="contained" 
@@ -232,19 +234,19 @@ const Home = () => {
               to="/team" 
               sx={{ mt: 2 }}
             >
-              Meet Our Team
+              {t('home.about.meetTeam')}
             </Button>
           </Grid>
           <Grid item xs={12} md={6}>
             <Box sx={{ p: 2, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 3 }}>
               <Typography variant="h5" gutterBottom align="center">
-                Why Choose Us?
+                {t('home.whyChooseUs.title')}
               </Typography>
               <Grid container spacing={2}>
                 {[
-                  { icon: <LanguageIcon color="primary" fontSize="large" />, title: 'Multiple Languages', description: 'Over 10 languages available' },
-                  { icon: <DescriptionIcon color="primary" fontSize="large" />, title: 'Document Expertise', description: 'Technical, legal, medical & more' },
-                  { icon: <TranslateIcon color="primary" fontSize="large" />, title: 'Certified Translators', description: 'Professional and qualified team' }
+                  { icon: <LanguageIcon color="primary" fontSize="large" />, title: t('home.whyChooseUs.multipleLanguages.title'), description: t('home.whyChooseUs.multipleLanguages.description') },
+                  { icon: <DescriptionIcon color="primary" fontSize="large" />, title: t('home.whyChooseUs.documentExpertise.title'), description: t('home.whyChooseUs.documentExpertise.description') },
+                  { icon: <TranslateIcon color="primary" fontSize="large" />, title: t('home.whyChooseUs.certifiedTranslators.title'), description: t('home.whyChooseUs.certifiedTranslators.description') }
                 ].map((item, index) => (
                   <Grid item xs={12} key={index}>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -266,14 +268,14 @@ const Home = () => {
       <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Languages We Offer
+            {t('home.languages.title')}
           </Typography>
           <Typography variant="body1" align="center" paragraph sx={{ mb: 6 }}>
-            Our team of professional translators covers a wide range of languages from around the world.
+            {t('home.languages.subtitle')}
           </Typography>
           <Grid container spacing={2} justifyContent="center">
-            {languages.map((language) => (
-              <Grid item key={language}>
+            {languageKeys.map((key) => (
+              <Grid item key={key}>
                 <Box 
                   sx={{ 
                     px: 3, 
@@ -289,7 +291,7 @@ const Home = () => {
                     }
                   }}
                 >
-                  <Typography variant="subtitle1">{language}</Typography>
+                  <Typography variant="subtitle1">{t(`home.languages.list.${key}`)}</Typography>
                 </Box>
               </Grid>
             ))}
@@ -300,27 +302,27 @@ const Home = () => {
       {/* Services Preview */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Typography variant="h3" component="h2" align="center" gutterBottom>
-          Our Services
+          {t('home.services.title')}
         </Typography>
         <Typography variant="body1" align="center" paragraph sx={{ mb: 6 }}>
-          We offer a comprehensive range of translation services to meet all your needs.
+          {t('home.services.subtitle')}
         </Typography>
         <Grid container spacing={4}>
           {[
             {
-              title: 'Document Translation',
+              title: t('home.services.documentTranslation.title'),
               image: 'https://images.unsplash.com/photo-1589330694653-ded6df03f754?w=500&auto=format&fit=crop&q=60',
-              description: 'Professional translation of legal documents, contracts, certificates, and more.'
+              description: t('home.services.documentTranslation.description')
             },
             {
-              title: 'Website Localization',
+              title: t('home.services.websiteLocalization.title'),
               image: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=500&auto=format&fit=crop&q=60',
-              description: 'Adapt your website content for different regions and languages to reach a global audience.'
+              description: t('home.services.websiteLocalization.description')
             },
             {
-              title: 'Technical Translation',
+              title: t('home.services.technicalTranslation.title'),
               image: 'https://images.unsplash.com/photo-1433840496881-cbd845929862?w=500&auto=format&fit=crop&q=60',
-              description: 'Accurate translation of technical manuals, guides, and specifications.'
+              description: t('home.services.technicalTranslation.description')
             }
           ].map((service, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
@@ -351,7 +353,7 @@ const Home = () => {
             component={RouterLink}
             to="/services"
           >
-            View All Services
+            {t('common.buttons.viewAll')}
           </Button>
         </Box>
       </Container>
@@ -362,13 +364,13 @@ const Home = () => {
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} md={6}>
               <Typography variant="h3" component="h2" gutterBottom>
-                Our Translation Portfolio
+                {t('home.portfolioShowcase.title')}
               </Typography>
               <Typography variant="body1" paragraph>
-                Explore our showcase of translation work across various industries and language pairs. See firsthand the quality and attention to detail that sets Ogham Translation Services apart.
+                {t('home.portfolioShowcase.paragraph1')}
               </Typography>
               <Typography variant="body1" paragraph>
-                Our portfolio features samples of legal documents, technical manuals, marketing materials, and creative content translated with meticulous precision and cultural sensitivity.
+                {t('home.portfolioShowcase.paragraph2')}
               </Typography>
               <Button 
                 variant="contained" 
@@ -378,7 +380,7 @@ const Home = () => {
                 to="/portfolio"
                 sx={{ mt: 2 }}
               >
-                View Our Portfolio
+                {t('home.portfolioShowcase.viewButton')}
               </Button>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -415,10 +417,10 @@ const Home = () => {
       <Box sx={{ bgcolor: 'secondary.main', color: 'white', py: 8 }}>
         <Container maxWidth="md">
           <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Ready to Get Started?
+            {t('home.cta.title')}
           </Typography>
           <Typography variant="h6" align="center" paragraph sx={{ mb: 4 }}>
-            Contact us today for a free quote on your translation project.
+            {t('home.cta.subtitle')}
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center' }}>
             <Button 
@@ -438,7 +440,7 @@ const Home = () => {
                 }
               }}
             >
-              Request a Quote
+              {t('home.cta.button')}
             </Button>
           </Box>
         </Container>

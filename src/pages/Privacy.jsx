@@ -11,18 +11,20 @@ import {
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { useTranslation } from 'react-i18next';
 
 const Privacy = () => {
+  const { t } = useTranslation();
   return (
     <Box>
       {/* Hero Section */}
       <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 6 }}>
         <Container maxWidth="lg">
           <Typography variant="h2" component="h1" gutterBottom>
-            Privacy Policy
+            {t('privacy.pageTitle')}
           </Typography>
           <Typography variant="subtitle1" sx={{ mb: 2 }}>
-            Last updated: March 9, 2025
+            {t('privacy.lastUpdated')}: {t('terms.date')}
           </Typography>
           <Breadcrumbs 
             separator={<NavigateNextIcon fontSize="small" />} 
@@ -30,9 +32,9 @@ const Privacy = () => {
             sx={{ color: 'white' }}
           >
             <Link component={RouterLink} to="/" sx={{ color: 'white', '&:hover': { color: 'primary.light' } }}>
-              Home
+              {t('terms.breadcrumbs.home')}
             </Link>
-            <Typography color="inherit">Privacy Policy</Typography>
+            <Typography color="inherit">{t('privacy.pageTitle')}</Typography>
           </Breadcrumbs>
         </Container>
       </Box>
@@ -41,220 +43,207 @@ const Privacy = () => {
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
           <Typography variant="h4" component="h2" gutterBottom>
-            1. Introduction
+            {t('privacy.content.intro.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            Ogham Translation Services ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.oghamtranslations.com or use our translation services.
+            {t('privacy.content.intro.description1')}
           </Typography>
           <Typography variant="body1" paragraph>
-            Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the site or use our services. By accessing our website or using our translation services, you agree to this Privacy Policy.
+            {t('privacy.content.intro.description2')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            2. Information We Collect
+            {t('privacy.content.collect.title')}
           </Typography>
           <Typography variant="h6" gutterBottom>
-            2.1 Personal Information
+            {t('privacy.content.collect.personal.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We may collect personal information that you voluntarily provide to us when you:
+            {t('privacy.content.collect.personal.intro')}
           </Typography>
           <Typography component="ul" sx={{ pl: 4, mb: 2 }}>
-            <Typography component="li" variant="body1">Register on our website</Typography>
-            <Typography component="li" variant="body1">Request a quote or place an order</Typography>
-            <Typography component="li" variant="body1">Subscribe to our newsletter</Typography>
-            <Typography component="li" variant="body1">Respond to a survey or fill out a form</Typography>
-            <Typography component="li" variant="body1">Contact us with inquiries or feedback</Typography>
+            {t('privacy.content.collect.personal.list', { returnObjects: true }).map((item, index) => (
+              <Typography key={index} component="li" variant="body1">{item}</Typography>
+            ))}
           </Typography>
           <Typography variant="body1" paragraph>
-            Personal information may include your name, email address, postal address, phone number, company information, and payment details.
+            {t('privacy.content.collect.personal.details')}
           </Typography>
 
           <Typography variant="h6" gutterBottom>
-            2.2 Non-Personal Information
+            {t('privacy.content.collect.nonPersonal.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We may automatically collect certain non-personal information when you visit our website, including:
+            {t('privacy.content.collect.nonPersonal.intro')}
           </Typography>
           <Typography component="ul" sx={{ pl: 4, mb: 2 }}>
-            <Typography component="li" variant="body1">IP address</Typography>
-            <Typography component="li" variant="body1">Browser type</Typography>
-            <Typography component="li" variant="body1">Operating system</Typography>
-            <Typography component="li" variant="body1">Pages visited and time spent on our website</Typography>
-            <Typography component="li" variant="body1">Referring website addresses</Typography>
+            {t('privacy.content.collect.nonPersonal.list', { returnObjects: true }).map((item, index) => (
+              <Typography key={index} component="li" variant="body1">{item}</Typography>
+            ))}
           </Typography>
 
           <Typography variant="h6" gutterBottom>
-            2.3 Content for Translation
+            {t('privacy.content.collect.translation.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            When you use our translation services, we necessarily collect and process the content you provide for translation. This may include personal data contained within the documents or materials you submit.
+            {t('privacy.content.collect.translation.description')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            3. How We Use Your Information
+            {t('privacy.content.usage.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We may use the information we collect for various purposes, including to:
+            {t('privacy.content.usage.intro')}
           </Typography>
           <Typography component="ul" sx={{ pl: 4, mb: 2 }}>
-            <Typography component="li" variant="body1">Provide, operate, and maintain our services</Typography>
-            <Typography component="li" variant="body1">Process and fulfill your translation requests</Typography>
-            <Typography component="li" variant="body1">Improve, personalize, and expand our services</Typography>
-            <Typography component="li" variant="body1">Understand and analyze how you use our website</Typography>
-            <Typography component="li" variant="body1">Develop new products, services, features, and functionality</Typography>
-            <Typography component="li" variant="body1">Communicate with you about our services, updates, and other information</Typography>
-            <Typography component="li" variant="body1">Send you marketing and promotional communications (only with your consent)</Typography>
-            <Typography component="li" variant="body1">Find and prevent fraud</Typography>
-            <Typography component="li" variant="body1">For compliance, legal process, and law enforcement purposes</Typography>
+            {t('privacy.content.usage.list', { returnObjects: true }).map((item, index) => (
+              <Typography key={index} component="li" variant="body1">{item}</Typography>
+            ))}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            4. How We Share Your Information
+            {t('privacy.content.sharing.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We may share your information in the following situations:
+            {t('privacy.content.sharing.intro')}
           </Typography>
 
           <Typography variant="h6" gutterBottom>
-            4.1 Service Providers
+            {t('privacy.content.sharing.providers.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We may share your information with service providers and translators who perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, and customer service. These service providers are bound by contractual obligations to keep personal information confidential and use it only for the purposes for which we disclose it to them.
+            {t('privacy.content.sharing.providers.description')}
           </Typography>
 
           <Typography variant="h6" gutterBottom>
-            4.2 Business Transfers
+            {t('privacy.content.sharing.transfers.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            If we are involved in a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction. We will notify you via email and/or a prominent notice on our website of any change in ownership or uses of your personal information.
+            {t('privacy.content.sharing.transfers.description')}
           </Typography>
 
           <Typography variant="h6" gutterBottom>
-            4.3 Legal Requirements
+            {t('privacy.content.sharing.legal.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We may disclose your information where we are legally required to do so in order to comply with applicable law, governmental requests, a judicial proceeding, court order, or legal process.
+            {t('privacy.content.sharing.legal.description')}
           </Typography>
 
           <Typography variant="h6" gutterBottom>
-            4.4 With Your Consent
+            {t('privacy.content.sharing.consent.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We may disclose your personal information for any other purpose with your consent.
+            {t('privacy.content.sharing.consent.description')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            5. Data Security
+            {t('privacy.content.security.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please also remember that we cannot guarantee that the internet itself is 100% secure. Although we will do our best to protect your personal information, transmission of personal information to and from our website is at your own risk.
+            {t('privacy.content.security.measures')}
           </Typography>
           <Typography variant="body1" paragraph>
-            For the translation process itself, we employ strict confidentiality measures. All our translators sign confidentiality agreements, and we use secure systems for document transfers.
+            {t('privacy.content.security.confidentiality')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            6. Data Retention
+            {t('privacy.content.retention.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Policy, unless a longer retention period is required or permitted by law. When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize it.
+            {t('privacy.content.retention.period')}
           </Typography>
           <Typography variant="body1" paragraph>
-            For translation content, we typically retain your documents for up to 3 months after project completion to address any potential follow-up questions or revision requests, after which they are securely deleted. If you require immediate deletion of your content after project completion, please let us know.
+            {t('privacy.content.retention.translation')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            7. Your Privacy Rights
+            {t('privacy.content.rights.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            Depending on your location, you may have certain rights regarding your personal information. These may include:
+            {t('privacy.content.rights.intro')}
           </Typography>
           <Typography component="ul" sx={{ pl: 4, mb: 2 }}>
-            <Typography component="li" variant="body1">The right to access personal information we hold about you</Typography>
-            <Typography component="li" variant="body1">The right to request correction of inaccurate personal information</Typography>
-            <Typography component="li" variant="body1">The right to request deletion of your personal information</Typography>
-            <Typography component="li" variant="body1">The right to object to processing of your personal information</Typography>
-            <Typography component="li" variant="body1">The right to data portability</Typography>
-            <Typography component="li" variant="body1">The right to withdraw consent</Typography>
+            {t('privacy.content.rights.list', { returnObjects: true }).map((item, index) => (
+              <Typography key={index} component="li" variant="body1">{item}</Typography>
+            ))}
           </Typography>
           <Typography variant="body1" paragraph>
-            To exercise these rights, please contact us using the details provided in the "Contact Us" section below.
+            {t('privacy.content.rights.exercise')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            8. Cookies and Tracking Technologies
+            {t('privacy.content.cookies.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We use cookies and similar tracking technologies to track activity on our website and store certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device.
+            {t('privacy.content.cookies.description')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We use the following types of cookies:
+            {t('privacy.content.cookies.types')}
           </Typography>
           <Typography component="ul" sx={{ pl: 4, mb: 2 }}>
-            <Typography component="li" variant="body1"><strong>Essential cookies:</strong> Necessary for the operation of our website. They enable basic functions like page navigation and access to secure areas of the website.</Typography>
-            <Typography component="li" variant="body1"><strong>Analytics cookies:</strong> Help us understand how visitors interact with our website by collecting and reporting information anonymously.</Typography>
-            <Typography component="li" variant="body1"><strong>Preference cookies:</strong> Enable our website to remember information that changes the way the website behaves or looks, like your preferred language.</Typography>
+            {t('privacy.content.cookies.list', { returnObjects: true }).map((item, index) => (
+              <Typography key={index} component="li" variant="body1" dangerouslySetInnerHTML={{ __html: item }} />
+            ))}
           </Typography>
           <Typography variant="body1" paragraph>
-            You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.
+            {t('privacy.content.cookies.management')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            9. Third-Party Websites
+            {t('privacy.content.thirdParty.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            Our website may contain links to other websites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+            {t('privacy.content.thirdParty.description')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            10. Children's Privacy
+            {t('privacy.content.children.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            Our services are not intended for use by children under the age of 16. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we can take necessary actions.
+            {t('privacy.content.children.description')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            11. Changes to This Privacy Policy
+            {t('privacy.content.changes.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
+            {t('privacy.content.changes.description')}
           </Typography>
 
           <Divider sx={{ my: 4 }} />
 
           <Typography variant="h4" component="h2" gutterBottom>
-            12. Contact Us
+            {t('privacy.content.contact.title')}
           </Typography>
           <Typography variant="body1" paragraph>
-            If you have any questions about this Privacy Policy, please contact us at:
+            {t('privacy.content.contact.description')}
           </Typography>
           <List>
             <ListItem disablePadding>
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Typography variant="body1" sx={{ mr: 1 }}>Email:</Typography>
+                <Typography variant="body1" sx={{ mr: 1 }}>{t('privacy.content.contact.email')}</Typography>
                 <Link component="a" href="mailto:info@oghamtranslations.com" underline="hover">
-                  info@oghamtranslations.com
+                  {t('privacy.content.contact.emailAddress')}
                 </Link>
               </Box>
             </ListItem>

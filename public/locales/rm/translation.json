@@ -1,0 +1,1271 @@
+{
+  "common": {
+    "language": "Romansh",
+    "languageNative": "Rumantsch",
+    "and": ",",
+    "menu": {
+      "home": "Chasa",
+      "services": "Servetschs",
+      "team": "Team",
+      "portfolio": "Portfolio",
+      "pricing": "Prets",
+      "contact": "Contact"
+    },
+    "footer": {
+      "about": "Servetschs da translaziun professiunals en pliras linguas. Qualitad, precisadad e punctualitad garantidas.",
+      "quickLinks": "Colliaziuns sveltas",
+      "contactUs": "Contactai nus",
+      "address": "Geneva, Turitg, Lugano - Svizra",
+      "email": "E-mail",
+      "allRightsReserved": "Tuts dretgs reservads",
+      "termsConditions": "Cundiziuns generalas",
+      "privacyPolicy": "Politica da confidenzialitad"
+    },
+    "buttons": {
+      "getQuote": "Reclama in preventiv",
+      "ourServices": "Noss servetschs",
+      "readMore": "Leger dapli",
+      "viewAll": "Vesair Tut",
+      "submit": "Trametter",
+      "send": "Trametter",
+      "accept": "Accettar"
+    },
+    "cookieConsent": {
+      "message": "Questa pagina web utilisescha cookies per meglierar l'experientscha d'utilisader. Vesa noss",
+      "moreInfo": "per dapli infurmaziuns."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Ponts tranter linguas, preservond culturas",
+      "subtitle": "Servetschs da translaziun precis e culturalmain adattads, fatgs tenor Voss basegns — en passa 10 linguas."
+    },
+    "portfolioShowcase": {
+      "title": "Noss Portfolio da Translaziuns",
+      "paragraph1": "Explorescha noss exempel da lavur da translaziun tras differentas branschas e pèr da linguas. Vesair da prima vista la qualitad e l'attenziun al detagl che differenziescha Ogham Translation Services.",
+      "paragraph2": "Noss portfolio preschenta exempels da documents legals, manuals tecnics, materials da marketing e cuntegn creativ translatads cun precisiun meticulusa e sensibilitad culturala.",
+      "viewButton": "Vesair Noss Portfolio"
+    },
+    "about": {
+      "title": "Davart Ogham Translations",
+      "paragraph1": "Fundà il 2022, Ogham Translations è ina interpresa da translaziun speziala che s'engascha a furnir soluziuns linguisticas excepziunalas cun attenziun meticulusa al detagl. Nus purschain servetschs da translaziun persunalisads e da gronda qualitad per interpresas e persunas en tut il mund.",
+      "paragraph2": "Noss team da translaturs professiunals èn pledaders nativs cun experientscha en lur champs respectivs, garantind translaziuns precisas e culturalmain adattadas per tut Voss basegns.",
+      "meetTeam": "Enconuscha Noss Team"
+    },
+    "whyChooseUs": {
+      "title": "Pertge Tscherner Nus?",
+      "multipleLanguages": {
+        "title": "Pliras Linguas",
+        "description": "Passa 10 linguas disponiblas"
+      },
+      "documentExpertise": {
+        "title": "Expertisa da Documents",
+        "description": "Tecnic, legal, medicinal & dapli"
+      },
+      "certifiedTranslators": {
+        "title": "Translators certificads",
+        "description": "Team professiunal e qualifitgà"
+      }
+    },
+    "languages": {
+      "title": "Linguas che nus purschain",
+      "subtitle": "Nus avain in team da translatur professiunals che cuvra ina vasta paletta da linguas da l'entir mund.",
+      "list": {
+        "english": "Englais",
+        "french": "Franzos",
+        "german": "Tudestg",
+        "italian": "Talian",
+        "romansh": "Rumantsch",
+        "spanish": "Spagnol",
+        "portuguese": "Portugais",
+        "russian": "Russ",
+        "ukrainian": "Ucranais",
+        "mandarin": "Mandarin",
+        "japanese": "Giapunais",
+        "arabic": "Arabic",
+        "czech": "Tschec",
+        "turkish": "Tirc"
+      }
+    },
+    "services": {
+      "title": "Nossas servetschs",
+      "subtitle": "Nus purschain ina vasta paletta da servetschs da translaziun per ademplir tut Voss basegns.",
+      "documentTranslation": {
+        "title": "Translaziun da documents",
+        "description": "Translaziun professiunala da documents legals, contracts, certificats, e dapli."
+      },
+      "websiteLocalization": {
+        "title": "Localisaziun da Websites",
+        "description": "Adatta il cuntegn da tes website per differentas regiuns e linguas per cuntanscher in public global."
+      },
+      "technicalTranslation": {
+        "title": "Translaziun Tecnica",
+        "description": "Translaziun precisa da manuals tecnics, guids, e specificaziuns."
+      },
+      "viewAllServices": "Vesair Tut ils Servetschs"
+    },
+    "portfolio": {
+      "title": "Noss Portfolio da Translaziuns",
+      "paragraph1": "Explora nossa preschentaziun da lavur da translaziun sur differentas industrias e pèr da linguas. Vesair da prima vista la qualitad e l'attenziun al detagl che differenziescha Ogham Translation Services.",
+      "paragraph2": "Noss portfolio cumpiglia exempels da documents legals, manuals tecnics, materials da marketing, e cuntegn creativ translatà cun precisiun meticulusa e sensibilitad culturala.",
+      "viewPortfolio": "Vesair Noss Portfolio"
+    },
+    "cta": {
+      "title": "Pront per Cumenzar?",
+      "subtitle": "Contactescha nus oz per in preventiv gratuit per tes project da translaziun.",
+      "button": "Pretenda in Preventiv"
+    }
+  },
+  "services": {
+    "pageTitle": "Noss Servetschs",
+    "pageSubtitle": "Nus purschain ina vasta gamma da servetschs da translaziun per ademplir tes basegns specifics.",
+    "process": {
+      "title": "Noss Process da Translaziun",
+      "subtitle": "Nus suandain in process rigurus per garantir las pli autas qualitads da translaziuns per tes cuntegn:",
+      "steps": [
+        {
+          "title": "Analisa dal Project",
+          "description": "Nus analisain tes cuntegn, pretensiuns, e public mira per determinar la meglra metoda."
+        },
+        {
+          "title": "Translaziun",
+          "description": "Noss translaturs indigens convertschan cun maestria Voss cuntegn en la lingua da destinaziun."
+        },
+        {
+          "title": "Ediziun & Revisiun",
+          "description": "In segund linguist reveder la translaziun per correctadad, consistenza e stil."
+        },
+        {
+          "title": "Assicuranza da Qualitad",
+          "description": "Controllas rigurusas da qualitad garanteschan che Vossa translaziun adempla noss auts standards."
+        },
+        {
+          "title": "Revisiun dal Client",
+          "description": "Nus implementain Vossas remartgas e faschain las adattaziuns necessarias."
+        },
+        {
+          "title": "Consegna",
+          "description": "Vossa translaziun finalisada vegn furnida en il format preferì, a temp e tenor budget."
+        }
+      ]
+    },
+    "categories": {
+      "document": {
+        "title": "Translaziun da Documents",
+        "description": "Translaziun professiunala da differentas tipologias da documents cun correctadad e attenziun al detagl.",
+        "services": {
+          "legal": {
+            "title": "Documents Legals",
+            "description": "Contracts, accords, documents da dretgira, opiniuns legalas, patents e certificaziuns.",
+            "features": [
+              "Translaziuns certificadas",
+              "Expertisa en terminologia legala",
+              "Confidenzialitad garantida"
+            ]
+          },
+          "business": {
+            "title": "Documents da Fatschenta",
+            "description": "Rapports finanzials, plans da fatschenta, materials da marketing e communicaziuns corporativas.",
+            "features": [
+              "Terminologia specifica da l'industria",
+              "Branding consistent",
+              "Preservaziun dal format"
+            ]
+          },
+          "technical": {
+            "title": "Documents Tecnics",
+            "description": "Manuals d'utilisader, specificaziuns tecnicas, guids d'instrucziun e rapports tecnics.",
+            "features": [
+              "Correctadad tecnica",
+              "Lingua simplifitgada sche necessari",
+              "Experts dal tema"
+            ]
+          },
+          "academic": {
+            "title": "Documents Academics",
+            "description": "Diploms, transcripziuns, lavurs da retschertga, dissertaziuns, e certificaziuns academicas.",
+            "features": [
+              "Expertisa en terminologia academica",
+              "Translaziun da nivel da retschertga",
+              "Formataziun da citaziuns"
+            ]
+          }
+        }
+      },
+      "website": {
+        "title": "Translaziun da Websites",
+        "description": "Servetschs cumplessivs da localisaziun da websites per gidar vossa fatschenta a cuntanscher public internaziunal.",
+        "services": {
+          "localization": {
+            "title": "Localisaziun da Websites",
+            "description": "Translaziun cumpletta e adattaziun culturala dal cuntegn da voss website per martgads internaziunals.",
+            "features": [
+              "Adattaziun culturala",
+              "Optimizaziun SEO",
+              "Adaptaziun da l'interfatscha d'utilisader"
+            ]
+          },
+          "ecommerce": {
+            "title": "Translaziun da E-commerce",
+            "description": "Descriziuns da products, categorias, process da checkout, e cuntegn da sustegn per clients.",
+            "features": [
+              "Terminologia da products consistenta",
+              "Localisaziun da metodas da pajament",
+              "Linguatg orientà al client"
+            ]
+          },
+          "cms": {
+            "title": "Integraziun CMS",
+            "description": "Integraziun cun WordPress, Shopify, ed auters sistems da gestiun da cuntegn.",
+            "features": [
+              "Compatibilitad da plugins",
+              "Configuraziun multi-linguistica",
+              "Sincronisaziun automatica dal cuntegn"
+            ]
+          },
+          "seo": {
+            "title": "SEO Multilingua",
+            "description": "Retschertga da pleds-clav e optimisaziun per plirs martgads da mira.",
+            "features": [
+              "Retschertga da pleds-clav locals",
+              "Optimizaziun da meta tags",
+              "URLs amiaivels per SEO"
+            ]
+          }
+        }
+      },
+      "specialized": {
+        "title": "Translaziuns Specialisadas",
+        "description": "Translaziuns expertas per industrias specificas che dovran savida e terminologia speziala.",
+        "services": {
+          "medical": {
+            "title": "Translaziun Medicala",
+            "description": "Registers medicinals, documents farmaceutics, emprovas clinicas e materials da sanadad.",
+            "features": [
+              "Expertisa en terminologia medicinala",
+              "Conformitad regulativa",
+              "Linguatg amiaivel per pazients"
+            ]
+          },
+          "financial": {
+            "title": "Translaziun Finanziala",
+            "description": "Bilantschs, rapports d'investiziun, documents bancars e materials d'assicuranza.",
+            "features": [
+              "Precisadad da terminologia finanziala",
+              "Format da cifras",
+              "Conformitad regulativa"
+            ]
+          },
+          "marketing": {
+            "title": "Translaziun da Marketing",
+            "description": "Campagnas da marketing, brochuras, reclamas e materials da promoziun.",
+            "features": [
+              "Adaptaziun creativa",
+              "Relevanza culturala",
+              "Preservaziun da la vusch da la marca"
+            ]
+          },
+          "literary": {
+            "title": "Translaziun Litterara",
+            "description": "Cudeschs, poesia, scripts e lavurs creativas che mantegnan il stil e l'intent da l'autur.",
+            "features": [
+              "Fidelitad stilistica",
+              "Nuanca culturala",
+              "Adaptaziun creativa"
+            ]
+          }
+        }
+      },
+      "additional": {
+        "title": "Servetschs Supplementars",
+        "description": "Servetschs linguistics cumplementars per ademplir voss basegns da communicaziun digitala.",
+        "services": {
+          "content": {
+            "title": "Creaziun da Cuntegn",
+            "description": "Creaziun da cuntegn multiling per ils voss martgads mira.",
+            "features": [
+              "Redacturs indigens",
+              "Cuntegn specific per il martgà",
+              "Optimizaziun SEO"
+            ]
+          },
+          "software": {
+            "title": "Localisaziun da Software",
+            "description": "Translaziun e adattaziun d'interfatschas da software, apps e gieus.",
+            "features": [
+              "Consideraziun da UI/UX",
+              "Gestiun da strings",
+              "Test e garanzia da qualitad"
+            ]
+          },
+          "subtitling": {
+            "title": "Suttitling",
+            "description": "Servets da translaziun multimedia per videos e films che dovran translaziuns da text.",
+            "features": [
+              "Sincronisaziun dal temp",
+              "Adaptaziun culturala",
+              "Sustegn pluriling"
+            ]
+          }
+        }
+      }
+    },
+    "documentTranslation": {
+      "title": "Translaziun da Documents",
+      "description": "Translaziun professiunala da documents legals, contracts, certificats e dapli.",
+      "features": [
+        "Translaziun da documents legals",
+        "Translaziun da documents corporativs",
+        "Translaziun da documents persunals",
+        "Translaziun da certificats",
+        "Translaziun da documents academics"
+      ]
+    },
+    "websiteLocalization": {
+      "title": "Localisaziun da Websites",
+      "description": "Adatta il cuntegn da tes website per differentas regiuns e linguas per cuntanscher in public global.",
+      "features": [
+        "Translaziun da cuntegn da website",
+        "Adaptaziun culturala per martgads da mira",
+        "Translaziuns optimadas per SEO",
+        "Localisaziun multimedia",
+        "Localisaziun da commerzi electronic"
+      ]
+    },
+    "technicalTranslation": {
+      "title": "Translaziun Tecnica",
+      "description": "Translaziun precisa da manuals tecnics, guids e specificaziuns.",
+      "features": [
+        "Translaziun da manuals tecnics",
+        "Documentaziun da software",
+        "Translaziun da patents",
+        "Specificaziuns tecnicas",
+        "Guids d'utilisaders e manuals d'instrucziun"
+      ]
+    }
+  },
+  "portfolio": {
+    "pageTitle": "Noss Portfolio da Translaziuns",
+    "pageSubtitle": "Exempels da noss lavur da translaziun tras differentas industrias e linguas",
+    "categories": {
+      "all": "Tuts Projects",
+      "featured": "Recomandà",
+      "legal": "Legal",
+      "medical": "Medicin",
+      "technical": "Tecnic",
+      "marketing": "Marketing",
+      "literary": "Litterar & Creativ"
+    },
+    "featuredChip": "En evidenza",
+    "viewProject": "Vesair il project",
+    "dialogTitle": "Project da translaziun",
+    "languages": {
+      "english": "Englais",
+      "french": "Franzos",
+      "german": "Tudestg",
+      "italian": "Talian",
+      "japanese": "Giapunais",
+      "mandarin": "Mandarin",
+      "russian": "Russ"
+    },
+    "preview": {
+      "title": "Previsiun dal project",
+      "sourceDocument": "Document da funtauna",
+      "translatedDocument": "Document translatà",
+      "sourceDocumentPlaceholder": "Il document da funtauna vegniss mussà qua. En ina implementaziun reala, quai mussass il cuntegn actual dal PDF.",
+      "translatedDocumentPlaceholder": "Il document translatà vegniss mussà qua. En ina implementaziun reala, quai mussass il cuntegn actual dal PDF.",
+      "downloadSource": "Telechargiar funtauna",
+      "downloadTranslation": "Telechargiar translaziun",
+      "sideBySide": "In sper l'auter",
+      "original": "Original",
+      "translation": "Translaziun",
+      "loading": "Chargiar PDF...",
+      "noData": "Nagin PDF disponibel",
+      "errorLoading": "Errur cun chargiar il PDF",
+      "prevPage": "Precedent",
+      "nextPage": "Proxim"
+    },
+    "viewModes": {
+      "comparison": "In sper l'auter",
+      "before": "Original mo",
+      "after": "Mo translaziun"
+    },
+    "previewPlaceholder": {
+      "sourceMessage": "Il document da funtauna vegniss mussà qua.",
+      "translatedMessage": "Il document translatà vegniss mussà qua.",
+      "implementationNote": "En ina implementaziun reala, quai mussass il cuntegn real dal PDF."
+    },
+    "beforeAfter": "Avant & Suenter",
+    "showcaseItems": [
+      {
+        "title": "Translaziun da contracts",
+        "description": "Translaziun da contracts da l'Englais al Franzos."
+      },
+      {
+        "title": "Translaziun d'artitgel da retschertga medicinala",
+        "description": "Translaziun d'artitgel da retschertga medicinala dal Tudestg a l'Englais."
+      },
+      {
+        "title": "Translaziun da rapport finanzial",
+        "description": "Translaziun da rapport finanzial dal Franzos al Giapunais."
+      },
+      {
+        "title": "Translaziun da material da marketing",
+        "description": "Translaziun da material da marketing da l'Englais al Mandarin."
+      },
+      {
+        "title": "Translaziun litterara",
+        "description": "Translaziun litterara dal Russ al Talian."
+      }
+    ]
+  },
+  "team": {
+    "pageTitle": "Noss Team",
+    "pageSubtitle": "Enconuscha noss team dedicà da translaturs professiunals e spezialists da linguas.",
+    "professionalTranslators": "Translaturs professiunals basads en Svizra",
+    "description": "Ils professiunals preschentads qua èn noss manaders da team, mintgin maina il lavur enturn ina lingua principala che è lur lingua materna. Nus avain era collavuraturs addiziunals, garantind che nus avain almain dus experts per translatar e lura reveder mintga cumbinaziun da linguas pussaivla. Quest'approach cun dus experts garantescha la pli auta qualitad e la precisiun culturala en tut nossas translaziuns. Basads en Svizra, nus profitain da noss ambient multicultural per porscher translaziuns precisas e culturalmain adattadas sur pliras linguas europeicas e globalas.",
+    "languages": "Linguas",
+    "specialties": "Specialitads",
+    "educationExperience": "Educaziun & Experientscha",
+    "experienceLabel": "Experientscha",
+    "ourFounders": "Noss Fundaturs",
+    "ourTranslators": "Noss Translaturs",
+    "ourPartners": "Noss Partenaris",
+    "philosophy": {
+      "title": "Nossa Filosofia da Translaziun",
+      "subtitle": "A Ogham Translations, nus essan persvas che la translaziun effectiva va al di là dals pleds - i sa tracta da transmetter il senn, il context e las sfumaturas culturalas. Basads en Svizra, in pajais cun quatter linguas uffizialas, nus chapin il plurilinguissem a noss core e purtain questa perspectiva unica a mintga project.",
+      "values": [
+        {
+          "title": "Expertisa Culturala",
+          "description": "Noss translaturs na san betg mo las linguas cun las qualas lavuran - els chapeschan las culturas davos ellas, garantind che Voss messadi restia adattà ed effectiv."
+        },
+        {
+          "title": "Conuschientscha dal Champ",
+          "description": "Nus assegnain translaturs tenor lur expertisa en Voss champ specific, sche quai è giuridic, medicinal, tecnic u cuntegn creativ."
+        },
+        {
+          "title": "Assicuranza da Qualitad",
+          "description": "Mintga translaziun passa tras in process rigurus da controlla da qualitad, inclusiv ina revisiun dad in segund linguist per garantir la correctadad e la consistenza."
+        },
+        {
+          "title": "Emprender Continuadamain",
+          "description": "Noss translaturs prendan regularmain part a svilup professiunal per restar actualisads cun la terminologia e las tecnicas da translaziun las pli novas."
+        }
+      ]
+    },
+    "members": [
+      {
+        "name": "Célia Brodard",
+        "role": "Translatrice Senior - Franzos",
+        "bio": "Nata e creschida a Genevra, Céline ha ina gronda passiun per las linguas e sa spezialisescha en documents giuridics, finanzials e da fatschenta. Alumna da las meglras instituziuns svizras, ella cumbinescha sia furmaziun academica cun onns d'experientscha professiunala en translaziun. Sia derivanza svizra e sia profunda chapientscha d'ambients multiculturals permettan ad ella da garantir la precisadad e la sensibilitad culturala en mintga project.",
+        "languages": [
+          "Franzos",
+          "Englais",
+          "Tudestg"
+        ],
+        "specialties": [
+          "Giuiridic",
+          "Business",
+          "Finanzial"
+        ],
+        "experience": "8+ onns",
+        "education": "Bachelor en Comunicaziun Multilingua – Universitad da Genevra, Svizra; Master en Translaziun spezialiseda (Giuiridic e Finanzial) – Universitad da Genevra, Facultad da Translaziun e Interpretaziun (FTI), Svizra"
+      },
+      {
+        "name": "Markus Brunner",
+        "role": "Translatour Senior - Tudestg",
+        "bio": "Basà a Turitg, Markus translatescha documents tecnics e scientifics dapi passa in decenni. Cun in fund da scolaziun en l'ingegneria e la linguistica, el porta ina savida interdisciplinara a sia lavur da translaziun. Sia furmaziun en ina da las meglras universitads tecnicas da la Svizra il equipa cun la capacitad da tractar translaziuns fitg cumplexas e tecnicas cun precisaziun e clerezza insuperabla.",
+        "languages": [
+          "Tudestg",
+          "Englais",
+          "Franzos"
+        ],
+        "specialties": [
+          "Tecnic",
+          "Scientific",
+          "Ingegneria"
+        ],
+        "experience": "12+ onns",
+        "education": "Bachelor en Ingegneria Mechanica – ETH Turitg, Svizra; Master en Lingua e Comunicaziun – Universitad da Turitg, Svizra"
+      },
+      {
+        "name": "Inês Ferreira",
+        "role": "Translatoura Senior - Portugais & Spagnol",
+        "bio": "Originara da Lisbona, Inês numna uss Lugano sia chasa. Ella è spezialiseda en translaziuns creativas e da marketing, cun ina gronda passiun per la litteratura e la narraziun. Sia basa academica en linguistica e studis litterars d'ina da las meglras universitads da Portugal il permetta da translatar cun sfumaturas culturalas e flair creativ.",
+        "languages": [
+          "Portugais",
+          "Spagnol",
+          "Talian",
+          "Franzos"
+        ],
+        "specialties": [
+          "Marketing",
+          "Creativ",
+          "Litterar"
+        ],
+        "experience": "7+ onns",
+        "education": "Bachelor en Linguistica – Universitad da Lisbona, Portugal; Master en Translaziun, Interpretaziun e Studis Interculturals – Universitad Autonoma da Barcelona (UAB), Spagna"
+      },
+      {
+        "name": "Jian Chen",
+        "role": "Translatour Senior - Mandarin",
+        "bio": "Jian è in spezialist en translaziuns da Mandarin-Inglês cun in focus sin documents da fatschenta e tecnics. Cun furmaziun formala en translaziun e communicaziun interculturala d'ina universitad da renum en China e studis supplementars en Svizra, el surmonta las differenzas culturalas e linguisticas per interpresas svizras che entran en il martgà chinais.",
+        "languages": [
+          "Mandarin",
+          "Inglês",
+          "Franzos"
+        ],
+        "specialties": [
+          "Fatschenta",
+          "Tecnic",
+          "E-commerce"
+        ],
+        "experience": "11+ onns",
+        "education": "Bachelor en Studis da Lingua Inglesa – Universitad Fudan, China; Master en Translaziun e Interpretaziun – Universitad da Turitg, Svizra"
+      },
+      {
+        "name": "Alessandra Conti",
+        "role": "Translatrice Senior - Talian",
+        "bio": "Da Tessin, il chantun talian da la Svizra, Alessandra excella en translatar documents relatads a l'art, cultura e turissem. Sia profunda enconuschientscha da la litteratura taliana e l'ierta svizra fa sias translaziuns culturalmain ritgas e precisas. Ses fund academic en studis interculturals e istorgia da l'art agiunta profunditad a sia experientscha.",
+        "languages": [
+          "Talian",
+          "Tudestg",
+          "Inglês"
+        ],
+        "specialties": [
+          "Art",
+          "Cultura",
+          "Turissem",
+          "Buns da luxus"
+        ],
+        "experience": "9+ onns",
+        "education": "Bachelor en Istorgia da l'Art – Universitad da Bologna, Italia; Master da Studis Avanzads en Communicaziun Interculturala – Universitad da Lugano, Svizra"
+      },
+      {
+        "name": "Emiko Shimizu",
+        "role": "Translatrice Senior - Giapunais",
+        "bio": "Emiko ha vasta experientscha en translatar manuals tecnics, patents e litteratura scientifica per grondas interpresas farmaceuticas e d'ura svizras. Sia furmaziun academica rigurusa en Giapun, cumbinada cun sia experientscha en Svizra, fa dad ella ina experta indispensabla per translaziuns fitg spezializadas e tecnicas tras differentas industrias.",
+        "languages": [
+          "Giapunais",
+          "Inglês",
+          "Tudestg"
+        ],
+        "specialties": [
+          "Tecnic",
+          "Patents",
+          "Farmaceutic",
+          "Medical"
+        ],
+        "experience": "10+ onns",
+        "education": "Bachelor en Scienzas Farmaceuticas – Universitad da Tokyo, Giapun; Master en Translaziun Tecnica – Universitad da Studis da Linguas da Tokyo (TUFS), Giapun"
+      },
+      {
+        "name": "Olena Kovalenko",
+        "role": "Translatrice senior - Ucranais & Russ",
+        "bio": "Oriunda da Kyiv, Olena è spezialistada en translaziuns litteraras, academicas e legalas. Cun in fund da filologia e studis litterars, ha ella translatà numerusas ovras litteraras e lavurs academicas, garantind autenticadad e ritgezza culturala en mintga translaziun.",
+        "languages": [
+          "Ucranais",
+          "Russ",
+          "Englais",
+          "Tudestg"
+        ],
+        "specialties": [
+          "Litterar",
+          "Academic",
+          "Legal"
+        ],
+        "experience": "8+ onns",
+        "education": "Bachelor en Filologia – Universitad Naziunala Taras Shevchenko da Kyiv, Ucraina; Master en Translaziun – Universitad da Vienna, Austria"
+      },
+      {
+        "name": "Robert Ainsworth",
+        "role": "Translatour senior - Englais",
+        "bio": "Sco parlader nativ d'englais cun abilitads da scriver excepziunalas, Robert garantescha la pli auta qualitad per tut las translaziuns englaisas. Cun in fund en schurnalistica e translaziun, el creescha cuntegn persvadent e precis sur ina vasta varietad d'industries, da rapports da fatschenta a retschertgas academicas e materials da marketing.",
+        "languages": [
+          "Englais",
+          "Franzos",
+          "Tudestg"
+        ],
+        "specialties": [
+          "Fatschenta",
+          "Marketing",
+          "Schurnalistica",
+          "Academic"
+        ],
+        "experience": "14+ onns",
+        "education": "Bachelor en Lingua e Litteratura Englaisa – Universitad da Oxford, Reginavel Unì; Master en Translaziun e Interpretaziun – Universitad da Westminster, Reginavel Unì"
+      },
+      {
+        "name": "Claudio Cereghetti",
+        "role": "Translatour senior - Rumantsch",
+        "bio": "Sco in dals paucs translaturs professiunals rumantschs, Claudio preservescha e promova questa lingua rara svizra tras sias translaziuns. Cun ina fundaziun academica profunda en filologia e patrimoni linguistic, è el in expert da confidenza per documentaziun uffiziala svizra e projects da preservaziun culturala.",
+        "languages": [
+          "Rumantsch",
+          "Tudestg",
+          "Talian",
+          "Franzos",
+          "Englais"
+        ],
+        "specialties": [
+          "Documentaziun Uffiziala",
+          "Cultural",
+          "Patrimoni"
+        ],
+        "experience": "12+ onns",
+        "education": "Bachelor en Litteratura e Linguistica Rumantscha – Universitad da Turitg, Svizra; Master en Filologia Classica – Universitad da Friburg, Svizra"
+      },
+      {
+        "name": "Amine Benchekroun",
+        "role": "Translatour Senior - Arabic",
+        "bio": "Amine è spezialist per translaziuns en contexts diplomatics, commerzials e legals en l'arab. Cun furmaziun en relaziuns internaziunalas e studis spezialisads da translaziun, el colia las regiuns arabofonas cun il divers pajais commerzials e diplomatics da la Svizra, garantind che las translaziuns èn precisas e culturalmain sensiblas.",
+        "languages": [
+          "Arab",
+          "Franzos",
+          "Englais"
+        ],
+        "specialties": [
+          "Diplomatic",
+          "Legal",
+          "Relaziuns Internaziunalas"
+        ],
+        "experience": "9+ onns",
+        "education": "Bachelor en Studis da Translaziun – Université Hassan II, Maroc; Master en Relaziuns Internaziunalas – Graduate Institute Geneva (IHEID), Svizra"
+      }
+    ]
+  },
+  "portfolioDetails": {
+    "projectDescription": "Descripziun dal Project",
+    "languages": "Linguas",
+    "industry": "Industria",
+    "tags": "Tags"
+  },
+  "pricing": {
+    "pageTitle": "Pretschs",
+    "pageSubtitle": "Opziuns da pretschs transparentas e flexiblas",
+    "guarantee": {
+      "title": "Nossa Garanzia da Satisfacziun",
+      "description": "Nus essan engaschads da furnir translaziuns da gronda qualitad che adempleschan vossas aspectativas. Sche vus essas betg cumplettamain cuntents cun nossa lavur, nus la revisain senza custs supplementars. Sche en mintga mument vus sentis che la translaziun na correspunda betg a vossas aspectativas, pudais dumandar ina annullaziun, e nus restituin il pajament — senza dumondas.",
+      "provisions": "Per tut ils projects, nus purschain:",
+      "points": {
+        "accurate": "Translaziuns precisas e contextualmente adattadas",
+        "onTime": "Consegna a temp sco cunvegnì en il sboz dal project",
+        "consistent": "Terminologia consistenta tras voss documents",
+        "responsive": "Servetsch client e updates dal project reactivs"
+      }
+    },
+    "standard": "Standard",
+    "professional": "Profi",
+    "premium": "Premium",
+    "perWord": "per pled",
+    "startingAt": "A partir da",
+    "contactForPricing": "Contactai per pretsch",
+    "customSolution": "Soluzione persunalisada",
+    "paymentTerms": "Cundiziuns da pajament",
+    "termsDescription": "Nus acceptain PayPal e transferiments bancars. Per clients corporativs, pudain nus organisar facturaziun cun cundiziuns da pajament. Per projects gronds, pudain nus pretender in pertschient dal pajament enavant.",
+    "packages": {
+      "title": "Pachets da translaziun",
+      "subtitle": "Tscherna il pachet adattà per tes basegns da translaziun. Tut ils pretschs èn en CHF.",
+      "plans": [
+        {
+          "title": "Standard",
+          "price": "0.08",
+          "unit": "per pled",
+          "description": "Per cuntegn general e documents basics",
+          "features": [
+            {
+              "text": "Translaziun d'auta qualitad"
+            },
+            {
+              "text": "Correctura cumpletta"
+            },
+            {
+              "text": "Temp da furniziun standard"
+            },
+            {
+              "text": "Terminologia specifica al context"
+            },
+            {
+              "text": "Opziun da furniziun rapida"
+            },
+            {
+              "text": "Team dedicà"
+            }
+          ]
+        },
+        {
+          "title": "Professional",
+          "price": "0.12",
+          "unit": "per pled",
+          "description": "Per cuntegn d'interpresa e spezial",
+          "features": [
+            {
+              "text": "Translaziun d'auta qualitad"
+            },
+            {
+              "text": "Correctura meglierada"
+            },
+            {
+              "text": "Temp da furniziun pli svelt"
+            },
+            {
+              "text": "Terminologia specifica al context"
+            },
+            {
+              "text": "Opziun da furniziun rapida"
+            },
+            {
+              "text": "Team dedicà"
+            }
+          ]
+        },
+        {
+          "title": "Premium",
+          "price": "0.16",
+          "unit": "per pled",
+          "description": "Per cuntegn critic e da gronda visibilitad",
+          "features": [
+            {
+              "text": "Translaziun d'auta qualitad"
+            },
+            {
+              "text": "Pliras rundas da revisiun"
+            },
+            {
+              "text": "Temp da furniziun prioritari"
+            },
+            {
+              "text": "Terminologia specifica al context"
+            },
+            {
+              "text": "Opziun da furniziun rapida"
+            },
+            {
+              "text": "Team dedicà"
+            }
+          ]
+        }
+      ]
+    },
+    "rates": {
+      "title": "Tarifas Detagliadas da Servetschs",
+      "subtitle": "La tabella suandanta porscha infurmaziuns pli detagliadas davart ils pretschs per tips specifics da servetschs.",
+      "note": "Tarifas èn en CHF per pled, sch'i na vegn betg inditgà auter.",
+      "headers": {
+        "service": "Servetsch",
+        "standard": "Standard",
+        "professional": "Professiunal",
+        "premium": "Premium"
+      },
+      "services": [
+        {
+          "service": "Translaziun da Documents",
+          "standard": "0.08-0.10",
+          "professional": "0.12-0.14",
+          "premium": "0.16-0.20"
+        },
+        {
+          "service": "Localisaziun da Websites",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.16",
+          "premium": "0.18-0.22"
+        },
+        {
+          "service": "Translaziun Tecnica",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.18",
+          "premium": "0.20-0.25"
+        },
+        {
+          "service": "Translaziun Legala",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "Translaziun Medicinala",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "Cuntegn da Marketing",
+          "standard": "0.09-0.11",
+          "professional": "0.13-0.15",
+          "premium": "0.17-0.22"
+        },
+        {
+          "service": "Suttitels",
+          "standard": "6-8",
+          "professional": "9-12",
+          "premium": "14-18",
+          "note": "Pretsch per minuta da video"
+        }
+      ]
+    },
+    "process": {
+      "title": "Noss Process da Pretsch",
+      "subtitle": "Chapir co nus fixain noss pretschs per servetschs da translaziun",
+      "steps": [
+        {
+          "title": "Valitaziun",
+          "description": "Nus valitain il dumber da pleds dal voss document, la cumbinaziun da linguas, la cumplexitad tecnica e las pretensiuns da termin."
+        },
+        {
+          "title": "Preventiv",
+          "description": "Nus furnin in preventiv detaglià cun pretschs transparents basà sin las vossas basegns specifics."
+        },
+        {
+          "title": "Approvaziun",
+          "description": "Suenter che vus avais approvà il preventiv, nus cumenzain il process da translaziun."
+        },
+        {
+          "title": "Consegna",
+          "description": "Nus furnin la translaziun terminada sin u avant il termin fixà."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "FAQs davart ils pretschs",
+      "subtitle": "Respostas a dumondas frequentas davart noss pretschs",
+      "questions": [
+        {
+          "question": "Co calculais vus il cust da in project da translaziun?",
+          "answer": "Nus calculain normalmain per pled en il text da partenza. Ils tariffs varieschan tenor la cumbinaziun da linguas, la cumplexitad dal cuntegn, la cumpetenza necessaria e la sveltezza da furniziun. Per tscherts servetschs sco la sutitulaziun, nus calculain per minuta da video."
+        },
+        {
+          "question": "Datti taxas supplementaras ultra da la tariffa per pled?",
+          "answer": "En la gronda part dals cas, la tariffa per pled cumpiglia il servetsch cumplet. Tuttina, taxas supplementaras pon vegnir applitgadas per urdens urgents (normalmain +25-50%), pretensiuns spezialas da formatar u ulteriuras rundas da revisiun sur quai ch'è inclus en vossa pachet."
+        },
+        {
+          "question": "Tge metodas da pajament acceptais vus?",
+          "answer": "Nus acceptain PayPal, transferiments bancars, e per clients corporativs, nus pudain organisar facturaziun cun cundiziuns da pajament."
+        },
+        {
+          "question": "Offris vus sconts per gronds projects?",
+          "answer": "Gea, nus offrin sconts da volum per gronds projects. La procentuala da scont crescha cun la grondezza dal project, normalmain a partir da 5% per projects sur 10,000 pleds e fin a 15% per projects sur 50,000 pleds."
+        },
+        {
+          "question": "Tge è vossa politica davart revisiuns?",
+          "answer": "Nus includain ina runda da revisiun en il pachet Standard, duas rundas en il pachet Professional e revisiuns illimitadas en il pachet Premium entaifer in rom raschunaivel. Ulteriuras rundas da revisiun pon vegnir cumpradas sche necessari."
+        },
+        {
+          "question": "Quant spert pudais vus furnir translaziuns?",
+          "answer": "Noss temp da furniziun standard è circa 2,000-2,500 pleds per di da lavur. Servetschs urgents èn disponibels cun in cust supplementar, che po reducir il temp da furniziun per 30-50%. Per projects gronds urgents, pudain nus assignar plirs translaturs per ademplir termins stretgs."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Pront per cumenzar?",
+      "subtitle": "Contactai nus oz per in preventiv gratuit per Voss project da translaziun.",
+      "button": "Dumandar in preventiv"
+    }
+  },
+  "contact": {
+    "pageTitle": "Contactai nus",
+    "pageSubtitle": "Nus essan qua per gidar cun Voss basegns da translaziun. Contactai nus oz.",
+    "standardPackage": {
+      "title": "Standard",
+      "description": "Per translaziun da cuntegn general cun temp da furniziun standard.",
+      "features": [
+        "Translaziun da auta qualitad",
+        "Correctura basica",
+        "Temp da furniziun standard",
+        "Sustegn per email"
+      ]
+    },
+    "professionalPackage": {
+      "title": "Professional",
+      "description": "Per cuntegn professiunal che dovra savida tecnica.",
+      "features": [
+        "Translaziun da auta qualitad",
+        "Correctura cumpletta",
+        "Temp da furniziun pli svelt",
+        "Terminologia specifica al context",
+        "Sustegn prioritari per email"
+      ]
+    },
+    "premiumPackage": {
+      "title": "Premium",
+      "description": "Per projects da prioritad auta che dovran qualitad extraordinaria.",
+      "features": [
+        "Translaziun da qualitad premium",
+        "Correctura cumpletta",
+        "Furniziun accelerada",
+        "Manager da project dedicà",
+        "Sustegn per telefon & email",
+        "Savida tecnica"
+      ]
+    },
+    "form": {
+      "title": "Dumandar in preventiv",
+      "subtitle": "Empleni il formular qua sutvart e nus vegnin a turnar tar Vus cun in preventiv per Voss project da translaziun.",
+      "name": "Voss num",
+      "email": "Adressa da email",
+      "phone": "Numer da telefon (opziunal)",
+      "subject": "Sujett",
+      "message": "Voss Messadi",
+      "submit": "Trametter Messadi",
+      "submitRequest": "Trametter Dumonda",
+      "agreeTerms": "Sundel d'accord cun",
+      "termsAgreement": "Sundel d'accord cun ils Cundiziuns & Condiziuns e la Politica da Privacitad",
+      "actions": {
+        "chooseFile": "Tscherner Datoteca"
+      },
+      "sections": {
+        "contactInfo": "Infurmaziuns da Contact",
+        "projectDetails": "Detagls dal Project",
+        "additionalInfo": "Infurmaziuns Supplementaras"
+      },
+      "fields": {
+        "firstName": "Prüm Num",
+        "lastName": "Cognom",
+        "email": "E-mail",
+        "phone": "Telefon",
+        "company": "Interpresa (sch'applicabel)",
+        "sourceLanguage": "Lingua da Partenza",
+        "targetLanguage": "Lingua da Destinaziun",
+        "serviceType": "Tip da Servetsch",
+        "projectDetails": "Detagls dal Project",
+        "fileUpload": "Agiuntar Document (opziunal)",
+        "deadline": "Scadenza (schelta)",
+        "budget": "Budget (approximativ)",
+        "howDidYouHear": "Co has vus udì da nus?",
+        "agreeToTerms": "Jau sun d'accord cun ils cundiziuns"
+      },
+      "placeholders": {
+        "projectDetails": "Per plaschair descriva voss project en detagl (dumber da pleds, tip da document, tema, etc.)",
+        "fileUpload": "Tips da datotecas sustegnids: PDF, DOC, DOCX, TXT, XLS, XLSX, PPT, PPTX, ODT, RTF (Max 10MB)",
+        "budget": "p.ex. $500-1000"
+      },
+      "errors": {
+        "firstNameRequired": "Prüm num è necessari",
+        "lastNameRequired": "Cognom è necessari",
+        "emailRequired": "Email è necessari",
+        "emailInvalid": "Adressa d'email nunvalaivla",
+        "sourceLanguageRequired": "Lingua da partenza è necessaria",
+        "targetLanguageRequired": "Lingua da destinaziun è necessaria",
+        "serviceTypeRequired": "Tip da servetsch è necessari",
+        "projectDetailsRequired": "Detagls dal project èn necessaris",
+        "fileTooBig": "La grondezza dal datoteca surpassa il limit da 10MB",
+        "fileTypeInvalid": "Tip da datoteca nunvalaivel. Per plaschair chargia in in format da document sustegnì",
+        "termsRequired": "Vus stuais esser d'accord cun ils cundiziuns",
+        "formHasErrors": "Per plaschair corregia ils sbagls en il formular"
+      },
+      "success": "Vossa dumonda è vegnida tramessa cun success! Nus vegnin a contactar Vus bainbaud."
+    },
+    "contactInfo": {
+      "title": "Infurmaziuns da contact",
+      "address": "Genevra, Turitg, Lugano - Svizra",
+      "email": "info@oghamtranslations.com",
+      "hours": "Glindesdi-Venderdi: 9:00 - 18:00 CET",
+      "reachOut": "Na dubitezz betg da contactar nus directamain:",
+      "businessHours": "Uras da fatschenta",
+      "weekdays": "Glindesdi - Venderdi: 8:00 - 18:00",
+      "saturday": "Sonda: 10:00 - 14:00",
+      "sunday": "Dumengia: Serrau",
+      "immediateAssistance": "Duvrais Vus agid immediat?",
+      "urgentNeeds": "Per basegns urgents da translaziun u dumondas davart noss servetschs:",
+      "urgentEmail": "Email: urgent@oghamtranslations.com",
+      "responseTime": "Nus ans stentain da respunder a tut las dumondas entaifer 2 uras da fatschenta durant nossas uras da lavur."
+    },
+    "faq": {
+      "title": "Dumondas frequentas",
+      "questions": [
+        {
+          "question": "Co poss jau survegnir in preventiv per mes project da translaziun?",
+          "answer": "Vus pudais dumandar in preventiv emplenind noss formular da contact u tramettend in email directamain a info@oghamtranslations.com cun detagls davart Voss project, inclus il pèr da linguas, il tip da document e la scadenza."
+        },
+        {
+          "question": "Tge è Vossa durada tipica da realisaziun?",
+          "answer": "Nossa durada da realisaziun dependa da la lunghezza dal document, la cumplexitad e dal pèr da linguas. Generalmain, translain nus radund 2'000-2'500 pleds per di per projects standards."
+        },
+        {
+          "question": "Aschurais Vus translaziuns certificadas?",
+          "answer": "Gea, nus purschain translaziuns certificadas per documents uffizials sco attestats da naschientscha, certificats da lètg, transcripziuns academic e documents legals."
+        }
+      ]
+    },
+    "languages": {
+      "english": "Englais",
+      "french": "Franzos",
+      "german": "Tudestg",
+      "italian": "Talian",
+      "romansh": "Rumantsch",
+      "spanish": "Spagnol",
+      "portuguese": "Portugais",
+      "russian": "Russ",
+      "ukrainian": "Ucranais",
+      "mandarin": "Mandarin",
+      "japanese": "Giapunais",
+      "arabic": "Arabic",
+      "czech": "Tschec",
+      "turkish": "Tirc"
+    },
+    "serviceTypes": {
+      "documentTranslation": "Translaziun da documents",
+      "websiteLocalization": "Localisaziun da websites",
+      "technicalTranslation": "Translaziun tecnica",
+      "legalTranslation": "Translaziun legala",
+      "medicalTranslation": "Translaziun medicinala",
+      "marketingMaterials": "Material da marketing",
+      "subtitling": "Suttitels",
+      "contentCreation": "Creaziun da cuntegn",
+      "softwareLocalization": "Localisaziun da software",
+      "other": "Auter"
+    }
+  },
+  "portfolioExtra": {
+    "viewSample": "Vesair exempel",
+    "allProjects": "Tuts projects",
+    "categories": {
+      "legal": "Legal",
+      "technical": "Tecnic",
+      "marketing": "Marketing",
+      "website": "Pagina web",
+      "corporate": "Corporate",
+      "medical": "Medicinal",
+      "creative": "Cuntegn creativ"
+    }
+  },
+  "terms": {
+    "pageTitle": "Cundiziuns generalas",
+    "lastUpdated": "Ultima actualisaziun",
+    "date": "9 da mars 2025",
+    "breadcrumbs": {
+      "home": "Chasa",
+      "terms": "Cundiziuns generalas"
+    },
+    "sections": {
+      "introduction": "Introducziun",
+      "services": "Descripziun dals servetschs",
+      "ordering": "Empustaziun e furniziun dal servetsch",
+      "payment": "Pretschs e pajament",
+      "revisions": "Revisiuns e Garanzia da Qualitad",
+      "confidentiality": "Confidenzialitad e Protecziun da Datas",
+      "intellectual": "Proprietad Intellectuala",
+      "liability": "Limitaziun da Responsabladad",
+      "termination": "Terminaziun",
+      "governing": "Lescha Applitgabla e Soluziun da Disputas",
+      "modifications": "Modificaziuns dals Cundiziuns",
+      "contact": "Infurmaziuns da Contact"
+    },
+    "content": {
+      "intro": {
+        "title": "1. Introducziun",
+        "welcome": "Bainvegni tar Ogham Translation Services (\"Company\", \"nus\", \"nossa\", \"nus\"). Quests Cundiziuns e Condiziuns reglan l'utilisaziun da nossa pagina web situada sin www.oghamtranslations.com e dals servetschs furnids da Ogham Translation Services.",
+        "agreement": "Accedind a nossa pagina web u utilisand noss servetschs, acceptais Vus d'esser liads da quests Cundiziuns e Condiziuns e da nossa Politica da Privacitad. Sche Vus na essas betg d'accord cun ina part da quests cundiziuns, na pudais Vus betg acceder a la pagina web u utilisar noss servetschs."
+      },
+      "services": {
+        "title": "2. Descripziun dals Servetschs",
+        "description": "Ogham Translation Services porscha servetschs da translaziun professiunals en passa 10 linguas. Noss servetschs cumpiglian translaziun da documents, localisaziun da paginas web, translaziun tecnica e auters servetschs linguistics sco descrits sin nossa pagina web.",
+        "translators": "Tut las translaziuns vegnan fatgas da translaturs professiunals che èn pledaders nativs en lur linguas respectivas e experts en lur champs. Mintga translaziun vegn examinada d'in segund professiunal per garantir qualitad e correctadad."
+      },
+      "ordering": {
+        "title": "3. Ordinaziun da Servetschs e Consegna",
+        "quotes": "3.1. <strong>Preventivs:</strong> Tut ils preventivs furnids da Ogham Translation Services èn valaivels per 30 dis a partir da la data da l'emissiun, sch'i na vegn betg specificà auter. Ils preventivs sa basan sin las infurmaziuns furnidas dal client al mument da la dumonda.",
+        "confirmation": "3.2. <strong>Conferma da l'Ordinaziun:</strong> Ils servetschs cumenzan mo suenter avair retschavì ina conferma scritta dal client che accepta il preventiv e quests Cundiziuns e Condiziuns.",
+        "delivery": "3.3. <strong>Consegna:</strong> La data da consegna vegn fixada al mument da la conferma da l'ordinaziun. Ogham Translation Services farà tut ils sforzs per ademplir ils termins da consegna fixads, ma na po betg garantir la consegna en cas da circumstanzas che na stattan betg sut nossa controlla.",
+        "format": "3.4. <strong>Format da Consegna:</strong> Sch'i na vegn betg specificà auter, las translaziuns vegnan furnidas en il medem format sco il text da partenza. Servetschs da formatar supplementars pon chaschunar custs supplementars."
+      },
+      "payment": {
+        "title": "4. Prezis e Pagament",
+        "pricing": "4.1. <strong>Pretschs:</strong> Noss pretschs sa basan sin il dumber da pleds, la cumbinaziun da linguas, la cumplexitad e la durada da temp. Servetschs spezials sco translaziuns certificadas u temas tecnics pon chaschunar custs supplementars.",
+        "terms": "4.2. <strong>Cundiziuns da pajament:</strong> Nus acceptain PayPal e transferiments bancars. Per clients corporativs, pudain nus organisar facturaziun cun cundiziuns da pajament. Per projects gronds, pudain nus pretender in pertschient dal pajament enavant."
+      },
+      "revisions": {
+        "title": "5. Revisiun e Garanzia da Qualitad",
+        "guarantee": "5.1. <strong>Garanzia da Qualitad:</strong> Nus essan engaschads da furnir translaziuns da auta qualitad. Sche Vus essas betg cuntent cun noss lavur, pudais Vus dumandar revisiuns entaifer 14 dis suenter la furniziun.",
+        "scope": "5.2. <strong>Champs da Revisiun:</strong> Revisiun gratuita è limitada a correcturas d'errors da translaziun u malinterpretaziuns. Midadas al text original u preferenzas stilisticas che na fuvan betg specificadas en il mandat original pon chaschunar custs supplementars.",
+        "refund": "5.3. <strong>Politica da Restituziun:</strong> Sche nus na pudain betg ademplir Vossas pretensiuns suenter emprovas raschunaivlas da revisiun, essas Vus eligibel per ina restituziun cumpletta."
+      },
+      "confidentiality": {
+        "title": "6. Confidenzialitad e Protecziun da Datas",
+        "confidentiality": "6.1. <strong>Confidenzialitad:</strong> Nus tractain tut ils documents e las infurmaziuns dals clients sco strictamain confidenzials. Noss translatur e persunal èn liads da contracts da confidenzialitad.",
+        "dataProtection": "6.2. <strong>Protecziun da Datas:</strong> Nus elavurain datas persunalas tenor nossa Politica da Privacitad e las leschas applicablas da protecziun da datas.",
+        "security": "6.3. <strong>Segirezza da Datas:</strong> Nus implementain mesiras tecnicas ed organisatoricas adattadas per proteger Vossas datas cunter access nunautorisà, midada, derasaziun u destrucziun."
+      },
+      "intellectual": {
+        "title": "7. Proprietad Intellectuala",
+        "ownership": "7.1. <strong>Proprietad:</strong> Il client mantegna tut ils dretgs da proprietad intellectuala al cuntegn original. Il cuntegn translat daventa la proprietad dal client suenter il pajament cumplett.",
+        "memory": "7.2. <strong>Memoria da Translaziun:</strong> A main ch'i vegnia autramain cunvegnì, pudain nus arcunar translaziuns en nossa memoria da translaziun per intents da qualitad e consistenza en projects futurs per il medem client.",
+        "reference": "7.3. <strong>Referenza:</strong> Nus pudain includer il num dal client en nossa glista da clients, a main che il client dumonda auter."
+      },
+      "liability": {
+        "title": "8. Limitaziun da Responsabladad",
+        "service": "8.1. <strong>Responsabladad dal Servetsch:</strong> Noss responsabladad è limitada al import pajà per ils servetschs da translaziun. Nus na essan betg responsabels per donns indirects, consequents u incidentals.",
+        "content": "8.2. <strong>Responsabladad dal Cuntegn:</strong> Il client è responsabel per garantir ch'el ha il dretg da translatar il cuntegn original. Nus na essan betg responsabels per violaziuns da copyright u autras dumondas legalas colliadas al cuntegn da las translaziuns.",
+        "timeSensitive": "8.3. <strong>Material Sensitiv al Temp:</strong> Per materials sensibels al temp, il client duai infurmar nus enavant. Nus na essan betg responsabels per perditas resultantas da retardaments en la furniziun, a main ch'i vegnia expressivamain cunvegnì per scrip."
+      },
+      "termination": {
+        "title": "9. Terminaziun",
+        "byClient": "9.1. <strong>Dal Client:</strong> Il client po terminar ils servetschs en mintga mument cun furnir ina notificaziun scritta. Il client vegn a esser responsabel per il pajament per tut il lavur terminada fin al punct da terminaziun.",
+        "byCompany": "9.2. <strong>Da Ogham Translation Services:</strong> Nus resalvain il dretg da terminar ils servetschs sch'il client violescha quests Termins e Cundiziuns, particularmain en connex cun ils termins da pajament."
+      },
+      "governing": {
+        "title": "10. Lescha Applitgabla e Resolziun da Disputas",
+        "law": "10.1. <strong>Lescha Applitgabla:</strong> Quests Termins e Cundiziuns vegnan regids e interpretads tenor las leschas da la Svizra.",
+        "resolution": "10.2. <strong>Resolziun da Disputas:</strong> Mintga dispita che resulta da u en connex cun quests Termins e Cundiziuns vegn resolvida tras negoziaziun en buna fe. Sche la dispita na po betg vegnir resolvida tras negoziaziun, ella vegn suttamessa a la giurisdicziun exclusiva dals tribunals da Turitg, Svizra."
+      },
+      "modifications": {
+        "title": "11. Modificaziuns dals Termins",
+        "description": "Nus resalvain il dretg da modifitgar quests Termins e Cundiziuns en mintga mument. Midaments vegnan effectivs suenter la publicaziun sin il website. Igl è vossa responsabladad da reveder quests Termins e Cundiziuns periodicamain. Vossa cuntinuaziun d'utilisar noss servetschs suenter la publicaziun dals Termins e Cundiziuns revisads munta che vus acceptais e essas d'accord cun ils midaments."
+      },
+      "contact": {
+        "title": "12. Infurmaziuns da Contact",
+        "description": "Sche vus avais dumondas davart quests Termins e Cundiziuns, per plaschair contactai nus a:",
+        "email": "E-mail:",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "privacy": {
+    "pageTitle": "Politica da Privacitad",
+    "lastUpdated": "Ultima actualisaziun",
+    "date": "9 da mars 2025",
+    "breadcrumbs": {
+      "home": "Chasa",
+      "privacy": "Politica da Privacitad"
+    },
+    "sections": {
+      "introduction": "Introducziun",
+      "collectedInfo": "Infurmaziuns che Nus Rimnain",
+      "useOfInfo": "Co Nus Utilisain Vossas Infurmaziuns",
+      "infoSharing": "Condivisiun d'Infurmaziuns",
+      "cookies": "Cookies e Tecnologias da Suivi",
+      "dataProtection": "Dretgs da protecziun da datas",
+      "thirdPartyLinks": "Colliaziuns da terzas partidas",
+      "childrenPrivacy": "Protecziun da la sfera privata dals uffants",
+      "changes": "Midadas a questa politica da confidenzialitad",
+      "contact": "Contactai nus"
+    },
+    "content": {
+      "intro": {
+        "title": "1. Introducziun",
+        "description1": "Ogham Translation Services (\"nus\", \"noss\", u \"nossa\") è engaschà a proteger vossa sfera privata. Questa politica da confidenzialitad declera co nus rimnain, utilisain, divulgain e protegain vossas infurmaziuns cura che vus visitais nossa pagina web www.oghamtranslations.com u utilisais noss servetschs da translaziun.",
+        "description2": "Legiai per plaschair questa politica da confidenzialitad cun attenziun. Sche vus na essas betg d'accord cun ils terms da questa politica da confidenzialitad, na duvrai betg il sit u noss servetschs. Cun acceder a nossa pagina web u utilisar noss servetschs da translaziun, vus accettai questa politica da confidenzialitad."
+      },
+      "collect": {
+        "title": "2. Infurmaziuns che nus rimnain",
+        "personal": {
+          "title": "2.1 Infurmaziuns persunalas",
+          "intro": "Nus pudain rimnar infurmaziuns persunalas che vus furnis voluntary a nus cura che vus:",
+          "list": [
+            "S'inscrivai sin nossa pagina web",
+            "Dumandai in preventiv u faschai ina cumanda",
+            "S'abunai a nossa newsletter",
+            "Respondei ad ina enquista u empleni ora in formular",
+            "Contactai nus cun dumondas u commentaris"
+          ],
+          "details": "Infurmaziuns persunalas pon includer voss num, adressa d'e-mail, adressa postala, numer da telefon, infurmaziuns da l'interpresa e detagls da pajament."
+        },
+        "nonPersonal": {
+          "title": "2.2 Infurmaziuns betg persunalas",
+          "intro": "Nus pudain rimnar automaticamain tschertas infurmaziuns betg persunalas cura che vus visitais nossa pagina web, inclusiv:",
+          "list": [
+            "Adressa IP",
+            "Tip da navigatur",
+            "Sistem operativ",
+            "Paginas visitadas e temp passà sin nossa pagina web",
+            "Adressas da paginas web da referiment"
+          ]
+        },
+        "translation": {
+          "title": "2.3 Cuntegn per translaziun",
+          "description": "Cura che vus utilisais noss servetschs da translaziun, nus rimnain e tractain necessariamain il cuntegn che vus furnis per translaziun. Quai po includer datas persunalas cuntegnidas entaifer ils documents u materials che vus tramettis."
+        }
+      },
+      "usage": {
+        "title": "3. Co nus utilisain vossas infurmaziuns",
+        "intro": "Nus pudain utilisar las infurmaziuns che nus rimnain per diversas finamiras, inclus per:",
+        "list": [
+          "Purschidar, operar e mantegnair noss servetschs",
+          "Elavurar e ademplir Vossas dumondas da translaziun",
+          "Megliurar, persunalisar e sviluppar noss servetschs",
+          "Chapir e analisar co Vus duvrais nossa pagina-web",
+          "Sviluppar novs products, servetschs, funcziuns e funcziunalitads",
+          "Communitgar cun Vus davart noss servetschs, actualisaziuns ed autras infurmaziuns",
+          "Trametter communicaziuns da marketing e promoziun (be cun Vossa lubientscha)",
+          "Chattar e prevegnir a fraud",
+          "Per cumpatibilitad, process legal e finamiras da persecuziun"
+        ]
+      },
+      "sharing": {
+        "title": "4. Co Partagein Nus Vossas Infurmaziuns",
+        "intro": "Nus pudain partgir Vossas infurmaziuns en las suandantas situaziuns:",
+        "providers": {
+          "title": "4.1 Furniturs da Servetschs",
+          "description": "Nus pudain partgir Vossas infurmaziuns cun furniturs da servetschs e translaturs che prestan servetschs per nus u per noss conto, inclusiv elavuraziun da pajaments, analisa da datas, furniziun d'emails, servetschs da hosting e servetsch client. Quels furniturs da servetschs èn liads da obligaziuns contractualas da tegnair las infurmaziuns persunalas confidenzialas e da duvrar ellas be per las finamiras per las qualas nus las avain reveladas."
+        },
+        "transfers": {
+          "title": "4.2 Transferiments da Fatschenta",
+          "description": "Sche nus essan involvids en ina fusiun, acquisiziun u vendita da tut u ina part da noss assets, Vossas infurmaziuns pon vegnir transferidas sco part da quella transacziun. Nus vegnin a notificar Vus via email e/u cun in avis prominent sin nossa pagina-web da mintga midada en la possessura u en l'utilisaziun da Vossas infurmaziuns persunalas."
+        },
+        "legal": {
+          "title": "4.3 Pretensiuns Legals",
+          "description": "Nus pudain revelar Vossas infurmaziuns nua che nus essan legalmain obligads da far quai per cumpatibilitad cun la lescha applitgabla, dumondas da la regenza, in process giudizial, in urden da dretgira u in process legal."
+        },
+        "consent": {
+          "title": "4.4 Cun Vossa Lubientscha",
+          "description": "Nus pudain revelar Vossas infurmaziuns persunalas per mintga autra finamira cun Vossa lubientscha."
+        }
+      },
+      "security": {
+        "title": "5. Segirezza da Datas",
+        "measures": "Nus avain implementà mesiras tecnicas ed organisatoricas adattadas per proteger la segirezza da mintga infurmaziun persunala che nus elavurain. Tuttina, per plaschair regordai era che nus na pudain betg garantir che l'internet sez è 100% segir. Malgrà che nus farain noss meglier per proteger Vossas infurmaziuns persunalas, la transmissiun da infurmaziuns persunalas vers e da nossa pagina-web è a Voss agen ristg.",
+        "confidentiality": "Per il process da translaziun sez, nus employain mesiras strictas da confidenzialitad. Tuts noss translaturs suttascrivan contracts da confidenzialitad, ed utilisain sistems segirs per il transferiment da documents."
+      },
+      "retention": {
+        "title": "6. Retenziun da Datas",
+        "period": "Nus tegnain Vossas infurmaziuns persunalas mo uschè ditg sco quai è necessari per las finamiras fixadas en questa Politica da Privacitad, a main ch'in temp da retenziun pli lung è pretendì u permess da la lescha. Cura che nus n'avain nagin basegn legitim da fatschenta per elavurar Vossas infurmaziuns persunalas, nus las stizzain u las anonymisain.",
+        "translation": "Per cuntegn da translaziun, nus tegnain tipicamain Voss documents fin a 3 mais suenter la finiziun dal project per respunder a dumondas suandantas potenzialas u dumondas da revisiun, suenter ils quals els vegnan stizzads en moda segira. Sche Vus giavischais la stizzada immediata da Voss cuntegn suenter la finiziun dal project, per plaschair infurmai nus."
+      },
+      "rights": {
+        "title": "7. Voss Drets da Privacitad",
+        "intro": "Tenor Vossa locaziun, Vus pudais avair tscherts dretgs areguard Vossas infurmaziuns persunalas. Quels pon includer:",
+        "list": [
+          "Il dretg d'access a las infurmaziuns persunalas che nus tegnain davart Vus",
+          "Il dretg da dumandar la correctura d'infurmaziuns persunalas incorrectas",
+          "Il dretg da dumandar la stizzada da Vossas infurmaziuns persunalas",
+          "Il dretg d'objectar a l'elavuraziun da Vossas infurmaziuns persunalas",
+          "Il dretg da portabilitad da datas",
+          "Il dretg da revocar la lubientscha"
+        ],
+        "exercise": "Per exercitar quests dretgs, per plaschair contactai nus cun las infurmaziuns furnidas en la seccion \"Contactai nus\" qua sut."
+      },
+      "cookies": {
+        "title": "8. Cookies e Tecnologias da Suivi",
+        "description": "Nus duvrain cookies e tecnologias da suivi sumegliantas per suandar l'activitad sin nossa pagina-web e memorisar tschertas infurmaziuns. Cookies èn datotecas cun ina pitschna quantitad da datas che pon includer in identificatur unic anonim. Cookies vegnan tramessas a Voss navigatur da ina pagina-web e memorisadas sin Voss apparat.",
+        "types": "Nus duvrain ils suandants tips da cookies:",
+        "list": [
+          "<strong>Cookies essenzials:</strong> Necessaris per il funcziunament da nossa pagina-web. Els permettan funcziuns basicas sco navigaziun da pagina e access a zonas segiras da la pagina-web.",
+          "<strong>Cookies d'analisa:</strong> Nus gidan a chapir co ils visitaders interageschan cun nossa pagina-web tras rimnar e rapportar infurmaziuns anonimamain.",
+          "<strong>Cookies da preferenza:</strong> Permettan a nossa pagina-web da sa regurdar infurmaziuns che midan il cumportament u l'apparenza da la pagina-web, sco Vossa lingua preferida."
+        ],
+        "management": "Vus pudais instruir Voss navigatur da refusar tut ils cookies u d'indicar cura che in cookie vegn tramess. Dentant, sch'ins na accepta betg cookies, ins po eventualmain betg esser abel d'utilisar tschertas parts da nossa pagina-web."
+      },
+      "thirdParty": {
+        "title": "9. Paginas-Web da Terzas Parts",
+        "description": "Nossa pagina-web po cuntegnair colliaziuns ad autras paginas-web che na vegnan betg manadas da nus. Sche Vus cliccais sin ina colliaziun da terza part, Vus vegnis manads a quella pagina da terza part. Nus recumandain fermamain da reveder la Politica da Privacitad da mintga pagina che Vus visitais. Nus n'avain nagina controlla sur e na prendain nagina responsabladad per il cuntegn, las politicas da privacitad, u las praticas da naginas paginas-web u servetschs da terzas parts."
+      },
+      "children": {
+        "title": "10. Privacitad da Uffants",
+        "description": "Noss servetschs na vegnan betg intendids per l'utilisaziun da uffants sut l'edad da 16 onns. Nus na rimnain betg conscientamain infurmaziuns persunalas dad uffants sut 16 onns. Sche Vus essas in genitur u in guardià e Vus essas conscients che Voss uffant ha furnì a nus infurmaziuns persunalas, per plaschair contactai nus per che nus pudain prender las mesiras necessarias."
+      },
+      "changes": {
+        "title": "11. Midadas a Questa Politica da Privacitad",
+        "description": "Nus pudain actualisar nossa Politica da Privacitad da temp en temp. Nus vegnin a notificar Vus da tuttas midadas tras publitgar la nova Politica da Privacitad sin questa pagina e actualisar la data \"Ultima actualisaziun\" a la testa da questa Politica da Privacitad. Vus essas cussegliads da reveder periodicamente questa Politica da Privacitad per tuttas midadas. Midadas a questa Politica da Privacitad èn effectivas cura ch'ellas vegnan publitgadas sin questa pagina."
+      },
+      "contact": {
+        "title": "12. Contactai Nus",
+        "description": "Sche Vus avais dumondas davart questa Politica da Privacitad, per plaschair contactai nus a:",
+        "email": "E-mail:",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "notFound": {
+    "title": "404 - Pagina Betg Chattada",
+    "message": "La pagina che Vus tschertgais na exista betg.",
+    "returnHome": "Returnar a Chasa"
+  }
+}

@@ -1,0 +1,1271 @@
+{
+  "common": {
+    "language": "Czech",
+    "languageNative": "Angličtina",
+    "and": ",",
+    "menu": {
+      "home": "Domů",
+      "services": "Služby",
+      "team": "Tým",
+      "portfolio": "Portfolio",
+      "pricing": "Ceník",
+      "contact": "Kontakt"
+    },
+    "footer": {
+      "about": "Profesionální překladatelské služby v několika jazycích. Kvalita, přesnost a včasnost zaručena.",
+      "quickLinks": "Rychlé odkazy",
+      "contactUs": "Kontaktujte nás",
+      "address": "Ženeva, Curych, Lugano - Švýcarsko",
+      "email": "E-mail",
+      "allRightsReserved": "Všechna práva vyhrazena",
+      "termsConditions": "Obchodní podmínky",
+      "privacyPolicy": "Zásady ochrany osobních údajů"
+    },
+    "buttons": {
+      "getQuote": "Získat nabídku",
+      "ourServices": "Naše služby",
+      "readMore": "Číst více",
+      "viewAll": "Zobrazit vše",
+      "submit": "Odeslat",
+      "send": "Poslat",
+      "accept": "Přijmout"
+    },
+    "cookieConsent": {
+      "message": "Tato webová stránka používá cookies ke zlepšení uživatelského zážitku. Podívejte se na naše",
+      "moreInfo": "pro více informací."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Spojujeme jazyky, zachováváme kultury",
+      "subtitle": "Přesné, kulturně přizpůsobené překladatelské služby šité na míru vašim potřebám — ve více než 10 jazycích."
+    },
+    "portfolioShowcase": {
+      "title": "Naše překladatelské portfolio",
+      "paragraph1": "Prozkoumejte naši ukázku překladatelské práce napříč různými odvětvími a jazykovými páry. Podívejte se na kvalitu a pozornost k detailu, které odlišují Ogham Translation Services.",
+      "paragraph2": "Naše portfolio obsahuje ukázky právních dokumentů, technických manuálů, marketingových materiálů a kreativního obsahu přeloženého s pečlivou přesností a kulturní citlivostí.",
+      "viewButton": "Zobrazit naše portfolio"
+    },
+    "about": {
+      "title": "O Ogham Translations",
+      "paragraph1": "Založena v roce 2022, Ogham Translations je butiková překladatelská společnost zaměřená na poskytování výjimečných jazykových řešení s pečlivou pozorností k detailu. Poskytujeme personalizované, vysoce kvalitní překladatelské služby pro firmy a jednotlivce po celém světě.",
+      "paragraph2": "Náš tým profesionálních překladatelů jsou rodilí mluvčí s odbornými znalostmi ve svých oborech, což zajišťuje přesné a kulturně vhodné překlady pro všechny vaše potřeby.",
+      "meetTeam": "Poznejte náš tým"
+    },
+    "whyChooseUs": {
+      "title": "Proč si vybrat nás?",
+      "multipleLanguages": {
+        "title": "Více jazyků",
+        "description": "Více než 10 dostupných jazyků"
+      },
+      "documentExpertise": {
+        "title": "Odbornost v dokumentech",
+        "description": "Technické, právní, lékařské a další"
+      },
+      "certifiedTranslators": {
+        "title": "Certifikovaní překladatelé",
+        "description": "Profesionální a kvalifikovaný tým"
+      }
+    },
+    "languages": {
+      "title": "Jazyky, které nabízíme",
+      "subtitle": "Náš tým profesionálních překladatelů pokrývá širokou škálu jazyků z celého světa.",
+      "list": {
+        "english": "Angličtina",
+        "french": "Francouzština",
+        "german": "Němčina",
+        "italian": "Italština",
+        "romansh": "Rétorománština",
+        "spanish": "Španělština",
+        "portuguese": "Portugalština",
+        "russian": "Ruština",
+        "ukrainian": "Ukrajinština",
+        "mandarin": "Mandarínština",
+        "japanese": "Japonština",
+        "arabic": "Arabština",
+        "czech": "Čeština",
+        "turkish": "Turečtina"
+      }
+    },
+    "services": {
+      "title": "Naše služby",
+      "subtitle": "Nabízíme komplexní škálu překladatelských služeb, které splní všechny vaše potřeby.",
+      "documentTranslation": {
+        "title": "Překlad dokumentů",
+        "description": "Profesionální překlad právních dokumentů, smluv, certifikátů a dalších."
+      },
+      "websiteLocalization": {
+        "title": "Lokalizace webových stránek",
+        "description": "Přizpůsobte obsah svých webových stránek pro různé regiony a jazyky, abyste oslovili globální publikum."
+      },
+      "technicalTranslation": {
+        "title": "Technický překlad",
+        "description": "Přesný překlad technických manuálů, příruček a specifikací."
+      },
+      "viewAllServices": "Zobrazit všechny služby"
+    },
+    "portfolio": {
+      "title": "Náš překladatelský portfoli",
+      "paragraph1": "Prozkoumejte naši ukázku překladatelské práce napříč různými odvětvími a jazykovými páry. Podívejte se na kvalitu a pozornost k detailu, které odlišují Ogham Translation Services.",
+      "paragraph2": "Naše portfolio obsahuje ukázky právních dokumentů, technických manuálů, marketingových materiálů a kreativního obsahu přeloženého s pečlivou přesností a kulturní citlivostí.",
+      "viewPortfolio": "Zobrazit naše portfolio"
+    },
+    "cta": {
+      "title": "Připraveni začít?",
+      "subtitle": "Kontaktujte nás ještě dnes pro bezplatnou cenovou nabídku na váš překladatelský projekt.",
+      "button": "Požádat o nabídku"
+    }
+  },
+  "services": {
+    "pageTitle": "Naše služby",
+    "pageSubtitle": "Nabízíme komplexní škálu překladatelských služeb, které splní vaše specifické potřeby.",
+    "process": {
+      "title": "Náš překladatelský proces",
+      "subtitle": "Dodržujeme přísný proces, abychom zajistili nejvyšší kvalitu překladů pro váš obsah:",
+      "steps": [
+        {
+          "title": "Analýza projektu",
+          "description": "Analyzujeme váš obsah, požadavky a cílové publikum, abychom určili nejlepší přístup."
+        },
+        {
+          "title": "Překlad",
+          "description": "Naši rodilí mluvčí odborně převádějí váš obsah do cílového jazyka."
+        },
+        {
+          "title": "Úpravy a kontrola",
+          "description": "Druhý lingvista kontroluje překlad z hlediska přesnosti, konzistence a stylu."
+        },
+        {
+          "title": "Zajištění kvality",
+          "description": "Přísné kontroly kvality zajišťují, že váš překlad splňuje naše vysoké standardy."
+        },
+        {
+          "title": "Revize klienta",
+          "description": "Zohledňujeme vaši zpětnou vazbu a provádíme potřebné úpravy."
+        },
+        {
+          "title": "Doručení",
+          "description": "Váš dokončený překlad je doručen ve vámi preferovaném formátu, včas a v rámci rozpočtu."
+        }
+      ]
+    },
+    "categories": {
+      "document": {
+        "title": "Překlad dokumentů",
+        "description": "Profesionální překlad různých typů dokumentů s přesností a důrazem na detail.",
+        "services": {
+          "legal": {
+            "title": "Právní dokumenty",
+            "description": "Smlouvy, dohody, soudní dokumenty, právní stanoviska, patenty a certifikace.",
+            "features": [
+              "Ověřené překlady",
+              "Odbornost v právní terminologii",
+              "Zaručená důvěrnost"
+            ]
+          },
+          "business": {
+            "title": "Obchodní dokumenty",
+            "description": "Finanční zprávy, obchodní plány, marketingové materiály a firemní komunikace.",
+            "features": [
+              "Terminologie specifická pro odvětví",
+              "Konzistentní branding",
+              "Zachování formátu"
+            ]
+          },
+          "technical": {
+            "title": "Technické dokumenty",
+            "description": "Uživatelské příručky, technické specifikace, návody a technické zprávy.",
+            "features": [
+              "Technická přesnost",
+              "Zjednodušený jazyk, když je potřeba",
+              "Odborníci na danou problematiku"
+            ]
+          },
+          "academic": {
+            "title": "Akademické dokumenty",
+            "description": "Diplomy, přepisy, výzkumné práce, diplomové práce a akademické certifikace.",
+            "features": [
+              "Odbornost v akademické terminologii",
+              "Překlad na úrovni výzkumu",
+              "Formátování citací"
+            ]
+          }
+        }
+      },
+      "website": {
+        "title": "Překlad webových stránek",
+        "description": "Komplexní lokalizační služby webových stránek, které pomohou vaší firmě oslovit globální publikum.",
+        "services": {
+          "localization": {
+            "title": "Lokalizace webových stránek",
+            "description": "Kompletní překlad a kulturní adaptace obsahu vašich webových stránek pro mezinárodní trhy.",
+            "features": [
+              "Kulturní adaptace",
+              "SEO optimalizace",
+              "Úprava uživatelského rozhraní"
+            ]
+          },
+          "ecommerce": {
+            "title": "Překlad e-commerce",
+            "description": "Popisy produktů, kategorie, procesy platby a obsah zákaznické podpory.",
+            "features": [
+              "Konzistentní produktová terminologie",
+              "Lokalizace platebních metod",
+              "Jazyk zaměřený na zákazníka"
+            ]
+          },
+          "cms": {
+            "title": "Integrace CMS",
+            "description": "Integrace s WordPress, Shopify a dalšími systémy pro správu obsahu.",
+            "features": [
+              "Kompatibilita pluginů",
+              "Nastavení více jazyků",
+              "Automatická synchronizace obsahu"
+            ]
+          },
+          "seo": {
+            "title": "Vícejazyčné SEO",
+            "description": "Výzkum a optimalizace klíčových slov pro více cílových trhů.",
+            "features": [
+              "Výzkum lokálních klíčových slov",
+              "Optimalizace meta tagů",
+              "SEO-přátelské URL"
+            ]
+          }
+        }
+      },
+      "specialized": {
+        "title": "Specializované překlady",
+        "description": "Odborné překlady pro specifická odvětví vyžadující specializované znalosti a terminologii.",
+        "services": {
+          "medical": {
+            "title": "Lékařský překlad",
+            "description": "Zdravotní záznamy, farmaceutické dokumenty, klinické studie a materiály týkající se zdravotní péče.",
+            "features": [
+              "Odbornost v lékařské terminologii",
+              "Regulační shoda",
+              "Jazyk přátelský k pacientům"
+            ]
+          },
+          "financial": {
+            "title": "Finanční překlad",
+            "description": "Finanční výkazy, investiční zprávy, bankovní dokumenty a materiály pojištění.",
+            "features": [
+              "Přesnost finanční terminologie",
+              "Formátování čísel",
+              "Regulační shoda"
+            ]
+          },
+          "marketing": {
+            "title": "Marketingový překlad",
+            "description": "Marketingové kampaně, brožury, reklamy a propagační materiály.",
+            "features": [
+              "Kreativní adaptace",
+              "Kulturní relevance",
+              "Zachování hlasu značky"
+            ]
+          },
+          "literary": {
+            "title": "Literární překlad",
+            "description": "Knihy, poezie, scénáře a kreativní díla, která zachovávají styl a záměr autora.",
+            "features": [
+              "Stylová věrnost",
+              "Kulturní nuance",
+              "Kreativní adaptace"
+            ]
+          }
+        }
+      },
+      "additional": {
+        "title": "Další služby",
+        "description": "Doplňkové jazykové služby pro splnění vašich potřeb v digitální komunikaci.",
+        "services": {
+          "content": {
+            "title": "Tvorba obsahu",
+            "description": "Originální vícejazyčná tvorba obsahu přizpůsobená vašim cílovým trhům.",
+            "features": [
+              "Copywriteři rodilí mluvčí",
+              "Obsah specifický pro trh",
+              "SEO optimalizace"
+            ]
+          },
+          "software": {
+            "title": "Lokalizace softwaru",
+            "description": "Překlad a adaptace softwarových rozhraní, aplikací a her.",
+            "features": [
+              "Zohlednění UI/UX",
+              "Správa řetězců",
+              "Testování a zajištění kvality"
+            ]
+          },
+          "subtitling": {
+            "title": "Titulkování",
+            "description": "Multimediální překladatelské služby pro videa a filmy vyžadující překlad textu.",
+            "features": [
+              "Synchronizace časování",
+              "Kulturní adaptace",
+              "Podpora více jazyků"
+            ]
+          }
+        }
+      }
+    },
+    "documentTranslation": {
+      "title": "Překlad dokumentů",
+      "description": "Profesionální překlad právních dokumentů, smluv, certifikátů a dalších.",
+      "features": [
+        "Překlad právních dokumentů",
+        "Překlad firemních dokumentů",
+        "Překlad osobních dokumentů",
+        "Překlad certifikátů",
+        "Překlad akademických dokumentů"
+      ]
+    },
+    "websiteLocalization": {
+      "title": "Lokalizace webových stránek",
+      "description": "Přizpůsobte obsah svých webových stránek pro různé regiony a jazyky, abyste oslovili globální publikum.",
+      "features": [
+        "Překlad obsahu webových stránek",
+        "Kulturní adaptace pro cílové trhy",
+        "SEO-optimalizované překlady",
+        "Lokalizace multimédií",
+        "Lokalizace e-commerce"
+      ]
+    },
+    "technicalTranslation": {
+      "title": "Technický překlad",
+      "description": "Přesný překlad technických manuálů, příruček a specifikací.",
+      "features": [
+        "Překlad technických manuálů",
+        "Dokumentace k softwaru",
+        "Překlad patentů",
+        "Technické specifikace",
+        "Uživatelské příručky a návody"
+      ]
+    }
+  },
+  "portfolio": {
+    "pageTitle": "Náš překladatelský portfoli",
+    "pageSubtitle": "Ukázky naší překladatelské práce v různých odvětvích a jazycích",
+    "categories": {
+      "all": "Všechny projekty",
+      "featured": "Doporučené",
+      "legal": "Právní",
+      "medical": "Lékařské",
+      "technical": "Technické",
+      "marketing": "Marketingové",
+      "literary": "Literární a kreativní"
+    },
+    "featuredChip": "Doporučené",
+    "viewProject": "Zobrazit projekt",
+    "dialogTitle": "Překladatelský projekt",
+    "languages": {
+      "english": "Angličtina",
+      "french": "Francouzština",
+      "german": "Němčina",
+      "italian": "Italština",
+      "japanese": "Japonština",
+      "mandarin": "Mandarínština",
+      "russian": "Ruština"
+    },
+    "preview": {
+      "title": "Náhled projektu",
+      "sourceDocument": "Zdrojový dokument",
+      "translatedDocument": "Přeložený dokument",
+      "sourceDocumentPlaceholder": "Zdrojový dokument by byl zobrazen zde. V reálné implementaci by se zde zobrazil skutečný obsah PDF.",
+      "translatedDocumentPlaceholder": "Přeložený dokument by byl zobrazen zde. V reálné implementaci by se zde zobrazil skutečný obsah PDF.",
+      "downloadSource": "Stáhnout zdroj",
+      "downloadTranslation": "Stáhnout překlad",
+      "sideBySide": "Vedle sebe",
+      "original": "Originál",
+      "translation": "Překlad",
+      "loading": "Načítání PDF...",
+      "noData": "Žádné PDF není k dispozici",
+      "errorLoading": "Chyba při načítání PDF",
+      "prevPage": "Předchozí",
+      "nextPage": "Další"
+    },
+    "viewModes": {
+      "comparison": "Vedle sebe",
+      "before": "Pouze originál",
+      "after": "Pouze překlad"
+    },
+    "previewPlaceholder": {
+      "sourceMessage": "Zde by byl zobrazen zdrojový dokument.",
+      "translatedMessage": "Zde by byl zobrazen přeložený dokument.",
+      "implementationNote": "V reálné implementaci by zde byl zobrazen skutečný obsah PDF."
+    },
+    "beforeAfter": "Před & Po",
+    "showcaseItems": [
+      {
+        "title": "Překlad smlouvy",
+        "description": "Překlad smlouvy z angličtiny do francouzštiny."
+      },
+      {
+        "title": "Překlad lékařského výzkumného článku",
+        "description": "Překlad lékařského výzkumného článku z němčiny do angličtiny."
+      },
+      {
+        "title": "Překlad finanční zprávy",
+        "description": "Finanční zpráva z francouzštiny do japonštiny."
+      },
+      {
+        "title": "Překlad marketingových materiálů",
+        "description": "Překlad marketingových materiálů z angličtiny do mandarínštiny."
+      },
+      {
+        "title": "Literární překlad",
+        "description": "Literární překlad z ruštiny do italštiny."
+      }
+    ]
+  },
+  "team": {
+    "pageTitle": "Náš tým",
+    "pageSubtitle": "Seznamte se s naším oddaným týmem profesionálních překladatelů a jazykových specialistů.",
+    "professionalTranslators": "Profesionální překladatelé se sídlem ve Švýcarsku",
+    "description": "Profesionálové uvedení zde jsou vedoucími našeho týmu, každý z nich vede práci kolem jednoho hlavního jazyka, který je jejich mateřským jazykem. Máme také další spolupracovníky, což zajišťuje, že máme alespoň dva odborníky na překlad a následnou kontrolu jakékoli možné jazykové kombinace. Tento přístup dvou odborníků zaručuje nejvyšší kvalitu a kulturní přesnost ve všech našich překladech. Se sídlem ve Švýcarsku využíváme našeho multikulturního prostředí k poskytování přesných a kulturně vhodných překladů v několika evropských a světových jazycích.",
+    "languages": "Jazyky",
+    "specialties": "Specializace",
+    "educationExperience": "Vzdělání a zkušenosti",
+    "experienceLabel": "Zkušenosti",
+    "ourFounders": "Naši zakladatelé",
+    "ourTranslators": "Naši překladatelé",
+    "ourPartners": "Naši partneři",
+    "philosophy": {
+      "title": "Naše překladatelská filozofie",
+      "subtitle": "V Ogham Translations věříme, že efektivní překlad jde nad rámec slov - jde o přenos významu, kontextu a kulturních nuancí. Se sídlem ve Švýcarsku, zemi se čtyřmi úředními jazyky, chápeme mnohojazyčnost v jádru a přinášíme tuto jedinečnou perspektivu do každého projektu.",
+      "values": [
+        {
+          "title": "Kulturní odbornost",
+          "description": "Naši překladatelé nejenže znají jazyky, se kterými pracují - rozumí i kulturám za nimi, což zajišťuje, že vaše zpráva zůstane vhodná a efektivní."
+        },
+        {
+          "title": "Odbornost v oboru",
+          "description": "Přidělujeme překladatele na základě jejich odbornosti ve vašem konkrétním oboru, ať už jde o právní, lékařský, technický nebo kreativní obsah."
+        },
+        {
+          "title": "Zajištění kvality",
+          "description": "Každý překlad prochází přísným procesem kontroly kvality, včetně revize druhým lingvistou, aby byla zajištěna přesnost a konzistence."
+        },
+        {
+          "title": "Nepřetržité vzdělávání",
+          "description": "Naši překladatelé se pravidelně účastní profesního rozvoje, aby byli informováni o nejnovější terminologii a překladatelských technikách."
+        }
+      ]
+    },
+    "members": [
+      {
+        "name": "Célia Brodard",
+        "role": "Senior překladatelka - francouzština",
+        "bio": "Céline, narozená a vyrostlá v Ženevě, má silnou vášeň pro jazyky a specializuje se na právní, finanční a obchodní dokumenty. Jako absolventka předních švýcarských institucí kombinuje své akademické zázemí s lety profesionálních překladatelských zkušeností. Její švýcarské dědictví a hluboké porozumění multikulturním prostředím jí umožňují zajistit přesnost a kulturní citlivost v každém projektu.",
+        "languages": [
+          "Francouzština",
+          "Angličtina",
+          "Němčina"
+        ],
+        "specialties": [
+          "Právní",
+          "Obchodní",
+          "Finanční"
+        ],
+        "experience": "8+ let",
+        "education": "Bakalář v oboru Multilingvní komunikace – Univerzita v Ženevě, Švýcarsko; Magister v oboru Specializovaný překlad (právní a finanční) – Univerzita v Ženevě, Fakulta překladatelství a tlumočnictví (FTI), Švýcarsko"
+      },
+      {
+        "name": "Markus Brunner",
+        "role": "Senior překladatel - němčina",
+        "bio": "Markus, sídlící v Curychu, překládá technické a vědecké dokumenty již více než deset let. Díky zázemí v inženýrství a lingvistice přináší do své překladatelské práce interdisciplinární odborné znalosti. Jeho školení na jedné z předních švýcarských technických univerzit mu umožňuje zvládat vysoce složité a technické překlady s bezkonkurenční přesností a jasností.",
+        "languages": [
+          "Němčina",
+          "Angličtina",
+          "Francouzština"
+        ],
+        "specialties": [
+          "Technické",
+          "Vědecké",
+          "Inženýrské"
+        ],
+        "experience": "12+ let",
+        "education": "Bakalář v oboru Strojní inženýrství – ETH Curych, Švýcarsko; Magister v oboru Jazyk a komunikace – Univerzita v Curychu, Švýcarsko"
+      },
+      {
+        "name": "Inês Ferreira",
+        "role": "Senior překladatelka - portugalština a španělština",
+        "bio": "Původem z Lisabonu, Inês nyní žije v Luganu. Specializuje se na kreativní a marketingové překlady s hlubokou vášní pro literaturu a vyprávění příběhů. Její akademické základy v lingvistice a literárních studiích z jedné z nejlepších portugalských univerzit jí umožňují překládat s kulturní nuancí a kreativním nádechem.",
+        "languages": [
+          "portugalština",
+          "španělština",
+          "italština",
+          "francouzština"
+        ],
+        "specialties": [
+          "marketing",
+          "kreativní",
+          "literární"
+        ],
+        "experience": "7+ let",
+        "education": "Bakalář v oboru lingvistika – Univerzita v Lisabonu, Portugalsko; Magisterský titul v oboru překlad, tlumočení a interkulturní studia – Autonomní univerzita v Barceloně (UAB), Španělsko"
+      },
+      {
+        "name": "Jian Chen",
+        "role": "Senior překladatel - mandarínština",
+        "bio": "Jian je odborník na překlady z mandarínštiny do angličtiny se zaměřením na obchodní a technické dokumenty. Díky formálnímu vzdělání v oblasti překladu a interkulturní komunikace na přední čínské univerzitě a dalším studiím ve Švýcarsku překonává kulturní a jazykové bariéry pro švýcarské firmy vstupující na čínský trh.",
+        "languages": [
+          "mandarínština",
+          "angličtina",
+          "francouzština"
+        ],
+        "specialties": [
+          "obchod",
+          "technický",
+          "e-commerce"
+        ],
+        "experience": "11+ let",
+        "education": "Bakalář v oboru anglická jazyková studia – Univerzita Fudan, Čína; Magisterský titul v oboru překlad a tlumočení – Univerzita v Curychu, Švýcarsko"
+      },
+      {
+        "name": "Alessandra Conti",
+        "role": "Senior překladatel - italština",
+        "bio": "Z Ticino, italsky mluvícího kantonu Švýcarska, Alessandra vyniká v překladu dokumentů týkajících se umění, kultury a turismu. Její hluboké znalosti italské literatury a švýcarského dědictví činí její překlady kulturně bohatými a přesnými. Její akademické zázemí v interkulturních studiích a dějinách umění přidává hloubku její odbornosti.",
+        "languages": [
+          "italština",
+          "němčina",
+          "angličtina"
+        ],
+        "specialties": [
+          "umění",
+          "kultura",
+          "turismus",
+          "luxusní zboží"
+        ],
+        "experience": "9+ let",
+        "education": "Bakalář v oboru dějiny umění – Univerzita v Bologni, Itálie; Magisterský titul v pokročilých studiích interkulturní komunikace – Univerzita v Luganu, Švýcarsko"
+      },
+      {
+        "name": "Emiko Shimizu",
+        "role": "Senior překladatel - japonština",
+        "bio": "Emiko má rozsáhlé zkušenosti s překladem technických manuálů, patentů a vědecké literatury pro významné švýcarské farmaceutické a hodinářské společnosti. Její důkladné akademické vzdělání v Japonsku, v kombinaci se zkušenostmi ve Švýcarsku, z ní činí nepostradatelnou odbornici pro vysoce specializované a technické překlady napříč průmyslovými odvětvími.",
+        "languages": [
+          "Japonština",
+          "Angličtina",
+          "Němčina"
+        ],
+        "specialties": [
+          "Technické",
+          "Patenty",
+          "Farmaceutické",
+          "Lékařské"
+        ],
+        "experience": "10+ let",
+        "education": "Bakalář ve farmaceutických vědách – Univerzita v Tokiu, Japonsko; Magisterský titul v technickém překladu – Tokijská univerzita zahraničních studií (TUFS), Japonsko"
+      },
+      {
+        "name": "Olena Kovalenko",
+        "role": "Senior překladatelka - Ukrajinština a Ruština",
+        "bio": "Původem z Kyjeva, Olena se specializuje na literární, akademické a právní překlady. S pozadím ve filologii a literárních studiích přeložila řadu literárních děl a akademických prací, zajišťujíc autenticitu a kulturní bohatství v každém překladu.",
+        "languages": [
+          "Ukrajinština",
+          "Ruština",
+          "Angličtina",
+          "Němčina"
+        ],
+        "specialties": [
+          "Literární",
+          "Akademické",
+          "Právní"
+        ],
+        "experience": "8+ let",
+        "education": "Bakalář ve filologii – Národní univerzita Tarase Ševčenka v Kyjevě, Ukrajina; Magisterský titul v překladu – Univerzita ve Vídni, Rakousko"
+      },
+      {
+        "name": "Robert Ainsworth",
+        "role": "Senior překladatel - Angličtina",
+        "bio": "Rodilý mluvčí angličtiny s výjimečnými schopnostmi psaní, Robert zajišťuje nejvyšší kvalitu všech anglických překladů. S pozadím v žurnalistice a překladu vytváří poutavý a přesný obsah napříč širokou škálou průmyslových odvětví, od obchodních zpráv po akademický výzkum a marketingové materiály.",
+        "languages": [
+          "Angličtina",
+          "Francouzština",
+          "Němčina"
+        ],
+        "specialties": [
+          "Obchodní",
+          "Marketing",
+          "Žurnalistika",
+          "Akademické"
+        ],
+        "experience": "14+ let",
+        "education": "Bakalář v anglickém jazyce a literatuře – Univerzita v Oxfordu, Spojené království; Magisterský titul v překladu a tlumočení – Univerzita Westminster, Spojené království"
+      },
+      {
+        "name": "Claudio Cereghetti",
+        "role": "Senior překladatel - rétorománština",
+        "bio": "Jako jeden z mála profesionálních překladatelů rétorománštiny Claudio zachovává a propaguje tento vzácný švýcarský jazyk prostřednictvím svých překladů. S hlubokým akademickým základem ve filologii a jazykovém dědictví je důvěryhodným odborníkem pro oficiální švýcarskou dokumentaci a projekty kulturního zachování.",
+        "languages": [
+          "rétorománština",
+          "němčina",
+          "italština",
+          "francouzština",
+          "angličtina"
+        ],
+        "specialties": [
+          "Oficiální dokumentace",
+          "Kultura",
+          "Dědictví"
+        ],
+        "experience": "12+ let",
+        "education": "Bakalář v oboru rétorománská literatura a lingvistika – Univerzita v Curychu, Švýcarsko; Magister v oboru klasická filologie – Univerzita ve Fribourgu, Švýcarsko"
+      },
+      {
+        "name": "Amine Benchekroun",
+        "role": "Senior překladatel - arabština",
+        "bio": "Amine se specializuje na překlady do arabštiny pro diplomatické, obchodní a právní kontexty. Díky vzdělání v mezinárodních vztazích a specializovaných překladatelských studiích propojuje arabsky mluvící regiony s různorodým obchodním a diplomatickým prostředím Švýcarska, zajišťuje, že překlady jsou přesné a kulturně citlivé.",
+        "languages": [
+          "arabština",
+          "francouzština",
+          "angličtina"
+        ],
+        "specialties": [
+          "Diplomatické",
+          "Právní",
+          "Mezinárodní vztahy"
+        ],
+        "experience": "9+ let",
+        "education": "Bakalář v oboru překladatelská studia – Université Hassan II, Maroko; Magister v oboru mezinárodní vztahy – Graduate Institute Geneva (IHEID), Švýcarsko"
+      }
+    ]
+  },
+  "portfolioDetails": {
+    "projectDescription": "Popis projektu",
+    "languages": "Jazyky",
+    "industry": "Průmysl",
+    "tags": "Štítky"
+  },
+  "pricing": {
+    "pageTitle": "Ceník",
+    "pageSubtitle": "Transparentní a flexibilní cenové možnosti",
+    "guarantee": {
+      "title": "Naše záruka spokojenosti",
+      "description": "Jsme odhodláni poskytovat vysoce kvalitní překlady, které splní vaše očekávání. Pokud nebudete s naší prací zcela spokojeni, upravíme ji bez dalších nákladů. Pokud kdykoli budete mít pocit, že překlad nesplňuje vaše očekávání, můžete požádat o zrušení a my vám vrátíme peníze — bez otázek.",
+      "provisions": "Pro všechny projekty poskytujeme:",
+      "points": {
+        "accurate": "Přesné a kontextově vhodné překlady",
+        "onTime": "Dodání včas, jak bylo dohodnuto v rozsahu projektu",
+        "consistent": "Konzistentní terminologie ve vašich dokumentech",
+        "responsive": "Reaktivní zákaznický servis a aktualizace projektu"
+      }
+    },
+    "standard": "Standardní",
+    "professional": "Profesionální",
+    "premium": "Prémiový",
+    "perWord": "za slovo",
+    "startingAt": "Od",
+    "contactForPricing": "Kontaktujte nás pro cenu",
+    "customSolution": "Vlastní řešení",
+    "paymentTerms": "Platební podmínky",
+    "termsDescription": "Přijímáme PayPal a bankovní převody. Pro firemní klienty můžeme zajistit fakturaci s platebními podmínkami. U velkých projektů můžeme požadovat procento platby předem.",
+    "packages": {
+      "title": "Balíčky překladů",
+      "subtitle": "Vyberte si správný balíček pro vaše překladové potřeby. Všechny ceny jsou v CHF.",
+      "plans": [
+        {
+          "title": "Standardní",
+          "price": "0.08",
+          "unit": "za slovo",
+          "description": "Pro obecný obsah a základní dokumenty",
+          "features": [
+            {
+              "text": "Vysoce kvalitní překlad"
+            },
+            {
+              "text": "Kompletní korektura"
+            },
+            {
+              "text": "Standardní doba dodání"
+            },
+            {
+              "text": "Terminologie specifická pro kontext"
+            },
+            {
+              "text": "Možnost rychlého zpracování"
+            },
+            {
+              "text": "Vyhrazený tým"
+            }
+          ]
+        },
+        {
+          "title": "Profesionální",
+          "price": "0.12",
+          "unit": "za slovo",
+          "description": "Pro obchodní a specializovaný obsah",
+          "features": [
+            {
+              "text": "Vysoce kvalitní překlad"
+            },
+            {
+              "text": "Vylepšená korektura"
+            },
+            {
+              "text": "Rychlejší doba dodání"
+            },
+            {
+              "text": "Terminologie specifická pro kontext"
+            },
+            {
+              "text": "Možnost rychlého zpracování"
+            },
+            {
+              "text": "Vyhrazený tým"
+            }
+          ]
+        },
+        {
+          "title": "Prémiový",
+          "price": "0.16",
+          "unit": "za slovo",
+          "description": "Pro kritický a vysoce viditelný obsah",
+          "features": [
+            {
+              "text": "Vysoce kvalitní překlad"
+            },
+            {
+              "text": "Více kol revizí"
+            },
+            {
+              "text": "Prioritní dodací lhůta"
+            },
+            {
+              "text": "Terminologie specifická pro kontext"
+            },
+            {
+              "text": "Možnost rychlého zpracování"
+            },
+            {
+              "text": "Vyhrazený tým"
+            }
+          ]
+        }
+      ]
+    },
+    "rates": {
+      "title": "Podrobné sazby služeb",
+      "subtitle": "Následující tabulka poskytuje podrobnější informace o cenách pro konkrétní typy služeb.",
+      "note": "Sazby jsou v CHF za slovo, pokud není uvedeno jinak.",
+      "headers": {
+        "service": "Služba",
+        "standard": "Standard",
+        "professional": "Profesionální",
+        "premium": "Prémiový"
+      },
+      "services": [
+        {
+          "service": "Překlad dokumentů",
+          "standard": "0.08-0.10",
+          "professional": "0.12-0.14",
+          "premium": "0.16-0.20"
+        },
+        {
+          "service": "Lokalizace webových stránek",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.16",
+          "premium": "0.18-0.22"
+        },
+        {
+          "service": "Technický překlad",
+          "standard": "0.10-0.12",
+          "professional": "0.14-0.18",
+          "premium": "0.20-0.25"
+        },
+        {
+          "service": "Právní překlad",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "Lékařský překlad",
+          "standard": "0.12-0.14",
+          "professional": "0.16-0.20",
+          "premium": "0.22-0.28"
+        },
+        {
+          "service": "Marketingový obsah",
+          "standard": "0.09-0.11",
+          "professional": "0.13-0.15",
+          "premium": "0.17-0.22"
+        },
+        {
+          "service": "Titulkování",
+          "standard": "6-8",
+          "professional": "9-12",
+          "premium": "14-18",
+          "note": "Cena za minutu videa"
+        }
+      ]
+    },
+    "process": {
+      "title": "Náš proces stanovení cen",
+      "subtitle": "Jak stanovujeme ceny našich překladatelských služeb",
+      "steps": [
+        {
+          "title": "Posouzení",
+          "description": "Vyhodnotíme počet slov ve vašem dokumentu, jazykovou kombinaci, technickou složitost a požadavky na termín."
+        },
+        {
+          "title": "Nabídka",
+          "description": "Poskytneme podrobnou nabídku s transparentními cenami na základě vašich specifických potřeb."
+        },
+        {
+          "title": "Schválení",
+          "description": "Jakmile schválíte nabídku, zahájíme překladatelský proces."
+        },
+        {
+          "title": "Doručení",
+          "description": "Dokončený překlad doručíme v dohodnutém termínu nebo dříve."
+        }
+      ]
+    },
+    "faqs": {
+      "title": "Často kladené otázky o cenách",
+      "subtitle": "Odpovědi na často kladené otázky ohledně našich cen",
+      "questions": [
+        {
+          "question": "Jak vypočítáváte náklady na překladatelský projekt?",
+          "answer": "Obvykle účtujeme za slovo ve zdrojovém textu. Sazby se liší v závislosti na jazykové kombinaci, složitosti obsahu, potřebné odbornosti a době zpracování. U některých služeb, jako je titulkování, účtujeme za minutu videa."
+        },
+        {
+          "question": "Existují nějaké další poplatky nad rámec sazby za slovo?",
+          "answer": "Ve většině případů sazba za slovo pokrývá kompletní službu. Nicméně, další poplatky mohou být účtovány za expresní objednávky (obvykle +25-50 %), speciální požadavky na formátování nebo další kola revizí nad rámec toho, co je zahrnuto ve vašem balíčku."
+        },
+        {
+          "question": "Jaké platební metody přijímáte?",
+          "answer": "Přijímáme PayPal, bankovní převody a pro firemní klienty můžeme zajistit fakturaci s platebními podmínkami."
+        },
+        {
+          "question": "Nabízíte slevy na velké projekty?",
+          "answer": "Ano, nabízíme množstevní slevy na velké projekty. Procento slevy se zvyšuje s velikostí projektu, obvykle začíná na 5 % pro projekty nad 10 000 slov a až 15 % pro projekty nad 50 000 slov."
+        },
+        {
+          "question": "Jaká je vaše politika ohledně revizí?",
+          "answer": "Náš Standardní balíček zahrnuje jedno kolo revizí, Profesionální balíček zahrnuje dvě kola revizí a Prémiový balíček zahrnuje neomezené revize v rozumném rozsahu. Další kola revizí lze zakoupit, pokud je to potřeba."
+        },
+        {
+          "question": "Jak rychle můžete dodat překlady?",
+          "answer": "Naše standardní dodací lhůta je přibližně 2 000-2 500 slov za pracovní den. Expresní služby jsou k dispozici za příplatek, což může zkrátit dobu zpracování o 30-50 %. Pro velké urgentní projekty můžeme přidělit více překladatelů, abychom splnili přísné termíny."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Připraveni začít?",
+      "subtitle": "Kontaktujte nás ještě dnes pro bezplatnou cenovou nabídku na váš překladatelský projekt.",
+      "button": "Požádat o nabídku"
+    }
+  },
+  "contact": {
+    "pageTitle": "Kontaktujte nás",
+    "pageSubtitle": "Jsme tu, abychom vám pomohli s vašimi překladatelskými potřebami. Kontaktujte nás ještě dnes.",
+    "standardPackage": {
+      "title": "Standard",
+      "description": "Pro překlad obecného obsahu se standardní dobou dodání.",
+      "features": [
+        "Vysoce kvalitní překlad",
+        "Základní korektura",
+        "Standardní doba dodání",
+        "Podpora e-mailem"
+      ]
+    },
+    "professionalPackage": {
+      "title": "Profesionální",
+      "description": "Pro profesionální obsah vyžadující technickou odbornost.",
+      "features": [
+        "Vysoce kvalitní překlad",
+        "Kompletní korektura",
+        "Rychlejší doba dodání",
+        "Terminologie specifická pro kontext",
+        "Prioritní podpora e-mailem"
+      ]
+    },
+    "premiumPackage": {
+      "title": "Prémiový",
+      "description": "Pro projekty s vysokou prioritou vyžadující výjimečnou kvalitu.",
+      "features": [
+        "Překlad prémiové kvality",
+        "Kompletní korektura",
+        "Zrychlené doručení",
+        "Vyhrazený projektový manažer",
+        "Podpora po telefonu a e-mailu",
+        "Technická odbornost"
+      ]
+    },
+    "form": {
+      "title": "Požádat o cenovou nabídku",
+      "subtitle": "Vyplňte formulář níže a my se vám ozveme s cenovou nabídkou pro váš překladatelský projekt.",
+      "name": "Vaše jméno",
+      "email": "Emailová adresa",
+      "phone": "Telefonní číslo (volitelné)",
+      "subject": "Předmět",
+      "message": "Vaše zpráva",
+      "submit": "Odeslat zprávu",
+      "submitRequest": "Odeslat žádost",
+      "agreeTerms": "Souhlasím s",
+      "termsAgreement": "Souhlasím s Podmínkami a Zásadami ochrany osobních údajů",
+      "actions": {
+        "chooseFile": "Vybrat soubor"
+      },
+      "sections": {
+        "contactInfo": "Kontaktní informace",
+        "projectDetails": "Detaily projektu",
+        "additionalInfo": "Další informace"
+      },
+      "fields": {
+        "firstName": "Jméno",
+        "lastName": "Příjmení",
+        "email": "Email",
+        "phone": "Telefon",
+        "company": "Společnost (pokud je to relevantní)",
+        "sourceLanguage": "Zdrojový jazyk",
+        "targetLanguage": "Cílový jazyk",
+        "serviceType": "Typ služby",
+        "projectDetails": "Detaily projektu",
+        "fileUpload": "Přiložit dokument (volitelné)",
+        "deadline": "Termín (pokud existuje)",
+        "budget": "Rozpočet (přibližný)",
+        "howDidYouHear": "Jak jste se o nás dozvěděli?",
+        "agreeToTerms": "Souhlasím s podmínkami"
+      },
+      "placeholders": {
+        "projectDetails": "Prosím, popište svůj projekt podrobně (počet slov, typ dokumentu, téma atd.)",
+        "fileUpload": "Podporované typy souborů: PDF, DOC, DOCX, TXT, XLS, XLSX, PPT, PPTX, ODT, RTF (Max 10MB)",
+        "budget": "např. $500-1000"
+      },
+      "errors": {
+        "firstNameRequired": "Jméno je povinné",
+        "lastNameRequired": "Příjmení je povinné",
+        "emailRequired": "Email je povinný",
+        "emailInvalid": "Neplatná emailová adresa",
+        "sourceLanguageRequired": "Zdrojový jazyk je povinný",
+        "targetLanguageRequired": "Cílový jazyk je povinný",
+        "serviceTypeRequired": "Typ služby je povinný",
+        "projectDetailsRequired": "Podrobnosti o projektu jsou vyžadovány",
+        "fileTooBig": "Velikost souboru překračuje limit 10 MB",
+        "fileTypeInvalid": "Neplatný typ souboru. Nahrajte prosím podporovaný formát dokumentu",
+        "termsRequired": "Musíte souhlasit s podmínkami",
+        "formHasErrors": "Opravte prosím chyby ve formuláři"
+      },
+      "success": "Váš dotaz byl úspěšně odeslán! Brzy vás budeme kontaktovat."
+    },
+    "contactInfo": {
+      "title": "Kontaktní informace",
+      "address": "Ženeva, Curych, Lugano - Švýcarsko",
+      "email": "info@oghamtranslations.com",
+      "hours": "Pondělí-Pátek: 9:00 - 18:00 CET",
+      "reachOut": "Neváhejte nás kontaktovat přímo:",
+      "businessHours": "Pracovní doba",
+      "weekdays": "Pondělí - Pátek: 8:00 - 18:00",
+      "saturday": "Sobota: 10:00 - 14:00",
+      "sunday": "Neděle: Zavřeno",
+      "immediateAssistance": "Potřebujete okamžitou pomoc?",
+      "urgentNeeds": "Pro naléhavé překladatelské potřeby nebo dotazy ohledně našich služeb:",
+      "urgentEmail": "Email: urgent@oghamtranslations.com",
+      "responseTime": "Snažíme se odpovědět na všechny dotazy do 2 pracovních hodin během naší pracovní doby."
+    },
+    "faq": {
+      "title": "Často kladené otázky",
+      "questions": [
+        {
+          "question": "Jak získám cenovou nabídku pro svůj překladatelský projekt?",
+          "answer": "Můžete požádat o cenovou nabídku vyplněním našeho kontaktního formuláře nebo nám přímo napsat na info@oghamtranslations.com s podrobnostmi o vašem projektu, včetně jazykové dvojice, typu dokumentu a termínu."
+        },
+        {
+          "question": "Jaká je vaše obvyklá doba zpracování?",
+          "answer": "Naše doba zpracování závisí na délce dokumentu, složitosti a jazykové dvojici. Obecně překládáme přibližně 2 000-2 500 slov denně pro standardní projekty."
+        },
+        {
+          "question": "Nabízíte ověřené překlady?",
+          "answer": "Ano, poskytujeme ověřené překlady pro oficiální dokumenty, jako jsou rodné listy, oddací listy, akademické přepisy a právní dokumenty."
+        }
+      ]
+    },
+    "languages": {
+      "english": "Angličtina",
+      "french": "Francouzština",
+      "german": "Němčina",
+      "italian": "Italština",
+      "romansh": "Rétorománština",
+      "spanish": "Španělština",
+      "portuguese": "Portugalština",
+      "russian": "Ruština",
+      "ukrainian": "Ukrajinština",
+      "mandarin": "Mandarínština",
+      "japanese": "Japonština",
+      "arabic": "Arabština",
+      "czech": "Čeština",
+      "turkish": "Turečtina"
+    },
+    "serviceTypes": {
+      "documentTranslation": "Překlad dokumentů",
+      "websiteLocalization": "Lokalizace webových stránek",
+      "technicalTranslation": "Technický překlad",
+      "legalTranslation": "Právní překlad",
+      "medicalTranslation": "Lékařský překlad",
+      "marketingMaterials": "Marketingové materiály",
+      "subtitling": "Titulkování",
+      "contentCreation": "Tvorba obsahu",
+      "softwareLocalization": "Lokalizace softwaru",
+      "other": "Jiné"
+    }
+  },
+  "portfolioExtra": {
+    "viewSample": "Zobrazit ukázku",
+    "allProjects": "Všechny projekty",
+    "categories": {
+      "legal": "Právní",
+      "technical": "Technický",
+      "marketing": "Marketing",
+      "website": "Webové stránky",
+      "corporate": "Firemní",
+      "medical": "Lékařský",
+      "creative": "Kreativní obsah"
+    }
+  },
+  "terms": {
+    "pageTitle": "Obchodní podmínky",
+    "lastUpdated": "Poslední aktualizace",
+    "date": "9. března 2025",
+    "breadcrumbs": {
+      "home": "Domů",
+      "terms": "Obchodní podmínky"
+    },
+    "sections": {
+      "introduction": "Úvod",
+      "services": "Popis služeb",
+      "ordering": "Objednávání a dodání služeb",
+      "payment": "Ceny a platby",
+      "revisions": "Revize a zajištění kvality",
+      "confidentiality": "Důvěrnost a ochrana dat",
+      "intellectual": "Duševní vlastnictví",
+      "liability": "Omezení odpovědnosti",
+      "termination": "Ukončení",
+      "governing": "Rozhodné právo a řešení sporů",
+      "modifications": "Změny podmínek",
+      "contact": "Kontaktní informace"
+    },
+    "content": {
+      "intro": {
+        "title": "1. Úvod",
+        "welcome": "Vítejte v Ogham Translation Services (\"Společnost\", \"my\", \"náš\", \"nás\"). Tyto Obchodní podmínky upravují vaše používání naší webové stránky na adrese www.oghamtranslations.com a služeb poskytovaných Ogham Translation Services.",
+        "agreement": "Přístupem na naši webovou stránku nebo používáním našich služeb souhlasíte s tím, že budete vázáni těmito Obchodními podmínkami a našimi Zásadami ochrany osobních údajů. Pokud nesouhlasíte s jakoukoli částí těchto podmínek, nesmíte přistupovat na webovou stránku ani používat naše služby."
+      },
+      "services": {
+        "title": "2. Popis služeb",
+        "description": "Ogham Translation Services poskytuje profesionální překladatelské služby ve více než 10 jazycích. Naše služby zahrnují překlad dokumentů, lokalizaci webových stránek, technické překlady a další jazykové služby, jak je popsáno na naší webové stránce.",
+        "translators": "Všechny překlady jsou prováděny profesionálními překladateli, kteří jsou rodilými mluvčími ve svých příslušných jazycích a odborníky na danou problematiku. Každý překlad prochází kontrolním procesem druhým profesionálem, aby byla zajištěna kvalita a přesnost."
+      },
+      "ordering": {
+        "title": "3. Objednávání služeb a dodání",
+        "quotes": "3.1. <strong>Nabídky:</strong> Všechny nabídky poskytnuté Ogham Translation Services jsou platné 30 dní od data vydání, pokud není uvedeno jinak. Nabídky jsou založeny na informacích poskytnutých klientem v době žádosti.",
+        "confirmation": "3.2. <strong>Potvrzení objednávky:</strong> Služby budou zahájeny pouze po obdržení písemného potvrzení od klienta, který přijímá nabídku a tyto Obchodní podmínky.",
+        "delivery": "3.3. <strong>Dodání:</strong> Datum dodání bude dohodnuto při potvrzení objednávky. Ogham Translation Services vynaloží veškeré úsilí, aby splnila dohodnuté termíny dodání, ale nemůže zaručit dodání v případě okolností mimo naši kontrolu.",
+        "format": "3.4. <strong>Formát dodání:</strong> Pokud není uvedeno jinak, překlady budou dodány ve stejném formátu jako zdrojový text. Další formátovací služby mohou být zpoplatněny."
+      },
+      "payment": {
+        "title": "4. Ceny a platby",
+        "pricing": "4.1. <strong>Ceny:</strong> Naše ceny jsou založeny na počtu slov, jazykové dvojici, složitosti a době zpracování. Speciální služby, jako jsou certifikované překlady nebo technické obory, mohou být zpoplatněny dodatečně.",
+        "terms": "4.2. <strong>Platební podmínky:</strong> Přijímáme PayPal a bankovní převody. Pro firemní klienty můžeme zajistit fakturaci s platebními podmínkami. U velkých projektů můžeme požadovat procento platby předem."
+      },
+      "revisions": {
+        "title": "5. Revize a zajištění kvality",
+        "guarantee": "5.1. <strong>Záruka kvality:</strong> Zavazujeme se poskytovat vysoce kvalitní překlady. Pokud nejste s naší prací spokojeni, můžete požádat o revize do 14 dnů od dodání.",
+        "scope": "5.2. <strong>Rozsah revizí:</strong> Bezplatné revize jsou omezeny na opravy překladatelských chyb nebo nesprávných interpretací. Změny zdrojového textu nebo stylistické preference, které nebyly specifikovány v původním zadání, mohou být zpoplatněny dodatečně.",
+        "refund": "5.3. <strong>Reklamační řád:</strong> Pokud nejsme schopni splnit vaše požadavky po přiměřených pokusech o revizi, máte nárok na plnou náhradu."
+      },
+      "confidentiality": {
+        "title": "6. Důvěrnost a ochrana dat",
+        "confidentiality": "6.1. <strong>Důvěrnost:</strong> Všechny dokumenty a informace klientů považujeme za přísně důvěrné. Naši překladatelé a zaměstnanci jsou vázáni dohodami o důvěrnosti.",
+        "dataProtection": "6.2. <strong>Ochrana dat:</strong> Osobní údaje zpracováváme v souladu s našimi Zásadami ochrany osobních údajů a platnými zákony o ochraně dat.",
+        "security": "6.3. <strong>Bezpečnost dat:</strong> Zavádíme vhodná technická a organizační opatření k ochraně vašich dat před neoprávněným přístupem, změnou, zveřejněním nebo zničením."
+      },
+      "intellectual": {
+        "title": "7. Duševní vlastnictví",
+        "ownership": "7.1. <strong>Vlastnictví:</strong> Klient si ponechává všechna práva duševního vlastnictví ke zdrojovému obsahu. Přeložený obsah se stává majetkem klienta po úplném zaplacení.",
+        "memory": "7.2. <strong>Paměť překladu:</strong> Pokud není dohodnuto jinak, můžeme ukládat překlady v naší paměti překladu pro účely kvality a konzistence v budoucích projektech pro stejného klienta.",
+        "reference": "7.3. <strong>Reference:</strong> Můžeme zahrnout jméno klienta do našeho seznamu klientů, pokud klient nepožádá jinak."
+      },
+      "liability": {
+        "title": "8. Omezení odpovědnosti",
+        "service": "8.1. <strong>Odpovědnost za služby:</strong> Naše odpovědnost je omezena na částku zaplacenou za překladatelské služby. Nejsme odpovědní za žádné nepřímé, následné nebo náhodné škody.",
+        "content": "8.2. <strong>Odpovědnost za obsah:</strong> Klient je odpovědný za zajištění, že má právo překládat zdrojový obsah. Nejsme odpovědní za žádné porušení autorských práv nebo jiné právní problémy související s obsahem překladů.",
+        "timeSensitive": "8.3. <strong>Časově citlivý materiál:</strong> U časově citlivých materiálů by nás měl klient předem informovat. Nejsme odpovědní za ztráty způsobené zpožděním dodání, pokud není výslovně dohodnuto písemně."
+      },
+      "termination": {
+        "title": "9. Ukončení",
+        "byClient": "9.1. <strong>Ze strany klienta:</strong> Klient může kdykoli ukončit služby poskytnutím písemného oznámení. Klient bude odpovědný za platbu za veškerou práci dokončenou do okamžiku ukončení.",
+        "byCompany": "9.2. <strong>Ze strany Ogham Translation Services:</strong> Vyhrazujeme si právo ukončit služby, pokud klient poruší tyto Podmínky, zejména pokud jde o platební podmínky."
+      },
+      "governing": {
+        "title": "10. Rozhodné právo a řešení sporů",
+        "law": "10.1. <strong>Rozhodné právo:</strong> Tyto Podmínky se řídí a vykládají v souladu s právem Švýcarska.",
+        "resolution": "10.2. <strong>Řešení sporů:</strong> Jakýkoli spor vyplývající z těchto Podmínek nebo v souvislosti s nimi bude řešen jednáním v dobré víře. Pokud spor nelze vyřešit jednáním, bude předložen výlučné jurisdikci soudů v Curychu, Švýcarsko."
+      },
+      "modifications": {
+        "title": "11. Změny podmínek",
+        "description": "Vyhrazujeme si právo kdykoli změnit tyto Podmínky. Změny budou účinné po zveřejnění na webových stránkách. Je vaší odpovědností pravidelně kontrolovat tyto Podmínky. Vaše pokračující používání našich služeb po zveřejnění revidovaných Podmínek znamená, že přijímáte a souhlasíte se změnami."
+      },
+      "contact": {
+        "title": "12. Kontaktní informace",
+        "description": "Pokud máte jakékoli dotazy ohledně těchto Podmínek, kontaktujte nás na:",
+        "email": "E-mail:",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "privacy": {
+    "pageTitle": "Zásady ochrany osobních údajů",
+    "lastUpdated": "Poslední aktualizace",
+    "date": "9. března 2025",
+    "breadcrumbs": {
+      "home": "Domů",
+      "privacy": "Zásady ochrany osobních údajů"
+    },
+    "sections": {
+      "introduction": "Úvod",
+      "collectedInfo": "Informace, které shromažďujeme",
+      "useOfInfo": "Jak používáme vaše informace",
+      "infoSharing": "Sdílení informací",
+      "cookies": "Cookies a sledovací technologie",
+      "dataProtection": "Práva na ochranu dat",
+      "thirdPartyLinks": "Odkazy na třetí strany",
+      "childrenPrivacy": "Ochrana soukromí dětí",
+      "changes": "Změny těchto zásad ochrany osobních údajů",
+      "contact": "Kontaktujte nás"
+    },
+    "content": {
+      "intro": {
+        "title": "1. Úvod",
+        "description1": "Ogham Translation Services (\"my\", \"naše\" nebo \"nás\") se zavazuje chránit vaše soukromí. Tyto zásady ochrany osobních údajů vysvětlují, jak shromažďujeme, používáme, zveřejňujeme a chráníme vaše informace, když navštívíte naši webovou stránku www.oghamtranslations.com nebo používáte naše překladatelské služby.",
+        "description2": "Přečtěte si prosím tyto zásady ochrany osobních údajů pečlivě. Pokud nesouhlasíte s podmínkami těchto zásad ochrany osobních údajů, prosím, nepřistupujte na stránky ani nepoužívejte naše služby. Přístupem na naši webovou stránku nebo používáním našich překladatelských služeb souhlasíte s těmito zásadami ochrany osobních údajů."
+      },
+      "collect": {
+        "title": "2. Informace, které shromažďujeme",
+        "personal": {
+          "title": "2.1 Osobní informace",
+          "intro": "Můžeme shromažďovat osobní informace, které nám dobrovolně poskytnete, když:",
+          "list": [
+            "Se zaregistrujete na naší webové stránce",
+            "Požádáte o cenovou nabídku nebo zadáte objednávku",
+            "Přihlásíte se k odběru našeho newsletteru",
+            "Odpovíte na průzkum nebo vyplníte formulář",
+            "Kontaktujete nás s dotazy nebo zpětnou vazbou"
+          ],
+          "details": "Osobní informace mohou zahrnovat vaše jméno, e-mailovou adresu, poštovní adresu, telefonní číslo, informace o společnosti a platební údaje."
+        },
+        "nonPersonal": {
+          "title": "2.2 Neosobní informace",
+          "intro": "Můžeme automaticky shromažďovat určité neosobní informace, když navštívíte naše webové stránky, včetně:",
+          "list": [
+            "IP adresa",
+            "Typ prohlížeče",
+            "Operační systém",
+            "Navštívené stránky a čas strávený na našich webových stránkách",
+            "Odkazující webové adresy"
+          ]
+        },
+        "translation": {
+          "title": "2.3 Obsah pro překlad",
+          "description": "Když používáte naše překladatelské služby, nutně shromažďujeme a zpracováváme obsah, který poskytnete k překladu. To může zahrnovat osobní údaje obsažené v dokumentech nebo materiálech, které předložíte."
+        }
+      },
+      "usage": {
+        "title": "3. Jak používáme vaše informace",
+        "intro": "Informace, které shromažďujeme, můžeme použít pro různé účely, včetně:",
+        "list": [
+          "Poskytování, provozování a údržba našich služeb",
+          "Zpracování a plnění vašich překladatelských požadavků",
+          "Zlepšování, personalizace a rozšiřování našich služeb",
+          "Porozumění a analýza, jak používáte naše webové stránky",
+          "Vývoj nových produktů, služeb, funkcí a funkcionalit",
+          "Komunikace s vámi o našich službách, aktualizacích a dalších informacích",
+          "Zasílání marketingových a propagačních sdělení (pouze s vaším souhlasem)",
+          "Vyhledávání a prevence podvodů",
+          "Pro účely dodržování předpisů, právních procesů a vymáhání práva"
+        ]
+      },
+      "sharing": {
+        "title": "4. Jak sdílíme vaše informace",
+        "intro": "Vaše informace můžeme sdílet v následujících situacích:",
+        "providers": {
+          "title": "4.1 Poskytovatelé služeb",
+          "description": "Vaše informace můžeme sdílet s poskytovateli služeb a překladateli, kteří pro nás nebo naším jménem vykonávají služby, včetně zpracování plateb, analýzy dat, doručování e-mailů, hostingových služeb a zákaznického servisu. Tito poskytovatelé služeb jsou vázáni smluvními povinnostmi udržovat osobní informace v tajnosti a používat je pouze pro účely, pro které jim je sdělujeme."
+        },
+        "transfers": {
+          "title": "4.2 Obchodní převody",
+          "description": "Pokud se účastníme fúze, akvizice nebo prodeje všech nebo části našich aktiv, vaše informace mohou být převedeny jako součást této transakce. O jakékoli změně vlastnictví nebo použití vašich osobních informací vás budeme informovat e-mailem a/nebo výrazným oznámením na našich webových stránkách."
+        },
+        "legal": {
+          "title": "4.3 Právní požadavky",
+          "description": "Vaše informace můžeme zveřejnit, pokud jsme k tomu právně povinni, abychom vyhověli platným zákonům, vládním požadavkům, soudnímu řízení, soudnímu příkazu nebo právnímu procesu."
+        },
+        "consent": {
+          "title": "4.4 S vaším souhlasem",
+          "description": "Vaše osobní informace můžeme zveřejnit pro jakýkoli jiný účel s vaším souhlasem."
+        }
+      },
+      "security": {
+        "title": "5. Bezpečnost dat",
+        "measures": "Zavedli jsme vhodná technická a organizační bezpečnostní opatření navržená k ochraně bezpečnosti jakýchkoli osobních informací, které zpracováváme. Nicméně, prosím, pamatujte také, že nemůžeme zaručit, že internet sám o sobě je 100% bezpečný. Ačkoli uděláme maximum pro ochranu vašich osobních informací, přenos osobních informací na naše webové stránky a z nich je na vaše vlastní riziko.",
+        "confidentiality": "Pro samotný překladatelský proces uplatňujeme přísná opatření důvěrnosti. Všichni naši překladatelé podepisují dohody o důvěrnosti a používáme bezpečné systémy pro přenos dokumentů."
+      },
+      "retention": {
+        "title": "6. Uchovávání dat",
+        "period": "Vaše osobní údaje budeme uchovávat pouze po dobu nezbytnou pro účely stanovené v těchto Zásadách ochrany osobních údajů, pokud delší doba uchovávání není vyžadována nebo povolena zákonem. Když již nebudeme mít legitimní obchodní potřebu zpracovávat vaše osobní údaje, buď je smažeme, nebo anonymizujeme.",
+        "translation": "Pro překladový obsah obvykle uchováváme vaše dokumenty až 3 měsíce po dokončení projektu, abychom mohli řešit případné následné dotazy nebo žádosti o revizi, poté jsou bezpečně smazány. Pokud požadujete okamžité smazání vašeho obsahu po dokončení projektu, dejte nám prosím vědět."
+      },
+      "rights": {
+        "title": "7. Vaše práva na ochranu soukromí",
+        "intro": "V závislosti na vaší lokalitě můžete mít určitá práva týkající se vašich osobních údajů. Tato práva mohou zahrnovat:",
+        "list": [
+          "Právo na přístup k osobním údajům, které o vás uchováváme",
+          "Právo požadovat opravu nepřesných osobních údajů",
+          "Právo požadovat smazání vašich osobních údajů",
+          "Právo vznést námitku proti zpracování vašich osobních údajů",
+          "Právo na přenositelnost údajů",
+          "Právo odvolat souhlas"
+        ],
+        "exercise": "Pro uplatnění těchto práv nás prosím kontaktujte pomocí údajů uvedených v sekci \"Kontaktujte nás\" níže."
+      },
+      "cookies": {
+        "title": "8. Cookies a sledovací technologie",
+        "description": "Používáme cookies a podobné sledovací technologie ke sledování aktivity na našich webových stránkách a ukládání určitých informací. Cookies jsou soubory s malým množstvím dat, které mohou obsahovat anonymní jedinečný identifikátor. Cookies jsou odesílány do vašeho prohlížeče z webové stránky a ukládány na vašem zařízení.",
+        "types": "Používáme následující typy cookies:",
+        "list": [
+          "<strong>Nezbytné cookies:</strong> Nezbytné pro provoz našich webových stránek. Umožňují základní funkce, jako je navigace na stránce a přístup k zabezpečeným oblastem webu.",
+          "<strong>Analytické cookies:</strong> Pomáhají nám pochopit, jak návštěvníci interagují s našimi webovými stránkami, tím, že shromažďují a anonymně hlásí informace.",
+          "<strong>Preferenční cookies:</strong> Umožňují našim webovým stránkám zapamatovat si informace, které mění způsob, jakým se web chová nebo vypadá, například váš preferovaný jazyk."
+        ],
+        "management": "Můžete nastavit svůj prohlížeč tak, aby odmítal všechny cookies nebo aby vás upozornil, když je cookie odesílána. Pokud však cookies nepřijmete, nemusíte být schopni používat některé části našich webových stránek."
+      },
+      "thirdParty": {
+        "title": "9. Webové stránky třetích stran",
+        "description": "Naše webové stránky mohou obsahovat odkazy na jiné webové stránky, které nejsou provozovány námi. Pokud kliknete na odkaz třetí strany, budete přesměrováni na stránky této třetí strany. Důrazně doporučujeme, abyste si přečetli Zásady ochrany osobních údajů každé stránky, kterou navštívíte. Nemáme žádnou kontrolu nad obsahem, zásadami ochrany osobních údajů ani praktikami jakýchkoli stránek nebo služeb třetích stran a neneseme za ně žádnou odpovědnost."
+      },
+      "children": {
+        "title": "10. Ochrana soukromí dětí",
+        "description": "Naše služby nejsou určeny pro děti mladší 16 let. Nevědomě neshromažďujeme osobní údaje od dětí mladších 16 let. Pokud jste rodič nebo opatrovník a víte, že nám vaše dítě poskytlo osobní údaje, kontaktujte nás, abychom mohli podniknout potřebné kroky."
+      },
+      "changes": {
+        "title": "11. Změny těchto Zásad ochrany osobních údajů",
+        "description": "Naše Zásady ochrany osobních údajů můžeme čas od času aktualizovat. O jakýchkoli změnách vás budeme informovat zveřejněním nových Zásad ochrany osobních údajů na této stránce a aktualizací data \"Poslední aktualizace\" v horní části těchto Zásad ochrany osobních údajů. Doporučujeme, abyste tyto Zásady ochrany osobních údajů pravidelně kontrolovali kvůli případným změnám. Změny těchto Zásad ochrany osobních údajů jsou účinné, když jsou zveřejněny na této stránce."
+      },
+      "contact": {
+        "title": "12. Kontaktujte nás",
+        "description": "Pokud máte jakékoli dotazy ohledně těchto Zásad ochrany osobních údajů, kontaktujte nás na:",
+        "email": "E-mail:",
+        "emailAddress": "info@oghamtranslations.com"
+      }
+    }
+  },
+  "notFound": {
+    "title": "404 - Stránka Nenalezena",
+    "message": "Stránka, kterou hledáte, neexistuje.",
+    "returnHome": "Vrátit se na domovskou stránku"
+  }
+}

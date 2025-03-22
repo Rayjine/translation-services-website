@@ -14,6 +14,7 @@ import {
   ListItemText,
   Paper
 } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { Link as RouterLink } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -22,127 +23,189 @@ import BusinessIcon from '@mui/icons-material/Business';
 import SchoolIcon from '@mui/icons-material/School';
 import CodeIcon from '@mui/icons-material/Code';
 
-const serviceCategories = [
-  {
-    id: 'document',
-    title: 'Document Translation',
-    icon: <DescriptionIcon sx={{ fontSize: 60 }} color="primary" />,
-    description: 'Professional translation of various document types with accuracy and attention to detail.',
-    services: [
-      {
-        title: 'Legal Documents',
-        description: 'Contracts, agreements, court documents, legal opinions, patents, and certifications.',
-        features: ['Certified translations', 'Legal terminology expertise', 'Confidentiality guaranteed']
-      },
-      {
-        title: 'Business Documents',
-        description: 'Financial reports, business plans, marketing materials, and corporate communications.',
-        features: ['Industry-specific terminology', 'Consistent branding', 'Format preservation']
-      },
-      {
-        title: 'Technical Documents',
-        description: 'User manuals, technical specifications, instruction guides, and technical reports.',
-        features: ['Technical accuracy', 'Simplified language when needed', 'Subject matter experts']
-      },
-      {
-        title: 'Academic Documents',
-        description: 'Diplomas, transcripts, research papers, theses, and academic certifications.',
-        features: ['Academic terminology expertise', 'Research-grade translation', 'Citation formatting']
-      },
+const Services = () => {
+  const { t } = useTranslation();
+  
+  const serviceCategories = [
+    {
+      id: 'document',
+      title: t('services.categories.document.title'),
+      icon: <DescriptionIcon sx={{ fontSize: 60 }} color="primary" />,
+      description: t('services.categories.document.description'),
+      services: [
+        {
+          title: t('services.categories.document.services.legal.title'),
+          description: t('services.categories.document.services.legal.description'),
+          features: [
+            t('services.categories.document.services.legal.features.0'),
+            t('services.categories.document.services.legal.features.1'),
+            t('services.categories.document.services.legal.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.document.services.business.title'),
+          description: t('services.categories.document.services.business.description'),
+          features: [
+            t('services.categories.document.services.business.features.0'),
+            t('services.categories.document.services.business.features.1'),
+            t('services.categories.document.services.business.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.document.services.technical.title'),
+          description: t('services.categories.document.services.technical.description'),
+          features: [
+            t('services.categories.document.services.technical.features.0'),
+            t('services.categories.document.services.technical.features.1'),
+            t('services.categories.document.services.technical.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.document.services.academic.title'),
+          description: t('services.categories.document.services.academic.description'),
+          features: [
+            t('services.categories.document.services.academic.features.0'),
+            t('services.categories.document.services.academic.features.1'),
+            t('services.categories.document.services.academic.features.2')
+          ]
+        }
+      ]
+    },
+    {
+      id: 'website',
+      title: t('services.categories.website.title'),
+      icon: <LanguageIcon sx={{ fontSize: 60 }} color="primary" />,
+      description: t('services.categories.website.description'),
+      services: [
+        {
+          title: t('services.categories.website.services.localization.title'),
+          description: t('services.categories.website.services.localization.description'),
+          features: [
+            t('services.categories.website.services.localization.features.0'),
+            t('services.categories.website.services.localization.features.1'),
+            t('services.categories.website.services.localization.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.website.services.ecommerce.title'),
+          description: t('services.categories.website.services.ecommerce.description'),
+          features: [
+            t('services.categories.website.services.ecommerce.features.0'),
+            t('services.categories.website.services.ecommerce.features.1'),
+            t('services.categories.website.services.ecommerce.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.website.services.cms.title'),
+          description: t('services.categories.website.services.cms.description'),
+          features: [
+            t('services.categories.website.services.cms.features.0'),
+            t('services.categories.website.services.cms.features.1'),
+            t('services.categories.website.services.cms.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.website.services.seo.title'),
+          description: t('services.categories.website.services.seo.description'),
+          features: [
+            t('services.categories.website.services.seo.features.0'),
+            t('services.categories.website.services.seo.features.1'),
+            t('services.categories.website.services.seo.features.2')
+          ]
+        }
     ]
   },
-  {
-    id: 'website',
-    title: 'Website Translation',
-    icon: <LanguageIcon sx={{ fontSize: 60 }} color="primary" />,
-    description: 'Comprehensive website localization services to help your business reach global audiences.',
-    services: [
-      {
-        title: 'Website Localization',
-        description: 'Complete translation and cultural adaptation of your website content for international markets.',
-        features: ['Cultural adaptation', 'SEO optimization', 'User interface adjustment']
-      },
-      {
-        title: 'E-commerce Translation',
-        description: 'Product descriptions, categories, checkout processes, and customer support content.',
-        features: ['Consistent product terminology', 'Payment method localization', 'Customer-centric language']
-      },
-      {
-        title: 'CMS Integration',
-        description: 'Integration with WordPress, Shopify, and other content management systems.',
-        features: ['Plugin compatibility', 'Multi-language setup', 'Automatic content synchronization']
-      },
-      {
-        title: 'Multilingual SEO',
-        description: 'Keyword research and optimization for multiple target markets.',
-        features: ['Local keyword research', 'Meta tag optimization', 'SEO-friendly URLs']
-      }
+    {
+      id: 'specialized',
+      title: t('services.categories.specialized.title'),
+      icon: <BusinessIcon sx={{ fontSize: 60 }} color="primary" />,
+      description: t('services.categories.specialized.description'),
+      services: [
+        {
+          title: t('services.categories.specialized.services.medical.title'),
+          description: t('services.categories.specialized.services.medical.description'),
+          features: [
+            t('services.categories.specialized.services.medical.features.0'),
+            t('services.categories.specialized.services.medical.features.1'),
+            t('services.categories.specialized.services.medical.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.specialized.services.financial.title'),
+          description: t('services.categories.specialized.services.financial.description'),
+          features: [
+            t('services.categories.specialized.services.financial.features.0'),
+            t('services.categories.specialized.services.financial.features.1'),
+            t('services.categories.specialized.services.financial.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.specialized.services.marketing.title'),
+          description: t('services.categories.specialized.services.marketing.description'),
+          features: [
+            t('services.categories.specialized.services.marketing.features.0'),
+            t('services.categories.specialized.services.marketing.features.1'),
+            t('services.categories.specialized.services.marketing.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.specialized.services.literary.title'),
+          description: t('services.categories.specialized.services.literary.description'),
+          features: [
+            t('services.categories.specialized.services.literary.features.0'),
+            t('services.categories.specialized.services.literary.features.1'),
+            t('services.categories.specialized.services.literary.features.2')
+          ]
+        }
     ]
   },
-  {
-    id: 'specialized',
-    title: 'Specialized Translations',
-    icon: <BusinessIcon sx={{ fontSize: 60 }} color="primary" />,
-    description: 'Expert translations for specific industries requiring specialized knowledge and terminology.',
-    services: [
-      {
-        title: 'Medical Translation',
-        description: 'Medical records, pharmaceutical documents, clinical trials, and healthcare materials.',
-        features: ['Medical terminology expertise', 'Regulatory compliance', 'Patient-friendly language']
-      },
-      {
-        title: 'Financial Translation',
-        description: 'Financial statements, investment reports, banking documents, and insurance materials.',
-        features: ['Financial terminology accuracy', 'Numerical formatting', 'Regulatory compliance']
-      },
-      {
-        title: 'Marketing Translation',
-        description: 'Marketing campaigns, brochures, advertisements, and promotional materials.',
-        features: ['Creative adaptation', 'Cultural relevance', 'Brand voice preservation']
-      },
-      {
-        title: 'Literary Translation',
-        description: 'Books, poetry, scripts, and creative works that maintain the author\'s style and intent.',
-        features: ['Stylistic faithfulness', 'Cultural nuance', 'Creative adaptation']
-      }
-    ]
-  },
-  {
-    id: 'additional',
-    title: 'Additional Services',
-    icon: <CodeIcon sx={{ fontSize: 60 }} color="primary" />,
-    description: 'Complementary language services to meet your digital communication needs.',
-    services: [
-      {
-        title: 'Content Creation',
-        description: 'Original multilingual content creation tailored to your target markets.',
-        features: ['Native-speaking copywriters', 'Market-specific content', 'SEO optimization']
-      },
-      {
-        title: 'Software Localization',
-        description: 'Translation and adaptation of software interfaces, apps, and games.',
-        features: ['UI/UX consideration', 'String management', 'Testing and quality assurance']
-      },
-      {
-        title: 'Subtitling',
-        description: 'Multimedia translation services for videos and films requiring text translations.',
-        features: ['Timing synchronization', 'Cultural adaptation', 'Multilingual support']
-      }
+    {
+      id: 'additional',
+      title: t('services.categories.additional.title'),
+      icon: <CodeIcon sx={{ fontSize: 60 }} color="primary" />,
+      description: t('services.categories.additional.description'),
+      services: [
+        {
+          title: t('services.categories.additional.services.content.title'),
+          description: t('services.categories.additional.services.content.description'),
+          features: [
+            t('services.categories.additional.services.content.features.0'),
+            t('services.categories.additional.services.content.features.1'),
+            t('services.categories.additional.services.content.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.additional.services.software.title'),
+          description: t('services.categories.additional.services.software.description'),
+          features: [
+            t('services.categories.additional.services.software.features.0'),
+            t('services.categories.additional.services.software.features.1'),
+            t('services.categories.additional.services.software.features.2')
+          ]
+        },
+        {
+          title: t('services.categories.additional.services.subtitling.title'),
+          description: t('services.categories.additional.services.subtitling.description'),
+          features: [
+            t('services.categories.additional.services.subtitling.features.0'),
+            t('services.categories.additional.services.subtitling.features.1'),
+            t('services.categories.additional.services.subtitling.features.2')
+          ]
+        }
     ]
   }
 ];
 
-const Services = () => {
   return (
     <Box>
       {/* Hero Section */}
       <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h2" component="h1" gutterBottom>
-            Our Services
+            {t('services.pageTitle')}
           </Typography>
           <Typography variant="h5" sx={{ mb: 4, fontWeight: 300 }}>
-            Professional translation solutions for every need
+            {t('services.pageSubtitle')}
           </Typography>
         </Container>
       </Box>
@@ -216,72 +279,70 @@ const Services = () => {
       <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Our Translation Process
+            {t('services.process.title')}
           </Typography>
           <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-            We follow a rigorous process to ensure the highest quality translations for your content:
+            {t('services.process.subtitle')}
           </Typography>
 
           <Grid container spacing={4} justifyContent="center">
-            {[
-              { step: 1, title: 'Project Analysis', description: 'We analyze your content, requirements, and target audience to determine the best approach.' },
-              { step: 2, title: 'Translation', description: 'Our native-speaking translators expertly convert your content to the target language.' },
-              { step: 3, title: 'Editing & Review', description: 'A second linguist reviews the translation for accuracy, consistency, and style.' },
-              { step: 4, title: 'Quality Assurance', description: 'Rigorous quality checks ensure your translation meets our high standards.' },
-              { step: 5, title: 'Client Review', description: 'We implement your feedback and make any necessary adjustments.' },
-              { step: 6, title: 'Delivery', description: 'Your finalized translation is delivered in your preferred format, on time and on budget.' }
-            ].map((process) => (
-              <Grid item xs={12} sm={6} md={4} key={process.step}>
-                <Box 
-                  sx={{ 
-                    bgcolor: 'white', 
-                    p: 3, 
-                    borderRadius: 2, 
-                    boxShadow: 1,
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    position: 'relative',
-                    '&::before': {
-                      content: '""',
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '5px',
-                      height: '100%',
-                      bgcolor: 'primary.main',
-                      borderTopLeftRadius: 2,
-                      borderBottomLeftRadius: 2
-                    }
-                  }}
-                >
+            {t('services.process.steps', { returnObjects: true }).map((process, index) => {
+              // Ensure process.step exists, otherwise use index+1
+              const stepNumber = process.step || index + 1;
+              return (
+                <Grid item xs={12} sm={6} md={4} key={`process-step-${stepNumber}`}>
                   <Box 
                     sx={{ 
-                      bgcolor: 'primary.main', 
-                      color: 'white', 
-                      width: 40, 
-                      height: 40, 
-                      borderRadius: '50%', 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center',
-                      mb: 2,
-                      fontWeight: 'bold'
+                      bgcolor: 'white', 
+                      p: 3, 
+                      borderRadius: 2, 
+                      boxShadow: 1,
+                      height: '100%',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      textAlign: 'center',
+                      position: 'relative',
+                      '&::before': {
+                        content: '""',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '5px',
+                        height: '100%',
+                        bgcolor: 'primary.main',
+                        borderTopLeftRadius: 2,
+                        borderBottomLeftRadius: 2
+                      }
                     }}
                   >
-                    {process.step}
+                    <Box 
+                      key={`step-circle-${stepNumber}`}
+                      sx={{ 
+                        bgcolor: 'primary.main', 
+                        color: 'white', 
+                        width: 40, 
+                        height: 40, 
+                        borderRadius: '50%', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center',
+                        mb: 2,
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      {stepNumber}
+                    </Box>
+                    <Typography variant="h6" component="h3" gutterBottom>
+                      {process.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {process.description}
+                    </Typography>
                   </Box>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    {process.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {process.description}
-                  </Typography>
-                </Box>
-              </Grid>
-            ))}
+                </Grid>
+              );
+            })}
           </Grid>
         </Container>
       </Box>
@@ -290,10 +351,10 @@ const Services = () => {
       <Box sx={{ bgcolor: 'secondary.main', color: 'white', py: 8 }}>
         <Container maxWidth="md">
           <Typography variant="h3" component="h2" align="center" gutterBottom>
-            Need a Translation?
+            {t('home.cta.title')}
           </Typography>
           <Typography variant="h6" align="center" paragraph sx={{ mb: 4 }}>
-            Contact us today for a free quote on your translation project.
+            {t('home.cta.subtitle')}
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
             <Button 
@@ -312,7 +373,7 @@ const Services = () => {
                 }
               }}
             >
-              Request a Quote
+              {t('common.buttons.getQuote')}
             </Button>
             <Button 
               variant="outlined" 
@@ -331,7 +392,7 @@ const Services = () => {
                 }
               }}
             >
-              View Pricing
+              {t('pricing.pageTitle')}
             </Button>
           </Box>
         </Container>

@@ -25,107 +25,109 @@ import {
   AccordionDetails
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
-const pricingPlans = [
+const getPricingPlans = (t) => [
   {
-    title: 'Standard',
+    title: t('pricing.standard'),
     price: 0.08,
-    unit: 'per word',
-    description: 'For general content and basic documents',
+    unit: t('pricing.perWord'),
+    description: t('pricing.packages.plans.0.description'),
     features: [
-      { text: 'High-quality translation', included: true },
-      { text: 'Full proofreading', included: true },
-      { text: 'Standard delivery time', included: true },
-      { text: 'Context-specific terminology', included: false },
-      { text: 'Rush turnaround option', included: false },
-      { text: 'Dedicated team', included: false },
+      { text: t('pricing.packages.plans.0.features.0.text'), included: true },
+      { text: t('pricing.packages.plans.0.features.1.text'), included: true },
+      { text: t('pricing.packages.plans.0.features.2.text'), included: true },
+      { text: t('pricing.packages.plans.0.features.3.text'), included: false },
+      { text: t('pricing.packages.plans.0.features.4.text'), included: false },
+      { text: t('pricing.packages.plans.0.features.5.text'), included: false },
     ],
     accent: false
   },
   {
-    title: 'Professional',
+    title: t('pricing.professional'),
     price: 0.12,
-    unit: 'per word',
-    description: 'For business and specialized content',
+    unit: t('pricing.perWord'),
+    description: t('pricing.packages.plans.1.description'),
     features: [
-      { text: 'High-quality translation', included: true },
-      { text: 'Enhanced proofreading', included: true },
-      { text: 'Faster delivery time', included: true },
-      { text: 'Context-specific terminology', included: true },
-      { text: 'Rush turnaround option', included: true },
-      { text: 'Dedicated team', included: false },
+      { text: t('pricing.packages.plans.1.features.0.text'), included: true },
+      { text: t('pricing.packages.plans.1.features.1.text'), included: true },
+      { text: t('pricing.packages.plans.1.features.2.text'), included: true },
+      { text: t('pricing.packages.plans.1.features.3.text'), included: true },
+      { text: t('pricing.packages.plans.1.features.4.text'), included: true },
+      { text: t('pricing.packages.plans.1.features.5.text'), included: false },
     ],
     accent: true
   },
   {
-    title: 'Premium',
+    title: t('pricing.premium'),
     price: 0.16,
-    unit: 'per word',
-    description: 'For critical and high-visibility content',
+    unit: t('pricing.perWord'),
+    description: t('pricing.packages.plans.2.description'),
     features: [
-      { text: 'High-quality translation', included: true },
-      { text: 'Multiple rounds of revision', included: true },
-      { text: 'Priority delivery time', included: true },
-      { text: 'Context-specific terminology', included: true },
-      { text: 'Rush turnaround option', included: true },
-      { text: 'Dedicated team', included: true },
+      { text: t('pricing.packages.plans.2.features.0.text'), included: true },
+      { text: t('pricing.packages.plans.2.features.1.text'), included: true },
+      { text: t('pricing.packages.plans.2.features.2.text'), included: true },
+      { text: t('pricing.packages.plans.2.features.3.text'), included: true },
+      { text: t('pricing.packages.plans.2.features.4.text'), included: true },
+      { text: t('pricing.packages.plans.2.features.5.text'), included: true },
     ],
     accent: false
   }
 ];
 
-const serviceRates = [
-  { service: 'Document Translation', standard: '0.08-0.10', professional: '0.12-0.14', premium: '0.16-0.20' },
-  { service: 'Website Localization', standard: '0.10-0.12', professional: '0.14-0.16', premium: '0.18-0.22' },
-  { service: 'Technical Translation', standard: '0.10-0.12', professional: '0.14-0.18', premium: '0.20-0.25' },
-  { service: 'Legal Translation', standard: '0.12-0.14', professional: '0.16-0.20', premium: '0.22-0.28' },
-  { service: 'Medical Translation', standard: '0.12-0.14', professional: '0.16-0.20', premium: '0.22-0.28' },
-  { service: 'Marketing Content', standard: '0.09-0.11', professional: '0.13-0.15', premium: '0.17-0.22' },
-  { service: 'Subtitling', standard: '6-8', professional: '9-12', premium: '14-18', note: 'Price per minute of video' },
+const getServiceRates = (t) => [
+  { service: t('pricing.rates.services.0.service'), standard: t('pricing.rates.services.0.standard'), professional: t('pricing.rates.services.0.professional'), premium: t('pricing.rates.services.0.premium') },
+  { service: t('pricing.rates.services.1.service'), standard: t('pricing.rates.services.1.standard'), professional: t('pricing.rates.services.1.professional'), premium: t('pricing.rates.services.1.premium') },
+  { service: t('pricing.rates.services.2.service'), standard: t('pricing.rates.services.2.standard'), professional: t('pricing.rates.services.2.professional'), premium: t('pricing.rates.services.2.premium') },
+  { service: t('pricing.rates.services.3.service'), standard: t('pricing.rates.services.3.standard'), professional: t('pricing.rates.services.3.professional'), premium: t('pricing.rates.services.3.premium') },
+  { service: t('pricing.rates.services.4.service'), standard: t('pricing.rates.services.4.standard'), professional: t('pricing.rates.services.4.professional'), premium: t('pricing.rates.services.4.premium') },
+  { service: t('pricing.rates.services.5.service'), standard: t('pricing.rates.services.5.standard'), professional: t('pricing.rates.services.5.professional'), premium: t('pricing.rates.services.5.premium') },
+  { service: t('pricing.rates.services.6.service'), standard: t('pricing.rates.services.6.standard'), professional: t('pricing.rates.services.6.professional'), premium: t('pricing.rates.services.6.premium'), note: t('pricing.rates.services.6.note') },
 ];
 
-const faqs = [
+const getFaqs = (t) => [
   {
-    question: 'How do you calculate the cost of a translation project?',
-    answer: 'We typically charge per word in the source text. The rates vary depending on the language pair, complexity of the content, required expertise, and turnaround time. For some services like subtitling, we charge per minute of video.'
+    question: t('pricing.faqs.questions.0.question'),
+    answer: t('pricing.faqs.questions.0.answer')
   },
   {
-    question: 'Are there any additional fees beyond the per-word rate?',
-    answer: 'In most cases, the per-word rate covers the complete service. However, additional fees may apply for rush orders (typically +25-50%), specialized formatting requirements, or extra rounds of revision beyond what\'s included in your package.'
+    question: t('pricing.faqs.questions.1.question'),
+    answer: t('pricing.faqs.questions.1.answer')
   },
   {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept PayPal, bank transfers, and for corporate clients, we can arrange invoicing with payment terms.'
+    question: t('pricing.faqs.questions.2.question'),
+    answer: t('pricing.faqs.questions.2.answer')
   },
   {
-    question: 'Do you offer discounts for large projects?',
-    answer: 'Yes, we offer volume discounts for large projects. The discount percentage increases with the size of the project, typically starting at 5% for projects over 10,000 words and up to 15% for projects over 50,000 words.'
+    question: t('pricing.faqs.questions.3.question'),
+    answer: t('pricing.faqs.questions.3.answer')
   },
   {
-    question: 'What is your policy on revisions?',
-    answer: 'Our Standard package includes one round of revisions, the Professional package includes two rounds of revisions, and the Premium package includes unlimited revisions within a reasonable scope. Additional revision rounds can be purchased if needed.'
-  },
-  {
-    question: 'How quickly can you deliver translations?',
-    answer: 'Our standard delivery time is approximately 2,000-2,500 words per business day. Rush services are available at an additional cost, which can reduce turnaround time by 30-50%. For large urgent projects, we can assign multiple translators to meet tight deadlines.'
+    question: t('pricing.faqs.questions.4.question'),
+    answer: t('pricing.faqs.questions.4.answer')
   }
 ];
 
 const Pricing = () => {
+  const { t } = useTranslation();
+  const pricingPlans = getPricingPlans(t);
+  const serviceRates = getServiceRates(t);
+  const faqs = getFaqs(t);
+  
   return (
     <Box>
       {/* Hero Section */}
       <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h2" component="h1" gutterBottom>
-            Pricing
+            {t('pricing.pageTitle')}
           </Typography>
           <Typography variant="h5" sx={{ mb: 4, fontWeight: 300 }}>
-            Transparent and flexible pricing options
+            {t('pricing.pageSubtitle')}
           </Typography>
         </Container>
       </Box>
@@ -133,10 +135,10 @@ const Pricing = () => {
       {/* Pricing Plans */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Typography variant="h4" component="h2" align="center" gutterBottom>
-          Translation Packages
+          {t('pricing.packages.title')}
         </Typography>
         <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-          Choose the right package for your translation needs. All prices are in CHF.
+          {t('pricing.packages.subtitle')}
         </Typography>
 
         <Grid container spacing={4} alignItems="stretch">
@@ -205,7 +207,7 @@ const Pricing = () => {
                     fullWidth
                     sx={{ mt: 3 }}
                   >
-                    Get Started
+                    {t('pricing.cta.button')}
                   </Button>
                 </CardContent>
               </Card>
@@ -218,21 +220,20 @@ const Pricing = () => {
       <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h4" component="h2" align="center" gutterBottom>
-            Detailed Service Rates
+            {t('pricing.rates.title')}
           </Typography>
           <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-            Below are our rates for specific services (CHF per word unless otherwise noted).
-            The exact price depends on language pair, complexity, and turnaround time.
+            {t('pricing.rates.subtitle')}
           </Typography>
 
           <TableContainer component={Paper} sx={{ mb: 4, overflow: 'hidden', boxShadow: 3 }}>
             <Table>
               <TableHead>
                 <TableRow sx={{ bgcolor: 'primary.main' }}>
-                  <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Service</TableCell>
-                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>Standard</TableCell>
-                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>Professional</TableCell>
-                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>Premium</TableCell>
+                  <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>{t('pricing.rates.headers.service')}</TableCell>
+                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>{t('pricing.standard')}</TableCell>
+                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>{t('pricing.professional')}</TableCell>
+                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>{t('pricing.premium')}</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -259,11 +260,8 @@ const Pricing = () => {
           </TableContainer>
 
           <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="body2" color="text.secondary" gutterBottom>
-              * Rates for Asian languages (Mandarin and Japanese) and rare languages (Romansh) may be higher.
-            </Typography>
             <Typography variant="body2" color="text.secondary">
-              ** Rush fees apply for expedited delivery: +25% for 24-hour turnaround, +50% for same-day delivery (when available).
+              {t('pricing.rates.note')}
             </Typography>
           </Box>
         </Container>
@@ -273,11 +271,10 @@ const Pricing = () => {
       <Container maxWidth="md" sx={{ py: 8 }}>
         <Paper sx={{ p: 4, borderRadius: 2, bgcolor: 'primary.light', color: 'white', textAlign: 'center', boxShadow: 3 }}>
           <Typography variant="h4" component="h2" gutterBottom>
-            Need a Personalized Quote?
+            {t('pricing.cta.title')}
           </Typography>
           <Typography variant="body1" paragraph sx={{ mb: 4, maxWidth: 800, mx: 'auto' }}>
-            Every project is unique. Contact us for a detailed quote tailored to your specific translation needs.
-            We offer volume discounts and competitive rates for long-term contracts.
+            {t('pricing.cta.subtitle')}
           </Typography>
           <Button
             variant="contained"
@@ -287,7 +284,7 @@ const Pricing = () => {
             to="/contact"
             sx={{ py: 1.5, px: 4 }}
           >
-            Request a Custom Quote
+            {t('pricing.cta.button')}
           </Button>
         </Paper>
       </Container>
@@ -296,10 +293,10 @@ const Pricing = () => {
       <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h4" component="h2" align="center" gutterBottom>
-            Frequently Asked Questions
+            {t('pricing.faqs.title')}
           </Typography>
           <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-            Find answers to common questions about our pricing and payment options.
+            {t('pricing.faqs.subtitle')}
           </Typography>
 
           <Grid container spacing={2}>
@@ -329,22 +326,20 @@ const Pricing = () => {
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
             <Typography variant="h4" component="h2" gutterBottom>
-              Our Satisfaction Guarantee
+              {t('pricing.guarantee.title')}
             </Typography>
             <Typography variant="body1" paragraph>
-              We're committed to delivering high-quality translations that meet your expectations. 
-              If you're not completely satisfied with our work, we'll revise it at no additional cost.
-              
-              If at any point you feel that the translation does not meet your expectations, you can request a cancellation, and we'll refund you — no questions asked.            </Typography>
+              {t('pricing.guarantee.description')}
+            </Typography>
             <Typography variant="body1" paragraph>
-              For all projects, we provide:
+              {t('pricing.guarantee.provisions')}
             </Typography>
             <List>
               {[
-                'Accurate and contextually appropriate translations',
-                'On-time delivery as agreed in the project scope',
-                'Consistent terminology throughout your documents',
-                'Responsive customer service and project updates'
+                t('pricing.guarantee.points.accurate'),
+                t('pricing.guarantee.points.onTime'),
+                t('pricing.guarantee.points.consistent'),
+                t('pricing.guarantee.points.responsive')
               ].map((point, index) => (
                 <ListItem key={index} sx={{ py: 0.5 }}>
                   <ListItemIcon sx={{ minWidth: 35 }}>
@@ -359,26 +354,12 @@ const Pricing = () => {
             <Box sx={{ p: 4, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 3 }}>
               <Typography variant="h5" gutterBottom>
                 <InfoOutlinedIcon sx={{ verticalAlign: 'middle', mr: 1, color: 'primary.main' }} />
-                Payment Terms
+                {t('pricing.paymentTerms')}
               </Typography>
               <Divider sx={{ mb: 3 }} />
-              <Grid container spacing={2}>
-                {[
-                  { title: 'Small Projects', description: 'For projects under CHF 500, payment is required in full before work begins.' },
-                  { title: 'Medium Projects', description: 'For projects between CHF 500-CHF 2,000, we require 50% upfront and 50% upon completion.' },
-                  { title: 'Large Projects', description: 'For projects over CHF 2,000, we can arrange flexible payment terms with milestone payments.' },
-                  { title: 'Corporate Clients', description: 'We offer Net-30 payment terms for established corporate clients with ongoing translation needs.' }
-                ].map((term, index) => (
-                  <Grid item xs={12} key={index}>
-                    <Typography variant="subtitle1" fontWeight="bold">
-                      {term.title}
-                    </Typography>
-                    <Typography variant="body2" paragraph>
-                      {term.description}
-                    </Typography>
-                  </Grid>
-                ))}
-              </Grid>
+              <Typography variant="body2" paragraph>
+                {t('pricing.termsDescription')}
+              </Typography>
             </Box>
           </Grid>
         </Grid>

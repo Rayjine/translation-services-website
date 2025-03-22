@@ -10,6 +10,7 @@ import {
   Avatar,
   Divider
 } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -139,16 +140,35 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  const { t } = useTranslation();
+  
+  // Map team member data from translations with images
+  const teamMembers = t('team.members', { returnObjects: true }).map((member, index) => ({
+    ...member,
+    image: [
+      celiaBrodardImg,
+      markusBrunnerImg,
+      inesFerreiraImg,
+      jianChenImg,
+      alessandraContiImg,
+      emikoShimizuImg,
+      olenaKovalenkoImg,
+      robertAinsworthImg,
+      claudioCereghettiImg,
+      amineBenchekrounImg
+    ][index]
+  }));
+
   return (
     <Box>
       {/* Hero Section */}
       <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h2" component="h1" gutterBottom>
-            Our Team
+            {t('team.pageTitle')}
           </Typography>
           <Typography variant="h5" sx={{ mb: 4, fontWeight: 300 }}>
-            Meet our professional translators
+            {t('team.pageSubtitle')}
           </Typography>
         </Container>
       </Box>
@@ -156,10 +176,10 @@ const Team = () => {
       {/* Team Overview */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Typography variant="h4" component="h2" align="center" gutterBottom>
-          Professional Translators Based in Switzerland
+          {t('team.professionalTranslators')}
         </Typography>
         <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 900, mx: 'auto' }}>
-          The professionals featured here are our team leaders, each one leading the work around one main language that is their mother tongue. We also have additional collaborators, ensuring that we have at least two experts to translate and then review any possible language combination. This dual-expert approach guarantees the highest quality and cultural accuracy in all our translations. Based in Switzerland, we leverage our multicultural environment to provide precise and culturally appropriate translations across multiple European and global languages.
+          {t('team.description')}
         </Typography>
 
         <Grid container spacing={4}>
@@ -197,7 +217,7 @@ const Team = () => {
                   <Box sx={{ mt: 2 }}>
                     <Typography variant="subtitle2" color="primary" sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                       <LanguageIcon fontSize="small" sx={{ mr: 1 }} />
-                      Languages
+                      {t('team.languages')}
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mb: 2 }}>
                       {member.languages.map((lang) => (
@@ -215,7 +235,7 @@ const Team = () => {
                   <Box sx={{ mt: 1 }}>
                     <Typography variant="subtitle2" color="primary" sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                       <WorkIcon fontSize="small" sx={{ mr: 1 }} />
-                      Specialties
+                      {t('team.specialties')}
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mb: 2 }}>
                       {member.specialties.map((specialty) => (
@@ -234,7 +254,7 @@ const Team = () => {
                   
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                     <Typography variant="body2" color="text.secondary" sx={{ mr: 1, fontWeight: 'bold' }}>
-                      Experience:
+                      {t('team.experienceLabel')}:
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       {member.experience}
@@ -258,31 +278,14 @@ const Team = () => {
       <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
         <Container maxWidth="lg">
           <Typography variant="h4" component="h2" align="center" gutterBottom>
-            Our Translation Philosophy
+            {t('team.philosophy.title')}
           </Typography>
           <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-            At Ogham Translations, we believe that effective translation goes beyond words - it's about conveying meaning, context, and cultural nuances. Based in Switzerland, a country with four official languages, we understand multilingualism at our core and bring this unique perspective to every project.
+            {t('team.philosophy.subtitle')}
           </Typography>
 
           <Grid container spacing={4}>
-            {[
-              {
-                title: 'Cultural Expertise',
-                description: 'Our translators don\'t just know the languages they work with - they understand the cultures behind them, ensuring your message remains appropriate and effective.'
-              },
-              {
-                title: 'Subject Matter Knowledge',
-                description: 'We assign translators based on their expertise in your specific field, whether it\'s legal, medical, technical, or creative content.'
-              },
-              {
-                title: 'Quality Assurance',
-                description: 'Every translation undergoes a rigorous quality control process, including review by a second linguist to ensure accuracy and consistency.'
-              },
-              {
-                title: 'Continuous Learning',
-                description: 'Our translators regularly participate in professional development to stay updated with the latest terminology and translation techniques.'
-              }
-            ].map((value, index) => (
+            {t('team.philosophy.values', { returnObjects: true }).map((value, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
                 <Box 
                   sx={{ 

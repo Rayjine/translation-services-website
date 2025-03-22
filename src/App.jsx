@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import CookieConsent from 'react-cookie-consent';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -19,12 +20,18 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Portfolio from './pages/Portfolio';
 
-const NotFound = () => (
-  <div style={{ padding: '50px', textAlign: 'center' }}>
-    <h1>404 - Page Not Found</h1>
-    <p>The page you are looking for does not exist.</p>
-  </div>
-);
+const NotFound = () => {
+  const { t } = useTranslation();
+  return (
+    <div style={{ padding: '50px', textAlign: 'center' }}>
+      <h1>{t('notFound.title')}</h1>
+      <p>{t('notFound.message')}</p>
+      <Link to="/" style={{ color: '#0b476c', textDecoration: 'underline' }}>
+        {t('notFound.returnHome')}
+      </Link>
+    </div>
+  );
+};
 
 // Theme configuration
 const theme = createTheme({
@@ -84,22 +91,23 @@ const theme = createTheme({
 const LocationAwareCookieConsent = () => {
   const location = useLocation();
   const isPrivacyPage = location.pathname === '/privacy';
+  const { t } = useTranslation();
   
   return (
     <CookieConsent
       location="bottom"
-      buttonText="Accept"
+      buttonText={t('common.buttons.accept')}
       cookieName="oghamTranslationsConsent"
       style={{ background: '#03142a', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif' }}
       buttonStyle={{ background: '#20fc8f', color: '#03142a', fontSize: '13px', fontWeight: 'bold', borderRadius: '4px', padding: '8px 16px' }}
       expires={150}
       overlay={!isPrivacyPage}
     >
-      This website uses cookies to enhance the user experience. See our{" "}
+      {t('common.cookieConsent.message')}{" "}
       <Link to="/privacy" style={{ color: '#00a8e8', textDecoration: 'underline' }}>
-        Privacy Policy
+        {t('common.footer.privacyPolicy')}
       </Link>{" "}
-      for more information.
+      {t('common.cookieConsent.moreInfo')}
     </CookieConsent>
   );
 };
