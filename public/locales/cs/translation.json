@@ -455,7 +455,7 @@
     },
     "members": [
       {
-        "name": "Célia Brodard",
+        "name": "Céline Brodard",
         "role": "Senior překladatelka - francouzština",
         "bio": "Céline, narozená a vyrostlá v Ženevě, má silnou vášeň pro jazyky a specializuje se na právní, finanční a obchodní dokumenty. Jako absolventka předních švýcarských institucí kombinuje své akademické zázemí s lety profesionálních překladatelských zkušeností. Její švýcarské dědictví a hluboké porozumění multikulturním prostředím jí umožňují zajistit přesnost a kulturní citlivost v každém projektu.",
         "languages": [
@@ -1266,6 +1266,13 @@
   "notFound": {
     "title": "404 - Stránka Nenalezena",
     "message": "Stránka, kterou hledáte, neexistuje.",
-    "returnHome": "Vrátit se na domovskou stránku"
+    "returnHome": "Vrátit se na domovskou stránku",
+    "popularServices": "Naše překladatelské služby",
+    "exploreSite": "Prozkoumat naší webové stránky",
+    "links": {
+      "documentTranslation": "Překlad dokumentů",
+      "websiteLocalization": "Lokalizace webových stránek",
+      "technicalTranslation": "Technický překlad"
+    }
   }
 }

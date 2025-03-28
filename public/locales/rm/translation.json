@@ -455,7 +455,7 @@
     },
     "members": [
       {
-        "name": "Célia Brodard",
+        "name": "Céline Brodard",
         "role": "Translatrice Senior - Franzos",
         "bio": "Nata e creschida a Genevra, Céline ha ina gronda passiun per las linguas e sa spezialisescha en documents giuridics, finanzials e da fatschenta. Alumna da las meglras instituziuns svizras, ella cumbinescha sia furmaziun academica cun onns d'experientscha professiunala en translaziun. Sia derivanza svizra e sia profunda chapientscha d'ambients multiculturals permettan ad ella da garantir la precisadad e la sensibilitad culturala en mintga project.",
         "languages": [
@@ -1264,8 +1264,16 @@
     }
   },
   "notFound": {
-    "title": "404 - Pagina Betg Chattada",
-    "message": "La pagina che Vus tschertgais na exista betg.",
-    "returnHome": "Returnar a Chasa"
+    "title": "404 - Pagina betg chattada",
+    "message": "La pagina che Vus tschertgais na exista betg u è vegnida spustada. Nus As cussegliain da explorar nossas autras paginas per chattar quai che Vus tschertgais.",
+    "returnHome": "Turnar a la pagina principi",
+    "contactUs": "Contactai nus",
+    "popularServices": "Noss servetschs da translaziun",
+    "exploreSite": "Explorar nossa website",
+    "links": {
+      "documentTranslation": "Translaziun da documents",
+      "websiteLocalization": "Localisaziun da websites",
+      "technicalTranslation": "Translaziun tecnica"
+    }
   }
 }

@@ -455,7 +455,7 @@
     },
     "members": [
       {
-        "name": "Célia Brodard",
+        "name": "Céline Brodard",
         "role": "Kıdemli Çevirmen - Fransızca",
         "bio": "Cenevre'de doğup büyüyen Céline, dillere büyük bir tutku duymakta ve hukuki, finansal ve ticari belgelerde uzmanlaşmıştır. İsviçre'nin önde gelen kurumlarından mezun olan Céline, akademik geçmişini yılların profesyonel çeviri deneyimiyle birleştirir. İsviçre kökeni ve çok kültürlü ortamları derinlemesine anlaması, her projede hassasiyet ve kültürel duyarlılığı sağlamasına olanak tanır.",
         "languages": [
@@ -1266,6 +1266,14 @@
   "notFound": {
     "title": "404 - Sayfa Bulunamadı",
     "message": "Aradığınız sayfa mevcut değil.",
-    "returnHome": "Ana Sayfaya Dön"
+    "returnHome": "Ana Sayfaya Dön",
+    "contactUs": "Bizimle İletişime Geçin",
+    "popularServices": "Nasıl Çeviririz?",
+    "exploreSite": "Web Sitemizi Keşfedin",
+    "links": {
+      "documentTranslation": "Belge Çevirisi",
+      "websiteLocalization": "Web Sitesi Lokalizasyonu",
+      "technicalTranslation": "Teknik Çevirisi"
+    }
   }
 }

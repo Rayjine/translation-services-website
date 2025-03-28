@@ -19,19 +19,9 @@ import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Portfolio from './pages/Portfolio';
+import NotFound from './pages/NotFound';
 
-const NotFound = () => {
-  const { t } = useTranslation();
-  return (
-    <div style={{ padding: '50px', textAlign: 'center' }}>
-      <h1>{t('notFound.title')}</h1>
-      <p>{t('notFound.message')}</p>
-      <Link to="/" style={{ color: '#0b476c', textDecoration: 'underline' }}>
-        {t('notFound.returnHome')}
-      </Link>
-    </div>
-  );
-};
+// NotFound component is now imported from ./pages/NotFound
 
 // Theme configuration
 const theme = createTheme({
@@ -59,13 +49,32 @@ const theme = createTheme({
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontWeight: 600
+      fontSize: '2.5rem',
+      fontWeight: 600,
+      '@media (min-width:600px)': {
+        fontSize: '3.5rem',
+      },
     },
     h2: {
-      fontWeight: 600
+      fontSize: '2rem',
+      fontWeight: 600,
+      '@media (min-width:600px)': {
+        fontSize: '2.5rem',
+      },
     },
     h3: {
-      fontWeight: 500
+      fontSize: '1.5rem',
+      fontWeight: 500,
+      '@media (min-width:600px)': {
+        fontSize: '1.75rem',
+      },
+    },
+    h4: {
+      fontSize: '1.25rem',
+      fontWeight: 500,
+      '@media (min-width:600px)': {
+        fontSize: '1.35rem',
+      },
     }
   },
   components: {

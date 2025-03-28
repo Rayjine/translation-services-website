@@ -193,7 +193,7 @@ const Contact = () => {
         formDataToSubmit.append('file', selectedFile);
         
         // Send the form data with the file
-        const response = await fetch('/send-email.php', {
+        const response = await fetch('https://oghamtranslations.com/send-email.php', {
           method: 'POST',
           body: formDataToSubmit
         });
@@ -205,7 +205,7 @@ const Contact = () => {
         }
       } else {
         // No file, just send JSON data
-        const response = await fetch('/send-email.php', {
+        const response = await fetch('https://oghamtranslations.com/send-email.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

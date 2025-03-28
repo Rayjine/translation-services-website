@@ -455,7 +455,7 @@
     },
     "members": [
       {
-        "name": "Célia Brodard",
+        "name": "Céline Brodard",
         "role": "Traductora Senior - Francés",
         "bio": "Nacida y criada en Ginebra, Céline tiene una gran pasión por los idiomas y se especializa en documentos legales, financieros y empresariales. Exalumna de las principales instituciones suizas, combina su formación académica con años de experiencia profesional en traducción. Su herencia suiza y profundo entendimiento de entornos multiculturales le permiten asegurar precisión y sensibilidad cultural en cada proyecto.",
         "languages": [
@@ -1266,6 +1266,14 @@
   "notFound": {
     "title": "404 - Página No Encontrada",
     "message": "La página que está buscando no existe.",
-    "returnHome": "Volver a Inicio"
+    "returnHome": "Volver a Inicio",
+    "contactUs": "Contáctenos",
+    "popularServices": "Nuestros Servicios",
+    "exploreSite": "Explorar Nuestra Website",
+    "links": {
+      "documentTranslation": "Dokumentenübersetzung",
+      "websiteLocalization": "Website-Lokalisierung",
+      "technicalTranslation": "Technische Übersetzung"
+    }
   }
 }

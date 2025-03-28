@@ -108,12 +108,12 @@ const Home = () => {
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
               <Typography 
-                variant="h2" 
+                variant="h1" 
                 component="h1" 
                 sx={{ 
                   fontWeight: 700, 
                   mb: 2,
-                  fontSize: { xs: '2.5rem', md: '3.5rem' }
+                  fontSize: { xs: '2.5rem', md: '3.75rem' }
                 }}
               >
                 {t('home.hero.title')}
@@ -218,7 +218,7 @@ const Home = () => {
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
-            <Typography variant="h3" component="h2" gutterBottom>
+            <Typography variant="h2" component="h2" gutterBottom>
               {t('home.about.title')}
             </Typography>
             <Typography variant="body1" paragraph>
@@ -239,7 +239,7 @@ const Home = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box sx={{ p: 2, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 3 }}>
-              <Typography variant="h5" gutterBottom align="center">
+              <Typography variant="h3" component="h3" gutterBottom align="center">
                 {t('home.whyChooseUs.title')}
               </Typography>
               <Grid container spacing={2}>
@@ -252,7 +252,7 @@ const Home = () => {
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                       <Box sx={{ mr: 2 }}>{item.icon}</Box>
                       <Box>
-                        <Typography variant="h6">{item.title}</Typography>
+                        <Typography variant="h4" component="h4">{item.title}</Typography>
                         <Typography variant="body2" color="text.secondary">{item.description}</Typography>
                       </Box>
                     </Box>
@@ -267,7 +267,7 @@ const Home = () => {
       {/* Languages Section */}
       <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
         <Container maxWidth="lg">
-          <Typography variant="h3" component="h2" align="center" gutterBottom>
+          <Typography variant="h2" component="h2" align="center" gutterBottom>
             {t('home.languages.title')}
           </Typography>
           <Typography variant="body1" align="center" paragraph sx={{ mb: 6 }}>
@@ -301,7 +301,7 @@ const Home = () => {
 
       {/* Services Preview */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h3" component="h2" align="center" gutterBottom>
+        <Typography variant="h2" component="h2" align="center" gutterBottom>
           {t('home.services.title')}
         </Typography>
         <Typography variant="body1" align="center" paragraph sx={{ mb: 6 }}>
@@ -334,7 +334,7 @@ const Home = () => {
                   alt={service.title}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h3">
+                  <Typography gutterBottom variant="h3" component="h3" sx={{ fontSize: '1.25rem' }}>
                     {service.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
@@ -345,7 +345,7 @@ const Home = () => {
             </Grid>
           ))}
         </Grid>
-        <Box sx={{ textAlign: 'center', mt: 4 }}>
+        <Box sx={{ textAlign: 'center', mt: 4 }}> 
           <Button 
             variant="contained" 
             color="primary" 
@@ -363,7 +363,7 @@ const Home = () => {
         <Container maxWidth="lg">
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} md={6}>
-              <Typography variant="h3" component="h2" gutterBottom>
+              <Typography variant="h2" component="h2" gutterBottom>
                 {t('home.portfolioShowcase.title')}
               </Typography>
               <Typography variant="body1" paragraph>

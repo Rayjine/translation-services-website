@@ -439,7 +439,7 @@
     "members": [
       {
         "id": 1,
-        "name": "Célia Brodard",
+        "name": "Céline Brodard",
         "role": "Senior Translator - French",
         "bio": "Born and raised in Geneva, Céline has a strong passion for languages and specializes in legal, financial, and business documents. An alumna of top Swiss institutions, she combines her academic background with years of professional translation experience. Her Swiss heritage and deep understanding of multicultural environments allow her to ensure precision and cultural sensitivity in every project.",
         "languages": ["French", "English", "German"],
@@ -1099,7 +1099,15 @@
   },
   "notFound": {
     "title": "404 - Page Not Found",
-    "message": "The page you are looking for does not exist.",
-    "returnHome": "Return to Home"
+    "message": "The page you are looking for does not exist or has been moved. We invite you to explore our other pages to find what you're looking for.",
+    "returnHome": "Return to Home",
+    "contactUs": "Contact Us",
+    "popularServices": "Our Translation Services",
+    "exploreSite": "Explore Our Website",
+    "links": {
+      "documentTranslation": "Document Translation",
+      "websiteLocalization": "Website Localization",
+      "technicalTranslation": "Technical Translation"
+    }
   }
 }
