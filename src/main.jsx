@@ -5,6 +5,7 @@ import './index.css';
 import App from './App.jsx';
 import './i18n';
 import { CircularProgress, Box } from '@mui/material';
+import AnalyticsTracker from './components/AnalyticsTracker';
 
 // Loading spinner component for Suspense fallback
 const Loading = () => (
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
+        <AnalyticsTracker />
         <App />
       </BrowserRouter>
     </Suspense>
