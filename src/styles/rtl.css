@@ -1,0 +1,115 @@
+/* RTL-specific styling overrides */
+
+/* General text alignment for RTL */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Flip directional icons while keeping logos and symmetrical icons intact */
+[dir="rtl"] .MuiSvgIcon-root:not(.no-flip):not(.keep-direction):not(.social-icon):not(.check-icon):not([data-testid="CheckIcon"]) {
+  transform: scaleX(-1);
+}
+
+/* Ensure SVG paths in checkmarks are not flipped */
+[dir="rtl"] .check-icon,
+[dir="rtl"] [data-testid="CheckCircleOutlineIcon"],
+[dir="rtl"] [data-testid="CheckIcon"],
+[dir="rtl"] svg[data-testid="CheckCircleOutlineIcon"],
+[dir="rtl"] svg[data-testid="CheckIcon"],
+[dir="rtl"] svg[data-testid="CheckCircleOutlineIcon"] path,
+[dir="rtl"] svg[data-testid="CheckIcon"] path {
+  transform: none !important;
+}
+
+/* Specifically add no-flip class to directional icons that should flip */
+[dir="rtl"] .flip-in-rtl {
+  transform: scaleX(-1);
+}
+
+/* Add class for icons that should never flip (logos, checkmarks, etc.) */
+.keep-direction, .social-icon, .logo-icon, .check-icon {
+  /* Ensure these icons never flip in RTL mode */
+  transform: none !important;
+}
+
+/* Adjust padding/margins that were directional */
+[dir="rtl"] .MuiButton-startIcon {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+[dir="rtl"] .MuiButton-endIcon {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+/* Fix list items that have left padding/bullets */
+[dir="rtl"] .MuiListItem-root {
+  padding-right: 16px;
+  padding-left: 0;
+  text-align: right;
+}
+
+/* Fix the alignment of text in list items */
+[dir="rtl"] .MuiListItemText-root {
+  text-align: right;
+}
+
+[dir="rtl"] .MuiListItemIcon-root {
+  margin-right: 0;
+  margin-left: 16px;
+}
+
+/* Ensure all typography in lists is right-aligned */
+[dir="rtl"] .MuiList-root .MuiTypography-root {
+  text-align: right;
+}
+
+/* Adjust form controls */
+[dir="rtl"] .MuiInputBase-input {
+  text-align: right;
+}
+
+/* Specifically fix alignment in outlined inputs */
+[dir="rtl"] .MuiOutlinedInput-input,
+[dir="rtl"] .MuiInputBase-input,
+[dir="rtl"] .MuiInput-input,
+[dir="rtl"] .MuiFilledInput-input {
+  text-align: right !important;
+}
+
+/* Fix input labels and placeholders */
+[dir="rtl"] .MuiInputLabel-root,
+[dir="rtl"] .MuiFormLabel-root {
+  right: 0;
+  left: auto;
+  transform-origin: top right;
+}
+
+[dir="rtl"] .MuiInputLabel-formControl {
+  right: 14px;
+  left: auto;
+  transform-origin: top right;
+}
+
+/* Fix input adornments */
+[dir="rtl"] .MuiInputAdornment-positionStart {
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+[dir="rtl"] .MuiInputAdornment-positionEnd {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+/* Fix Card actions that might have directional styling */
+[dir="rtl"] .MuiCardActions-root {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Fix any flexbox-based components that use 'row' as the default direction */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}

@@ -256,7 +256,7 @@ const Services = () => {
                                 {service.features.map((feature, idx) => (
                                   <ListItem key={idx} disablePadding sx={{ mb: 1 }}>
                                     <ListItemIcon sx={{ minWidth: 30 }}>
-                                      <CheckCircleOutlineIcon color="success" fontSize="small" />
+                                      <CheckCircleOutlineIcon className="check-icon" color="success" fontSize="small" />
                                     </ListItemIcon>
                                     <ListItemText primary={feature} />
                                   </ListItem>

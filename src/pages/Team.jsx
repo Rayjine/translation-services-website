@@ -216,7 +216,7 @@ const Team = () => {
                   
                   <Box sx={{ mt: 2 }}>
                     <Typography variant="subtitle2" color="primary" sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                      <LanguageIcon fontSize="small" sx={{ mr: 1 }} />
+                      <LanguageIcon className="keep-direction" fontSize="small" sx={{ mr: 1 }} />
                       {t('team.languages')}
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mb: 2 }}>
@@ -234,7 +234,7 @@ const Team = () => {
                   
                   <Box sx={{ mt: 1 }}>
                     <Typography variant="subtitle2" color="primary" sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                      <WorkIcon fontSize="small" sx={{ mr: 1 }} />
+                      <WorkIcon className="keep-direction" fontSize="small" sx={{ mr: 1 }} />
                       {t('team.specialties')}
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mb: 2 }}>
@@ -262,7 +262,7 @@ const Team = () => {
                   </Box>
                   
                   <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-                    <SchoolIcon fontSize="small" sx={{ mr: 1, mt: 0.5, color: 'text.secondary' }} />
+                    <SchoolIcon className="keep-direction" fontSize="small" sx={{ mr: 1, mt: 0.5, color: 'text.secondary' }} />
                     <Typography variant="body2" color="text.secondary">
                       {member.education}
                     </Typography>

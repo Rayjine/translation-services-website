@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDirection } from '../contexts/DirectionContext';
 import {
   Box,
   Menu,
@@ -33,6 +34,7 @@ const languages = [
 
 const LanguageSwitcher = ({ variant = 'icon' }) => {
   const { i18n, t } = useTranslation();
+  const { isRtl } = useDirection();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -78,9 +80,9 @@ const LanguageSwitcher = ({ variant = 'icon' }) => {
           onClick={handleClick}
         >
           <Typography variant="body2" sx={{ display: 'flex', alignItems: 'center' }}>
-            <span style={{ marginRight: '4px' }}>{currentLanguage.flag}</span>
+            <span style={{ marginRight: isRtl ? '0' : '4px', marginLeft: isRtl ? '4px' : '0' }}>{currentLanguage.flag}</span>
             {currentLanguage.name}
-            <KeyboardArrowDownIcon fontSize="small" sx={{ ml: 0.5 }} />
+            <KeyboardArrowDownIcon fontSize="small" sx={{ ml: isRtl ? 0 : 0.5, mr: isRtl ? 0.5 : 0 }} />
           </Typography>
         </Box>
       )}
@@ -95,11 +97,11 @@ const LanguageSwitcher = ({ variant = 'icon' }) => {
         }}
         anchorOrigin={{
           vertical: 'bottom',
-          horizontal: 'right'
+          horizontal: isRtl ? 'left' : 'right'
         }}
         transformOrigin={{
           vertical: 'top',
-          horizontal: 'right'
+          horizontal: isRtl ? 'left' : 'right'
         }}
         PaperProps={{
           elevation: 3,

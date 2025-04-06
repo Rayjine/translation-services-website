@@ -2,6 +2,7 @@ import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+import './styles/rtl.css'; // Import RTL styles
 import App from './App.jsx';
 import './i18n';
 import { CircularProgress, Box } from '@mui/material';

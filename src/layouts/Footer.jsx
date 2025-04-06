@@ -23,16 +23,16 @@ const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <IconButton sx={{ color: '#53a6cc', '&:hover': { color: '#3b9b5c' } }} aria-label="Facebook" component="a" href="#" target="_blank">
-                <FacebookIcon />
+                <FacebookIcon className="social-icon" />
               </IconButton>
               <IconButton sx={{ color: '#53a6cc', '&:hover': { color: '#3b9b5c' } }} aria-label="Twitter" component="a" href="#" target="_blank">
-                <TwitterIcon />
+                <TwitterIcon className="social-icon" />
               </IconButton>
               <IconButton sx={{ color: '#53a6cc', '&:hover': { color: '#3b9b5c' } }} aria-label="LinkedIn" component="a" href="#" target="_blank">
-                <LinkedInIcon />
+                <LinkedInIcon className="social-icon" />
               </IconButton>
               <IconButton sx={{ color: '#53a6cc', '&:hover': { color: '#3b9b5c' } }} aria-label="Instagram" component="a" href="#" target="_blank">
-                <InstagramIcon />
+                <InstagramIcon className="social-icon" />
               </IconButton>
             </Box>
           </Grid>
@@ -84,7 +84,7 @@ const Footer = () => {
         </Grid>
         
         <Typography variant="body2" align="center" sx={{ pt: 4, borderTop: '1px solid rgba(83, 166, 204, 0.3)', mt: 4 }}>
-          © {currentYear} Ogham Translations. {t('common.footer.allRightsReserved')}. <Link component={RouterLink} to="/terms" color="inherit" sx={{ '&:hover': { color: '#53a6cc' } }}>{t('common.footer.termsConditions')}</Link> | <Link component={RouterLink} to="/privacy" color="inherit" sx={{ '&:hover': { color: '#53a6cc' } }}>{t('common.footer.privacyPolicy')}</Link>
+          &copy; {currentYear} Ogham Translations. {t('common.footer.allRightsReserved')}. <Link component={RouterLink} to="/terms" color="inherit" sx={{ '&:hover': { color: '#53a6cc' } }}>{t('common.footer.termsConditions')}</Link> | <Link component={RouterLink} to="/privacy" color="inherit" sx={{ '&:hover': { color: '#53a6cc' } }}>{t('common.footer.privacyPolicy')}</Link>
         </Typography>
       </Container>
     </Box>
