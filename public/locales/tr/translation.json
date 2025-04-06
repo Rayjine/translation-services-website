@@ -183,7 +183,7 @@
           },
           "academic": {
             "title": "Akademik Belgeler",
-            "description": "Diplomalar, transkriptler, araştırma makaleleri, tezler ve akademik sertifikalar.",
+            "description": "Diplomalar, transkriptler, araştırmalar, tezler ve akademik sertifikalar.",
             "features": [
               "Akademik terminoloji uzmanlığı",
               "Araştırma düzeyinde çeviri",
@@ -218,16 +218,16 @@
             "title": "CMS Entegrasyonu",
             "description": "WordPress, Shopify ve diğer içerik yönetim sistemleri ile entegrasyon.",
             "features": [
-              "Eklenti uyumluluğu",
+              "UI/UX dikkate alma",
               "Çok dilli kurulum",
               "Otomatik içerik senkronizasyonu"
             ]
           },
           "seo": {
             "title": "Çok Dilli SEO",
-            "description": "Birden fazla hedef pazar için anahtar kelime araştırması ve optimizasyonu.",
+            "description": "Birden fazla hedef pazar için anahtar kelime araştırmaları ve optimizasyonu.",
             "features": [
-              "Yerel anahtar kelime araştırması",
+              "Yerel anahtar kelime araştırmaları",
               "Meta etiket optimizasyonu",
               "SEO dostu URL'ler"
             ]
@@ -403,7 +403,7 @@
       },
       {
         "title": "Tıbbi Araştırma Makalesi Çevirisi",
-        "description": "Almancadan İngilizceye tıbbi araştırma makalesi çevirisi."
+        "description": "Almancadan İngilizceye tıbbi araştırmalar makalesi çevirisi."
       },
       {
         "title": "Finansal Rapor Çevirisi",
@@ -615,21 +615,21 @@
         "education": "Romansh Edebiyatı ve Dilbilimi Lisansı – Zürih Üniversitesi, İsviçre; Klasik Filoloji Yüksek Lisansı – Fribourg Üniversitesi, İsviçre"
       },
       {
-        "name": "Amine Benchekroun",
+        "name": "Saleh Al-Otaibi",
         "role": "Kıdemli Çevirmen - Arapça",
-        "bio": "Amine, diplomatik, ticari ve hukuki bağlamlarda Arapça çevirilerde uzmanlaşmıştır. Uluslararası ilişkiler ve uzman çeviri çalışmaları eğitimi ile Arapça konuşulan bölgeler ile İsviçre'nin çeşitli ticari ve diplomatik ortamını birbirine bağlar, çevirilerin hem doğru hem de kültürel olarak hassas olmasını sağlar.",
+        "bio": "Riyad kökenli Saleh, dillere karşı derin bir tutkuya sahip ve iş ve teknik çevirilerde uzmanlaşmıştır. Saygın Suudi ve İsviçre kurumlarının mezunu olarak, akademik geçmişini kapsamlı profesyonel deneyimle birleştirmektedir. Hem Orta Doğu hem de Avrupa pazarlarına ilişkin derin anlayışı, Arap işletmelerinin yabancı ülkelere etkin bir şekilde genişlemesine yardımcı olmasını sağlar.",
         "languages": [
           "Arapça",
-          "Fransızca",
-          "İngilizce"
+          "İngilizce",
+          "Fransızca"
         ],
         "specialties": [
-          "Diplomatik",
-          "Hukuki",
-          "Uluslararası İlişkiler"
+          "İş",
+          "Teknik",
+          "E-ticaret"
         ],
         "experience": "9+ yıl",
-        "education": "Çeviri Çalışmaları Lisansı – Université Hassan II, Fas; Uluslararası İlişkiler Yüksek Lisansı – Cenevre Yüksek Öğrenim Enstitüsü (IHEID), İsviçre"
+        "education": "Lisans - İngiliz Dili Çalışmaları – Kral Suud Üniversitesi, Suudi Arabistan; Yüksek Lisans - Çeviri ve Tercümanlık – Zürih Üniversitesi, İsviçre"
       }
     ]
   },

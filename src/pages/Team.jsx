@@ -24,7 +24,7 @@ import olenaKovalenkoImg from '../assets/images/team/olena_kovalenko.png';
 import inesFerreiraImg from '../assets/images/team/ines_ferreira.png';
 import jianChenImg from '../assets/images/team/jian_chen.png';
 import emikoShimizuImg from '../assets/images/team/emiko_shimizu.png';
-import amineBenchekrounImg from '../assets/images/team/amine_benchekroun.png';
+import salehAlOtaibiImg from '../assets/images/team/saleh_al-otaibi.png';
 
 const teamMembers = [
   {
@@ -83,40 +83,7 @@ const teamMembers = [
     image: alessandraContiImg
   },
   {
-    id: 6,
-    name: 'Emiko Shimizu',
-    role: 'Senior Translator - Japanese',
-    bio: 'Emiko has extensive experience in translating technical manuals, patents, and scientific literature for major Swiss pharmaceutical and watchmaking companies. Her rigorous academic training in Japan, combined with her experience in Switzerland, makes her an indispensable expert for highly specialized and technical translations across industries.',
-    languages: ['Japanese', 'English', 'German'],
-    specialties: ['Technical', 'Patents', 'Pharmaceutical', 'Medical'],
-    experience: '10+ years',
-    education: 'Bachelor’s in Pharmaceutical Sciences – University of Tokyo, Japan; Master’s in Technical Translation – Tokyo University of Foreign Studies (TUFS), Japan',
-    image: emikoShimizuImg
-  },
-  {
-    id: 7,
-    name: 'Olena Kovalenko',
-    role: 'Senior Translator - Ukrainian & Russian',
-    bio: 'Originally from Kyiv, Olena specializes in literary, academic, and legal translations. With a background in philology and literary studies, she has translated numerous literary works and academic papers, ensuring authenticity and cultural richness in every translation.',
-    languages: ['Ukrainian', 'Russian', 'English', 'German'],
-    specialties: ['Literary', 'Academic', 'Legal'],
-    experience: '8+ years',
-    education: 'Bachelor’s in Philology – Taras Shevchenko National University of Kyiv, Ukraine; Master’s in Translation – University of Vienna, Austria',
-    image: olenaKovalenkoImg
-  },
-  {
-    id: 8,
-    name: 'Robert Ainsworth',
-    role: 'Senior Translator - English',
-    bio: 'A native English speaker with exceptional writing skills, Robert ensures the highest quality for all English translations. With a background in journalism and translation, he crafts compelling and accurate content across a wide variety of industries, from business reports to academic research and marketing materials.',
-    languages: ['English', 'French', 'German'],
-    specialties: ['Business', 'Marketing', 'Journalism', 'Academic'],
-    experience: '14+ years',
-    education: 'Bachelor’s in English Language and Literature – University of Oxford, UK; Master’s in Translation and Interpreting – University of Westminster, UK',
-    image: robertAinsworthImg
-  },
-  {
-    id: 9,
+    id: 10,
     name: 'Claudio Cereghetti',
     role: 'Senior Translator - Romansh',
     bio: 'As one of the few professional Romansh translators, Claudio preserves and promotes this rare Swiss language through his translations. With a deep academic foundation in philology and linguistic heritage, he is a trusted expert for official Swiss documentation and cultural preservation projects.',
@@ -127,15 +94,48 @@ const teamMembers = [
     image: claudioCereghettiImg
   },
   {
-    id: 10,
-    name: 'Amine Benchekroun',
+    id: 6,
+    name: 'Saleh Al-Otaibi',
     role: 'Senior Translator - Arabic',
-    bio: 'Amine specializes in Arabic translations for diplomatic, business, and legal contexts. With training in international relations and specialist translation studies, he bridges Arabic-speaking regions with Switzerland’s diverse business and diplomatic landscape, ensuring translations are both accurate and culturally sensitive.',
-    languages: ['Arabic', 'French', 'English'],
-    specialties: ['Diplomatic', 'Legal', 'International Relations'],
-    experience: '9+ years',
-    education: 'Bachelor’s in Translation Studies – Université Hassan II, Morocco; Master’s in International Relations – Graduate Institute Geneva (IHEID), Switzerland',
-    image: amineBenchekrounImg
+    bio: 'Originally from Riyadh, Saleh has a profound passion for languages and specializes in business and technical translations. An alumnus of esteemed Saudi and Swiss institutions, he combines his academic background with extensive professional experience. His deep understanding of both Middle Eastern and European markets enables him to assist Arabic businesses in effectively expanding to foreign countries.',
+    languages: ['Arabic', 'English', 'French'],
+    specialties: ['Business', 'Technical', 'Marketing'],
+    experience: '10+ years',
+    education: 'Bachelor’s in Translation – King Khalid University, Saudi Arabia; Master’s in Translation Technologies – Saudi Electronic University, Saudi Arabia; Master’s in Translation and Interpreting – University of Geneva, Switzerland',
+    image: salehAlOtaibiImg
+  },  
+  {
+    id: 7,
+    name: 'Emiko Shimizu',
+    role: 'Senior Translator - Japanese',
+    bio: 'Emiko has extensive experience in translating technical manuals, patents, and scientific literature for major Swiss pharmaceutical and watchmaking companies. Her rigorous academic training in Japan, combined with her experience in Switzerland, makes her an indispensable expert for highly specialized and technical translations across industries.',
+    languages: ['Japanese', 'English', 'German'],
+    specialties: ['Technical', 'Patents', 'Pharmaceutical', 'Medical'],
+    experience: '10+ years',
+    education: 'Bachelor’s in Pharmaceutical Sciences – University of Tokyo, Japan; Master’s in Technical Translation – Tokyo University of Foreign Studies (TUFS), Japan',
+    image: emikoShimizuImg
+  },
+  {
+    id: 8,
+    name: 'Olena Kovalenko',
+    role: 'Senior Translator - Ukrainian & Russian',
+    bio: 'Originally from Kyiv, Olena specializes in literary, academic, and legal translations. With a background in philology and literary studies, she has translated numerous literary works and academic papers, ensuring authenticity and cultural richness in every translation.',
+    languages: ['Ukrainian', 'Russian', 'English', 'German'],
+    specialties: ['Literary', 'Academic', 'Legal'],
+    experience: '8+ years',
+    education: 'Bachelor’s in Philology – Taras Shevchenko National University of Kyiv, Ukraine; Master’s in Translation – University of Vienna, Austria',
+    image: olenaKovalenkoImg
+  },
+  {
+    id: 9,
+    name: 'Robert Ainsworth',
+    role: 'Senior Translator - English',
+    bio: 'A native English speaker with exceptional writing skills, Robert ensures the highest quality for all English translations. With a background in journalism and translation, he crafts compelling and accurate content across a wide variety of industries, from business reports to academic research and marketing materials.',
+    languages: ['English', 'French', 'German'],
+    specialties: ['Business', 'Marketing', 'Journalism', 'Academic'],
+    experience: '14+ years',
+    education: 'Bachelor’s in English Language and Literature – University of Oxford, UK; Master’s in Translation and Interpreting – University of Westminster, UK',
+    image: robertAinsworthImg
   }
 ];
 
@@ -155,7 +155,7 @@ const Team = () => {
       olenaKovalenkoImg,
       robertAinsworthImg,
       claudioCereghettiImg,
-      amineBenchekrounImg
+      salehAlOtaibiImg
     ][index]
   }));
 

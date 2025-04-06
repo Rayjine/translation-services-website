@@ -49,7 +49,7 @@
     "about": {
       "title": "O Ogham Translations",
       "paragraph1": "Založena v roce 2022, Ogham Translations je butiková překladatelská společnost zaměřená na poskytování výjimečných jazykových řešení s pečlivou pozorností k detailu. Poskytujeme personalizované, vysoce kvalitní překladatelské služby pro firmy a jednotlivce po celém světě.",
-      "paragraph2": "Náš tým profesionálních překladatelů jsou rodilí mluvčí s odbornými znalostmi ve svých oborech, což zajišťuje přesné a kulturně vhodné překlady pro všechny vaše potřeby.",
+      "paragraph2": "Náš tým profesionálních překladatelů jsou rodilí mluvčí s odbornými znalostmi ve svých oborech, což zajišťuje přesné a kulturně vhodné překlady pro všechna vaše potřeby.",
       "meetTeam": "Poznejte náš tým"
     },
     "whyChooseUs": {
@@ -92,7 +92,7 @@
       "subtitle": "Nabízíme komplexní škálu překladatelských služeb, které splní všechny vaše potřeby.",
       "documentTranslation": {
         "title": "Překlad dokumentů",
-        "description": "Profesionální překlad právních dokumentů, smluv, certifikátů a dalších."
+        "description": "Profesionální překlad různých typů dokumentů s přesností a důrazem na detail."
       },
       "websiteLocalization": {
         "title": "Lokalizace webových stránek",
@@ -236,7 +236,7 @@
       },
       "specialized": {
         "title": "Specializované překlady",
-        "description": "Odborné překlady pro specifická odvětví vyžadující specializované znalosti a terminologii.",
+        "description": "Odborné překlady pro specifická odvětví vyžadujících specializované znalosti a terminologii.",
         "services": {
           "medical": {
             "title": "Lékařský překlad",
@@ -300,7 +300,7 @@
           },
           "subtitling": {
             "title": "Titulkování",
-            "description": "Multimediální překladatelské služby pro videa a filmy vyžadující překlad textu.",
+            "description": "Multimediální překladatelské služby pro videa a filmy vyžadujících překlad textu.",
             "features": [
               "Synchronizace časování",
               "Kulturní adaptace",
@@ -509,7 +509,7 @@
       {
         "name": "Jian Chen",
         "role": "Senior překladatel - mandarínština",
-        "bio": "Jian je odborník na překlady z mandarínštiny do angličtiny se zaměřením na obchodní a technické dokumenty. Díky formálnímu vzdělání v oblasti překladu a interkulturní komunikace na přední čínské univerzitě a dalším studiím ve Švýcarsku překonává kulturní a jazykové bariéry pro švýcarské firmy vstupující na čínský trh.",
+        "bio": "Jian je odborník na překlady z mandarínštiny do angličtiny se zaměřením na obchodní a technické dokumenty. Díky formálnímu vzdělání v oblasti překladu a interkulturní komunikace na přední čínské univerzitě a dalším studiím ve Švýcarsku překonává kulturní a jazykové bariéry pro švýcarské firmy vstupujících na čínský trh.",
         "languages": [
           "mandarínština",
           "angličtina",
@@ -615,9 +615,9 @@
         "education": "Bakalář v oboru rétorománská literatura a lingvistika – Univerzita v Curychu, Švýcarsko; Magister v oboru klasická filologie – Univerzita ve Fribourgu, Švýcarsko"
       },
       {
-        "name": "Amine Benchekroun",
+        "name": "Saleh Al-Otaibi",
         "role": "Senior překladatel - arabština",
-        "bio": "Amine se specializuje na překlady do arabštiny pro diplomatické, obchodní a právní kontexty. Díky vzdělání v mezinárodních vztazích a specializovaných překladatelských studiích propojuje arabsky mluvící regiony s různorodým obchodním a diplomatickým prostředím Švýcarska, zajišťuje, že překlady jsou přesné a kulturně citlivé.",
+        "bio": "Původem z Rijádu, Saleh má hlubokou vášeň pro jazyky a specializuje se na obchodní a technické překlady. Jako absolvent vážených saúdských a švýcarských institucí kombinuje své akademické vzdělání s rozsáhlými profesními zkušenostmi. Jeho hluboké porozumění trhům Blízkého východu i Evropy mu umožňuje pomáhat arabským podnikům efektivně expandovat do zahraničních zemí.",
         "languages": [
           "arabština",
           "francouzština",
@@ -748,7 +748,7 @@
     },
     "rates": {
       "title": "Podrobné sazby služeb",
-      "subtitle": "Následující tabulka poskytuje podrobnější informace o cenách pro konkrétní typy služeb.",
+      "subtitle": "Následujícím tabulka poskytuje podrobnější informace o cenách pro konkrétní typy služeb.",
       "note": "Sazby jsou v CHF za slovo, pokud není uvedeno jinak.",
       "headers": {
         "service": "Služba",
@@ -875,7 +875,7 @@
     },
     "professionalPackage": {
       "title": "Profesionální",
-      "description": "Pro profesionální obsah vyžadující technickou odbornost.",
+      "description": "Pro profesionální obsah vyžadujícím technickou odbornost.",
       "features": [
         "Vysoce kvalitní překlad",
         "Kompletní korektura",
@@ -886,7 +886,7 @@
     },
     "premiumPackage": {
       "title": "Prémiový",
-      "description": "Pro projekty s vysokou prioritou vyžadující výjimečnou kvalitu.",
+      "description": "Pro projekty s vysokou prioritou vyžadujícím výjimečnou kvalitu.",
       "features": [
         "Překlad prémiové kvality",
         "Kompletní korektura",
@@ -966,7 +966,7 @@
       "immediateAssistance": "Potřebujete okamžitou pomoc?",
       "urgentNeeds": "Pro naléhavé překladatelské potřeby nebo dotazy ohledně našich služeb:",
       "urgentEmail": "Email: urgent@oghamtranslations.com",
-      "responseTime": "Snažíme se odpovědět na všechny dotazy do 2 pracovních hodin během naší pracovní doby."
+      "responseTime": "Snažíme se odpovědět na všechna dotazy do 2 pracovních hodin během naší pracovní doby."
     },
     "faq": {
       "title": "Často kladené otázky",
@@ -1093,7 +1093,7 @@
       "liability": {
         "title": "8. Omezení odpovědnosti",
         "service": "8.1. <strong>Odpovědnost za služby:</strong> Naše odpovědnost je omezena na částku zaplacenou za překladatelské služby. Nejsme odpovědní za žádné nepřímé, následné nebo náhodné škody.",
-        "content": "8.2. <strong>Odpovědnost za obsah:</strong> Klient je odpovědný za zajištění, že má právo překládat zdrojový obsah. Nejsme odpovědní za žádné porušení autorských práv nebo jiné právní problémy související s obsahem překladů.",
+        "content": "8.2. <strong>Odpovědnost za obsah:</strong> Klient je odpovědný za zajištění, že má právo překládat zdrojový obsah. Nejsme odpovědní za žádné porušení autorských práv nebo jiné právní problémy souvisejících s obsahem překladů.",
         "timeSensitive": "8.3. <strong>Časově citlivý materiál:</strong> U časově citlivých materiálů by nás měl klient předem informovat. Nejsme odpovědní za ztráty způsobené zpožděním dodání, pokud není výslovně dohodnuto písemně."
       },
       "termination": {
@@ -1108,7 +1108,7 @@
       },
       "modifications": {
         "title": "11. Změny podmínek",
-        "description": "Vyhrazujeme si právo kdykoli změnit tyto Podmínky. Změny budou účinné po zveřejnění na webových stránkách. Je vaší odpovědností pravidelně kontrolovat tyto Podmínky. Vaše pokračující používání našich služeb po zveřejnění revidovaných Podmínek znamená, že přijímáte a souhlasíte se změnami."
+        "description": "Vyhrazujeme si právo kdykoli změnit tyto Podmínky. Změny budou účinné po zveřejnění na webových stránkách. Je vaší odpovědností pravidelně kontrolovat tyto Podmínky. Vaše pokračujícím používání našich služeb po zveřejnění revidovaných Podmínek znamená, že přijímáte a souhlasíte se změnami."
       },
       "contact": {
         "title": "12. Kontaktní informace",
@@ -1166,7 +1166,7 @@
             "Typ prohlížeče",
             "Operační systém",
             "Navštívené stránky a čas strávený na našich webových stránkách",
-            "Odkazující webové adresy"
+            "Odkazujících webových adres"
           ]
         },
         "translation": {
@@ -1241,11 +1241,11 @@
           "<strong>Analytické cookies:</strong> Pomáhají nám pochopit, jak návštěvníci interagují s našimi webovými stránkami, tím, že shromažďují a anonymně hlásí informace.",
           "<strong>Preferenční cookies:</strong> Umožňují našim webovým stránkám zapamatovat si informace, které mění způsob, jakým se web chová nebo vypadá, například váš preferovaný jazyk."
         ],
-        "management": "Můžete nastavit svůj prohlížeč tak, aby odmítal všechny cookies nebo aby vás upozornil, když je cookie odesílána. Pokud však cookies nepřijmete, nemusíte být schopni používat některé části našich webových stránek."
+        "management": "Můžete nastavit svůj prohlížeč tak, aby odmítal všechna cookies nebo aby vás upozornil, když je cookie odesílána. Pokud však cookies nepřijmete, nemusíte být schopni používat některé části našich webových stránek."
       },
       "thirdParty": {
         "title": "9. Webové stránky třetích stran",
-        "description": "Naše webové stránky mohou obsahovat odkazy na jiné webové stránky, které nejsou provozovány námi. Pokud kliknete na odkaz třetí strany, budete přesměrováni na stránky této třetí strany. Důrazně doporučujeme, abyste si přečetli Zásady ochrany osobních údajů každé stránky, kterou navštívíte. Nemáme žádnou kontrolu nad obsahem, zásadami ochrany osobních údajů ani praktikami jakýchkoli stránek nebo služeb třetích stran a neneseme za ně žádnou odpovědnost."
+        "description": "Naše webové stránky mohou obsahovat odkazy na jiné webové stránky, které nejsme provozují. Pokud kliknete na odkaz třetí strany, budete přesměrováni na stránky této třetí strany. Důrazně doporučujeme, abyste si přečetli Zásady ochrany osobních údajů každé stránky, kterou navštívíte. Nemáme žádnou kontrolu nad obsahem, zásadami ochrany osobních údajů ani praktikami jakýchkoli stránek nebo služeb třetích stran a neneseme za ně žádnou odpovědnost."
       },
       "children": {
         "title": "10. Ochrana soukromí dětí",

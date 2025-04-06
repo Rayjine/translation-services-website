@@ -529,13 +529,13 @@
       },
       {
         "id": 10,
-        "name": "Amine Benchekroun",
+        "name": "Saleh Al-Otaibi",
         "role": "Senior Translator - Arabic",
-        "bio": "Amine specializes in Arabic translations for diplomatic, business, and legal contexts. With training in international relations and specialist translation studies, he bridges Arabic-speaking regions with Switzerland's diverse business and diplomatic landscape, ensuring translations are both accurate and culturally sensitive.",
-        "languages": ["Arabic", "French", "English"],
-        "specialties": ["Diplomatic", "Legal", "International Relations"],
-        "experience": "9+ years",
-        "education": "Bachelor's in Translation Studies – Université Hassan II, Morocco; Master's in International Relations – Graduate Institute Geneva (IHEID), Switzerland"
+        "bio": "Originally from Riyadh, Saleh has a profound passion for languages and specializes in business and technical translations. An alumnus of esteemed Saudi and Swiss institutions, he combines his academic background with extensive professional experience. His deep understanding of both Middle Eastern and European markets enables him to assist Arabic businesses in effectively expanding to foreign countries.",
+        "languages": ["Arabic", "English", "French"],
+        "specialties": ["Business", "Technical", "Marketing"],
+        "experience": "10+ years",
+        "education": "Bachelor's in Translation – King Khalid University, Saudi Arabia; Master's in Translation Technologies – Saudi Electronic University, Saudi Arabia; Master's in Translation and Interpreting – University of Geneva, Switzerland"
       }
     ]
   },
