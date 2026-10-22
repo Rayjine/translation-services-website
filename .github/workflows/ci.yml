@@ -24,7 +24,7 @@ jobs:
       - run: bash scripts/test-php.sh
       - run: php tests/contact-validation.php
       - run: php tests/smtp-protocol.php
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install chromium
       - run: npm run test:e2e
       - name: Record source and artifact hashes
         run: |
