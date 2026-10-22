@@ -1,22 +1,30 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { getCookieConsentValue } from 'react-cookie-consent';
 import ReactGA from 'react-ga4';
 
-const TRACKING_ID = "G-RLCNPC0F0L"; // Your Google Analytics Measurement ID
-
-// Initialize GA4 only once
-ReactGA.initialize(TRACKING_ID);
-console.log('GA Initialized');
+const TRACKING_ID = 'G-RLCNPC0F0L';
+let initialized = false;
+const hasConsent = () => getCookieConsentValue('oghamTranslationsConsent') === 'true';
 
 function AnalyticsTracker() {
   const location = useLocation();
-
+  const [consent, setConsent] = useState(hasConsent);
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search, title: document.title });
-    console.log(`GA Pageview sent: ${location.pathname + location.search}`);
-  }, [location]); // Re-run effect when location changes
-
-  return null; // This component doesn't render anything
+    const update = () => setConsent(hasConsent());
+    window.addEventListener('ogham-consent-change', update);
+    return () => window.removeEventListener('ogham-consent-change', update);
+  }, []);
+  useEffect(() => {
+    if (!consent) return;
+    if (!initialized) {
+      ReactGA.initialize(TRACKING_ID, { gtagOptions: { send_page_view: false } });
+      initialized = true;
+    }
+    // Query parameters can contain personal information; do not send them.
+    ReactGA.send({ hitType: 'pageview', page: location.pathname, title: document.title });
+  }, [location.pathname, consent]);
+  return null;
 }
 
 export default AnalyticsTracker;

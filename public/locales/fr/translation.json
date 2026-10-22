@@ -9,7 +9,8 @@
       "team": "Équipe",
       "portfolio": "Portfolio",
       "pricing": "Tarifs",
-      "contact": "Contact"
+      "contact": "Contact",
+      "open": "Ouvrir le menu de navigation"
     },
     "footer": {
       "about": "Services de traduction professionnelle en plusieurs langues. Qualité, précision et ponctualité garanties.",
@@ -28,7 +29,8 @@
       "viewAll": "Voir tout",
       "submit": "Soumettre",
       "send": "Envoyer",
-      "accept": "Accepter"
+      "accept": "Accepter",
+      "decline": "Refuser"
     },
     "cookieConsent": {
       "message": "Ce site utilise des cookies pour améliorer l'expérience utilisateur. Voir notre",
@@ -951,7 +953,8 @@
         "termsRequired": "Vous devez accepter les termes",
         "formHasErrors": "Veuillez corriger les erreurs dans le formulaire"
       },
-      "success": "Votre demande a été soumise avec succès ! Nous vous contacterons bientôt."
+      "success": "Votre demande a été soumise avec succès ! Nous vous contacterons bientôt.",
+      "unavailable": "Le formulaire est temporairement indisponible. Vous pouvez nous écrire directement à"
     },
     "contactInfo": {
       "title": "Informations de contact",

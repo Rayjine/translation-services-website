@@ -28,7 +28,8 @@
       "viewAll": "Tümünü Gör",
       "submit": "Gönder",
       "send": "Gönder",
-      "accept": "Kabul Et"
+      "accept": "Kabul Et",
+      "decline": "Reddet"
     },
     "cookieConsent": {
       "message": "Bu web sitesi, kullanıcı deneyimini geliştirmek için çerezler kullanır. Daha fazla bilgi için",

@@ -28,7 +28,8 @@
       "viewAll": "查看全部",
       "submit": "提交",
       "send": "发送",
-      "accept": "接受"
+      "accept": "接受",
+      "decline": "拒绝"
     },
     "cookieConsent": {
       "message": "本网站使用cookies以提升用户体验。请参阅我们的",

@@ -1,10 +1,6 @@
-import { Box, Container, Grid, Typography, Link, IconButton } from '@mui/material';
+import { Box, Container, Grid, Typography, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,20 +17,6 @@ const Footer = () => {
             <Typography variant="body2" sx={{ mb: 2 }}>
               {t('common.footer.about')}
             </Typography>
-            <Box sx={{ display: 'flex', gap: 1 }}>
-              <IconButton sx={{ color: '#53a6cc', '&:hover': { color: '#3b9b5c' } }} aria-label="Facebook" component="a" href="#" target="_blank">
-                <FacebookIcon className="social-icon" />
-              </IconButton>
-              <IconButton sx={{ color: '#53a6cc', '&:hover': { color: '#3b9b5c' } }} aria-label="Twitter" component="a" href="#" target="_blank">
-                <TwitterIcon className="social-icon" />
-              </IconButton>
-              <IconButton sx={{ color: '#53a6cc', '&:hover': { color: '#3b9b5c' } }} aria-label="LinkedIn" component="a" href="#" target="_blank">
-                <LinkedInIcon className="social-icon" />
-              </IconButton>
-              <IconButton sx={{ color: '#53a6cc', '&:hover': { color: '#3b9b5c' } }} aria-label="Instagram" component="a" href="#" target="_blank">
-                <InstagramIcon className="social-icon" />
-              </IconButton>
-            </Box>
           </Grid>
           
           <Grid item xs={12} sm={4}>

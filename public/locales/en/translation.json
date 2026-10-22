@@ -4,6 +4,7 @@
     "languageNative": "English",
     "and": ",",
     "menu": {
+      "open": "Open navigation menu",
       "home": "Home",
       "services": "Services",
       "team": "Team",
@@ -22,6 +23,7 @@
       "privacyPolicy": "Privacy Policy"
     },
     "buttons": {
+      "decline": "Decline",
       "getQuote": "Get a Quote",
       "ourServices": "Our Services",
       "readMore": "Read More",
@@ -731,6 +733,7 @@
       ]
     },
     "form": {
+      "unavailable": "The online form is temporarily unavailable. Please email us directly at",
       "title": "Request a Quote",
       "subtitle": "Fill out the form below and we'll get back to you with a quote for your translation project.",
       "name": "Your Name",

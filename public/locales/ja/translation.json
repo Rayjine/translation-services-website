@@ -28,7 +28,8 @@
       "viewAll": "すべて表示",
       "submit": "送信",
       "send": "送信",
-      "accept": "承認"
+      "accept": "承認",
+      "decline": "拒否する"
     },
     "cookieConsent": {
       "message": "このウェブサイトは、ユーザー体験を向上させるためにクッキーを使用しています。詳細は",

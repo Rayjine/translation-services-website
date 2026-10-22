@@ -28,7 +28,8 @@
       "viewAll": "Ver Todo",
       "submit": "Enviar",
       "send": "Enviar",
-      "accept": "Aceptar"
+      "accept": "Aceptar",
+      "decline": "Rechazar"
     },
     "cookieConsent": {
       "message": "Este sitio web utiliza cookies para mejorar la experiencia del usuario. Vea nuestro",
