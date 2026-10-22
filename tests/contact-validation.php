@@ -12,7 +12,7 @@ $host = '127.0.0.1';
 $port = 18782;
 $address = "http://$host:$port/send-email.php";
 $server = proc_open(
-    ['php', '-S', "$host:$port", '-t', '/app/public'],
+    ['php', '-S', "$host:$port", '-t', realpath(__DIR__ . '/../public')],
     [0 => ['pipe', 'r'], 1 => ['file', '/dev/null', 'w'], 2 => ['file', '/dev/null', 'w']],
     $pipes
 );
