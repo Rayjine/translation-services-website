@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import CookieConsent from 'react-cookie-consent';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -25,19 +25,22 @@ import NotFound from './pages/NotFound';
 // NotFound component is now imported from ./pages/NotFound
 
 const LocationAwareCookieConsent = () => {
-  const location = useLocation();
-  const isPrivacyPage = location.pathname === '/privacy';
   const { t } = useTranslation();
   
   return (
     <CookieConsent
       location="bottom"
       buttonText={t('common.buttons.accept')}
+      enableDeclineButton
+      declineButtonText={t('common.buttons.decline', 'Decline')}
+      onAccept={() => window.dispatchEvent(new Event('ogham-consent-change'))}
+      onDecline={() => window.dispatchEvent(new Event('ogham-consent-change'))}
+      declineButtonStyle={{ background: 'transparent', color: '#ffffff', border: '1px solid #ffffff', borderRadius: '4px', minHeight: '44px', padding: '10px 16px' }}
       cookieName="oghamTranslationsConsent"
       style={{ background: '#03142a', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif' }}
-      buttonStyle={{ background: '#20fc8f', color: '#03142a', fontSize: '13px', fontWeight: 'bold', borderRadius: '4px', padding: '8px 16px' }}
+      buttonStyle={{ background: '#20fc8f', color: '#03142a', fontSize: '13px', fontWeight: 'bold', borderRadius: '4px', padding: '10px 16px', minHeight: '44px' }}
       expires={150}
-      overlay={!isPrivacyPage}
+      overlay={false}
     >
       {t('common.cookieConsent.message')}{" "}
       <Link to="/privacy" style={{ color: '#00a8e8', textDecoration: 'underline' }}>

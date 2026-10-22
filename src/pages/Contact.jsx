@@ -62,6 +62,8 @@ const getServiceTypes = (t) => [
 
 const Contact = () => {
   const { t } = useTranslation();
+  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY?.trim();
+  const recaptchaConfigured = Boolean(recaptchaSiteKey);
   
   // Get translated languages and service types
   const languages = getLanguages(t);
@@ -156,6 +158,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!recaptchaConfigured) return;
     
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
@@ -543,24 +547,36 @@ const Contact = () => {
                     )}
                   </Grid>
                   
-                  {/* reCAPTCHA */}
+                  {!recaptchaConfigured && (
+                    <Grid item xs={12}>
+                      <Alert severity="info">
+                        {t('contact.form.unavailable', { defaultValue: 'The online form is temporarily unavailable. Please email us directly at' })}{' '}
+                        <Link href="mailto:info@oghamtranslations.com" color="inherit" underline="always">
+                          info@oghamtranslations.com
+                        </Link>.
+                      </Alert>
+                    </Grid>
+                  )}
+
+                  {/* reCAPTCHA is only mounted when the public site key is configured. */}
                   <Grid item xs={12} sx={{ mt: 2 }}>
                     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                      <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                        onChange={(value) => {
-                          setCaptchaValue(value);
-                          // Clear error when captcha is verified
-                          if (formErrors.captcha) {
-                            setFormErrors({
-                              ...formErrors,
-                              captcha: null
-                            });
-                          }
-                        }}
-                        theme="light"
-                      />
+                      {recaptchaConfigured && (
+                        <ReCAPTCHA
+                          ref={recaptchaRef}
+                          sitekey={recaptchaSiteKey}
+                          onChange={(value) => {
+                            setCaptchaValue(value);
+                            if (formErrors.captcha) {
+                              setFormErrors({
+                                ...formErrors,
+                                captcha: null
+                              });
+                            }
+                          }}
+                          theme="light"
+                        />
+                      )}
                     </Box>
                     {formErrors.captcha && (
                       <Typography variant="caption" color="error" sx={{ display: 'block', textAlign: 'center', mt: 1 }}>
@@ -575,6 +591,7 @@ const Contact = () => {
                       color="primary"
                       size="large"
                       fullWidth
+                      disabled={!recaptchaConfigured}
                       sx={{ py: 1.5 }}
                     >
                       {t('contact.form.submitRequest')}

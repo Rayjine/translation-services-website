@@ -4,22 +4,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', 0); // Don't display errors in production
 ini_set('log_errors', 1);   // Log errors instead
 
-// Detect production environment
-$is_production = strpos(__DIR__, '/sites/oghamtranslations.com') !== false;
-
-// Set log directory
-$log_dir = __DIR__ . '/logs';
-
-// Create log directory if it doesn't exist
-if (!file_exists($log_dir)) {
-    mkdir($log_dir, 0755, true);
-}
-
-// Set the log file to our custom location
-ini_set('error_log', $log_dir . '/php_errors.log');
-
-
-
 // Register shutdown function to catch fatal errors
 register_shutdown_function(function() {
     $error = error_get_last();
@@ -79,59 +63,35 @@ function loadEnv($path) {
     return true;
 }
 
-// Load environment variables from the production path
-$envPath = '/home/clients/4684ac79f6c28e7a53817535f7015dba/sites/oghamtranslations.com/.env';
-loadEnv($envPath);
+// Load secrets only from a path configured outside the document root, or use
+// environment variables supplied directly by the hosting provider.
+$envPath = getenv('OGHAM_ENV_FILE');
+if (is_string($envPath) && $envPath !== '') {
+    loadEnv($envPath);
+}
 
-// Basic environment variables check
-error_log('ENV variables loaded from production path');
-
-// Create our contact submissions backup directory
-$backupDir = __DIR__ . '/contact_submissions';
-if (!file_exists($backupDir)) {
-    mkdir($backupDir, 0755, true);
+function escapeEmailHtml($value) {
+    return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
 // Function to handle email sending with or without attachment
 function sendEmail($to, $subject, $body, $headers, $attachment = null) {
-    // Immediately save form data to a JSON file as a backup
-    global $backupDir;
-    $timestamp = date('Y-m-d_H-i-s');
-    $backupFile = $backupDir . '/submission_' . $timestamp . '.json';
-    
-    $backupData = [
-        'timestamp' => $timestamp,
-        'to' => $to,
-        'subject' => $subject,
-        'body' => $body,
-        'headers' => $headers,
-        'attachment' => $attachment ? $attachment['name'] : null
-    ];
-    
-    file_put_contents($backupFile, json_encode($backupData, JSON_PRETTY_PRINT));
-    // Append form details to log file as a backup method in case SMTP fails
-    error_log("====== NEW FORM SUBMISSION ======\n".
-             "To: {$to}\n".
-             "Subject: {$subject}\n".
-             "Body: {$body}\n".
-             "Headers: {$headers}\n".
-             "Attachment: " . ($attachment ? $attachment['name'] : 'None'));
-             
     // Try sending using SMTP directly (since mail() function is not available)
     $smtpServer = 'mail.infomaniak.com'; // Infomaniak SMTP server
     $smtpPort = 465;  // SSL/TLS port for Infomaniak
     
     // Get credentials from environment variables
-    $smtpUser = $_ENV['SMTP_USER'] ?? getenv('SMTP_USER') ?? 'info@oghamtranslations.com';
-    $smtpPass = $_ENV['SMTP_PASS'] ?? getenv('SMTP_PASS') ?? '';
-    
-    // Log SMTP connection info (without exposing full password)
-    error_log("SMTP connection details: {$smtpServer}:{$smtpPort} with user {$smtpUser}");
-    
-    // Parse the From header to get the sender email
-    $senderEmail = 'info@oghamtranslations.com'; // Default fallback
-    if (preg_match('/From: ([^\r\n]*)/i', $headers, $matches)) {
-        $senderEmail = trim(str_replace(['<', '>'], '', $matches[1]));
+    $smtpUser = trim((string) ($_ENV['SMTP_USER'] ?? getenv('SMTP_USER') ?? ''));
+    $smtpPass = (string) ($_ENV['SMTP_PASS'] ?? getenv('SMTP_PASS') ?? '');
+    if (filter_var($smtpUser, FILTER_VALIDATE_EMAIL) === false || preg_match('/[\r\n\0]/', $smtpUser) || $smtpPass === '') {
+        error_log('SMTP is not configured');
+        return false;
+    }
+
+    // Reply only to a validated address supplied by the form.
+    $senderEmail = 'info@oghamtranslations.com';
+    if (preg_match('/^Reply-To:\s*([^\r\n]*)/mi', $headers, $matches)) {
+        $senderEmail = trim($matches[1]);
     }
     
     // Initialize connection
@@ -149,9 +109,10 @@ function sendEmail($to, $subject, $body, $headers, $attachment = null) {
             error_log("Connecting without SSL to {$smtpServer}:{$smtpPort}");
         }
         if (!$socket) {
-            error_log("Socket connection failed: $errno - $errstr");
+            error_log('SMTP connection failed');
             return false;
         }
+        stream_set_timeout($socket, 15);
         
         // Check server response
         if (!checkResponse($socket, 220)) {
@@ -175,7 +136,10 @@ function sendEmail($to, $subject, $body, $headers, $attachment = null) {
             }
             
             // Upgrade to TLS
-            stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
+            if (stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT) !== true) {
+                fclose($socket);
+                return false;
+            }
             
             // Send EHLO again after TLS
             fputs($socket, "EHLO oghamtranslations.com\r\n");
@@ -236,7 +200,7 @@ function sendEmail($to, $subject, $body, $headers, $attachment = null) {
         
         // Handle attachment
         if ($attachment) {
-            $separator = md5(time());
+            $separator = bin2hex(random_bytes(24));
             $fileContent = file_get_contents($attachment['tmp_name']);
             $fileEncoded = chunk_split(base64_encode($fileContent));
             $filename = $attachment['name'];
@@ -244,8 +208,8 @@ function sendEmail($to, $subject, $body, $headers, $attachment = null) {
             $message .= "Content-Type: multipart/mixed; boundary=\"$separator\"\r\n\r\n";
             $message .= "--$separator\r\n";
             $message .= "Content-Type: text/html; charset=UTF-8\r\n";
-            $message .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
-            $message .= "$body\r\n\r\n";
+            $message .= "Content-Transfer-Encoding: quoted-printable\r\n\r\n";
+            $message .= quoted_printable_encode($body) . "\r\n\r\n";
             $message .= "--$separator\r\n";
             $message .= "Content-Type: application/octet-stream; name=\"$filename\"\r\n";
             $message .= "Content-Transfer-Encoding: base64\r\n";
@@ -253,10 +217,14 @@ function sendEmail($to, $subject, $body, $headers, $attachment = null) {
             $message .= "$fileEncoded\r\n";
             $message .= "--$separator--";
         } else {
-            $message .= "Content-Type: text/html; charset=UTF-8\r\n\r\n";
-            $message .= "$body\r\n";
+            $message .= "Content-Type: text/html; charset=UTF-8\r\n";
+            $message .= "Content-Transfer-Encoding: quoted-printable\r\n\r\n";
+            $message .= quoted_printable_encode($body) . "\r\n";
         }
         
+        // SMTP DATA requires CRLF and dot transparency, including user-provided lines.
+        $message = preg_replace('/\r\n|\r|\n/', "\r\n", $message);
+        $message = preg_replace('/(^|\r\n)\./', '$1..', $message);
         // End message with a single dot
         fputs($socket, $message . "\r\n.\r\n");
         if (!checkResponse($socket, 250)) {
@@ -272,13 +240,6 @@ function sendEmail($to, $subject, $body, $headers, $attachment = null) {
     } catch (Exception $e) {
         $success = false;
     }
-    
-    // Save the form data to a file as a backup if sending fails
-    if (!$success) {
-        $formDataFile = __DIR__ . '/contact_submissions/form_' . date('Y-m-d_H-i-s') . '.html';
-        file_put_contents($formDataFile, $body);
-    }
-    
     return $success;
 }
 
@@ -302,63 +263,117 @@ function checkResponse($socket, $expectedCode) {
 $contentType = isset($_SERVER["CONTENT_TYPE"]) ? $_SERVER["CONTENT_TYPE"] : '';
 
 try {
-    if (strpos($contentType, 'multipart/form-data') !== false) {
-        $postData = json_decode($_POST['data'], true);
+    if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+        sendJsonResponse(false, 'Method not allowed', 405);
+    }
+
+    if (stripos($contentType, 'multipart/form-data') !== false) {
+        $postData = json_decode($_POST['data'] ?? '', true);
         if ($postData === null && json_last_error() !== JSON_ERROR_NONE) {
             sendJsonResponse(false, 'Invalid JSON in form data: ' . json_last_error_msg(), 400);
         }
         $data = $postData;
-        $attachment = isset($_FILES['file']) && $_FILES['file']['error'] === 0 ? $_FILES['file'] : null;
-    } else {
+        $attachment = null;
+        if (isset($_FILES['file'])) {
+            $upload = $_FILES['file'];
+            if (!is_array($upload) || ($upload['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
+                sendJsonResponse(false, 'Invalid file upload', 400);
+            }
+            if (!is_uploaded_file($upload['tmp_name'] ?? '')) {
+                sendJsonResponse(false, 'Invalid file upload', 400);
+            }
+            $uploadSize = filesize($upload['tmp_name']);
+            if ($uploadSize === false || $uploadSize > 10 * 1024 * 1024) {
+                sendJsonResponse(false, 'File exceeds the 10 MB limit', 413);
+            }
+            $originalName = basename((string) ($upload['name'] ?? ''));
+            $extension = strtolower(pathinfo($originalName, PATHINFO_EXTENSION));
+            $allowedExtensions = ['pdf', 'doc', 'docx', 'txt', 'xls', 'xlsx', 'ppt', 'pptx', 'odt', 'rtf'];
+            if (!in_array($extension, $allowedExtensions, true) || preg_match('/[\r\n\0]/', $originalName)) {
+                sendJsonResponse(false, 'Unsupported file', 400);
+            }
+            $safeName = preg_replace('/[^A-Za-z0-9._-]/', '_', $originalName);
+            $attachment = $upload;
+            $attachment['name'] = $safeName !== '' ? $safeName : 'attachment.' . $extension;
+        }
+    } elseif (stripos($contentType, 'application/json') !== false) {
         $inputData = file_get_contents('php://input');
         $data = json_decode($inputData, true);
         if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
             sendJsonResponse(false, 'Invalid JSON in request body: ' . json_last_error_msg(), 400);
         }
         $attachment = null;
+    } else {
+        sendJsonResponse(false, 'Unsupported content type', 415);
     }
 
-    if (empty($data)) {
+    if (!is_array($data) || empty($data)) {
         sendJsonResponse(false, 'No data received', 400);
     }
 
-    // Verify required fields
+    // Validate all string values on the server; the browser's validation is not a security boundary.
+    $maxLengths = [
+        'firstName' => 120, 'lastName' => 120, 'email' => 254, 'phone' => 60,
+        'company' => 200, 'sourceLanguage' => 100, 'targetLanguage' => 100,
+        'serviceType' => 120, 'projectDetails' => 12000, 'deadline' => 40,
+        'budget' => 120, 'howDidYouHear' => 500
+    ];
+    foreach ($maxLengths as $field => $maxLength) {
+        if (isset($data[$field]) && !is_string($data[$field])) {
+            sendJsonResponse(false, 'Invalid form data', 400);
+        }
+        if (isset($data[$field])) {
+            $data[$field] = trim($data[$field]);
+            if (strlen($data[$field]) > $maxLength) {
+                sendJsonResponse(false, 'A form field is too long', 400);
+            }
+        }
+    }
     $requiredFields = ['firstName', 'lastName', 'email', 'sourceLanguage', 'targetLanguage', 'serviceType', 'projectDetails'];
     foreach ($requiredFields as $field) {
-        if (empty($data[$field])) {
+        if (!isset($data[$field]) || $data[$field] === '') {
             sendJsonResponse(false, 'Missing required field: ' . $field, 400);
         }
     }
+    if (($data['agreeToTerms'] ?? false) !== true) {
+        sendJsonResponse(false, 'Terms must be accepted', 400);
+    }
 
-    // reCAPTCHA verification (enable as needed)
-    if (!empty($data['recaptchaToken'])) {
-        // Get the secret key
-        $recaptchaSecret = $_ENV['RECAPTCHA_SECRET_KEY'] ?? getenv('RECAPTCHA_SECRET_KEY') ?? '';
-        
-        if (!empty($recaptchaSecret)) {
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
-                'secret' => $recaptchaSecret,
-                'response' => $data['recaptchaToken'],
-                'remoteip' => $_SERVER['REMOTE_ADDR']
-            ]));
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            $recaptchaResponse = json_decode(curl_exec($ch), true);
-            curl_close($ch);
+    if (preg_match('/[\r\n\0]/', $data['firstName'] . $data['lastName'] . $data['email']) ||
+        filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
+        sendJsonResponse(false, 'Invalid email or name', 400);
+    }
 
-            if (!$recaptchaResponse['success']) {
-                // For testing: Allow form submission despite reCAPTCHA failure
-                
-                // Uncomment this in production to enforce reCAPTCHA
-                /*
-                sendJsonResponse(false, 'CAPTCHA verification failed', 400, [
-                    'details' => $recaptchaResponse['error-codes']
-                ]);
-                */
-            }
-        }
+    // CAPTCHA is mandatory. Missing configuration or a failed verification must never fail open.
+    $recaptchaToken = $data['recaptchaToken'] ?? '';
+    $recaptchaSecret = trim((string) ($_ENV['RECAPTCHA_SECRET_KEY'] ?? getenv('RECAPTCHA_SECRET_KEY') ?? ''));
+    if (!is_string($recaptchaToken) || trim($recaptchaToken) === '') {
+        sendJsonResponse(false, 'CAPTCHA verification is required', 400);
+    }
+    if ($recaptchaSecret === '' || !function_exists('curl_init')) {
+        error_log('CAPTCHA verification is not configured');
+        sendJsonResponse(false, 'Form verification is temporarily unavailable', 503);
+    }
+    $ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => http_build_query([
+            'secret' => $recaptchaSecret,
+            'response' => $recaptchaToken,
+            'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''
+        ]),
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CONNECTTIMEOUT => 5,
+        CURLOPT_TIMEOUT => 10
+    ]);
+    $captchaBody = curl_exec($ch);
+    $captchaStatus = curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+    curl_close($ch);
+    $captchaResult = is_string($captchaBody) ? json_decode($captchaBody, true) : null;
+    $validCaptchaHosts = ['oghamtranslations.com', 'www.oghamtranslations.com'];
+    if ($captchaStatus !== 200 || !is_array($captchaResult) || ($captchaResult['success'] ?? false) !== true ||
+        !in_array($captchaResult['hostname'] ?? '', $validCaptchaHosts, true)) {
+        sendJsonResponse(false, 'CAPTCHA verification failed', 400);
     }
 
     // Constructing email
@@ -368,32 +383,32 @@ try {
     // Build email body
     $body = "<html><body>";
     $body .= "<h2>New Translation Request</h2>";
-    $body .= "<p><strong>Name:</strong> {$data['firstName']} {$data['lastName']}</p>";
-    $body .= "<p><strong>Email:</strong> {$data['email']}</p>";
+    $body .= "<p><strong>Name:</strong> " . escapeEmailHtml($data['firstName']) . " " . escapeEmailHtml($data['lastName']) . "</p>";
+    $body .= "<p><strong>Email:</strong> " . escapeEmailHtml($data['email']) . "</p>";
 
     if (!empty($data['phone'])) {
-        $body .= "<p><strong>Phone:</strong> {$data['phone']}</p>";
+        $body .= "<p><strong>Phone:</strong> " . escapeEmailHtml($data['phone']) . "</p>";
     }
 
     if (!empty($data['company'])) {
-        $body .= "<p><strong>Company:</strong> {$data['company']}</p>";
+        $body .= "<p><strong>Company:</strong> " . escapeEmailHtml($data['company']) . "</p>";
     }
 
-    $body .= "<p><strong>Source Language:</strong> {$data['sourceLanguage']}</p>";
-    $body .= "<p><strong>Target Language:</strong> {$data['targetLanguage']}</p>";
-    $body .= "<p><strong>Service Type:</strong> {$data['serviceType']}</p>";
-    $body .= "<p><strong>Project Details:</strong> " . nl2br(htmlspecialchars($data['projectDetails'])) . "</p>";
+    $body .= "<p><strong>Source Language:</strong> " . escapeEmailHtml($data['sourceLanguage']) . "</p>";
+    $body .= "<p><strong>Target Language:</strong> " . escapeEmailHtml($data['targetLanguage']) . "</p>";
+    $body .= "<p><strong>Service Type:</strong> " . escapeEmailHtml($data['serviceType']) . "</p>";
+    $body .= "<p><strong>Project Details:</strong> " . nl2br(escapeEmailHtml($data['projectDetails'])) . "</p>";
 
     if (!empty($data['deadline'])) {
-        $body .= "<p><strong>Deadline:</strong> {$data['deadline']}</p>";
+        $body .= "<p><strong>Deadline:</strong> " . escapeEmailHtml($data['deadline']) . "</p>";
     }
 
     if (!empty($data['budget'])) {
-        $body .= "<p><strong>Budget:</strong> {$data['budget']}</p>";
+        $body .= "<p><strong>Budget:</strong> " . escapeEmailHtml($data['budget']) . "</p>";
     }
 
     if (!empty($data['howDidYouHear'])) {
-        $body .= "<p><strong>How they heard about us:</strong> {$data['howDidYouHear']}</p>";
+        $body .= "<p><strong>How they heard about us:</strong> " . escapeEmailHtml($data['howDidYouHear']) . "</p>";
     }
 
     if (!empty($data['agreeToTerms']) && $data['agreeToTerms'] === true) {
@@ -405,7 +420,6 @@ try {
     // Email headers
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    $headers .= "From: {$data['email']}\r\n";
     $headers .= "Reply-To: {$data['email']}\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
 
@@ -417,6 +431,7 @@ try {
     } else {
         sendJsonResponse(false, 'Failed to send the email. Please try again later.', 500);
     }
-} catch (Exception $e) {
+} catch (Throwable $e) {
+    error_log('Contact form processing failed');
     sendJsonResponse(false, 'Error processing request. Please try again.', 500);
 }

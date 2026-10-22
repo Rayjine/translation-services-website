@@ -101,6 +101,8 @@ const Header = () => {
               size="large"
               aria-controls="menu-appbar"
               aria-haspopup="true"
+              aria-label={t('common.menu.open', { defaultValue: 'Open navigation menu' })}
+              aria-expanded={Boolean(anchorElNav)}
               onClick={handleOpenNavMenu}
               color="inherit"
             >

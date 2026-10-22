@@ -28,7 +28,8 @@
       "viewAll": "Zobrazit vše",
       "submit": "Odeslat",
       "send": "Poslat",
-      "accept": "Přijmout"
+      "accept": "Přijmout",
+      "decline": "Odmítnout"
     },
     "cookieConsent": {
       "message": "Tato webová stránka používá cookies ke zlepšení uživatelského zážitku. Podívejte se na naše",

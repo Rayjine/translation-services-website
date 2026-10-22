@@ -1,22 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
+import { fileURLToPath } from 'node:url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: path.resolve(__dirname, 'node_modules/pdfjs-dist/build/pdf.worker.min.mjs'),
-          dest: 'assets',
-          rename: 'pdf.worker.min.js'
-        }
-      ]
-    })
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       // Resolve the PDF worker path issue
