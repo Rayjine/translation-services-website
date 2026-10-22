@@ -1,78 +1,230 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Self-hosted fonts: no third-party font requests before consent. The
+   @fontsource files use unicode-range, so Cyrillic/Arabic subsets only
+   download for pages that need them. */
+@import '@fontsource-variable/literata/opsz.css';
+@import '@fontsource-variable/manrope/wght.css';
+@import '@fontsource/ibm-plex-sans-arabic/arabic-400.css';
+@import '@fontsource/ibm-plex-sans-arabic/arabic-600.css';
 
-  /* Color Palette */
-  --indigo-dye: #0b476cff;
-  --shamrock-green: #3b9b5cff;
-  --picton-blue: #53a6ccff;
-  --light-yellow: #FBFEF9;
-  --tea-rose-red: #ebbab9ff;
+:root {
+  --ink: #071a2b;
+  --ink-soft: #0b2f48;
+  --indigo: #0b476c;
+  --picton: #53a6cc;
+  --shamrock: #3b9b5c;
+  --mint: #7ddba3;
+  --paper: #f7f4ec;
+  --paper-deep: #efe9da;
+  --line: #e2dac6;
+  --text: #0f2638;
+  --text-muted: #4f6272;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
   color-scheme: light;
-  color: var(--indigo-dye);
-  background-color: var(--light-yellow);
-
+  color: var(--text);
+  background-color: var(--paper);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: var(--picton-blue);
-  text-decoration: inherit;
-}
-a:hover {
-  color: var(--shamrock-green);
+html {
+  scroll-behavior: smooth;
+  /* Keeps anchor jumps and keyboard-focused controls clear of the sticky header. */
+  scroll-padding-top: 88px;
 }
 
 body {
   margin: 0;
-  display: block; /* Changed from flex */
+  /* Long compound words (German, Russian…) must wrap instead of widening narrow screens. */
+  overflow-wrap: break-word;
   min-width: 320px;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  background: var(--paper);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: var(--indigo-dye);
-  color: white;
+a {
+  color: var(--indigo);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+::selection {
+  background: rgba(125, 219, 163, 0.45);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
+/* Dark surfaces: indigo would vanish on ink, so use picton there. */
+header :focus-visible,
+footer :focus-visible,
+.grain :focus-visible,
+.MuiDrawer-paper :focus-visible,
+.ogham-consent :focus-visible {
+  outline-color: var(--picton);
+}
+
+/* ---------- Scroll reveal (see components/ui/Reveal.jsx) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translate3d(var(--reveal-x, 0), var(--reveal-y, 28px), 0) scale(var(--reveal-scale, 1));
+  transition:
+    opacity 0.9s var(--ease-out) var(--reveal-delay, 0ms),
+    transform 0.9s var(--ease-out) var(--reveal-delay, 0ms);
+}
+.reveal[data-variant='fade'] { --reveal-y: 0px; }
+.reveal[data-variant='scale'] { --reveal-y: 0px; --reveal-scale: 0.94; }
+.reveal[data-variant='start'] { --reveal-y: 0px; --reveal-x: -36px; }
+.reveal[data-variant='end'] { --reveal-y: 0px; --reveal-x: 36px; }
+[dir='rtl'] .reveal[data-variant='start'] { --reveal-x: 36px; }
+[dir='rtl'] .reveal[data-variant='end'] { --reveal-x: -36px; }
+.reveal.is-visible,
+.reveal:focus-within {
+  opacity: 1;
+  transform: none;
+}
+.reveal:not(.is-visible) {
+  will-change: opacity, transform;
+}
+
+@media print {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .page-enter { animation: none !important; }
+  .ogham-consent { display: none !important; }
+}
+
+/* ---------- Ogham stroke drawing (see components/ui/OghamMark.jsx) ---------- */
+.ogham-draw .ogham-stroke {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: ogham-draw 0.7s var(--ease-out) forwards;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes ogham-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ---------- Shared keyframes for page components ---------- */
+@keyframes float-y {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}
+@keyframes drift {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(12px, -18px, 0) rotate(3deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+@keyframes gradient-pan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes page-enter {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes blink {
+  0%, 45% { opacity: 1; }
+  55%, 100% { opacity: 0; }
+}
+
+.page-enter {
+  animation: page-enter 0.6s var(--ease-out) both;
+}
+
+/* Decorative infinite loops opt in with .motion-loop so the hero's pause button can stop them. */
+html[data-motion-paused] .motion-loop {
+  animation-play-state: paused !important;
+}
+
+/* Film-grain texture for dark sections; purely decorative. */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+  /* A file, not a data: URI: the production CSP (img-src 'self') blocks data: images. */
+  background-image: url('/grain.svg');
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Cookie consent (react-cookie-consent with disableStyles) ---------- */
+.ogham-consent {
+  position: fixed;
+  /* Above the app bar (1100) but below MUI drawers (1200) and dialogs (1300) so it never covers their controls. */
+  z-index: 1150;
+  inset-inline: 16px;
+  bottom: 16px;
+  margin-inline: auto;
+  max-width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 16px 18px 16px 22px;
+  color: rgba(255, 255, 255, 0.86);
+  background: rgba(7, 26, 43, 0.94);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.55);
+  animation: page-enter 0.6s var(--ease-out) 0.4s both;
+  font-size: 0.925rem;
+  line-height: 1.55;
+}
+.ogham-consent__text { flex: 1 1 320px; }
+.ogham-consent__actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.ogham-consent__accept,
+.ogham-consent__decline {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: transform 0.2s var(--ease-out), background-color 0.2s, border-color 0.2s;
 }
-button:hover {
-  background-color: var(--picton-blue);
-  border-color: var(--shamrock-green);
+.ogham-consent__accept {
+  order: 2;
+  color: #fff;
+  background: #2a7043;
+  border: 1px solid #2a7043;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.ogham-consent__decline {
+  order: 1;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+.ogham-consent__accept:hover,
+.ogham-consent__decline:hover { transform: translateY(-2px); }
+.ogham-consent__decline:hover { border-color: #fff; }

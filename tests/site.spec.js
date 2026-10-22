@@ -64,3 +64,29 @@ test('declining cookies never requests Google Analytics', async ({ page }) => {
   await page.goto('/services');
   expect(analytics).toHaveLength(0);
 });
+
+test('mobile drawer controls sit above the cookie banner', async ({ page, context }) => {
+  await english(page);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await expect(page.getByRole('button', { name: 'Decline' })).toBeVisible();
+  await page.getByRole('button', { name: 'Open navigation menu' }).click();
+  await page.getByRole('presentation').getByRole('link', { name: 'Get a Quote' }).click();
+  await expect(page).toHaveURL(/\/contact$/);
+  const cookies = await context.cookies();
+  expect(cookies.find(c => c.name === 'oghamTranslationsConsent')).toBeUndefined();
+});
+
+test('quote form is revealed even when zoomed to 400%', async ({ page }) => {
+  await english(page);
+  await page.setViewportSize({ width: 320, height: 256 });
+  await page.goto('/contact');
+  const firstName = page.locator('input[name="firstName"]');
+  await firstName.scrollIntoViewIfNeeded();
+  await firstName.focus();
+  await expect.poll(() => firstName.evaluate(el => {
+    let o = 1;
+    for (let n = el; n; n = n.parentElement) o *= Number(getComputedStyle(n).opacity);
+    return o;
+  })).toBe(1);
+});

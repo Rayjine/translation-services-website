@@ -9,7 +9,10 @@
       "team": "Team",
       "portfolio": "Portfolio",
       "pricing": "Prets",
-      "contact": "Contact"
+      "contact": "Contact",
+      "close": "Serrar il menu da navigaziun",
+      "open": "Avrir il menu da navigaziun",
+      "mainNav": "Navigaziun principala"
     },
     "footer": {
       "about": "Servetschs da translaziun professiunals en pliras linguas. Qualitad, precisadad e punctualitad garantidas.",
@@ -34,12 +37,17 @@
     "cookieConsent": {
       "message": "Questa pagina web utilisescha cookies per meglierar l'experientscha d'utilisader. Vesa noss",
       "moreInfo": "per dapli infurmaziuns."
-    }
+    },
+    "languageSelector": "Lingua",
+    "breadcrumb": "Percurs da navigaziun",
+    "skipToContent": "Siglir al cuntegn"
   },
   "home": {
     "hero": {
       "title": "Ponts tranter linguas, preservond culturas",
-      "subtitle": "Servetschs da translaziun precis e culturalmain adattads, fatgs tenor Voss basegns — en passa 10 linguas."
+      "subtitle": "Servetschs da translaziun precis e culturalmain adattads, fatgs tenor Voss basegns — en passa 10 linguas.",
+      "pauseAnimation": "Pausar l'animaziun",
+      "playAnimation": "Cuntinuar l'animaziun"
     },
     "portfolioShowcase": {
       "title": "Noss Portfolio da Translaziuns",
@@ -115,6 +123,12 @@
       "title": "Pront per Cumenzar?",
       "subtitle": "Contactescha nus oz per in preventiv gratuit per tes project da translaziun.",
       "button": "Pretenda in Preventiv"
+    },
+    "stats": {
+      "languages": "Linguas translatadas da persunas da lingua materna",
+      "translators": "Translaturs responsabels en il team",
+      "experts": "Experts per mintga text: in translatescha, in revesa",
+      "founded": "Fundada en Svizra"
     }
   },
   "services": {
@@ -148,7 +162,8 @@
           "title": "Consegna",
           "description": "Vossa translaziun finalisada vegn furnida en il format preferì, a temp e tenor budget."
         }
-      ]
+      ],
+      "eyebrow": "Co che nus lavurain"
     },
     "categories": {
       "document": {
@@ -343,7 +358,8 @@
         "Specificaziuns tecnicas",
         "Guids d'utilisaders e manuals d'instrucziun"
       ]
-    }
+    },
+    "categoriesNav": "Categorias da servetschs"
   },
   "portfolio": {
     "pageTitle": "Noss Portfolio da Translaziuns",
@@ -384,7 +400,8 @@
       "noData": "Nagin PDF disponibel",
       "errorLoading": "Errur cun chargiar il PDF",
       "prevPage": "Precedent",
-      "nextPage": "Proxim"
+      "nextPage": "Proxim",
+      "close": "Serrar"
     },
     "viewModes": {
       "comparison": "In sper l'auter",
@@ -418,7 +435,8 @@
         "title": "Translaziun litterara",
         "description": "Translaziun litterara dal Russ al Talian."
       }
-    ]
+    ],
+    "filterLabel": "Filtrar ils projects tenor categoria"
   },
   "team": {
     "pageTitle": "Noss Team",
@@ -632,7 +650,8 @@
         "experience": "9+ onns",
         "education": "Bachelor en Studis da Translaziun – Université Hassan II, Maroc; Master en Relaziuns Internaziunalas – Graduate Institute Geneva (IHEID), Svizra"
       }
-    ]
+    ],
+    "closeProfile": "Serrar il profil"
   },
   "portfolioDetails": {
     "projectDescription": "Descripziun dal Project",
@@ -859,7 +878,11 @@
       "title": "Pront per cumenzar?",
       "subtitle": "Contactai nus oz per in preventiv gratuit per Voss project da translaziun.",
       "button": "Dumandar in preventiv"
-    }
+    },
+    "eyebrow": "Tariffas transparentas en francs svizzers",
+    "mostPopular": "Il pli popular",
+    "included": "Inclus",
+    "notIncluded": "Betg inclus"
   },
   "contact": {
     "pageTitle": "Contactai nus",
@@ -910,7 +933,8 @@
       "agreeTerms": "Sundel d'accord cun",
       "termsAgreement": "Sundel d'accord cun ils Cundiziuns & Condiziuns e la Politica da Privacitad",
       "actions": {
-        "chooseFile": "Tscherner Datoteca"
+        "chooseFile": "Tscherner Datoteca",
+        "removeFile": "Allontanar la datoteca"
       },
       "sections": {
         "contactInfo": "Infurmaziuns da Contact",
@@ -950,9 +974,14 @@
         "fileTooBig": "La grondezza dal datoteca surpassa il limit da 10MB",
         "fileTypeInvalid": "Tip da datoteca nunvalaivel. Per plaschair chargia in in format da document sustegnì",
         "termsRequired": "Vus stuais esser d'accord cun ils cundiziuns",
-        "formHasErrors": "Per plaschair corregia ils sbagls en il formular"
+        "formHasErrors": "Per plaschair corregia ils sbagls en il formular",
+        "captchaRequired": "Confermai p.pl. che Vus n'essas betg in robot"
       },
-      "success": "Vossa dumonda è vegnida tramessa cun success! Nus vegnin a contactar Vus bainbaud."
+      "success": "Vossa dumonda è vegnida tramessa cun success! Nus vegnin a contactar Vus bainbaud.",
+      "sending": "Tramettel Vossa dumonda…",
+      "error": "I è succedì in sbagl. Empruvai pli tard anc ina giada.",
+      "rateLimited": "Memia dumondas. Spetgai avant ch'empruvar anc ina giada u scrivai a nus directamain in e-mail.",
+      "unavailable": "Il formular online n'è temporarmain betg disponibel. Scrivai a nus directamain a"
     },
     "contactInfo": {
       "title": "Infurmaziuns da contact",
@@ -1275,6 +1304,11 @@
       "documentTranslation": "Translaziun da documents",
       "websiteLocalization": "Localisaziun da websites",
       "technicalTranslation": "Translaziun tecnica"
-    }
+    },
+    "tagline": "Pers en la translaziun",
+    "oghamCaption": "«Lost» (pers), engravà en ogham"
+  },
+  "legal": {
+    "onThisPage": "Sin questa pagina"
   }
 }

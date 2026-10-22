@@ -9,7 +9,10 @@
       "team": "チーム",
       "portfolio": "ポートフォリオ",
       "pricing": "料金",
-      "contact": "お問い合わせ"
+      "contact": "お問い合わせ",
+      "close": "ナビゲーションメニューを閉じる",
+      "open": "ナビゲーションメニューを開く",
+      "mainNav": "メインナビゲーション"
     },
     "footer": {
       "about": "多言語でのプロフェッショナルな翻訳サービス。品質、正確さ、迅速さを保証します。",
@@ -34,12 +37,17 @@
     "cookieConsent": {
       "message": "このウェブサイトは、ユーザー体験を向上させるためにクッキーを使用しています。詳細は",
       "moreInfo": "をご覧ください。"
-    }
+    },
+    "languageSelector": "言語",
+    "breadcrumb": "パンくずリスト",
+    "skipToContent": "コンテンツへスキップ"
   },
   "home": {
     "hero": {
       "title": "言語の架け橋、文化の保存",
-      "subtitle": "正確で文化に配慮した翻訳サービスを、10以上の言語であなたのニーズに合わせて提供します。"
+      "subtitle": "正確で文化に配慮した翻訳サービスを、10以上の言語であなたのニーズに合わせて提供します。",
+      "pauseAnimation": "アニメーションを一時停止",
+      "playAnimation": "アニメーションを再生"
     },
     "portfolioShowcase": {
       "title": "私たちの翻訳ポートフォリオ",
@@ -115,6 +123,12 @@
       "title": "準備はできましたか？",
       "subtitle": "翻訳プロジェクトの無料見積もりについて、今日お問い合わせください。",
       "button": "見積もりを依頼する"
+    },
+    "stats": {
+      "languages": "言語をネイティブ翻訳者が担当",
+      "translators": "名のリード翻訳者",
+      "experts": "名の専門家が各文書を担当：翻訳と校閲",
+      "founded": "スイスで創業"
     }
   },
   "services": {
@@ -148,7 +162,8 @@
           "title": "納品",
           "description": "完成した翻訳を、ご希望の形式で、時間通りかつ予算内でお届けします。"
         }
-      ]
+      ],
+      "eyebrow": "私たちの進め方"
     },
     "categories": {
       "document": {
@@ -343,7 +358,8 @@
         "技術仕様書",
         "ユーザーガイドと取扱説明書"
       ]
-    }
+    },
+    "categoriesNav": "サービスカテゴリー"
   },
   "portfolio": {
     "pageTitle": "私たちの翻訳ポートフォリオ",
@@ -384,7 +400,8 @@
       "noData": "PDFがありません",
       "errorLoading": "PDFの読み込みエラー",
       "prevPage": "前へ",
-      "nextPage": "次へ"
+      "nextPage": "次へ",
+      "close": "閉じる"
     },
     "viewModes": {
       "comparison": "並べて表示",
@@ -418,7 +435,8 @@
         "title": "文学翻訳",
         "description": "ロシア語からイタリア語への文学翻訳。"
       }
-    ]
+    ],
+    "filterLabel": "カテゴリーでプロジェクトを絞り込む"
   },
   "team": {
     "pageTitle": "私たちのチーム",
@@ -632,7 +650,8 @@
         "experience": "10年以上",
         "education": "翻訳学士 – キングハリド大学、サウジアラビア; 翻訳テクノロジー修士 – サウジ電子大学、サウジアラビア; 翻訳・通訳修士 – ジュネーブ大学、スイス"
       }
-    ]
+    ],
+    "closeProfile": "プロフィールを閉じる"
   },
   "portfolioDetails": {
     "projectDescription": "プロジェクト説明",
@@ -859,7 +878,11 @@
       "title": "準備はできましたか？",
       "subtitle": "翻訳プロジェクトの無料見積もりについて、ぜひお問い合わせください。",
       "button": "見積もりを依頼"
-    }
+    },
+    "eyebrow": "スイスフランによる明瞭な料金",
+    "mostPopular": "一番人気",
+    "included": "含まれます",
+    "notIncluded": "含まれません"
   },
   "contact": {
     "pageTitle": "お問い合わせ",
@@ -910,7 +933,8 @@
       "agreeTerms": "同意します",
       "termsAgreement": "利用規約とプライバシーポリシーに同意します",
       "actions": {
-        "chooseFile": "ファイルを選択"
+        "chooseFile": "ファイルを選択",
+        "removeFile": "ファイルを削除"
       },
       "sections": {
         "contactInfo": "連絡先情報",
@@ -950,9 +974,14 @@
         "fileTooBig": "ファイルサイズが10MBの制限を超えています",
         "fileTypeInvalid": "無効なファイル形式です。サポートされている文書形式をアップロードしてください",
         "termsRequired": "利用規約に同意する必要があります",
-        "formHasErrors": "フォームのエラーを修正してください"
+        "formHasErrors": "フォームのエラーを修正してください",
+        "captchaRequired": "ロボットではないことを確認してください"
       },
-      "success": "お問い合わせが正常に送信されました！すぐにご連絡いたします。"
+      "success": "お問い合わせが正常に送信されました！すぐにご連絡いたします。",
+      "sending": "送信しています…",
+      "error": "エラーが発生しました。しばらくしてから再度お試しください。",
+      "rateLimited": "リクエストが多すぎます。しばらく待ってから再度お試しいただくか、直接メールでご連絡ください。",
+      "unavailable": "オンラインフォームは現在ご利用いただけません。お手数ですが、直接こちらへメールでご連絡ください："
     },
     "contactInfo": {
       "title": "連絡先情報",
@@ -1275,6 +1304,11 @@
       "documentTranslation": "文書翻訳",
       "websiteLocalization": "ウェブサイトのローカライゼーション",
       "technicalTranslation": "技術翻訳"
-    }
+    },
+    "tagline": "翻訳の迷子",
+    "oghamCaption": "オガム文字で刻まれた「Lost（迷子）」"
+  },
+  "legal": {
+    "onThisPage": "このページの内容"
   }
 }

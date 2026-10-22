@@ -9,7 +9,10 @@
       "team": "Ekip",
       "portfolio": "Portföy",
       "pricing": "Fiyatlandırma",
-      "contact": "İletişim"
+      "contact": "İletişim",
+      "close": "Gezinme menüsünü kapat",
+      "open": "Gezinme menüsünü aç",
+      "mainNav": "Ana gezinme"
     },
     "footer": {
       "about": "Birden fazla dilde profesyonel çeviri hizmetleri. Kalite, doğruluk ve zamanında teslimat garantisi.",
@@ -34,12 +37,17 @@
     "cookieConsent": {
       "message": "Bu web sitesi, kullanıcı deneyimini geliştirmek için çerezler kullanır. Daha fazla bilgi için",
       "moreInfo": "bakınız."
-    }
+    },
+    "languageSelector": "Dil",
+    "breadcrumb": "İçerik haritası",
+    "skipToContent": "İçeriğe geç"
   },
   "home": {
     "hero": {
       "title": "Dilleri Birleştiriyor, Kültürleri Koruyoruz",
-      "subtitle": "İhtiyaçlarınıza göre uyarlanmış, doğru ve kültürel olarak duyarlı çeviri hizmetleri — 10'dan fazla dilde."
+      "subtitle": "İhtiyaçlarınıza göre uyarlanmış, doğru ve kültürel olarak duyarlı çeviri hizmetleri — 10'dan fazla dilde.",
+      "pauseAnimation": "Animasyonu duraklat",
+      "playAnimation": "Animasyonu oynat"
     },
     "portfolioShowcase": {
       "title": "Çeviri Portföyümüz",
@@ -115,6 +123,12 @@
       "title": "Başlamaya Hazır mısınız?",
       "subtitle": "Çeviri projeniz için ücretsiz teklif almak üzere bugün bizimle iletişime geçin.",
       "button": "Teklif İste"
+    },
+    "stats": {
+      "languages": "Ana dili konuşanlarca çevrilen dil",
+      "translators": "Ekipte baş çevirmen",
+      "experts": "Her metinde uzman: biri çevirir, biri kontrol eder",
+      "founded": "İsviçre'de kuruldu"
     }
   },
   "services": {
@@ -148,7 +162,8 @@
           "title": "Teslimat",
           "description": "Son haline getirilmiş çeviriniz, tercih ettiğiniz formatta, zamanında ve bütçeye uygun olarak teslim edilir."
         }
-      ]
+      ],
+      "eyebrow": "Nasıl çalışıyoruz"
     },
     "categories": {
       "document": {
@@ -343,7 +358,8 @@
         "Teknik spesifikasyonlar",
         "Kullanıcı kılavuzları ve talimat kitapçıkları"
       ]
-    }
+    },
+    "categoriesNav": "Hizmet kategorileri"
   },
   "portfolio": {
     "pageTitle": "Çeviri Portföyümüz",
@@ -384,7 +400,8 @@
       "noData": "PDF mevcut değil",
       "errorLoading": "PDF yüklenirken hata oluştu",
       "prevPage": "Önceki",
-      "nextPage": "Sonraki"
+      "nextPage": "Sonraki",
+      "close": "Kapat"
     },
     "viewModes": {
       "comparison": "Yan Yana",
@@ -418,7 +435,8 @@
         "title": "Edebi Çeviri",
         "description": "Rusçadan İtalyancaya edebi çeviri."
       }
-    ]
+    ],
+    "filterLabel": "Projeleri kategoriye göre filtrele"
   },
   "team": {
     "pageTitle": "Ekibimiz",
@@ -632,7 +650,8 @@
         "experience": "9+ yıl",
         "education": "Lisans - İngiliz Dili Çalışmaları – Kral Suud Üniversitesi, Suudi Arabistan; Yüksek Lisans - Çeviri ve Tercümanlık – Zürih Üniversitesi, İsviçre"
       }
-    ]
+    ],
+    "closeProfile": "Profili kapat"
   },
   "portfolioDetails": {
     "projectDescription": "Proje Açıklaması",
@@ -859,7 +878,11 @@
       "title": "Başlamaya Hazır mısınız?",
       "subtitle": "Çeviri projeniz için ücretsiz bir teklif almak üzere bugün bizimle iletişime geçin.",
       "button": "Teklif İste"
-    }
+    },
+    "eyebrow": "İsviçre frangı cinsinden şeffaf fiyatlar",
+    "mostPopular": "En popüler",
+    "included": "Dahil",
+    "notIncluded": "Dahil değil"
   },
   "contact": {
     "pageTitle": "Bize Ulaşın",
@@ -910,7 +933,8 @@
       "agreeTerms": "Kabul ediyorum",
       "termsAgreement": "Şartlar & Koşullar ve Gizlilik Politikasını kabul ediyorum",
       "actions": {
-        "chooseFile": "Dosya Seç"
+        "chooseFile": "Dosya Seç",
+        "removeFile": "Dosyayı kaldır"
       },
       "sections": {
         "contactInfo": "İletişim Bilgileri",
@@ -950,9 +974,14 @@
         "fileTooBig": "Dosya boyutu 10MB sınırını aşıyor",
         "fileTypeInvalid": "Geçersiz dosya türü. Lütfen desteklenen bir belge formatı yükleyin",
         "termsRequired": "Şartları kabul etmelisiniz",
-        "formHasErrors": "Lütfen formdaki hataları düzeltin"
+        "formHasErrors": "Lütfen formdaki hataları düzeltin",
+        "captchaRequired": "Lütfen robot olmadığınızı doğrulayın"
       },
-      "success": "Sorgunuz başarıyla gönderildi! Yakında sizinle iletişime geçeceğiz."
+      "success": "Sorgunuz başarıyla gönderildi! Yakında sizinle iletişime geçeceğiz.",
+      "sending": "Talebiniz gönderiliyor…",
+      "error": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+      "rateLimited": "Çok fazla istek. Lütfen tekrar denemeden önce bekleyin veya bize doğrudan e-posta gönderin.",
+      "unavailable": "Çevrimiçi form geçici olarak kullanılamıyor. Lütfen bize doğrudan şu adresten e-posta gönderin:"
     },
     "contactInfo": {
       "title": "İletişim Bilgileri",
@@ -1275,6 +1304,11 @@
       "documentTranslation": "Belge Çevirisi",
       "websiteLocalization": "Web Sitesi Lokalizasyonu",
       "technicalTranslation": "Teknik Çevirisi"
-    }
+    },
+    "tagline": "Çeviride kayboldu",
+    "oghamCaption": "Ogham ile oyulmuş “Lost” (kayıp)"
+  },
+  "legal": {
+    "onThisPage": "Bu sayfada"
   }
 }

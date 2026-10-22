@@ -9,7 +9,10 @@
       "team": "Tým",
       "portfolio": "Portfolio",
       "pricing": "Ceník",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "close": "Zavřít navigační menu",
+      "open": "Otevřít navigační menu",
+      "mainNav": "Hlavní navigace"
     },
     "footer": {
       "about": "Profesionální překladatelské služby v několika jazycích. Kvalita, přesnost a včasnost zaručena.",
@@ -34,12 +37,17 @@
     "cookieConsent": {
       "message": "Tato webová stránka používá cookies ke zlepšení uživatelského zážitku. Podívejte se na naše",
       "moreInfo": "pro více informací."
-    }
+    },
+    "languageSelector": "Jazyk",
+    "breadcrumb": "Drobečková navigace",
+    "skipToContent": "Přejít na obsah"
   },
   "home": {
     "hero": {
       "title": "Spojujeme jazyky, zachováváme kultury",
-      "subtitle": "Přesné, kulturně přizpůsobené překladatelské služby šité na míru vašim potřebám — ve více než 10 jazycích."
+      "subtitle": "Přesné, kulturně přizpůsobené překladatelské služby šité na míru vašim potřebám — ve více než 10 jazycích.",
+      "pauseAnimation": "Pozastavit animaci",
+      "playAnimation": "Spustit animaci"
     },
     "portfolioShowcase": {
       "title": "Naše překladatelské portfolio",
@@ -115,6 +123,12 @@
       "title": "Připraveni začít?",
       "subtitle": "Kontaktujte nás ještě dnes pro bezplatnou cenovou nabídku na váš překladatelský projekt.",
       "button": "Požádat o nabídku"
+    },
+    "stats": {
+      "languages": "Jazyků překládaných rodilými mluvčími",
+      "translators": "Hlavních překladatelů v týmu",
+      "experts": "Experti na každý text: jeden překládá, druhý reviduje",
+      "founded": "Založeno ve Švýcarsku"
     }
   },
   "services": {
@@ -148,7 +162,8 @@
           "title": "Doručení",
           "description": "Váš dokončený překlad je doručen ve vámi preferovaném formátu, včas a v rámci rozpočtu."
         }
-      ]
+      ],
+      "eyebrow": "Jak pracujeme"
     },
     "categories": {
       "document": {
@@ -343,7 +358,8 @@
         "Technické specifikace",
         "Uživatelské příručky a návody"
       ]
-    }
+    },
+    "categoriesNav": "Kategorie služeb"
   },
   "portfolio": {
     "pageTitle": "Náš překladatelský portfoli",
@@ -384,7 +400,8 @@
       "noData": "Žádné PDF není k dispozici",
       "errorLoading": "Chyba při načítání PDF",
       "prevPage": "Předchozí",
-      "nextPage": "Další"
+      "nextPage": "Další",
+      "close": "Zavřít"
     },
     "viewModes": {
       "comparison": "Vedle sebe",
@@ -418,7 +435,8 @@
         "title": "Literární překlad",
         "description": "Literární překlad z ruštiny do italštiny."
       }
-    ]
+    ],
+    "filterLabel": "Filtrovat projekty podle kategorie"
   },
   "team": {
     "pageTitle": "Náš tým",
@@ -632,7 +650,8 @@
         "experience": "9+ let",
         "education": "Bakalář v oboru překladatelská studia – Université Hassan II, Maroko; Magister v oboru mezinárodní vztahy – Graduate Institute Geneva (IHEID), Švýcarsko"
       }
-    ]
+    ],
+    "closeProfile": "Zavřít profil"
   },
   "portfolioDetails": {
     "projectDescription": "Popis projektu",
@@ -859,7 +878,11 @@
       "title": "Připraveni začít?",
       "subtitle": "Kontaktujte nás ještě dnes pro bezplatnou cenovou nabídku na váš překladatelský projekt.",
       "button": "Požádat o nabídku"
-    }
+    },
+    "eyebrow": "Transparentní ceny ve švýcarských francích",
+    "mostPopular": "Nejoblíbenější",
+    "included": "Zahrnuto",
+    "notIncluded": "Nezahrnuto"
   },
   "contact": {
     "pageTitle": "Kontaktujte nás",
@@ -910,7 +933,8 @@
       "agreeTerms": "Souhlasím s",
       "termsAgreement": "Souhlasím s Podmínkami a Zásadami ochrany osobních údajů",
       "actions": {
-        "chooseFile": "Vybrat soubor"
+        "chooseFile": "Vybrat soubor",
+        "removeFile": "Odebrat soubor"
       },
       "sections": {
         "contactInfo": "Kontaktní informace",
@@ -950,9 +974,14 @@
         "fileTooBig": "Velikost souboru překračuje limit 10 MB",
         "fileTypeInvalid": "Neplatný typ souboru. Nahrajte prosím podporovaný formát dokumentu",
         "termsRequired": "Musíte souhlasit s podmínkami",
-        "formHasErrors": "Opravte prosím chyby ve formuláři"
+        "formHasErrors": "Opravte prosím chyby ve formuláři",
+        "captchaRequired": "Potvrďte prosím, že nejste robot"
       },
-      "success": "Váš dotaz byl úspěšně odeslán! Brzy vás budeme kontaktovat."
+      "success": "Váš dotaz byl úspěšně odeslán! Brzy vás budeme kontaktovat.",
+      "sending": "Odesílání vaší žádosti…",
+      "error": "Došlo k chybě. Zkuste to prosím později.",
+      "rateLimited": "Příliš mnoho požadavků. Počkejte prosím, než to zkusíte znovu, nebo nám napište přímo e-mail.",
+      "unavailable": "Online formulář je dočasně nedostupný. Napište nám prosím přímo na"
     },
     "contactInfo": {
       "title": "Kontaktní informace",
@@ -1274,6 +1303,12 @@
       "documentTranslation": "Překlad dokumentů",
       "websiteLocalization": "Lokalizace webových stránek",
       "technicalTranslation": "Technický překlad"
-    }
+    },
+    "tagline": "Ztraceno v překladu",
+    "oghamCaption": "„Lost“ (ztraceno), vytesáno v ogamu",
+    "contactUs": "Kontaktujte nás"
+  },
+  "legal": {
+    "onThisPage": "Na této stránce"
   }
 }
