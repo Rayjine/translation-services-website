@@ -19,6 +19,7 @@ while (($line = fgets($client)) !== false) {
             $inData = false;
             fwrite($client, $mode === 'reject_data' ? "554 rejected\r\n" : "250 queued locally\r\n");
             if ($mode === 'reject_data') break;
+            if ($mode === 'quit_disconnect') break;
         } else {
             $data .= $line;
         }

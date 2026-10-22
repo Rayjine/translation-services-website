@@ -16,7 +16,7 @@ function exercise(string $mode, ?array $attachment = null): array {
     assertTrue($socket !== false, 'Cannot connect to loopback SMTP');
     stream_set_timeout($socket, 5);
     $sent = smtpSend($socket, 'sender@example.org', 'local-pass', 'recipient@example.org',
-        'A local delivery test', "<p>Café</p>\r\n.line after newline", 'reply@example.org', $attachment);
+        'Demande de traduction — Genève', "<p>Café</p>\r\n.line after newline", 'reply@example.org', $attachment);
     fclose($socket);
     $result = json_decode(stream_get_contents($pipes[1]), true);
     $stderr = stream_get_contents($pipes[2]);
@@ -30,6 +30,8 @@ function exercise(string $mode, ?array $attachment = null): array {
 assertTrue($sent, 'Plain message should be accepted');
 assertTrue(in_array('QUIT', $message['commands'], true), 'SMTP session must close');
 assertTrue(str_contains($message['data'], "Reply-To: reply@example.org\r\n"), 'Reply-To header missing');
+assertTrue(str_contains($message['data'], 'Subject: =?UTF-8?B?'), 'UTF-8 subject is not MIME encoded');
+assertTrue(str_contains($message['data'], "=?UTF-8?B?" . base64_encode('Demande de traduction — Genève') . "?=\r\n"), 'UTF-8 subject bytes changed');
 assertTrue(str_contains($message['data'], "Content-Transfer-Encoding: quoted-printable\r\n"), 'HTML encoding missing');
 assertTrue(str_contains($message['data'], 'Caf=C3=A9'), 'UTF-8 body not quoted-printable encoded');
 assertTrue(str_contains($message['data'], "\r\n..line after newline"), 'SMTP dot stuffing missing');
@@ -52,4 +54,7 @@ foreach (['reject_rcpt', 'reject_data'] as $rejection) {
     [$sent] = exercise($rejection);
     assertTrue(!$sent, "SMTP $rejection must not report delivery");
 }
-echo "SMTP loopback protocol passed (plain, multipart, CRLF, encoding, dot transparency, refusals; no external mail)\n";
+[$sent, $message] = exercise('quit_disconnect');
+assertTrue($sent, 'A missing QUIT reply must not turn an accepted DATA message into failure');
+assertTrue(!in_array('QUIT', $message['commands'], true), 'Disconnect fixture should close before QUIT');
+echo "SMTP loopback protocol passed (plain, multipart, CRLF, MIME headers/body, dot transparency, refusals, accepted DATA with lost QUIT; no external mail)\n";
