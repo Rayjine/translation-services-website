@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 php -l public/send-email.php
+php -l public/smtp-protocol.php
 rate_dir=$(mktemp -d)
 server_log=$(mktemp)
 cleanup() { kill "$server_pid" 2>/dev/null || true; rm -rf "$rate_dir" "$server_log"; }
