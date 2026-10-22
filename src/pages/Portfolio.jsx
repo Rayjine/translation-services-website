@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 
 // Configure PDF.js worker path
@@ -158,6 +158,45 @@ const Portfolio = () => {
     changePage(1, type);
   };
 
+  const renderPdfControls = (type, file) => (
+    <Box sx={{
+      width: '100%',
+      px: 2,
+      py: 1,
+      borderTop: '1px solid #e0e0e0',
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: 1,
+    }}>
+      {numPages[type] && (
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, flexWrap: 'wrap' }}>
+          <Button size="small" disabled={pageNumber[type] <= 1} onClick={() => previousPage(type)} variant="outlined">
+            {t('portfolio.preview.prevPage')}
+          </Button>
+          <Typography variant="body2" sx={{ whiteSpace: 'nowrap' }}>
+            {pageNumber[type]} / {numPages[type]}
+          </Typography>
+          <Button size="small" disabled={pageNumber[type] >= numPages[type]} onClick={() => nextPage(type)} variant="outlined">
+            {t('portfolio.preview.nextPage')}
+          </Button>
+        </Box>
+      )}
+      <Button
+        variant="outlined"
+        startIcon={<DownloadIcon />}
+        component="a"
+        href={file}
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{ minHeight: 44, textAlign: 'center', whiteSpace: 'normal' }}
+      >
+        {type === 'before' ? t('portfolio.preview.downloadSource') : t('portfolio.preview.downloadTranslation')}
+      </Button>
+    </Box>
+  );
+
   // Render actual PDFs using react-pdf
   const renderPdfPreview = (mode) => {
     if (!selectedItem) return null;
@@ -169,10 +208,10 @@ const Portfolio = () => {
         display: 'flex', 
         flexDirection: 'column', 
         alignItems: 'center', 
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         border: '1px solid #e0e0e0',
         borderRadius: 1,
-        overflow: 'hidden'
+        overflow: 'auto'
       }}>
         {mode === 'comparison' ? (
           <Grid container spacing={2}>
@@ -185,15 +224,12 @@ const Portfolio = () => {
                   sx={{ 
                     height: '55vh', 
                     bgcolor: 'white', 
-                    p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    position: 'relative',
-                    overflow: 'auto'
+                    minWidth: 0,
                   }}
                 >
+                  <Box sx={{ flex: 1, minHeight: 0, overflow: 'auto', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Document
                     file={selectedItem.beforePdf}
                     onLoadSuccess={(pdf) => onDocumentLoadSuccess(pdf, 'before')}
@@ -228,42 +264,8 @@ const Portfolio = () => {
                       renderTextLayer={false}
                     />
                   </Document>
-                  
-                  {numPages.before && (
-                    <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', gap: 2, position: 'absolute', bottom: 10 }}>
-                      <Button 
-                        size="small" 
-                        disabled={pageNumber.before <= 1} 
-                        onClick={() => previousPage('before')}
-                        variant="outlined"
-                      >
-                        {t('portfolio.preview.prevPage')}
-                      </Button>
-                      <Typography variant="body2">
-                        {pageNumber.before} / {numPages.before}
-                      </Typography>
-                      <Button 
-                        size="small" 
-                        disabled={pageNumber.before >= numPages.before} 
-                        onClick={() => nextPage('before')}
-                        variant="outlined"
-                      >
-                        {t('portfolio.preview.nextPage')}
-                      </Button>
-                    </Box>
-                  )}
-                  
-                  <Button 
-                    variant="outlined" 
-                    startIcon={<DownloadIcon />} 
-                    sx={{ mt: 2, position: 'absolute', bottom: 10, right: 10 }}
-                    component="a"
-                    href={selectedItem?.beforePdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t('portfolio.preview.downloadSource')}
-                  </Button>
+                  </Box>
+                  {renderPdfControls('before', selectedItem.beforePdf)}
                 </Box>
               </Paper>
             </Grid>
@@ -276,15 +278,12 @@ const Portfolio = () => {
                   sx={{ 
                     height: '55vh', 
                     bgcolor: 'white', 
-                    p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    position: 'relative',
-                    overflow: 'auto'
+                    minWidth: 0,
                   }}
                 >
+                  <Box sx={{ flex: 1, minHeight: 0, overflow: 'auto', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Document
                     file={selectedItem.afterPdf}
                     onLoadSuccess={(pdf) => onDocumentLoadSuccess(pdf, 'after')}
@@ -319,42 +318,8 @@ const Portfolio = () => {
                       renderTextLayer={false}
                     />
                   </Document>
-                  
-                  {numPages.after && (
-                    <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', gap: 2, position: 'absolute', bottom: 10 }}>
-                      <Button 
-                        size="small" 
-                        disabled={pageNumber.after <= 1} 
-                        onClick={() => previousPage('after')}
-                        variant="outlined"
-                      >
-                        {t('portfolio.preview.prevPage')}
-                      </Button>
-                      <Typography variant="body2">
-                        {pageNumber.after} / {numPages.after}
-                      </Typography>
-                      <Button 
-                        size="small" 
-                        disabled={pageNumber.after >= numPages.after} 
-                        onClick={() => nextPage('after')}
-                        variant="outlined"
-                      >
-                        {t('portfolio.preview.nextPage')}
-                      </Button>
-                    </Box>
-                  )}
-                  
-                  <Button 
-                    variant="outlined" 
-                    startIcon={<DownloadIcon />} 
-                    sx={{ mt: 2, position: 'absolute', bottom: 10, right: 10 }}
-                    component="a"
-                    href={selectedItem?.afterPdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t('portfolio.preview.downloadTranslation')}
-                  </Button>
+                  </Box>
+                  {renderPdfControls('after', selectedItem.afterPdf)}
                 </Box>
               </Paper>
             </Grid>
@@ -368,15 +333,12 @@ const Portfolio = () => {
               sx={{ 
                 height: '55vh', 
                 bgcolor: 'white', 
-                p: 2,
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                position: 'relative',
-                overflow: 'auto'
+                minWidth: 0,
               }}
             >
+              <Box sx={{ flex: 1, minHeight: 0, overflow: 'auto', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Document
                 file={mode === 'before' ? selectedItem.beforePdf : selectedItem.afterPdf}
                 onLoadSuccess={(pdf) => onDocumentLoadSuccess(pdf, mode)}
@@ -411,44 +373,8 @@ const Portfolio = () => {
                   renderTextLayer={false}
                 />
               </Document>
-              
-              {numPages[mode] && (
-                <Box sx={{ mt: 2, display: 'flex', alignItems: 'center', gap: 2, position: 'absolute', bottom: 10 }}>
-                  <Button 
-                    size="small" 
-                    disabled={pageNumber[mode] <= 1} 
-                    onClick={() => previousPage(mode)}
-                    variant="outlined"
-                  >
-                    {t('portfolio.preview.prevPage')}
-                  </Button>
-                  <Typography variant="body2">
-                    {pageNumber[mode]} / {numPages[mode]}
-                  </Typography>
-                  <Button 
-                    size="small" 
-                    disabled={pageNumber[mode] >= numPages[mode]} 
-                    onClick={() => nextPage(mode)}
-                    variant="outlined"
-                  >
-                    {t('portfolio.preview.nextPage')}
-                  </Button>
-                </Box>
-              )}
-              
-              <Button 
-                variant="outlined" 
-                startIcon={<DownloadIcon />} 
-                sx={{ mt: 2, position: 'absolute', bottom: 10, right: 10 }}
-                component="a"
-                href={mode === 'before' ? selectedItem?.beforePdf : selectedItem?.afterPdf}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {mode === 'before' 
-                  ? t('portfolio.preview.downloadSource')
-                  : t('portfolio.preview.downloadTranslation')}
-              </Button>
+              </Box>
+              {renderPdfControls(mode, mode === 'before' ? selectedItem.beforePdf : selectedItem.afterPdf)}
             </Box>
           </Box>
         )}
