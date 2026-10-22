@@ -38,7 +38,7 @@ jobs:
             'files_sha256': files,
           }, indent=2) + '\n')
           PY
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: ogham-public-no-captcha-key-${{ github.sha }}
           path: dist/
