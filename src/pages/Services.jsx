@@ -213,7 +213,7 @@ const Services = () => {
       {/* Services Overview */}
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Grid container spacing={6}>
-          {serviceCategories.map((category, index) => (
+          {serviceCategories.map((category) => (
             <Grid item xs={12} key={category.id}>
               <Paper 
                 elevation={3} 

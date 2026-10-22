@@ -74,189 +74,91 @@ function escapeEmailHtml($value) {
     return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
-// Function to handle email sending with or without attachment
+// Keep counters outside the web root. Fail closed if the private directory is
+// unavailable; a deployment must never silently remove the abuse limit.
+function enforceRateLimit($envPath) {
+    $directory = getenv('OGHAM_RATE_LIMIT_DIR');
+    if (!is_string($directory) || $directory === '') {
+        $directory = is_string($envPath) && $envPath !== '' ? dirname($envPath) . '/rate-limit' : '';
+    }
+    if ($directory === '') {
+        error_log('Private rate-limit directory unavailable');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    $documentRoot = realpath($_SERVER['DOCUMENT_ROOT'] ?? '');
+    $parent = realpath(dirname($directory));
+    if ($documentRoot === false || $parent === false || str_starts_with($parent . '/', $documentRoot . '/')) {
+        error_log('Unsafe rate-limit parent');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    if (!is_dir($directory) && !mkdir($directory, 0700)) {
+        error_log('Private rate-limit directory unavailable');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    $directory = realpath($directory);
+    if ($directory === false || $documentRoot === false || str_starts_with($directory . '/', $documentRoot . '/') || !is_writable($directory)) {
+        error_log('Unsafe rate-limit directory');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    $address = $_SERVER['REMOTE_ADDR'] ?? '';
+    $rateKey = (string) ($_ENV['RECAPTCHA_SECRET_KEY'] ?? getenv('RECAPTCHA_SECRET_KEY') ?: 'ogham');
+    $key = hash_hmac('sha256', $address, $rateKey);
+    $handle = fopen($directory . '/' . $key . '.json', 'c+');
+    if ($handle === false || !flock($handle, LOCK_EX)) {
+        error_log('Rate-limit storage unavailable');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    $stored = json_decode(stream_get_contents($handle), true);
+    $now = time();
+    $window = is_array($stored) && isset($stored['since'], $stored['count']) && $stored['since'] > $now - 3600
+        ? $stored : ['since' => $now, 'count' => 0];
+    if ($window['count'] >= 20) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        header('Retry-After: ' . max(1, $window['since'] + 3600 - $now));
+        sendJsonResponse(false, 'Too many requests. Please try again later.', 429);
+    }
+    $window['count']++;
+    rewind($handle);
+    if (!ftruncate($handle, 0) || fwrite($handle, json_encode($window)) === false || !fflush($handle)) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    flock($handle, LOCK_UN);
+    fclose($handle);
+}
+
+// The socket protocol is separate so a loopback fake server can test the exact
+// SMTP DATA bytes without exposing a test mode in the public endpoint.
+require_once __DIR__ . '/smtp-protocol.php';
+
 function sendEmail($to, $subject, $body, $headers, $attachment = null) {
-    // Try sending using SMTP directly (since mail() function is not available)
-    $smtpServer = 'mail.infomaniak.com'; // Infomaniak SMTP server
-    $smtpPort = 465;  // SSL/TLS port for Infomaniak
-    
-    // Get credentials from environment variables
     $smtpUser = trim((string) ($_ENV['SMTP_USER'] ?? getenv('SMTP_USER') ?? ''));
     $smtpPass = (string) ($_ENV['SMTP_PASS'] ?? getenv('SMTP_PASS') ?? '');
     if (filter_var($smtpUser, FILTER_VALIDATE_EMAIL) === false || preg_match('/[\r\n\0]/', $smtpUser) || $smtpPass === '') {
         error_log('SMTP is not configured');
         return false;
     }
-
-    // Reply only to a validated address supplied by the form.
     $senderEmail = 'info@oghamtranslations.com';
     if (preg_match('/^Reply-To:\s*([^\r\n]*)/mi', $headers, $matches)) {
         $senderEmail = trim($matches[1]);
     }
-    
-    // Initialize connection
-    $success = false;
     try {
-        // Create a socket connection to the SMTP server with SSL for port 465
-        $socket = false;
-        if ($smtpPort == 465) {
-            // Use SSL for connection
-            $socket = fsockopen("ssl://{$smtpServer}", $smtpPort, $errno, $errstr, 30);
-            error_log("Connecting using SSL to {$smtpServer}:{$smtpPort}");
-        } else {
-            // Use regular connection for other ports
-            $socket = fsockopen($smtpServer, $smtpPort, $errno, $errstr, 30);
-            error_log("Connecting without SSL to {$smtpServer}:{$smtpPort}");
-        }
+        $socket = @fsockopen('ssl://mail.infomaniak.com', 465, $errno, $errstr, 30);
         if (!$socket) {
             error_log('SMTP connection failed');
             return false;
         }
         stream_set_timeout($socket, 15);
-        
-        // Check server response
-        if (!checkResponse($socket, 220)) {
-            fclose($socket);
-            return false;
-        }
-        
-        // Send EHLO command
-        fputs($socket, "EHLO oghamtranslations.com\r\n");
-        if (!checkResponse($socket, 250)) {
-            fclose($socket);
-            return false;
-        }
-        
-        // Start TLS if not on port 465 (which is usually already SSL)
-        if ($smtpPort != 465) {
-            fputs($socket, "STARTTLS\r\n");
-            if (!checkResponse($socket, 220)) {
-                fclose($socket);
-                return false;
-            }
-            
-            // Upgrade to TLS
-            if (stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT) !== true) {
-                fclose($socket);
-                return false;
-            }
-            
-            // Send EHLO again after TLS
-            fputs($socket, "EHLO oghamtranslations.com\r\n");
-            if (!checkResponse($socket, 250)) {
-                fclose($socket);
-                return false;
-            }
-        }
-        
-        // Authentication if credentials provided
-        if (!empty($smtpUser) && !empty($smtpPass)) {
-            fputs($socket, "AUTH LOGIN\r\n");
-            if (!checkResponse($socket, 334)) {
-                fclose($socket);
-                return false;
-            }
-            
-            fputs($socket, base64_encode($smtpUser) . "\r\n");
-            if (!checkResponse($socket, 334)) {
-                fclose($socket);
-                return false;
-            }
-            
-            fputs($socket, base64_encode($smtpPass) . "\r\n");
-            if (!checkResponse($socket, 235)) {
-                error_log("SMTP authentication failed");
-                fclose($socket);
-                return false;
-            }
-        }
-        
-        // Set sender and recipient
-        fputs($socket, "MAIL FROM: <$smtpUser>\r\n");
-        if (!checkResponse($socket, 250)) {
-            fclose($socket);
-            return false;
-        }
-        
-        fputs($socket, "RCPT TO: <$to>\r\n");
-        if (!checkResponse($socket, 250)) {
-            fclose($socket);
-            return false;
-        }
-        
-        // Start message data
-        fputs($socket, "DATA\r\n");
-        if (!checkResponse($socket, 354)) {
-            fclose($socket);
-            return false;
-        }
-        
-        // Prepare message with headers
-        $message = "Subject: $subject\r\n";
-        $message .= "To: $to\r\n";
-        $message .= "From: $smtpUser\r\n";
-        $message .= "Reply-To: $senderEmail\r\n";
-        $message .= "MIME-Version: 1.0\r\n";
-        
-        // Handle attachment
-        if ($attachment) {
-            $separator = bin2hex(random_bytes(24));
-            $fileContent = file_get_contents($attachment['tmp_name']);
-            $fileEncoded = chunk_split(base64_encode($fileContent));
-            $filename = $attachment['name'];
-            
-            $message .= "Content-Type: multipart/mixed; boundary=\"$separator\"\r\n\r\n";
-            $message .= "--$separator\r\n";
-            $message .= "Content-Type: text/html; charset=UTF-8\r\n";
-            $message .= "Content-Transfer-Encoding: quoted-printable\r\n\r\n";
-            $message .= quoted_printable_encode($body) . "\r\n\r\n";
-            $message .= "--$separator\r\n";
-            $message .= "Content-Type: application/octet-stream; name=\"$filename\"\r\n";
-            $message .= "Content-Transfer-Encoding: base64\r\n";
-            $message .= "Content-Disposition: attachment; filename=\"$filename\"\r\n\r\n";
-            $message .= "$fileEncoded\r\n";
-            $message .= "--$separator--";
-        } else {
-            $message .= "Content-Type: text/html; charset=UTF-8\r\n";
-            $message .= "Content-Transfer-Encoding: quoted-printable\r\n\r\n";
-            $message .= quoted_printable_encode($body) . "\r\n";
-        }
-        
-        // SMTP DATA requires CRLF and dot transparency, including user-provided lines.
-        $message = preg_replace('/\r\n|\r|\n/', "\r\n", $message);
-        $message = preg_replace('/(^|\r\n)\./', '$1..', $message);
-        // End message with a single dot
-        fputs($socket, $message . "\r\n.\r\n");
-        if (!checkResponse($socket, 250)) {
-            fclose($socket);
-            return false;
-        }
-        
-        // Quit session
-        fputs($socket, "QUIT\r\n");
+        $success = smtpSend($socket, $smtpUser, $smtpPass, $to, $subject, $body, $senderEmail, $attachment);
         fclose($socket);
-        $success = true;
-        
-    } catch (Exception $e) {
-        $success = false;
-    }
-    return $success;
-}
-
-// Helper function to check SMTP responses
-function checkResponse($socket, $expectedCode) {
-    $response = '';
-    while (substr($response, 3, 1) != ' ') {
-        if (!($response = fgets($socket, 256))) {
-            return false;
-        }
-    }
-    
-    if (substr($response, 0, 3) != $expectedCode) {
+        return $success;
+    } catch (Throwable $error) {
+        error_log('SMTP delivery failed');
+        if (isset($socket) && is_resource($socket)) fclose($socket);
         return false;
     }
-    
-    return true;
 }
 
 // Get the request data
@@ -343,6 +245,8 @@ try {
         filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
         sendJsonResponse(false, 'Invalid email or name', 400);
     }
+
+    enforceRateLimit($envPath);
 
     // CAPTCHA is mandatory. Missing configuration or a failed verification must never fail open.
     $recaptchaToken = $data['recaptchaToken'] ?? '';

@@ -2,15 +2,17 @@
 // Run with:
 // podman run --rm --network=none --read-only --tmpfs /tmp \
 //   -e OGHAM_ENV_FILE= -e RECAPTCHA_SECRET_KEY= -e SMTP_USER= -e SMTP_PASS= \
-//   -v "$PWD/public/send-email.php:/app/public/send-email.php:ro,Z" \
-//   -v "$PWD/tests/contact-validation.php:/app/tests/contact-validation.php:ro,Z" \
-//   docker.io/library/php:8.2-cli php /app/tests/contact-validation.php
+//   -v "$PWD:/app:ro,Z" docker.io/library/php:8.4-cli php /app/tests/contact-validation.php
+
+$rateDir = sys_get_temp_dir() . '/ogham-validation-' . getmypid();
+mkdir($rateDir, 0700);
+putenv('OGHAM_RATE_LIMIT_DIR=' . $rateDir);
 
 $host = '127.0.0.1';
 $port = 18782;
 $address = "http://$host:$port/send-email.php";
 $server = proc_open(
-    ['php', '-S', "$host:$port", '-t', '/app/public'],
+    ['php', '-S', "$host:$port", '-t', realpath(__DIR__ . '/../public')],
     [0 => ['pipe', 'r'], 1 => ['file', '/dev/null', 'w'], 2 => ['file', '/dev/null', 'w']],
     $pipes
 );
@@ -75,4 +77,6 @@ try {
 } finally {
     proc_terminate($server);
     proc_close($server);
+    foreach (glob($rateDir . '/*') ?: [] as $counter) unlink($counter);
+    rmdir($rateDir);
 }

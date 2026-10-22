@@ -8,9 +8,7 @@ import {
   Grid, 
   Card, 
   CardContent, 
-  CardMedia,
-  useTheme,
-  useMediaQuery
+  CardMedia
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -40,9 +38,6 @@ const scriptExamples = [
 ];
 
 const Home = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
   const { t } = useTranslation();
   
   const [text, setText] = useState('');
@@ -52,13 +47,6 @@ const Home = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      handleTyping();
-    }, speed);
-
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, scriptIndex]);
-
-  const handleTyping = () => {
     // Current full text to type
     const fullText = scriptExamples[scriptIndex];
     
@@ -90,7 +78,9 @@ const Home = () => {
         setIsDeleting(true);
       }
     }
-  };
+    }, speed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, scriptIndex, speed]);
 
   return (
     <Box>

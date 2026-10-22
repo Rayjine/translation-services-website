@@ -1,0 +1,46 @@
+name: Validate Ogham
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - run: bash scripts/test-php.sh
+      - run: php tests/contact-validation.php
+      - run: php tests/smtp-protocol.php
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - name: Record source and artifact hashes
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          files = {str(p.relative_to('dist')): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path('dist').rglob('*')) if p.is_file()}
+          Path('dist/build-manifest.json').write_text(json.dumps({
+            'source_sha': os.environ['GITHUB_SHA'],
+            'captcha_key': 'NOT_EMBEDDED_REBUILD_FROM_PRIVATE_RUNTIME_ENV',
+            'files_sha256': files,
+          }, indent=2) + '\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ogham-public-no-captcha-key-${{ github.sha }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
