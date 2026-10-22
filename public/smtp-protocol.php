@@ -25,11 +25,24 @@ function smtpSubjectHeader(string $subject): string {
     $subject = trim(preg_replace('/[\r\n\x00-\x1F\x7F]+/', ' ', $subject));
     if (preg_match('/[^\x20-\x7E]/', $subject) !== 1) return $subject;
 
-    // Adjacent encoded words are decoded and concatenated by standard mail clients.
-    $words = [];
-    foreach (str_split($subject, 45) as $chunk) {
-        $words[] = '=?UTF-8?B?' . base64_encode($chunk) . '?=';
+    $characters = preg_split('//u', $subject, -1, PREG_SPLIT_NO_EMPTY);
+    if ($characters === false) {
+        // Do not emit malformed UTF-8 in an RFC 2047 encoded-word.
+        $subject = preg_replace('/[^\x20-\x7E]/', '?', $subject);
+        return $subject;
     }
+
+    // Keep each encoded-word independently valid UTF-8 and within 45 source bytes.
+    $words = [];
+    $chunk = '';
+    foreach ($characters as $character) {
+        if (strlen($chunk) + strlen($character) > 45) {
+            $words[] = '=?UTF-8?B?' . base64_encode($chunk) . '?=';
+            $chunk = '';
+        }
+        $chunk .= $character;
+    }
+    if ($chunk !== '') $words[] = '=?UTF-8?B?' . base64_encode($chunk) . '?=';
     return implode("\r\n ", $words);
 }
 

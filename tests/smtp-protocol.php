@@ -32,6 +32,16 @@ assertTrue(in_array('QUIT', $message['commands'], true), 'SMTP session must clos
 assertTrue(str_contains($message['data'], "Reply-To: reply@example.org\r\n"), 'Reply-To header missing');
 assertTrue(str_contains($message['data'], 'Subject: =?UTF-8?B?'), 'UTF-8 subject is not MIME encoded');
 assertTrue(str_contains($message['data'], "=?UTF-8?B?" . base64_encode('Demande de traduction — Genève') . "?=\r\n"), 'UTF-8 subject bytes changed');
+$longSubject = str_repeat('A', 44) . '🧑‍🍳é Genève';
+$encodedSubject = smtpSubjectHeader($longSubject);
+assertTrue(preg_match_all('/=\?UTF-8\?B\?([^?]+)\?=/', $encodedSubject, $encodedWords) > 1, 'Long UTF-8 subject should use multiple encoded words');
+$decodedSubject = '';
+foreach ($encodedWords[1] as $word) {
+    $decoded = base64_decode($word, true);
+    assertTrue($decoded !== false && preg_match('//u', $decoded) === 1, 'RFC 2047 word contains invalid or split UTF-8');
+    $decodedSubject .= $decoded;
+}
+assertTrue($decodedSubject === $longSubject, 'RFC 2047 word folding changed the long subject');
 assertTrue(str_contains($message['data'], "Content-Transfer-Encoding: quoted-printable\r\n"), 'HTML encoding missing');
 assertTrue(str_contains($message['data'], 'Caf=C3=A9'), 'UTF-8 body not quoted-printable encoded');
 assertTrue(str_contains($message['data'], "\r\n..line after newline"), 'SMTP dot stuffing missing');
