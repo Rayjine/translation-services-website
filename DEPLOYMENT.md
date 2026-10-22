@@ -6,7 +6,7 @@ The PHP endpoint needs cURL, OpenSSL and an SMTP connection to Infomaniak on por
 
 The endpoint fails closed when verification or mail settings are missing. Verify these settings before replacing the live endpoint. Use a staging hostname only after adding it explicitly to the permitted CAPTCHA hostnames and its Google reCAPTCHA configuration; do not disable verification for testing.
 
-Deploy the built static files and `send-email.php`. The old code could store contact submissions and logs inside the document root. Before deployment, inspect existing `contact_submissions/` and `logs/` privately, move any necessary records to protected storage with an appropriate retention period, and remove public access. This source change stops future writes there but cannot remove historical server files.
+Deploy the built static files, `send-email.php` and its required `smtp-protocol.php`. The old code could store contact submissions and logs inside the document root. Before deployment, inspect existing `contact_submissions/` and `logs/` privately, move any necessary records to protected storage with an appropriate retention period, and remove public access. This source change stops future writes there but cannot remove historical server files.
 
 Release checks: PHP syntax/runtime compatibility on the target server, an authorized end-to-end contact test with and without an attachment, rejection of a missing/invalid CAPTCHA, email delivery, and a browser check that Analytics starts only after consent. No production message was sent as part of the repository audit.
 
