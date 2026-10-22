@@ -119,6 +119,9 @@ const Portfolio = () => {
 
   const handleCardClick = (item) => {
     setSelectedItem(item);
+    setPageNumber({ before: 1, after: 1 });
+    setNumPages({ before: null, after: null });
+    setViewMode('comparison');
     setOpen(true);
   };
 

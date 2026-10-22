@@ -74,6 +74,61 @@ function escapeEmailHtml($value) {
     return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
+// Keep counters outside the web root. Fail closed if the private directory is
+// unavailable; a deployment must never silently remove the abuse limit.
+function enforceRateLimit($envPath) {
+    $directory = getenv('OGHAM_RATE_LIMIT_DIR');
+    if (!is_string($directory) || $directory === '') {
+        $directory = is_string($envPath) && $envPath !== '' ? dirname($envPath) . '/rate-limit' : '';
+    }
+    if ($directory === '') {
+        error_log('Private rate-limit directory unavailable');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    $documentRoot = realpath($_SERVER['DOCUMENT_ROOT'] ?? '');
+    $parent = realpath(dirname($directory));
+    if ($documentRoot === false || $parent === false || str_starts_with($parent . '/', $documentRoot . '/')) {
+        error_log('Unsafe rate-limit parent');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    if (!is_dir($directory) && !mkdir($directory, 0700)) {
+        error_log('Private rate-limit directory unavailable');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    $directory = realpath($directory);
+    if ($directory === false || $documentRoot === false || str_starts_with($directory . '/', $documentRoot . '/') || !is_writable($directory)) {
+        error_log('Unsafe rate-limit directory');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    $address = $_SERVER['REMOTE_ADDR'] ?? '';
+    $rateKey = (string) ($_ENV['RECAPTCHA_SECRET_KEY'] ?? getenv('RECAPTCHA_SECRET_KEY') ?: 'ogham');
+    $key = hash_hmac('sha256', $address, $rateKey);
+    $handle = fopen($directory . '/' . $key . '.json', 'c+');
+    if ($handle === false || !flock($handle, LOCK_EX)) {
+        error_log('Rate-limit storage unavailable');
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    $stored = json_decode(stream_get_contents($handle), true);
+    $now = time();
+    $window = is_array($stored) && isset($stored['since'], $stored['count']) && $stored['since'] > $now - 3600
+        ? $stored : ['since' => $now, 'count' => 0];
+    if ($window['count'] >= 20) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        header('Retry-After: ' . max(1, $window['since'] + 3600 - $now));
+        sendJsonResponse(false, 'Too many requests. Please try again later.', 429);
+    }
+    $window['count']++;
+    rewind($handle);
+    if (!ftruncate($handle, 0) || fwrite($handle, json_encode($window)) === false || !fflush($handle)) {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+        sendJsonResponse(false, 'Form temporarily unavailable', 503);
+    }
+    flock($handle, LOCK_UN);
+    fclose($handle);
+}
+
 // Function to handle email sending with or without attachment
 function sendEmail($to, $subject, $body, $headers, $attachment = null) {
     // Try sending using SMTP directly (since mail() function is not available)
@@ -343,6 +398,8 @@ try {
         filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
         sendJsonResponse(false, 'Invalid email or name', 400);
     }
+
+    enforceRateLimit($envPath);
 
     // CAPTCHA is mandatory. Missing configuration or a failed verification must never fail open.
     $recaptchaToken = $data['recaptchaToken'] ?? '';

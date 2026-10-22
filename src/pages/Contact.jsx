@@ -91,6 +91,7 @@ const Contact = () => {
   const fileInputRef = useRef(null);
 
   const [formErrors, setFormErrors] = useState({});
+  const [submitting, setSubmitting] = useState(false);
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: '',
@@ -115,6 +116,18 @@ const Contact = () => {
   
   const handleFileChange = (e) => {
     const file = e.target.files[0];
+    if (file && file.size > 10 * 1024 * 1024) {
+      setSelectedFile(null);
+      setFormErrors((errors) => ({ ...errors, fileUpload: t('contact.form.errors.fileTooBig') }));
+      e.target.value = '';
+      return;
+    }
+    if (file && !/\.(pdf|doc|docx|txt|xls|xlsx|ppt|pptx|odt|rtf)$/i.test(file.name)) {
+      setSelectedFile(null);
+      setFormErrors((errors) => ({ ...errors, fileUpload: t('contact.form.errors.fileTypeInvalid') }));
+      e.target.value = '';
+      return;
+    }
     setSelectedFile(file);
     
     // Clear file upload error if it exists
@@ -142,7 +155,7 @@ const Contact = () => {
     
     if (!formData.email.trim()) {
       errors.email = t('contact.form.errors.emailRequired');
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       errors.email = t('contact.form.errors.emailInvalid');
     }
     
@@ -164,6 +177,8 @@ const Contact = () => {
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setFormErrors(validationErrors);
+      const firstInvalid = Object.keys(validationErrors)[0];
+      document.querySelector(`[name="${firstInvalid}"]`)?.focus();
       setSnackbar({
         open: true,
         message: t('contact.form.errors.formHasErrors'),
@@ -172,6 +187,7 @@ const Contact = () => {
       return;
     }
     
+    setSubmitting(true);
     // Show loading state
     setSnackbar({
       open: true,
@@ -197,19 +213,19 @@ const Contact = () => {
         formDataToSubmit.append('file', selectedFile);
         
         // Send the form data with the file
-        const response = await fetch('https://oghamtranslations.com/send-email.php', {
+        const response = await fetch('/send-email.php', {
           method: 'POST',
           body: formDataToSubmit
         });
         
         const result = await response.json();
         
-        if (!result.success) {
-          throw new Error(result.message || 'Failed to send message');
+        if (!response.ok || !result.success) {
+          throw new Error(response.status === 429 ? 'rate-limit' : 'send-failed');
         }
       } else {
         // No file, just send JSON data
-        const response = await fetch('https://oghamtranslations.com/send-email.php', {
+        const response = await fetch('/send-email.php', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -219,8 +235,8 @@ const Contact = () => {
         
         const result = await response.json();
         
-        if (!result.success) {
-          throw new Error(result.message || 'Failed to send message');
+        if (!response.ok || !result.success) {
+          throw new Error(response.status === 429 ? 'rate-limit' : 'send-failed');
         }
       }
       
@@ -263,9 +279,15 @@ const Contact = () => {
       console.error('Error submitting form:', error);
       setSnackbar({
         open: true,
-        message: t('contact.form.error') || 'An error occurred. Please try again later.',
+        message: error.message === 'rate-limit'
+          ? t('contact.form.rateLimited', { defaultValue: 'Too many requests. Please wait before trying again, or email us directly.' })
+          : t('contact.form.error') || 'An error occurred. Please try again later.',
         severity: 'error'
       });
+      setCaptchaValue(null);
+      recaptchaRef.current?.reset();
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -302,7 +324,12 @@ const Contact = () => {
                 {t('contact.form.subtitle')}
               </Typography>
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} noValidate>
+                {snackbar.open && snackbar.severity !== 'info' && (
+                  <Alert severity={snackbar.severity} role="status" sx={{ mb: 2 }}>
+                    {snackbar.message}
+                  </Alert>
+                )}
                 <Grid container spacing={3}>
                   {/* Personal Information */}
                   <Grid item xs={12}>
@@ -591,10 +618,10 @@ const Contact = () => {
                       color="primary"
                       size="large"
                       fullWidth
-                      disabled={!recaptchaConfigured}
+                      disabled={!recaptchaConfigured || submitting}
                       sx={{ py: 1.5 }}
                     >
-                      {t('contact.form.submitRequest')}
+                      {submitting ? t('contact.form.sending') : t('contact.form.submitRequest')}
                     </Button>
                   </Grid>
                 </Grid>

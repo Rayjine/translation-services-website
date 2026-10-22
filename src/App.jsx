@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { lazy, Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import CookieConsent from 'react-cookie-consent';
@@ -19,7 +19,7 @@ import Contact from './pages/Contact';
 // import Blog from './pages/Blog'; // Temporarily removed
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
-import Portfolio from './pages/Portfolio';
+const Portfolio = lazy(() => import('./pages/Portfolio'));
 import NotFound from './pages/NotFound';
 
 // NotFound component is now imported from ./pages/NotFound
@@ -52,8 +52,7 @@ const LocationAwareCookieConsent = () => {
 };
 
 const AppWithTheme = () => {
-  const { direction, isRtl } = useDirection();
-  const { t } = useTranslation();
+  const { direction } = useDirection();
   
   // Create theme with direction
   const theme = createTheme({
@@ -144,7 +143,7 @@ const AppWithTheme = () => {
           <Route path="contact" element={<Contact />} />
           {/* Blog route temporarily removed */}
           <Route path="terms" element={<Terms />} />
-          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="portfolio" element={<Suspense fallback={<div role="status" style={{ padding: '3rem', textAlign: 'center' }}>Loading portfolio…</div>}><Portfolio /></Suspense>} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Route>
