@@ -26,11 +26,8 @@
   transform: scaleX(-1);
 }
 
-/* Add class for icons that should never flip (logos, checkmarks, etc.) */
-.keep-direction, .social-icon, .logo-icon, .check-icon {
-  /* Ensure these icons never flip in RTL mode */
-  transform: none !important;
-}
+/* .keep-direction, .social-icon, .logo-icon and .check-icon are excluded from the
+   flip rule above, so they keep their orientation without overriding hover/animation transforms. */
 
 /* Adjust padding/margins that were directional */
 [dir="rtl"] .MuiButton-startIcon {

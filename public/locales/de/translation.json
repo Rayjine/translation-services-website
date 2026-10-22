@@ -9,7 +9,10 @@
       "team": "Team",
       "portfolio": "Portfolio",
       "pricing": "Preise",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "close": "Navigationsmenü schliessen",
+      "open": "Navigationsmenü öffnen",
+      "mainNav": "Hauptnavigation"
     },
     "footer": {
       "about": "Professionelle Übersetzungsdienste in mehreren Sprachen. Qualität, Genauigkeit und Pünktlichkeit garantiert.",
@@ -34,12 +37,17 @@
     "cookieConsent": {
       "message": "Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern. Siehe unsere",
       "moreInfo": "für weitere Informationen."
-    }
+    },
+    "languageSelector": "Sprache",
+    "breadcrumb": "Brotkrümelnavigation",
+    "skipToContent": "Zum Inhalt springen"
   },
   "home": {
     "hero": {
       "title": "Sprachen verbinden, Kulturen bewahren",
-      "subtitle": "Präzise, kulturell abgestimmte Übersetzungsdienste, die auf Ihre Bedürfnisse zugeschnitten sind — in über 10 Sprachen."
+      "subtitle": "Präzise, kulturell abgestimmte Übersetzungsdienste, die auf Ihre Bedürfnisse zugeschnitten sind — in über 10 Sprachen.",
+      "pauseAnimation": "Animation anhalten",
+      "playAnimation": "Animation abspielen"
     },
     "portfolioShowcase": {
       "title": "Unser Übersetzungsportfolio",
@@ -115,6 +123,12 @@
       "title": "Bereit, loszulegen?",
       "subtitle": "Kontaktieren Sie uns noch heute für ein kostenloses Angebot für Ihr Übersetzungsprojekt.",
       "button": "Ein Angebot anfordern"
+    },
+    "stats": {
+      "languages": "Sprachen, übersetzt von Muttersprachlern",
+      "translators": "Leitende Übersetzer im Team",
+      "experts": "Experten pro Text: einer übersetzt, einer prüft",
+      "founded": "Gegründet in der Schweiz"
     }
   },
   "services": {
@@ -148,7 +162,8 @@
           "title": "Lieferung",
           "description": "Ihre fertige Übersetzung wird in Ihrem bevorzugten Format, pünktlich und im Budgetrahmen geliefert."
         }
-      ]
+      ],
+      "eyebrow": "So arbeiten wir"
     },
     "categories": {
       "document": {
@@ -343,7 +358,8 @@
         "Technische Spezifikationen",
         "Benutzerhandbücher und Bedienungsanleitungen"
       ]
-    }
+    },
+    "categoriesNav": "Leistungskategorien"
   },
   "portfolio": {
     "pageTitle": "Unser Übersetzungsportfolio",
@@ -384,7 +400,8 @@
       "noData": "Kein PDF verfügbar",
       "errorLoading": "Fehler beim Laden des PDF",
       "prevPage": "Vorherige",
-      "nextPage": "Nächste"
+      "nextPage": "Nächste",
+      "close": "Schließen"
     },
     "viewModes": {
       "comparison": "Nebeneinander",
@@ -418,7 +435,8 @@
         "title": "Literarische Übersetzung",
         "description": "Literarische Übersetzung von Russisch nach Italienisch."
       }
-    ]
+    ],
+    "filterLabel": "Projekte nach Kategorie filtern"
   },
   "team": {
     "pageTitle": "Unser Team",
@@ -632,7 +650,8 @@
         "experience": "9+ Jahre",
         "education": "Bachelor in Übersetzungswissenschaften – Université Hassan II, Marokko; Master in Internationalen Beziehungen – Graduate Institute Geneva (IHEID), Schweiz"
       }
-    ]
+    ],
+    "closeProfile": "Profil schliessen"
   },
   "portfolioDetails": {
     "projectDescription": "Projektbeschreibung",
@@ -859,7 +878,11 @@
       "title": "Bereit, um zu starten?",
       "subtitle": "Kontaktieren Sie uns noch heute für ein kostenloses Angebot für Ihr Übersetzungsprojekt.",
       "button": "Angebot anfordern"
-    }
+    },
+    "eyebrow": "Transparente Preise in Schweizer Franken",
+    "mostPopular": "Am beliebtesten",
+    "included": "Inbegriffen",
+    "notIncluded": "Nicht inbegriffen"
   },
   "contact": {
     "pageTitle": "Kontaktieren Sie uns",
@@ -910,7 +933,8 @@
       "agreeTerms": "Ich stimme zu",
       "termsAgreement": "Ich stimme den Allgemeinen Geschäftsbedingungen und der Datenschutzrichtlinie zu",
       "actions": {
-        "chooseFile": "Datei auswählen"
+        "chooseFile": "Datei auswählen",
+        "removeFile": "Datei entfernen"
       },
       "sections": {
         "contactInfo": "Kontaktinformationen",
@@ -950,9 +974,14 @@
         "fileTooBig": "Dateigröße überschreitet das Limit von 10MB",
         "fileTypeInvalid": "Ungültiger Dateityp. Bitte laden Sie ein unterstütztes Dokumentenformat hoch",
         "termsRequired": "Sie müssen den Bedingungen zustimmen",
-        "formHasErrors": "Bitte korrigieren Sie die Fehler im Formular"
+        "formHasErrors": "Bitte korrigieren Sie die Fehler im Formular",
+        "captchaRequired": "Bitte bestätigen Sie, dass Sie kein Roboter sind"
       },
-      "success": "Ihre Anfrage wurde erfolgreich übermittelt! Wir werden uns bald mit Ihnen in Verbindung setzen."
+      "success": "Ihre Anfrage wurde erfolgreich übermittelt! Wir werden uns bald mit Ihnen in Verbindung setzen.",
+      "sending": "Ihre Anfrage wird gesendet…",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
+      "rateLimited": "Zu viele Anfragen. Bitte warten Sie, bevor Sie es erneut versuchen, oder schreiben Sie uns direkt eine E-Mail.",
+      "unavailable": "Das Online-Formular ist vorübergehend nicht verfügbar. Bitte schreiben Sie uns direkt an"
     },
     "contactInfo": {
       "title": "Kontaktinformationen",
@@ -1274,6 +1303,12 @@
       "documentTranslation": "Dokumentenübersetzung",
       "websiteLocalization": "Website-Lokalisierung",
       "technicalTranslation": "Technische Übersetzung"
-    }
+    },
+    "tagline": "Lost in Translation",
+    "oghamCaption": "„Lost“ (verloren), in Ogham gemeißelt",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "legal": {
+    "onThisPage": "Auf dieser Seite"
   }
 }

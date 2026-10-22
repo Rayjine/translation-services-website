@@ -1,400 +1,267 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  CardMedia,
-  Button,
-  Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Paper
-} from '@mui/material';
+import { Box, Container, Typography, Button } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import { Link as RouterLink } from 'react-router-dom';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import SouthIcon from '@mui/icons-material/South';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import LanguageIcon from '@mui/icons-material/Language';
-import DescriptionIcon from '@mui/icons-material/Description';
-import BusinessIcon from '@mui/icons-material/Business';
-import SchoolIcon from '@mui/icons-material/School';
+import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
 import CodeIcon from '@mui/icons-material/Code';
+import PageHero from '../components/ui/PageHero';
+import SectionHeading from '../components/ui/SectionHeading';
+import GlyphField from '../components/ui/GlyphField';
+import OghamMark from '../components/ui/OghamMark';
+import Reveal from '../components/ui/Reveal';
+import ServiceCategory from '../components/services/ServiceCategory';
+import ProcessTimeline from '../components/services/ProcessTimeline';
+import { tokens, easing } from '../theme';
+
+// Category → sub-service keys, in display order. Every sub-service has three features.
+const CATEGORIES = [
+  { id: 'document', icon: DescriptionOutlinedIcon, ogham: 'Document', services: ['legal', 'business', 'technical', 'academic'] },
+  { id: 'website', icon: LanguageIcon, ogham: 'Website', services: ['localization', 'ecommerce', 'cms', 'seo'] },
+  { id: 'specialized', icon: BusinessCenterOutlinedIcon, ogham: 'Specialized', services: ['medical', 'financial', 'marketing', 'literary'] },
+  { id: 'additional', icon: CodeIcon, ogham: 'Additional', services: ['content', 'software', 'subtitling'] },
+];
+const FEATURE_COUNT = 3;
 
 const Services = () => {
   const { t } = useTranslation();
-  
-  const serviceCategories = [
-    {
-      id: 'document',
-      title: t('services.categories.document.title'),
-      icon: <DescriptionIcon sx={{ fontSize: 60 }} color="primary" />,
-      description: t('services.categories.document.description'),
-      services: [
-        {
-          title: t('services.categories.document.services.legal.title'),
-          description: t('services.categories.document.services.legal.description'),
-          features: [
-            t('services.categories.document.services.legal.features.0'),
-            t('services.categories.document.services.legal.features.1'),
-            t('services.categories.document.services.legal.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.document.services.business.title'),
-          description: t('services.categories.document.services.business.description'),
-          features: [
-            t('services.categories.document.services.business.features.0'),
-            t('services.categories.document.services.business.features.1'),
-            t('services.categories.document.services.business.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.document.services.technical.title'),
-          description: t('services.categories.document.services.technical.description'),
-          features: [
-            t('services.categories.document.services.technical.features.0'),
-            t('services.categories.document.services.technical.features.1'),
-            t('services.categories.document.services.technical.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.document.services.academic.title'),
-          description: t('services.categories.document.services.academic.description'),
-          features: [
-            t('services.categories.document.services.academic.features.0'),
-            t('services.categories.document.services.academic.features.1'),
-            t('services.categories.document.services.academic.features.2')
-          ]
-        }
-      ]
-    },
-    {
-      id: 'website',
-      title: t('services.categories.website.title'),
-      icon: <LanguageIcon sx={{ fontSize: 60 }} color="primary" />,
-      description: t('services.categories.website.description'),
-      services: [
-        {
-          title: t('services.categories.website.services.localization.title'),
-          description: t('services.categories.website.services.localization.description'),
-          features: [
-            t('services.categories.website.services.localization.features.0'),
-            t('services.categories.website.services.localization.features.1'),
-            t('services.categories.website.services.localization.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.website.services.ecommerce.title'),
-          description: t('services.categories.website.services.ecommerce.description'),
-          features: [
-            t('services.categories.website.services.ecommerce.features.0'),
-            t('services.categories.website.services.ecommerce.features.1'),
-            t('services.categories.website.services.ecommerce.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.website.services.cms.title'),
-          description: t('services.categories.website.services.cms.description'),
-          features: [
-            t('services.categories.website.services.cms.features.0'),
-            t('services.categories.website.services.cms.features.1'),
-            t('services.categories.website.services.cms.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.website.services.seo.title'),
-          description: t('services.categories.website.services.seo.description'),
-          features: [
-            t('services.categories.website.services.seo.features.0'),
-            t('services.categories.website.services.seo.features.1'),
-            t('services.categories.website.services.seo.features.2')
-          ]
-        }
-    ]
-  },
-    {
-      id: 'specialized',
-      title: t('services.categories.specialized.title'),
-      icon: <BusinessIcon sx={{ fontSize: 60 }} color="primary" />,
-      description: t('services.categories.specialized.description'),
-      services: [
-        {
-          title: t('services.categories.specialized.services.medical.title'),
-          description: t('services.categories.specialized.services.medical.description'),
-          features: [
-            t('services.categories.specialized.services.medical.features.0'),
-            t('services.categories.specialized.services.medical.features.1'),
-            t('services.categories.specialized.services.medical.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.specialized.services.financial.title'),
-          description: t('services.categories.specialized.services.financial.description'),
-          features: [
-            t('services.categories.specialized.services.financial.features.0'),
-            t('services.categories.specialized.services.financial.features.1'),
-            t('services.categories.specialized.services.financial.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.specialized.services.marketing.title'),
-          description: t('services.categories.specialized.services.marketing.description'),
-          features: [
-            t('services.categories.specialized.services.marketing.features.0'),
-            t('services.categories.specialized.services.marketing.features.1'),
-            t('services.categories.specialized.services.marketing.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.specialized.services.literary.title'),
-          description: t('services.categories.specialized.services.literary.description'),
-          features: [
-            t('services.categories.specialized.services.literary.features.0'),
-            t('services.categories.specialized.services.literary.features.1'),
-            t('services.categories.specialized.services.literary.features.2')
-          ]
-        }
-    ]
-  },
-    {
-      id: 'additional',
-      title: t('services.categories.additional.title'),
-      icon: <CodeIcon sx={{ fontSize: 60 }} color="primary" />,
-      description: t('services.categories.additional.description'),
-      services: [
-        {
-          title: t('services.categories.additional.services.content.title'),
-          description: t('services.categories.additional.services.content.description'),
-          features: [
-            t('services.categories.additional.services.content.features.0'),
-            t('services.categories.additional.services.content.features.1'),
-            t('services.categories.additional.services.content.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.additional.services.software.title'),
-          description: t('services.categories.additional.services.software.description'),
-          features: [
-            t('services.categories.additional.services.software.features.0'),
-            t('services.categories.additional.services.software.features.1'),
-            t('services.categories.additional.services.software.features.2')
-          ]
-        },
-        {
-          title: t('services.categories.additional.services.subtitling.title'),
-          description: t('services.categories.additional.services.subtitling.description'),
-          features: [
-            t('services.categories.additional.services.subtitling.features.0'),
-            t('services.categories.additional.services.subtitling.features.1'),
-            t('services.categories.additional.services.subtitling.features.2')
-          ]
-        }
-    ]
-  }
-];
+
+  const categories = CATEGORIES.map((category) => {
+    const base = `services.categories.${category.id}`;
+    return {
+      ...category,
+      title: t(`${base}.title`),
+      description: t(`${base}.description`),
+      services: category.services.map((key) => ({
+        key,
+        title: t(`${base}.services.${key}.title`),
+        description: t(`${base}.services.${key}.description`),
+        features: Array.from({ length: FEATURE_COUNT }, (_, i) => t(`${base}.services.${key}.features.${i}`)),
+      })),
+    };
+  });
+
+  const rawSteps = t('services.process.steps', { returnObjects: true });
+  const steps = (Array.isArray(rawSteps) ? rawSteps : []).map((step, index) => ({
+    number: step.step || index + 1,
+    title: step.title,
+    description: step.description,
+  }));
 
   return (
     <Box>
-      {/* Hero Section */}
-      <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 8 }}>
-        <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" gutterBottom>
-            {t('services.pageTitle')}
-          </Typography>
-          <Typography variant="h5" sx={{ mb: 4, fontWeight: 300 }}>
-            {t('services.pageSubtitle')}
-          </Typography>
-        </Container>
-      </Box>
-
-      {/* Services Overview */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Grid container spacing={6}>
-          {serviceCategories.map((category) => (
-            <Grid item xs={12} key={category.id}>
-              <Paper 
-                elevation={3} 
-                sx={{ 
-                  p: 4, 
-                  mb: 4,
-                  borderRadius: 2,
-                  transition: 'transform 0.3s ease-in-out',
-                  '&:hover': {
-                    transform: 'translateY(-5px)'
-                  }
-                }}
-              >
-                <Grid container spacing={4}>
-                  <Grid item xs={12} sm={12} md={3} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <Box sx={{ mb: 2 }}>
-                      {category.icon}
-                    </Box>
-                    <Typography variant="h4" component="h2" align="center" gutterBottom>
-                      {category.title}
-                    </Typography>
-                    <Typography variant="body1" align="center" color="text.secondary">
-                      {category.description}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={12} md={9}>
-                    <Grid container spacing={3}>
-                      {category.services.map((service) => (
-                        <Grid item xs={12} sm={6} key={service.title}>
-                          <Card variant="outlined" sx={{ height: '100%' }}>
-                            <CardContent>
-                              <Typography variant="h6" component="h3" gutterBottom>
-                                {service.title}
-                              </Typography>
-                              <Typography variant="body2" color="text.secondary" paragraph>
-                                {service.description}
-                              </Typography>
-                              <Divider sx={{ my: 2 }} />
-                              <List dense disablePadding>
-                                {service.features.map((feature, idx) => (
-                                  <ListItem key={idx} disablePadding sx={{ mb: 1 }}>
-                                    <ListItemIcon sx={{ minWidth: 30 }}>
-                                      <CheckCircleOutlineIcon className="check-icon" color="success" fontSize="small" />
-                                    </ListItemIcon>
-                                    <ListItemText primary={feature} />
-                                  </ListItem>
-                                ))}
-                              </List>
-                            </CardContent>
-                          </Card>
-                        </Grid>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-
-      {/* Process Section */}
-      <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
-        <Container maxWidth="lg">
-          <Typography variant="h3" component="h2" align="center" gutterBottom>
-            {t('services.process.title')}
-          </Typography>
-          <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-            {t('services.process.subtitle')}
-          </Typography>
-
-          <Grid container spacing={4} justifyContent="center">
-            {t('services.process.steps', { returnObjects: true }).map((process, index) => {
-              // Ensure process.step exists, otherwise use index+1
-              const stepNumber = process.step || index + 1;
-              return (
-                <Grid item xs={12} sm={6} md={4} key={`process-step-${stepNumber}`}>
-                  <Box 
-                    sx={{ 
-                      bgcolor: 'white', 
-                      p: 3, 
-                      borderRadius: 2, 
-                      boxShadow: 1,
-                      height: '100%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      textAlign: 'center',
-                      position: 'relative',
-                      '&::before': {
-                        content: '""',
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '5px',
-                        height: '100%',
-                        bgcolor: 'primary.main',
-                        borderTopLeftRadius: 2,
-                        borderBottomLeftRadius: 2
-                      }
+      <PageHero
+        eyebrow={t('common.footer.address')}
+        title={t('services.pageTitle')}
+        subtitle={t('services.pageSubtitle')}
+        ogham="Services"
+      >
+        {/* Jump links to each category */}
+        <Box
+          component="nav"
+          aria-label={t('services.categoriesNav', 'Service categories')}
+          // Let the pills run past the hero's text column so they sit on one line on wide screens.
+          sx={{ mt: { xs: 1, md: 2 }, width: { lg: 'min(1152px, calc(100vw - 48px))' } }}
+        >
+          <Box component="ul" sx={{ listStyle: 'none', m: 0, p: 0, display: 'flex', flexWrap: 'wrap', gap: 1.25 }}>
+            {categories.map((category, i) => (
+              <li key={category.id}>
+                <Box
+                  component="a"
+                  href={`#${category.id}`}
+                  sx={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 1.25,
+                    minHeight: 44,
+                    paddingInline: '8px 18px',
+                    borderRadius: 999,
+                    color: '#fff',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    border: '1px solid rgba(255,255,255,0.18)',
+                    bgcolor: 'rgba(255,255,255,0.04)',
+                    transition: `transform .35s ${easing.out}, background-color .3s, border-color .3s`,
+                    '& .pill-num': { transition: 'background-color .3s, color .3s' },
+                    '& .pill-arrow': { opacity: 0.55, transition: `transform .35s ${easing.out}, opacity .3s` },
+                    '&:hover, &:focus-visible': {
+                      bgcolor: alpha(tokens.mint, 0.12),
+                      borderColor: alpha(tokens.mint, 0.6),
+                      transform: 'translateY(-2px)',
+                    },
+                    '&:hover .pill-num, &:focus-visible .pill-num': { bgcolor: tokens.mint, color: tokens.ink },
+                    '&:hover .pill-arrow, &:focus-visible .pill-arrow': { opacity: 1, transform: 'translateY(2px)' },
+                  }}
+                >
+                  <Box
+                    component="span"
+                    aria-hidden
+                    className="pill-num"
+                    sx={{
+                      display: 'grid',
+                      placeItems: 'center',
+                      width: 30,
+                      height: 30,
+                      borderRadius: '50%',
+                      fontSize: '0.75rem',
+                      fontWeight: 800,
+                      color: tokens.mint,
+                      bgcolor: 'rgba(255,255,255,0.08)',
+                      direction: 'ltr',
                     }}
                   >
-                    <Box 
-                      key={`step-circle-${stepNumber}`}
-                      sx={{ 
-                        bgcolor: 'primary.main', 
-                        color: 'white', 
-                        width: 40, 
-                        height: 40, 
-                        borderRadius: '50%', 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        justifyContent: 'center',
-                        mb: 2,
-                        fontWeight: 'bold'
-                      }}
-                    >
-                      {stepNumber}
-                    </Box>
-                    <Typography variant="h6" component="h3" gutterBottom>
-                      {process.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {process.description}
-                    </Typography>
+                    {String(i + 1).padStart(2, '0')}
                   </Box>
-                </Grid>
-              );
-            })}
-          </Grid>
+                  {category.title}
+                  {/* Wrapped so the hover nudge isn't cancelled by the RTL icon rules. */}
+                  <Box component="span" aria-hidden className="pill-arrow" sx={{ display: 'inline-flex' }}>
+                    <SouthIcon className="keep-direction" sx={{ fontSize: 16 }} />
+                  </Box>
+                </Box>
+              </li>
+            ))}
+          </Box>
+        </Box>
+      </PageHero>
+
+      {categories.map((category, i) => (
+        <ServiceCategory
+          key={category.id}
+          id={category.id}
+          number={i + 1}
+          total={categories.length}
+          title={category.title}
+          description={category.description}
+          icon={category.icon}
+          ogham={category.ogham}
+          services={category.services}
+          tone={i % 2 === 1 ? 'deep' : 'paper'}
+        />
+      ))}
+
+      {/* Translation process */}
+      <Box
+        component="section"
+        className="grain"
+        sx={{ position: 'relative', overflow: 'hidden', color: '#fff', background: tokens.heroBackground, py: { xs: 10, md: 15 } }}
+      >
+        <GlyphField opacity={0.05} density={0.5} />
+        <Container maxWidth="lg" sx={{ position: 'relative' }}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              alignItems: { md: 'flex-end' },
+              justifyContent: 'space-between',
+              gap: { xs: 0, md: 6 },
+              mb: { xs: 2, md: 4 },
+            }}
+          >
+            <SectionHeading
+              eyebrow={t('services.process.eyebrow', 'How we work')}
+              title={t('services.process.title')}
+              subtitle={t('services.process.subtitle')}
+              align="start"
+              tone="dark"
+              maxWidth={680}
+            />
+            <Box aria-hidden sx={{ display: { xs: 'none', md: 'block' }, color: tokens.picton, opacity: 0.55, mb: 8, flexShrink: 0 }}>
+              <OghamMark text="Process" strokeLength={22} strokeWidth={2} sx={{ height: 64, width: 'auto' }} />
+            </Box>
+          </Box>
+          <ProcessTimeline steps={steps} />
         </Container>
       </Box>
 
-      {/* CTA Section */}
-      <Box sx={{ bgcolor: 'secondary.main', color: 'white', py: 8 }}>
-        <Container maxWidth="md">
-          <Typography variant="h3" component="h2" align="center" gutterBottom>
-            {t('home.cta.title')}
-          </Typography>
-          <Typography variant="h6" align="center" paragraph sx={{ mb: 4 }}>
-            {t('home.cta.subtitle')}
-          </Typography>
-          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
-            <Button 
-              variant="contained" 
-              size="large"
-              component={RouterLink}
-              to="/contact"
-              sx={{ 
-                fontSize: '1.1rem', 
-                py: 1.5, 
-                px: 4,
-                bgcolor: 'white',
-                color: 'secondary.main',
-                '&:hover': {
-                  bgcolor: 'rgba(255,255,255,0.9)'
-                }
+      {/* Call to action */}
+      <Box component="section" sx={{ bgcolor: tokens.paper, py: { xs: 8, md: 12 } }}>
+        <Container maxWidth="lg">
+          <Reveal variant="scale">
+            <Box
+              className="grain"
+              sx={{
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: { xs: '24px', md: '32px' },
+                background: tokens.heroBackground,
+                color: '#fff',
+                px: { xs: 3, sm: 5, md: 9 },
+                py: { xs: 6, md: 9 },
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', md: 'minmax(0, 1.4fr) minmax(0, 1fr)' },
+                alignItems: 'center',
+                gap: { xs: 4, md: 6 },
+                boxShadow: '0 40px 80px -40px rgba(7,26,43,0.55)',
               }}
             >
-              {t('common.buttons.getQuote')}
-            </Button>
-            <Button 
-              variant="outlined" 
-              color="inherit" 
-              size="large"
-              component={RouterLink}
-              to="/pricing"
-              sx={{ 
-                fontSize: '1.1rem', 
-                py: 1.5, 
-                px: 4,
-                borderColor: 'white',
-                '&:hover': {
-                  borderColor: 'white',
-                  bgcolor: 'rgba(255,255,255,0.1)'
-                }
-              }}
-            >
-              {t('pricing.pageTitle')}
-            </Button>
-          </Box>
+              {/* Carved word running behind the panel */}
+              <Box
+                aria-hidden
+                sx={{
+                  position: 'absolute',
+                  display: { xs: 'none', md: 'block' },
+                  insetInlineEnd: '-3%',
+                  top: -22,
+                  width: '48%',
+                  color: tokens.mint,
+                  opacity: 0.14,
+                  pointerEvents: 'none',
+                }}
+              >
+                <OghamMark text="Translate" strokeLength={30} strokeWidth={2} stagger={50} sx={{ width: '100%', height: 'auto' }} />
+              </Box>
+
+              <Box sx={{ position: 'relative' }}>
+                <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
+                  {t('home.cta.title')}
+                </Typography>
+                <Typography sx={{ color: 'rgba(255,255,255,0.78)', fontSize: { xs: '1.075rem', md: '1.2rem' }, maxWidth: 520 }}>
+                  {t('home.cta.subtitle')}
+                </Typography>
+              </Box>
+
+              <Box
+                sx={{
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: { xs: 'column', sm: 'row', md: 'column', lg: 'row' },
+                  justifyContent: { md: 'flex-end' },
+                  alignItems: { xs: 'stretch', sm: 'center', md: 'stretch', lg: 'center' },
+                  gap: 1.5,
+                }}
+              >
+                <Button
+                  component={RouterLink}
+                  to="/contact"
+                  variant="contained"
+                  color="secondary"
+                  size="large"
+                  endIcon={<ArrowForwardIcon className="flip-in-rtl" />}
+                  sx={{ whiteSpace: 'nowrap' }}
+                >
+                  {t('common.buttons.getQuote')}
+                </Button>
+                <Button
+                  component={RouterLink}
+                  to="/pricing"
+                  variant="outlined"
+                  size="large"
+                  sx={{
+                    color: '#fff',
+                    borderColor: 'rgba(255,255,255,0.45)',
+                    whiteSpace: 'nowrap',
+                    '&:hover': { borderColor: '#fff', bgcolor: 'rgba(255,255,255,0.08)' },
+                  }}
+                >
+                  {t('pricing.pageTitle')}
+                </Button>
+              </Box>
+            </Box>
+          </Reveal>
         </Container>
       </Box>
     </Box>

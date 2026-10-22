@@ -1,369 +1,411 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  CardHeader,
-  Button,
-  Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Chip,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails
-} from '@mui/material';
+import { Box, Button, Container, Grid, Link, Typography } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import { Link as RouterLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import CheckIcon from '@mui/icons-material/Check';
-import CloseIcon from '@mui/icons-material/Close';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
+import PageHero from '../components/ui/PageHero';
+import SectionHeading from '../components/ui/SectionHeading';
+import Reveal from '../components/ui/Reveal';
+import OghamMark from '../components/ui/OghamMark';
+import GlyphField from '../components/ui/GlyphField';
+import PlanCard from '../components/pricing/PlanCard';
+import PricingProcess from '../components/pricing/PricingProcess';
+import RatesTable from '../components/pricing/RatesTable';
+import PricingFaq from '../components/pricing/PricingFaq';
+import GuaranteeSeal from '../components/pricing/GuaranteeSeal';
+import { tokens, easing, fonts } from '../theme';
+
+const FEATURE_COUNT = 6;
+
+// Which features each package includes (same order as the translation arrays).
+const PLAN_INCLUDES = [
+  [true, true, true, false, false, false],
+  [true, true, true, true, true, false],
+  [true, true, true, true, true, true],
+];
 
 const getPricingPlans = (t) => [
-  {
-    title: t('pricing.standard'),
-    price: 0.08,
-    unit: t('pricing.perWord'),
-    description: t('pricing.packages.plans.0.description'),
-    features: [
-      { text: t('pricing.packages.plans.0.features.0.text'), included: true },
-      { text: t('pricing.packages.plans.0.features.1.text'), included: true },
-      { text: t('pricing.packages.plans.0.features.2.text'), included: true },
-      { text: t('pricing.packages.plans.0.features.3.text'), included: false },
-      { text: t('pricing.packages.plans.0.features.4.text'), included: false },
-      { text: t('pricing.packages.plans.0.features.5.text'), included: false },
-    ],
-    accent: false
-  },
-  {
-    title: t('pricing.professional'),
-    price: 0.12,
-    unit: t('pricing.perWord'),
-    description: t('pricing.packages.plans.1.description'),
-    features: [
-      { text: t('pricing.packages.plans.1.features.0.text'), included: true },
-      { text: t('pricing.packages.plans.1.features.1.text'), included: true },
-      { text: t('pricing.packages.plans.1.features.2.text'), included: true },
-      { text: t('pricing.packages.plans.1.features.3.text'), included: true },
-      { text: t('pricing.packages.plans.1.features.4.text'), included: true },
-      { text: t('pricing.packages.plans.1.features.5.text'), included: false },
-    ],
-    accent: true
-  },
-  {
-    title: t('pricing.premium'),
-    price: 0.16,
-    unit: t('pricing.perWord'),
-    description: t('pricing.packages.plans.2.description'),
-    features: [
-      { text: t('pricing.packages.plans.2.features.0.text'), included: true },
-      { text: t('pricing.packages.plans.2.features.1.text'), included: true },
-      { text: t('pricing.packages.plans.2.features.2.text'), included: true },
-      { text: t('pricing.packages.plans.2.features.3.text'), included: true },
-      { text: t('pricing.packages.plans.2.features.4.text'), included: true },
-      { text: t('pricing.packages.plans.2.features.5.text'), included: true },
-    ],
-    accent: false
-  }
-];
+  { key: 'standard', ogham: 'Standard', price: '0.08' },
+  { key: 'professional', ogham: 'Professional', price: '0.12', featured: true },
+  { key: 'premium', ogham: 'Premium', price: '0.16' },
+].map((plan, i) => ({
+  ...plan,
+  title: t(`pricing.${plan.key}`),
+  unit: t('pricing.perWord'),
+  description: t(`pricing.packages.plans.${i}.description`),
+  features: Array.from({ length: FEATURE_COUNT }, (_, f) => ({
+    text: t(`pricing.packages.plans.${i}.features.${f}.text`),
+    included: PLAN_INCLUDES[i][f],
+  })),
+}));
 
-const getServiceRates = (t) => [
-  { service: t('pricing.rates.services.0.service'), standard: t('pricing.rates.services.0.standard'), professional: t('pricing.rates.services.0.professional'), premium: t('pricing.rates.services.0.premium') },
-  { service: t('pricing.rates.services.1.service'), standard: t('pricing.rates.services.1.standard'), professional: t('pricing.rates.services.1.professional'), premium: t('pricing.rates.services.1.premium') },
-  { service: t('pricing.rates.services.2.service'), standard: t('pricing.rates.services.2.standard'), professional: t('pricing.rates.services.2.professional'), premium: t('pricing.rates.services.2.premium') },
-  { service: t('pricing.rates.services.3.service'), standard: t('pricing.rates.services.3.standard'), professional: t('pricing.rates.services.3.professional'), premium: t('pricing.rates.services.3.premium') },
-  { service: t('pricing.rates.services.4.service'), standard: t('pricing.rates.services.4.standard'), professional: t('pricing.rates.services.4.professional'), premium: t('pricing.rates.services.4.premium') },
-  { service: t('pricing.rates.services.5.service'), standard: t('pricing.rates.services.5.standard'), professional: t('pricing.rates.services.5.professional'), premium: t('pricing.rates.services.5.premium') },
-  { service: t('pricing.rates.services.6.service'), standard: t('pricing.rates.services.6.standard'), professional: t('pricing.rates.services.6.professional'), premium: t('pricing.rates.services.6.premium'), note: t('pricing.rates.services.6.note') },
-];
+const getServiceRates = (t) =>
+  Array.from({ length: 7 }, (_, i) => ({
+    service: t(`pricing.rates.services.${i}.service`),
+    standard: t(`pricing.rates.services.${i}.standard`),
+    professional: t(`pricing.rates.services.${i}.professional`),
+    premium: t(`pricing.rates.services.${i}.premium`),
+    ...(i === 6 && { note: t('pricing.rates.services.6.note') }),
+  }));
 
-const getFaqs = (t) => [
-  {
-    question: t('pricing.faqs.questions.0.question'),
-    answer: t('pricing.faqs.questions.0.answer')
-  },
-  {
-    question: t('pricing.faqs.questions.1.question'),
-    answer: t('pricing.faqs.questions.1.answer')
-  },
-  {
-    question: t('pricing.faqs.questions.2.question'),
-    answer: t('pricing.faqs.questions.2.answer')
-  },
-  {
-    question: t('pricing.faqs.questions.3.question'),
-    answer: t('pricing.faqs.questions.3.answer')
-  },
-  {
-    question: t('pricing.faqs.questions.4.question'),
-    answer: t('pricing.faqs.questions.4.answer')
-  }
-];
+const getProcessSteps = (t) =>
+  Array.from({ length: 4 }, (_, i) => ({
+    title: t(`pricing.process.steps.${i}.title`),
+    description: t(`pricing.process.steps.${i}.description`),
+  }));
+
+const getFaqs = (t) =>
+  Array.from({ length: 6 }, (_, i) => ({
+    question: t(`pricing.faqs.questions.${i}.question`),
+    answer: t(`pricing.faqs.questions.${i}.answer`),
+  }));
+
+const sectionPy = { py: { xs: 10, md: 14 } };
 
 const Pricing = () => {
   const { t } = useTranslation();
   const pricingPlans = getPricingPlans(t);
   const serviceRates = getServiceRates(t);
+  const processSteps = getProcessSteps(t);
   const faqs = getFaqs(t);
-  
+  const guaranteePoints = [
+    t('pricing.guarantee.points.accurate'),
+    t('pricing.guarantee.points.onTime'),
+    t('pricing.guarantee.points.consistent'),
+    t('pricing.guarantee.points.responsive'),
+  ];
+
   return (
     <Box>
-      {/* Hero Section */}
-      <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 8 }}>
-        <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" gutterBottom>
-            {t('pricing.pageTitle')}
-          </Typography>
-          <Typography variant="h5" sx={{ mb: 4, fontWeight: 300 }}>
-            {t('pricing.pageSubtitle')}
-          </Typography>
-        </Container>
-      </Box>
-
-      {/* Pricing Plans */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h4" component="h2" align="center" gutterBottom>
-          {t('pricing.packages.title')}
-        </Typography>
-        <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-          {t('pricing.packages.subtitle')}
-        </Typography>
-
-        <Grid container spacing={4} alignItems="stretch">
-          {pricingPlans.map((plan) => (
-            <Grid item xs={12} md={4} key={plan.title}>
-              <Card 
-                sx={{ 
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  ...(plan.accent && {
-                    border: '2px solid',
-                    borderColor: 'secondary.main',
-                    transform: 'scale(1.02)',
-                    boxShadow: 4
-                  })
-                }}
-              >
-                <CardHeader
-                  title={plan.title}
-                  titleTypographyProps={{ align: 'center', variant: 'h5' }}
-                  subheaderTypographyProps={{ align: 'center' }}
-                  sx={{
-                    bgcolor: plan.accent ? 'secondary.main' : 'primary.main',
-                    color: 'white',
-                    pb: 1
-                  }}
-                />
-                <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                  <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', mb: 2 }}>
-                    <Typography component="h2" variant="h3" color="text.primary">
-                      CHF {plan.price}
-                    </Typography>
-                    <Typography variant="subtitle1" color="text.secondary">
-                      {plan.unit}
-                    </Typography>
+      {/* ---------- Hero ---------- */}
+      <PageHero
+        eyebrow={t('pricing.eyebrow', 'Transparent rates in Swiss francs')}
+        title={t('pricing.pageTitle')}
+        subtitle={t('pricing.pageSubtitle')}
+        ogham="Pricing"
+      >
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: { xs: 2, sm: 3 } }}>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
+            <Button
+              component={RouterLink}
+              to="/contact"
+              variant="contained"
+              color="secondary"
+              size="large"
+              endIcon={<ArrowForwardIcon className="flip-in-rtl" />}
+            >
+              {t('pricing.cta.button')}
+            </Button>
+            <Button
+              href="#rates"
+              variant="outlined"
+              size="large"
+              endIcon={<ArrowDownwardIcon className="keep-direction" />}
+              sx={{
+                color: '#fff',
+                borderColor: 'rgba(255,255,255,0.4)',
+                '&:hover': { borderColor: '#fff', bgcolor: 'rgba(255,255,255,0.06)' },
+              }}
+            >
+              {t('pricing.rates.title')}
+            </Button>
+          </Box>
+          {/* "Starting at CHF 0.08 per word" */}
+          <Box
+            sx={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 1.5,
+              paddingInlineStart: { xs: 0, sm: 3 },
+              borderInlineStart: { xs: 'none', sm: '1px solid rgba(255,255,255,0.2)' },
+            }}
+          >
+            <Box>
+              <Typography component="span" variant="overline" sx={{ display: 'block', color: 'rgba(255,255,255,0.6)', lineHeight: 1.4 }}>
+                {t('pricing.startingAt')}
+              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 0.75, flexWrap: 'wrap' }}>
+                <Box component="span" sx={{ direction: 'ltr', unicodeBidi: 'isolate', fontFamily: fonts.display, fontSize: '1.75rem', fontWeight: 600, lineHeight: 1.1 }}>
+                  <Box component="span" sx={{ fontFamily: fonts.body, fontSize: '0.8rem', fontWeight: 800, letterSpacing: '0.12em', color: tokens.mint, marginInlineEnd: '6px' }}>
+                    CHF
                   </Box>
-                  <Typography variant="subtitle1" align="center" sx={{ fontStyle: 'italic', mb: 3 }}>
-                    {plan.description}
-                  </Typography>
-                  <List sx={{ flexGrow: 1 }}>
-                    {plan.features.map((feature) => (
-                      <ListItem key={feature.text} sx={{ py: 0.5 }}>
-                        <ListItemIcon sx={{ minWidth: 35 }}>
-                          {feature.included ? (
-                            <CheckIcon sx={{ color: 'success.main' }} />
-                          ) : (
-                            <CloseIcon sx={{ color: 'text.disabled' }} />
-                          )}
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={feature.text}
-                          primaryTypographyProps={{
-                            color: feature.included ? 'textPrimary' : 'textSecondary',
-                            style: !feature.included ? { textDecoration: 'line-through' } : {}
-                          }}
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
-                  <Button
-                    component={RouterLink}
-                    to="/contact"
-                    variant={plan.accent ? 'contained' : 'outlined'}
-                    color={plan.accent ? 'secondary' : 'primary'}
-                    fullWidth
-                    sx={{ mt: 3 }}
-                  >
-                    {t('pricing.cta.button')}
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+                  0.08
+                </Box>
+                <Typography component="span" sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem' }}>
+                  {t('pricing.perWord')}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </PageHero>
 
-      {/* Detailed Pricing Table */}
-      <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
-        <Container maxWidth="lg">
-          <Typography variant="h4" component="h2" align="center" gutterBottom>
-            {t('pricing.rates.title')}
-          </Typography>
-          <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-            {t('pricing.rates.subtitle')}
-          </Typography>
-
-          <TableContainer component={Paper} sx={{ mb: 4, overflow: 'hidden', boxShadow: 3 }}>
-            <Table>
-              <TableHead>
-                <TableRow sx={{ bgcolor: 'primary.main' }}>
-                  <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>{t('pricing.rates.headers.service')}</TableCell>
-                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>{t('pricing.standard')}</TableCell>
-                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>{t('pricing.professional')}</TableCell>
-                  <TableCell align="center" sx={{ color: 'white', fontWeight: 'bold' }}>{t('pricing.premium')}</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {serviceRates.map((row) => (
-                  <TableRow
-                    key={row.service}
-                    sx={{ '&:last-child td, &:last-child th': { border: 0 }, '&:hover': { bgcolor: 'rgba(0, 0, 0, 0.04)' } }}
-                  >
-                    <TableCell component="th" scope="row">
-                      {row.service}
-                      {row.note && (
-                        <Typography variant="caption" display="block" color="text.secondary">
-                          {row.note}
-                        </Typography>
-                      )}
-                    </TableCell>
-                    <TableCell align="center">CHF {row.standard}</TableCell>
-                    <TableCell align="center">CHF {row.professional}</TableCell>
-                    <TableCell align="center">CHF {row.premium}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-
-          <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="body2" color="text.secondary">
-              {t('pricing.rates.note')}
-            </Typography>
+      {/* ---------- 01 · Packages ---------- */}
+      <Box component="section" sx={{ ...sectionPy, position: 'relative', overflow: 'hidden' }}>
+        {/* Faint carved stem behind the cards */}
+        <Box
+          aria-hidden
+          sx={{ position: 'absolute', insetInline: '-4%', top: { xs: '30%', md: '46%' }, color: tokens.picton, opacity: 0.1, pointerEvents: 'none' }}
+        >
+          <OghamMark text="Standard Professional Premium" strokeLength={46} strokeWidth={1.5} stagger={30} sx={{ width: '100%', height: 'auto' }} />
+        </Box>
+        <Container maxWidth="lg" sx={{ position: 'relative' }}>
+          <SectionHeading eyebrow="01" title={t('pricing.packages.title')} subtitle={t('pricing.packages.subtitle')} />
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', md: 'repeat(3, minmax(0, 1fr))' },
+              gap: { xs: 4, md: 3, lg: 4 },
+              alignItems: 'stretch',
+              maxWidth: { xs: 480, md: 'none' },
+              mx: 'auto',
+            }}
+          >
+            {pricingPlans.map((plan, i) => (
+              <Reveal key={plan.key} delay={i * 110} sx={{ height: '100%', order: { xs: plan.featured ? -1 : i, md: i } }}>
+                <PlanCard plan={plan} index={i} featured={plan.featured} t={t} />
+              </Reveal>
+            ))}
           </Box>
         </Container>
       </Box>
 
-      {/* Custom Quote */}
-      <Container maxWidth="md" sx={{ py: 8 }}>
-        <Paper sx={{ p: 4, borderRadius: 2, bgcolor: 'primary.light', color: 'white', textAlign: 'center', boxShadow: 3 }}>
-          <Typography variant="h4" component="h2" gutterBottom>
-            {t('pricing.cta.title')}
-          </Typography>
-          <Typography variant="body1" paragraph sx={{ mb: 4, maxWidth: 800, mx: 'auto' }}>
-            {t('pricing.cta.subtitle')}
-          </Typography>
-          <Button
-            variant="contained"
-            color="secondary"
-            size="large"
-            component={RouterLink}
-            to="/contact"
-            sx={{ py: 1.5, px: 4 }}
-          >
-            {t('pricing.cta.button')}
-          </Button>
-        </Paper>
-      </Container>
-
-      {/* FAQs */}
-      <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
+      {/* ---------- 02 · How pricing works ---------- */}
+      <Box component="section" sx={{ ...sectionPy, bgcolor: tokens.paperDeep, borderBlock: `1px solid ${tokens.line}` }}>
         <Container maxWidth="lg">
-          <Typography variant="h4" component="h2" align="center" gutterBottom>
-            {t('pricing.faqs.title')}
-          </Typography>
-          <Typography variant="body1" align="center" paragraph sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}>
-            {t('pricing.faqs.subtitle')}
-          </Typography>
+          <SectionHeading eyebrow="02" title={t('pricing.process.title')} subtitle={t('pricing.process.subtitle')} align="start" />
+          <PricingProcess steps={processSteps} />
+        </Container>
+      </Box>
 
-          <Grid container spacing={2}>
-            {faqs.map((faq, index) => (
-              <Grid item xs={12} key={index}>
-                <Accordion>
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls={`panel${index}-content`}
-                    id={`panel${index}-header`}
-                    sx={{ bgcolor: 'rgba(0, 0, 0, 0.03)' }}
-                  >
-                    <Typography variant="h6">{faq.question}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography variant="body1">{faq.answer}</Typography>
-                  </AccordionDetails>
-                </Accordion>
+      {/* ---------- 03 · Detailed rates ---------- */}
+      <Box component="section" id="rates" sx={{ pt: { xs: 10, md: 14 }, pb: { xs: 6, md: 8 } }}>
+        <Container maxWidth="lg">
+          <SectionHeading eyebrow="03" title={t('pricing.rates.title')} subtitle={t('pricing.rates.subtitle')} />
+          <Reveal variant="scale">
+            <RatesTable rows={serviceRates} label={t('pricing.rates.title')} t={t} />
+          </Reveal>
+          <Reveal delay={120}>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, mt: 3, color: tokens.textMuted }}>
+              <InfoOutlinedIcon className="keep-direction" sx={{ fontSize: 18, color: tokens.picton }} />
+              <Typography variant="body2">{t('pricing.rates.note')}</Typography>
+            </Box>
+          </Reveal>
+        </Container>
+      </Box>
+
+      {/* ---------- CTA ---------- */}
+      <Box component="section" sx={{ pt: { xs: 4, md: 6 }, pb: { xs: 10, md: 14 } }}>
+        <Container maxWidth="lg">
+          <Reveal variant="scale">
+            <Box
+              className="grain"
+              sx={{
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: { xs: '24px', md: '32px' },
+                background: tokens.heroBackground,
+                color: '#fff',
+                px: { xs: 3.5, sm: 6, md: 9 },
+                py: { xs: 7, md: 10 },
+                boxShadow: `0 50px 100px -50px ${alpha(tokens.ink, 0.7)}`,
+              }}
+            >
+              <GlyphField opacity={0.06} density={0.5} />
+              <Grid container spacing={{ xs: 4, md: 6 }} alignItems="center" sx={{ position: 'relative' }}>
+                <Grid item xs={12} lg={7}>
+                  <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
+                    {t('pricing.cta.title')}
+                  </Typography>
+                  <Typography sx={{ color: 'rgba(255,255,255,0.78)', fontSize: { xs: '1.08rem', md: '1.2rem' }, lineHeight: 1.6, maxWidth: 520 }}>
+                    {t('pricing.cta.subtitle')}
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} lg={5}>
+                  <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row', lg: 'column' }, flexWrap: 'wrap', alignItems: { xs: 'flex-start', md: 'center', lg: 'flex-end' }, gap: { xs: 2.5, md: 4, lg: 2.5 } }}>
+                    <Button
+                      component={RouterLink}
+                      to="/contact"
+                      variant="contained"
+                      color="secondary"
+                      size="large"
+                      endIcon={<ArrowForwardIcon className="flip-in-rtl" />}
+                      sx={{ minHeight: 56, px: 4 }}
+                    >
+                      {t('pricing.cta.button')}
+                    </Button>
+                    <Link
+                      href="mailto:info@oghamtranslations.com"
+                      aria-label={`${t('common.footer.email')}: info@oghamtranslations.com`}
+                      sx={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 1,
+                        minHeight: 44,
+                        color: 'rgba(255,255,255,0.78)',
+                        textDecoration: 'none',
+                        fontWeight: 600,
+                        transition: 'color .2s',
+                        overflowWrap: 'anywhere',
+                        '&:hover': { color: tokens.mint },
+                      }}
+                    >
+                      <MailOutlineIcon className="keep-direction" sx={{ fontSize: 20, color: tokens.picton }} />
+                      info@oghamtranslations.com
+                    </Link>
+                  </Box>
+                </Grid>
               </Grid>
-            ))}
+              {/* "Request a quote", carved along the foot of the card */}
+              <Box aria-hidden sx={{ position: 'relative', mt: { xs: 5, md: 7 }, mx: { xs: -1, md: 0 }, color: tokens.mint, opacity: 0.4 }}>
+                <OghamMark text="Request a quote" strokeLength={13} strokeWidth={1.5} stagger={45} delay={300} sx={{ width: '100%', height: 'auto' }} />
+              </Box>
+            </Box>
+          </Reveal>
+        </Container>
+      </Box>
+
+      {/* ---------- 04 · FAQs ---------- */}
+      <Box component="section" sx={{ ...sectionPy, bgcolor: tokens.paperDeep, borderBlock: `1px solid ${tokens.line}` }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={{ xs: 2, md: 8 }}>
+            <Grid item xs={12} md={5}>
+              <Box sx={{ position: { md: 'sticky' }, top: { md: 120 } }}>
+                <SectionHeading eyebrow="04" title={t('pricing.faqs.title')} subtitle={t('pricing.faqs.subtitle')} align="start" sx={{ mb: { xs: 4, md: 5 } }} />
+                <Reveal variant="fade" delay={200}>
+                  <Box sx={{ display: { xs: 'none', md: 'block' }, color: tokens.shamrock, opacity: 0.55 }}>
+                    <OghamMark text="Questions" strokeLength={18} strokeWidth={2} stagger={60} sx={{ width: 240, height: 'auto' }} />
+                  </Box>
+                </Reveal>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={7}>
+              <PricingFaq faqs={faqs} />
+            </Grid>
           </Grid>
         </Container>
       </Box>
 
-      {/* Satisfaction Guarantee */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" component="h2" gutterBottom>
-              {t('pricing.guarantee.title')}
-            </Typography>
-            <Typography variant="body1" paragraph>
-              {t('pricing.guarantee.description')}
-            </Typography>
-            <Typography variant="body1" paragraph>
-              {t('pricing.guarantee.provisions')}
-            </Typography>
-            <List>
-              {[
-                t('pricing.guarantee.points.accurate'),
-                t('pricing.guarantee.points.onTime'),
-                t('pricing.guarantee.points.consistent'),
-                t('pricing.guarantee.points.responsive')
-              ].map((point, index) => (
-                <ListItem key={index} sx={{ py: 0.5 }}>
-                  <ListItemIcon sx={{ minWidth: 35 }}>
-                    <CheckIcon sx={{ color: 'success.main' }} />
-                  </ListItemIcon>
-                  <ListItemText primary={point} />
-                </ListItem>
-              ))}
-            </List>
+      {/* ---------- 05 · Guarantee & payment terms ---------- */}
+      <Box component="section" sx={{ ...sectionPy, position: 'relative', overflow: 'hidden' }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={{ xs: 8, md: 10, lg: 8 }} alignItems="center">
+            <Grid item xs={12} lg={7}>
+              <SectionHeading eyebrow="05" title={t('pricing.guarantee.title')} align="start" sx={{ mb: { xs: 3, md: 4 } }} />
+              <Reveal delay={100}>
+                <Typography
+                  sx={{
+                    position: 'relative',
+                    fontFamily: fonts.display,
+                    fontSize: { xs: '1.15rem', md: '1.3rem' },
+                    lineHeight: 1.65,
+                    color: tokens.text,
+                    paddingInlineStart: { xs: 2.5, md: 3.5 },
+                    mb: 5,
+                    '&::before': {
+                      content: '""',
+                      position: 'absolute',
+                      insetInlineStart: 0,
+                      top: 6,
+                      bottom: 6,
+                      width: 3,
+                      borderRadius: 3,
+                      background: tokens.gradient,
+                    },
+                  }}
+                >
+                  {t('pricing.guarantee.description')}
+                </Typography>
+              </Reveal>
+              <Reveal delay={160}>
+                <Typography variant="overline" component="p" sx={{ display: 'block', color: tokens.textMuted, mb: 2 }}>
+                  {t('pricing.guarantee.provisions')}
+                </Typography>
+              </Reveal>
+              <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0, display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 1.5 }}>
+                {guaranteePoints.map((point, i) => (
+                  <Reveal key={point} component="li" delay={200 + i * 80}>
+                    <Box
+                      sx={{
+                        height: '100%',
+                        display: 'flex',
+                        gap: 1.5,
+                        alignItems: 'flex-start',
+                        p: 2,
+                        borderRadius: '16px',
+                        border: `1px solid ${tokens.line}`,
+                        bgcolor: '#fff',
+                        transition: `transform .4s ${easing.out}, border-color .3s, box-shadow .4s`,
+                        '&:hover': {
+                          transform: 'translateY(-3px)',
+                          borderColor: alpha(tokens.shamrock, 0.4),
+                          boxShadow: '0 18px 36px -26px rgba(7,26,43,0.35)',
+                        },
+                      }}
+                    >
+                      <Box
+                        aria-hidden
+                        sx={{ flexShrink: 0, width: 26, height: 26, borderRadius: '50%', display: 'grid', placeItems: 'center', bgcolor: alpha(tokens.shamrock, 0.12), color: tokens.shamrock }}
+                      >
+                        <CheckIcon className="check-icon" sx={{ fontSize: 16 }} />
+                      </Box>
+                      <Typography variant="body2" sx={{ color: tokens.text, fontSize: '0.975rem', fontWeight: 600 }}>
+                        {point}
+                      </Typography>
+                    </Box>
+                  </Reveal>
+                ))}
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} lg={5}>
+              <Reveal variant="end" delay={120}>
+                <Box sx={{ position: 'relative', maxWidth: 440, mx: 'auto' }}>
+                  <Box sx={{ display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1, mb: '-84px' }}>
+                    <GuaranteeSeal label={t('pricing.guarantee.title')} size={200} />
+                  </Box>
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      borderRadius: '22px',
+                      border: `1px solid ${tokens.line}`,
+                      bgcolor: '#fff',
+                      px: { xs: 3, md: 4 },
+                      pt: '116px',
+                      pb: { xs: 3.5, md: 4 },
+                      boxShadow: '0 1px 2px rgba(7,26,43,0.04), 0 30px 60px -36px rgba(7,26,43,0.3)',
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
+                      <Box
+                        aria-hidden
+                        sx={{ width: 44, height: 44, borderRadius: '12px', display: 'grid', placeItems: 'center', bgcolor: alpha(tokens.picton, 0.12), color: tokens.indigo, flexShrink: 0 }}
+                      >
+                        <AccountBalanceWalletOutlinedIcon className="keep-direction" />
+                      </Box>
+                      <Typography variant="h3" component="h3" sx={{ fontSize: '1.5rem' }}>
+                        {t('pricing.paymentTerms')}
+                      </Typography>
+                    </Box>
+                    <Typography variant="body2" sx={{ color: tokens.textMuted, fontSize: '1rem' }}>
+                      {t('pricing.termsDescription')}
+                    </Typography>
+                    <Box aria-hidden sx={{ mt: 3, pt: 2.5, borderTop: `1px dashed ${tokens.line}`, color: tokens.picton, opacity: 0.6 }}>
+                      <OghamMark text="Payment" strokeLength={10} strokeWidth={1.75} stagger={50} sx={{ height: 30, width: 'auto', maxWidth: '100%' }} />
+                    </Box>
+                  </Box>
+                </Box>
+              </Reveal>
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Box sx={{ p: 4, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 3 }}>
-              <Typography variant="h5" gutterBottom>
-                <InfoOutlinedIcon sx={{ verticalAlign: 'middle', mr: 1, color: 'primary.main' }} />
-                {t('pricing.paymentTerms')}
-              </Typography>
-              <Divider sx={{ mb: 3 }} />
-              <Typography variant="body2" paragraph>
-                {t('pricing.termsDescription')}
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </Box>
     </Box>
   );
 };

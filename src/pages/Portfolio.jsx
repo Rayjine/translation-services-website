@@ -1,117 +1,106 @@
 import { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Link as RouterLink } from 'react-router-dom';
+import { pdfjs } from 'react-pdf';
 
 // Configure PDF.js worker path
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url
 ).toString();
-import {
-  Box,
-  Container,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  CardMedia,
-  CardActionArea,
-  Tabs,
-  Tab,
-  Button,
-  Chip,
-  Paper,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  IconButton,
-} from '@mui/material';
+import { Box, Button, Container, Tab, Tabs, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import CloseIcon from '@mui/icons-material/Close';
-import DownloadIcon from '@mui/icons-material/Download';
-import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
-import TranslateIcon from '@mui/icons-material/Translate';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import PageHero from '../components/ui/PageHero';
+import Reveal from '../components/ui/Reveal';
+import Marquee from '../components/ui/Marquee';
+import OghamMark from '../components/ui/OghamMark';
+import GlyphField from '../components/ui/GlyphField';
+import ProjectCard from '../components/portfolio/ProjectCard';
+import ProjectDialog from '../components/portfolio/ProjectDialog';
+import PairArrow from '../components/portfolio/PairArrow';
+import { tokens, fonts, easing } from '../theme';
 
 // Portfolio showcase items with translation keys
 const getShowcaseItems = (t) => {
   // Get the array of showcase items from translations
   const showcaseItemsArray = t('portfolio.showcaseItems', { returnObjects: true });
-  
+
   // Create the complete showcase items by adding additional properties
   return [
     {
       id: 1,
       title: showcaseItemsArray[0].title,
       description: showcaseItemsArray[0].description,
-      tags: [t('portfolio.categories.legal'), t('portfolio.languages.french'), t('portfolio.languages.english')],
-      category: "legal",
-      thumbnailSrc: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=500&auto=format&fit=crop&q=60",
-      beforePdf: "/pdfs/contract-english.pdf",
-      afterPdf: "/pdfs/contract-french.pdf",
-      featured: true
+      category: 'legal',
+      source: 'english',
+      target: 'french',
+      thumbnailSrc: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=500&auto=format&fit=crop&q=60',
+      beforePdf: '/pdfs/contract-english.pdf',
+      afterPdf: '/pdfs/contract-french.pdf',
+      featured: true,
     },
     {
       id: 2,
       title: showcaseItemsArray[1].title,
       description: showcaseItemsArray[1].description,
-      tags: [t('portfolio.categories.medical'), t('portfolio.languages.german'), t('portfolio.languages.english')],
-      category: "medical",
-      thumbnailSrc: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60",
-      beforePdf: "/pdfs/medical-german.pdf",
-      afterPdf: "/pdfs/medical-english.pdf",
-      featured: true
+      category: 'medical',
+      source: 'german',
+      target: 'english',
+      thumbnailSrc: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60',
+      beforePdf: '/pdfs/medical-german.pdf',
+      afterPdf: '/pdfs/medical-english.pdf',
+      featured: true,
     },
     {
       id: 3,
       title: showcaseItemsArray[2].title,
       description: showcaseItemsArray[2].description,
-      tags: [t('portfolio.categories.technical'), t('portfolio.languages.french'), t('portfolio.languages.japanese')],
-      category: "technical",
-      thumbnailSrc: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=500&auto=format&fit=crop&q=60",
-      beforePdf: "/pdfs/report-french.pdf",
-      afterPdf: "/pdfs/report-japanese.pdf",
-      featured: false
+      category: 'technical',
+      source: 'french',
+      target: 'japanese',
+      thumbnailSrc: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=500&auto=format&fit=crop&q=60',
+      beforePdf: '/pdfs/report-french.pdf',
+      afterPdf: '/pdfs/report-japanese.pdf',
+      featured: false,
     },
     {
       id: 4,
       title: showcaseItemsArray[3].title,
       description: showcaseItemsArray[3].description,
-      tags: [t('portfolio.categories.marketing'), t('portfolio.languages.english'), t('portfolio.languages.mandarin')],
-      category: "marketing",
-      thumbnailSrc: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&auto=format&fit=crop&q=60",
-      beforePdf: "/pdfs/marketing-english.pdf",
-      afterPdf: "/pdfs/marketing-mandarin.pdf",
-      featured: false
+      category: 'marketing',
+      source: 'english',
+      target: 'mandarin',
+      thumbnailSrc: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500&auto=format&fit=crop&q=60',
+      beforePdf: '/pdfs/marketing-english.pdf',
+      afterPdf: '/pdfs/marketing-mandarin.pdf',
+      featured: false,
     },
     {
       id: 5,
       title: showcaseItemsArray[4].title,
       description: showcaseItemsArray[4].description,
-      tags: [t('portfolio.categories.literary'), t('portfolio.languages.russian'), t('portfolio.languages.italian')],
-      category: "literary",
-      thumbnailSrc: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=500&auto=format&fit=crop&q=60",
-      beforePdf: "/pdfs/story-russian.pdf",
-      afterPdf: "/pdfs/story-italian.pdf",
-      featured: false
-    }
+      category: 'literary',
+      source: 'russian',
+      target: 'italian',
+      thumbnailSrc: 'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=500&auto=format&fit=crop&q=60',
+      beforePdf: '/pdfs/story-russian.pdf',
+      afterPdf: '/pdfs/story-italian.pdf',
+      featured: false,
+    },
   ];
 };
 
+const CATEGORIES = ['all', 'featured', 'legal', 'medical', 'technical', 'marketing', 'literary'];
+
 const Portfolio = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const showcaseItems = getShowcaseItems(t);
   const [category, setCategory] = useState('all');
   const [selectedItem, setSelectedItem] = useState(null);
   const [open, setOpen] = useState(false);
   const [viewMode, setViewMode] = useState('comparison'); // 'comparison', 'before', 'after'
-  const [numPages, setNumPages] = useState({
-    before: null,
-    after: null
-  });
-  const [pageNumber, setPageNumber] = useState({
-    before: 1,
-    after: 1
-  });
+  const [numPages, setNumPages] = useState({ before: null, after: null });
+  const [pageNumber, setPageNumber] = useState({ before: 1, after: 1 });
 
   const handleCategoryChange = (event, newValue) => {
     setCategory(newValue);
@@ -129,442 +118,381 @@ const Portfolio = () => {
     setOpen(false);
   };
 
-  const filteredItems = category === 'all' 
-    ? showcaseItems 
+  const filteredItems = category === 'all'
+    ? showcaseItems
     : category === 'featured'
-      ? showcaseItems.filter(item => item.featured)
-      : showcaseItems.filter(item => item.category === category);
+      ? showcaseItems.filter((item) => item.featured)
+      : showcaseItems.filter((item) => item.category === category);
 
   // Function to handle success loading of PDF document
   const onDocumentLoadSuccess = (pdf, type) => {
-    setNumPages(prev => ({
-      ...prev,
-      [type]: pdf.numPages
-    }));
+    setNumPages((prev) => ({ ...prev, [type]: pdf.numPages }));
   };
 
   // Function to change page
   const changePage = (offset, type) => {
-    setPageNumber(prev => ({
-      ...prev,
-      [type]: prev[type] + offset
-    }));
+    setPageNumber((prev) => ({ ...prev, [type]: prev[type] + offset }));
   };
 
-  // Function to go to previous page
-  const previousPage = (type) => {
-    changePage(-1, type);
-  };
+  const previousPage = (type) => changePage(-1, type);
+  const nextPage = (type) => changePage(1, type);
 
-  // Function to go to next page
-  const nextPage = (type) => {
-    changePage(1, type);
-  };
+  // Featured samples get the wide, cinematic treatment; a lone result does too.
+  const isLarge = (item) => item.featured || filteredItems.length === 1;
 
-  const renderPdfControls = (type, file) => (
-    <Box sx={{
-      width: '100%',
-      px: 2,
-      py: 1,
-      borderTop: '1px solid #e0e0e0',
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      gap: 1,
-    }}>
-      {numPages[type] && (
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, flexWrap: 'wrap' }}>
-          <Button size="small" disabled={pageNumber[type] <= 1} onClick={() => previousPage(type)} variant="outlined">
-            {t('portfolio.preview.prevPage')}
-          </Button>
-          <Typography variant="body2" sx={{ whiteSpace: 'nowrap' }}>
-            {pageNumber[type]} / {numPages[type]}
-          </Typography>
-          <Button size="small" disabled={pageNumber[type] >= numPages[type]} onClick={() => nextPage(type)} variant="outlined">
-            {t('portfolio.preview.nextPage')}
-          </Button>
-        </Box>
-      )}
-      <Button
-        variant="outlined"
-        startIcon={<DownloadIcon />}
-        component="a"
-        href={file}
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ minHeight: 44, textAlign: 'center', whiteSpace: 'normal' }}
-      >
-        {type === 'before' ? t('portfolio.preview.downloadSource') : t('portfolio.preview.downloadTranslation')}
-      </Button>
-    </Box>
-  );
+  const steps = [
+    t('portfolio.viewProject'),
+    t('portfolio.viewModes.comparison'),
+    t('portfolio.preview.downloadTranslation'),
+  ];
 
-  // Render actual PDFs using react-pdf
-  const renderPdfPreview = (mode) => {
-    if (!selectedItem) return null;
-    
-    return (
-      <Box sx={{ 
-        height: '65vh', 
-        bgcolor: '#f5f5f5', 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        justifyContent: 'flex-start',
-        border: '1px solid #e0e0e0',
-        borderRadius: 1,
-        overflow: 'auto'
-      }}>
-        {mode === 'comparison' ? (
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-              <Paper elevation={0} sx={{ height: '100%', p: 2, backgroundColor: 'rgba(3, 20, 42, 0.05)' }}>
-                <Typography variant="subtitle1" sx={{ mb: 1, color: 'primary.main', fontWeight: 'bold' }}>
-                  {t('portfolio.preview.sourceDocument')}
-                </Typography>
-                <Box 
-                  sx={{ 
-                    height: '55vh', 
-                    bgcolor: 'white', 
-                    display: 'flex',
-                    flexDirection: 'column',
-                    minWidth: 0,
-                  }}
-                >
-                  <Box sx={{ flex: 1, minHeight: 0, overflow: 'auto', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Document
-                    file={selectedItem.beforePdf}
-                    onLoadSuccess={(pdf) => onDocumentLoadSuccess(pdf, 'before')}
-                    onLoadError={(error) => console.error('Error loading PDF:', error)}
-                    loading={
-                      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                        <Typography variant="body2" color="textSecondary" align="center">
-                          {t('portfolio.preview.loading')}
-                        </Typography>
-                      </Box>
-                    }
-                    noData={
-                      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                        <TranslateIcon sx={{ fontSize: 80, color: 'rgba(3, 20, 42, 0.2)', mb: 2 }} />
-                        <Typography variant="body2" color="textSecondary" align="center">
-                          {t('portfolio.preview.noData')}
-                        </Typography>
-                      </Box>
-                    }
-                    error={
-                      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                        <Typography variant="body2" color="textSecondary" align="center" sx={{ color: 'error.main' }}>
-                          {t('portfolio.preview.errorLoading')}
-                        </Typography>
-                      </Box>
-                    }
-                  >
-                    <Page 
-                      pageNumber={pageNumber.before} 
-                      width={280}
-                      renderAnnotationLayer={false}
-                      renderTextLayer={false}
-                    />
-                  </Document>
-                  </Box>
-                  {renderPdfControls('before', selectedItem.beforePdf)}
-                </Box>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Paper elevation={0} sx={{ height: '100%', p: 2, backgroundColor: 'rgba(0, 168, 232, 0.05)' }}>
-                <Typography variant="subtitle1" sx={{ mb: 1, color: 'primary.main', fontWeight: 'bold' }}>
-                  {t('portfolio.preview.translatedDocument')}
-                </Typography>
-                <Box 
-                  sx={{ 
-                    height: '55vh', 
-                    bgcolor: 'white', 
-                    display: 'flex',
-                    flexDirection: 'column',
-                    minWidth: 0,
-                  }}
-                >
-                  <Box sx={{ flex: 1, minHeight: 0, overflow: 'auto', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Document
-                    file={selectedItem.afterPdf}
-                    onLoadSuccess={(pdf) => onDocumentLoadSuccess(pdf, 'after')}
-                    onLoadError={(error) => console.error('Error loading PDF:', error)}
-                    loading={
-                      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                        <Typography variant="body2" color="textSecondary" align="center">
-                          {t('portfolio.preview.loading')}
-                        </Typography>
-                      </Box>
-                    }
-                    noData={
-                      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                        <TranslateIcon sx={{ fontSize: 80, color: 'rgba(0, 168, 232, 0.2)', mb: 2 }} />
-                        <Typography variant="body2" color="textSecondary" align="center">
-                          {t('portfolio.preview.noData')}
-                        </Typography>
-                      </Box>
-                    }
-                    error={
-                      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                        <Typography variant="body2" color="textSecondary" align="center" sx={{ color: 'error.main' }}>
-                          {t('portfolio.preview.errorLoading')}
-                        </Typography>
-                      </Box>
-                    }
-                  >
-                    <Page 
-                      pageNumber={pageNumber.after} 
-                      width={280}
-                      renderAnnotationLayer={false}
-                      renderTextLayer={false}
-                    />
-                  </Document>
-                  </Box>
-                  {renderPdfControls('after', selectedItem.afterPdf)}
-                </Box>
-              </Paper>
-            </Grid>
-          </Grid>
-        ) : (
-          <Box sx={{ width: '100%', height: '100%', p: 2 }}>
-            <Typography variant="subtitle1" sx={{ mb: 1, color: 'primary.main', fontWeight: 'bold' }}>
-              {mode === 'before' ? t('portfolio.preview.sourceDocument') : t('portfolio.preview.translatedDocument')}
-            </Typography>
-            <Box 
-              sx={{ 
-                height: '55vh', 
-                bgcolor: 'white', 
-                display: 'flex',
-                flexDirection: 'column',
-                minWidth: 0,
-              }}
-            >
-              <Box sx={{ flex: 1, minHeight: 0, overflow: 'auto', p: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Document
-                file={mode === 'before' ? selectedItem.beforePdf : selectedItem.afterPdf}
-                onLoadSuccess={(pdf) => onDocumentLoadSuccess(pdf, mode)}
-                onLoadError={(error) => console.error('Error loading PDF:', error)}
-                loading={
-                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <Typography variant="body2" color="textSecondary" align="center">
-                      {t('portfolio.preview.loading')}
-                    </Typography>
-                  </Box>
-                }
-                noData={
-                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <TranslateIcon sx={{ fontSize: 80, color: mode === 'before' ? 'rgba(3, 20, 42, 0.2)' : 'rgba(0, 168, 232, 0.2)', mb: 2 }} />
-                    <Typography variant="body2" color="textSecondary" align="center">
-                      {t('portfolio.preview.noData')}
-                    </Typography>
-                  </Box>
-                }
-                error={
-                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <Typography variant="body2" color="textSecondary" align="center" sx={{ color: 'error.main' }}>
-                      {t('portfolio.preview.errorLoading')}
-                    </Typography>
-                  </Box>
-                }
-              >
-                <Page 
-                  pageNumber={pageNumber[mode]} 
-                  width={500}
-                  renderAnnotationLayer={false}
-                  renderTextLayer={false}
-                />
-              </Document>
-              </Box>
-              {renderPdfControls(mode, mode === 'before' ? selectedItem.beforePdf : selectedItem.afterPdf)}
-            </Box>
-          </Box>
-        )}
-      </Box>
-    );
-  };
+  const pairs = showcaseItems.map((item) => [t(`portfolio.languages.${item.source}`), t(`portfolio.languages.${item.target}`)]);
 
   return (
     <Box>
-      {/* Hero Section */}
-      <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 6 }}>
+      <PageHero
+        eyebrow={t('common.menu.portfolio')}
+        title={t('portfolio.pageTitle')}
+        subtitle={t('portfolio.pageSubtitle')}
+        ogham="Portfolio"
+      />
+
+      {/* Language-pair ticker */}
+      <Box
+        aria-hidden
+        sx={{
+          bgcolor: tokens.paperDeep,
+          borderBottom: `1px solid ${tokens.line}`,
+          py: { xs: 2, md: 2.5 },
+        }}
+      >
+        <Marquee duration={38} gap={56}>
+          {[...pairs, ...pairs].map(([from, to], i) => (
+            <Box
+              key={i}
+              dir={i18n.dir()}
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 2,
+                whiteSpace: 'nowrap',
+                fontFamily: fonts.display,
+                fontStyle: 'italic',
+                fontSize: { xs: '1.15rem', md: '1.45rem' },
+                color: tokens.text,
+              }}
+            >
+              <span>{from}</span>
+              <PairArrow width={36} sx={{ color: tokens.shamrock }} />
+              <span>{to}</span>
+              <Box component="span" sx={{ display: 'inline-flex', gap: '3px', marginInlineStart: 4, color: tokens.picton }}>
+                {[0, 1, 2, 3].map((n) => (
+                  <Box key={n} component="span" sx={{ width: '2px', height: 16, bgcolor: 'currentColor', borderRadius: 1, opacity: 0.8 }} />
+                ))}
+              </Box>
+            </Box>
+          ))}
+        </Marquee>
+      </Box>
+
+      <Box component="section" sx={{ py: { xs: 8, md: 12 } }}>
         <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" gutterBottom>
-            {t('portfolio.pageTitle')}
-          </Typography>
-          <Typography variant="h5" sx={{ mb: 4, fontWeight: 300 }}>
-            {t('portfolio.pageSubtitle')}
-          </Typography>
+          {/* Editorial intro: what the samples are and how to read them */}
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', md: '7fr 5fr' },
+              gap: { xs: 5, md: 10 },
+              alignItems: 'start',
+              mb: { xs: 7, md: 10 },
+            }}
+          >
+            <Box>
+              <Reveal variant="fade">
+                <Typography
+                  variant="overline"
+                  component="h2"
+                  sx={{ display: 'inline-flex', alignItems: 'center', gap: 1.25, color: 'secondary.dark', mb: 2 }}
+                >
+                  <Box component="span" aria-hidden sx={{ display: 'inline-flex', gap: '3px' }}>
+                    {[0, 1, 2].map((i) => (
+                      <Box key={i} component="span" sx={{ width: '2px', height: 12, borderRadius: 1, bgcolor: 'currentColor', opacity: 1 - i * 0.25 }} />
+                    ))}
+                  </Box>
+                  {t('portfolio.beforeAfter')}
+                </Typography>
+              </Reveal>
+              <Reveal delay={80}>
+                <Typography
+                  sx={{
+                    fontFamily: fonts.display,
+                    fontWeight: 500,
+                    fontSize: { xs: '1.45rem', md: '2rem' },
+                    lineHeight: 1.4,
+                    letterSpacing: '-0.01em',
+                    color: tokens.text,
+                    textWrap: 'pretty',
+                  }}
+                >
+                  {t('home.portfolio.paragraph1')}
+                </Typography>
+              </Reveal>
+              <Reveal delay={160}>
+                <Typography variant="body1" sx={{ color: tokens.textMuted, mt: 2.5, maxWidth: 620 }}>
+                  {t('home.portfolio.paragraph2')}
+                </Typography>
+              </Reveal>
+            </Box>
+
+            {/* Three carved steps on an Ogham stem */}
+            <Box
+              component="ol"
+              sx={{
+                listStyle: 'none',
+                m: 0,
+                p: 0,
+                display: 'grid',
+                gap: 2,
+                position: 'relative',
+                mt: { md: 5 },
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  insetInlineStart: 35,
+                  top: 28,
+                  bottom: 28,
+                  width: '2px',
+                  background: `linear-gradient(to bottom, ${tokens.indigo}, ${tokens.shamrock})`,
+                  opacity: 0.35,
+                },
+              }}
+            >
+              {steps.map((label, i) => (
+                <Reveal key={label} component="li" variant="start" delay={120 + i * 110} sx={{ position: 'relative' }}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 2.5,
+                      p: 1,
+                      paddingInlineEnd: 2.5,
+                      borderRadius: 999,
+                      transition: `background-color .3s, transform .4s ${easing.out}`,
+                      '&:hover': { bgcolor: '#fff', transform: 'translateX(4px)' },
+                      '[dir="rtl"] &:hover': { transform: 'translateX(-4px)' },
+                    }}
+                  >
+                    <Box
+                      aria-hidden
+                      sx={{
+                        width: 40,
+                        height: 40,
+                        m: '0 8px',
+                        flexShrink: 0,
+                        borderRadius: '50%',
+                        display: 'grid',
+                        placeItems: 'center',
+                        position: 'relative',
+                        zIndex: 1,
+                        bgcolor: i === 2 ? tokens.ink : '#fff',
+                        color: i === 2 ? tokens.mint : tokens.indigo,
+                        border: `1.5px solid ${i === 2 ? tokens.ink : tokens.line}`,
+                        fontFamily: fonts.display,
+                        fontWeight: 600,
+                        fontSize: '0.95rem',
+                      }}
+                    >
+                      {String(i + 1).padStart(2, '0')}
+                    </Box>
+                    <Typography sx={{ fontWeight: 700, fontSize: '1.05rem', color: tokens.text }}>{label}</Typography>
+                  </Box>
+                </Reveal>
+              ))}
+            </Box>
+          </Box>
+
+          {/* Filter bar */}
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: { xs: 2.5, md: 4 },
+              mb: { xs: 4, md: 5 },
+            }}
+          >
+            <Tabs
+              value={category}
+              onChange={handleCategoryChange}
+              aria-label={t('portfolio.filterLabel', 'Filter projects by category')}
+              variant="scrollable"
+              scrollButtons={false}
+              sx={{
+                flex: { xs: '1 1 100%', md: '0 1 auto' },
+                maxWidth: '100%',
+                minHeight: 0,
+                p: '5px',
+                bgcolor: '#fff',
+                border: `1px solid ${tokens.line}`,
+                borderRadius: 999,
+                boxShadow: '0 1px 2px rgba(7,26,43,0.04), 0 14px 30px -22px rgba(7,26,43,0.35)',
+                '& .MuiTabs-scroller': { borderRadius: 999 },
+                '& .MuiTabs-indicator': {
+                  top: 0,
+                  bottom: 0,
+                  height: '100%',
+                  borderRadius: 999,
+                  bgcolor: tokens.ink,
+                  zIndex: 0,
+                  transition: `left .5s ${easing.out}, right .5s ${easing.out}, width .5s ${easing.out}`,
+                },
+                '& .MuiTabs-flexContainer': { gap: 0.25 },
+                '& .MuiTab-root': {
+                  zIndex: 1,
+                  minHeight: 44,
+                  minWidth: 0,
+                  px: { xs: 2, md: 2.25 },
+                  py: 1,
+                  borderRadius: 999,
+                  fontSize: '0.92rem',
+                  color: tokens.textMuted,
+                  transition: 'color .35s',
+                  '&:hover': { color: tokens.text },
+                  '&.Mui-selected': { color: '#fff' },
+                  '&.Mui-focusVisible': { outline: `2px solid ${tokens.indigo}`, outlineOffset: -2 },
+                  '&.Mui-selected.Mui-focusVisible': { outlineColor: tokens.picton },
+                },
+              }}
+            >
+              {CATEGORIES.map((value) => (
+                <Tab key={value} value={value} label={t(`portfolio.categories.${value}`)} disableRipple />
+              ))}
+            </Tabs>
+
+            <Box role="status" sx={{ display: 'flex', alignItems: 'baseline', gap: 1.5, color: tokens.text }}>
+              <Box
+                key={category}
+                component="span"
+                sx={{
+                  fontFamily: fonts.display,
+                  fontWeight: 500,
+                  fontSize: { xs: '2.25rem', md: '2.75rem' },
+                  lineHeight: 1,
+                  fontVariantNumeric: 'tabular-nums',
+                  animation: `page-enter .5s ${easing.out} both`,
+                }}
+              >
+                {String(filteredItems.length).padStart(2, '0')}
+              </Box>
+              <Typography component="span" variant="overline" sx={{ color: tokens.textMuted }}>
+                {t(`portfolio.categories.${category}`)}
+              </Typography>
+            </Box>
+          </Box>
+
+          {/* Showcase grid */}
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(12, 1fr)' },
+              gap: { xs: 3, md: 4 },
+            }}
+          >
+            {filteredItems.map((item, i) => {
+              const large = isLarge(item);
+              return (
+                <Reveal
+                  key={`${category}-${item.id}`}
+                  delay={i * 90}
+                  sx={{
+                    gridColumn: {
+                      sm: large ? 'span 2' : 'span 1',
+                      md: large ? 'span 6' : 'span 4',
+                    },
+                  }}
+                >
+                  <ProjectCard item={item} index={showcaseItems.indexOf(item)} large={large} onOpen={handleCardClick} />
+                </Reveal>
+              );
+            })}
+          </Box>
         </Container>
       </Box>
 
-      {/* Main Content */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        {/* Category Tabs */}
-        <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 4 }}>
-          <Tabs 
-            value={category} 
-            onChange={handleCategoryChange} 
-            aria-label="category tabs"
-            textColor="primary"
-            indicatorColor="primary"
-            variant="scrollable"
-            scrollButtons="auto"
-          >
-            <Tab value="all" label={t('portfolio.categories.all')} />
-            <Tab value="featured" label={t('portfolio.categories.featured')} />
-            <Tab value="legal" label={t('portfolio.categories.legal')} />
-            <Tab value="medical" label={t('portfolio.categories.medical')} />
-            <Tab value="technical" label={t('portfolio.categories.technical')} />
-            <Tab value="marketing" label={t('portfolio.categories.marketing')} />
-            <Tab value="literary" label={t('portfolio.categories.literary')} />
-          </Tabs>
-        </Box>
-
-        {/* Showcase Grid */}
-        <Grid container spacing={4}>
-          {filteredItems.map((item) => (
-            <Grid item xs={12} sm={6} md={4} key={item.id}>
-              <Card 
-                elevation={3} 
-                sx={{ 
-                  height: '100%', 
-                  display: 'flex', 
-                  flexDirection: 'column',
-                  transition: 'transform 0.3s, box-shadow 0.3s',
-                  '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: 8
-                  }
-                }}
-              >
-                <CardActionArea onClick={() => handleCardClick(item)}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={item.thumbnailSrc}
-                    alt={item.title}
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h6" component="div">
-                      {item.title}
-                      {item.featured && (
-                        <Chip 
-                          label={t('portfolio.featuredChip')}
-                          size="small" 
-                          sx={{ 
-                            ml: 1, 
-                            bgcolor: '#20fc8f', 
-                            color: '#03142a', 
-                            fontWeight: 'bold',
-                            fontSize: '0.6rem'
-                          }} 
-                        />
-                      )}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                      {item.description}
-                    </Typography>
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                      {item.tags.map((tag) => (
-                        <Chip 
-                          key={tag} 
-                          label={tag} 
-                          size="small" 
-                          sx={{ 
-                            bgcolor: 'rgba(0, 168, 232, 0.1)', 
-                            color: 'primary.main',
-                            fontSize: '0.7rem'
-                          }} 
-                        />
-                      ))}
-                    </Box>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-
-      {/* Preview Dialog */}
-      {selectedItem && (
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          maxWidth="xl"
-          fullWidth
-          aria-labelledby="showcase-dialog-title"
-        >
-          <DialogTitle id="showcase-dialog-title" sx={{ pr: 8 }}>
-            {selectedItem.title}
-            <IconButton
-              aria-label="close"
-              onClick={handleClose}
+      {/* Closing call to action */}
+      <Box component="section" sx={{ pb: { xs: 8, md: 12 } }}>
+        <Container maxWidth="lg">
+          <Reveal variant="scale">
+            <Box
+              className="grain"
               sx={{
-                position: 'absolute',
-                right: 8,
-                top: 12,
-                color: (theme) => theme.palette.grey[500],
+                position: 'relative',
+                overflow: 'hidden',
+                borderRadius: { xs: '24px', md: '32px' },
+                background: tokens.heroBackground,
+                color: '#fff',
+                px: { xs: 3, sm: 6, md: 8 },
+                py: { xs: 6, md: 8 },
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', md: '1fr auto' },
+                alignItems: 'center',
+                gap: { xs: 4, md: 6 },
               }}
             >
-              <CloseIcon />
-            </IconButton>
-          </DialogTitle>
-
-          <DialogContent dividers>
-            <Box sx={{ mb: 2, display: 'flex', gap: 2 }}>
-              <Button
-                variant={viewMode === 'comparison' ? 'contained' : 'outlined'}
-                onClick={() => setViewMode('comparison')}
-                startIcon={<CompareArrowsIcon />}
-                color="primary"
-                size="small"
+              <GlyphField opacity={0.08} density={0.7} />
+              <Box
+                aria-hidden
+                sx={{
+                  position: 'absolute',
+                  insetInlineStart: { xs: -40, md: '52%' },
+                  insetInlineEnd: { xs: -40, md: 32 },
+                  bottom: { xs: 12, md: 18 },
+                  color: tokens.picton,
+                  opacity: 0.22,
+                  pointerEvents: 'none',
+                }}
               >
-                {t('portfolio.viewModes.comparison')}
-              </Button>
-              <Button
-                variant={viewMode === 'before' ? 'contained' : 'outlined'}
-                onClick={() => setViewMode('before')}
-                color="primary"
-                size="small"
-              >
-                {t('portfolio.viewModes.before')}
-              </Button>
-              <Button
-                variant={viewMode === 'after' ? 'contained' : 'outlined'}
-                onClick={() => setViewMode('after')}
-                color="primary"
-                size="small"
-              >
-                {t('portfolio.viewModes.after')}
-              </Button>
+                <OghamMark text="Translate" strokeLength={18} strokeWidth={1.75} stagger={50} sx={{ width: '100%', height: 'auto', maxHeight: 56 }} />
+              </Box>
+              <Box sx={{ position: 'relative', maxWidth: 640 }}>
+                <Typography variant="h2" component="h2" sx={{ mb: 2 }}>
+                  {t('home.cta.title')}
+                </Typography>
+                <Typography sx={{ color: 'rgba(255,255,255,0.78)', fontSize: { xs: '1.05rem', md: '1.2rem' } }}>
+                  {t('home.cta.subtitle')}
+                </Typography>
+              </Box>
+              <Box sx={{ position: 'relative' }}>
+                <Button
+                  component={RouterLink}
+                  to="/contact"
+                  variant="contained"
+                  color="secondary"
+                  size="large"
+                  endIcon={<ArrowForwardIcon className="flip-in-rtl" />}
+                  sx={{ minHeight: 52, whiteSpace: 'nowrap' }}
+                >
+                  {t('home.cta.button')}
+                </Button>
+              </Box>
             </Box>
+          </Reveal>
+        </Container>
+      </Box>
 
-            <Typography variant="body2" color="text.secondary" paragraph>
-              {selectedItem.description}
-            </Typography>
-            
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5, mb: 2 }}>
-              {selectedItem.tags.map((tag) => (
-                <Chip 
-                  key={tag} 
-                  label={tag} 
-                  size="small" 
-                  sx={{ 
-                    bgcolor: 'rgba(0, 168, 232, 0.1)', 
-                    color: 'primary.main'
-                  }} 
-                />
-              ))}
-            </Box>
-
-            {/* PDF Preview Area */}
-            {renderPdfPreview(viewMode)}
-          </DialogContent>
-        </Dialog>
-      )}
+      <ProjectDialog
+        item={selectedItem}
+        open={open}
+        onClose={handleClose}
+        viewMode={viewMode}
+        onViewModeChange={setViewMode}
+        pageNumber={pageNumber}
+        numPages={numPages}
+        onLoadSuccess={onDocumentLoadSuccess}
+        onPrev={previousPage}
+        onNext={nextPage}
+      />
     </Box>
   );
 };

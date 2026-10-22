@@ -9,7 +9,10 @@
       "team": "团队",
       "portfolio": "作品集",
       "pricing": "定价",
-      "contact": "联系"
+      "contact": "联系",
+      "close": "关闭导航菜单",
+      "open": "打开导航菜单",
+      "mainNav": "主导航"
     },
     "footer": {
       "about": "提供多语言的专业翻译服务。保证质量、准确性和及时性。",
@@ -34,12 +37,17 @@
     "cookieConsent": {
       "message": "本网站使用cookies以提升用户体验。请参阅我们的",
       "moreInfo": "了解更多信息。"
-    }
+    },
+    "languageSelector": "语言",
+    "breadcrumb": "面包屑导航",
+    "skipToContent": "跳到主要内容"
   },
   "home": {
     "hero": {
       "title": "连接语言，传承文化",
-      "subtitle": "准确且文化敏感的翻译服务，满足您的需求——涵盖10多种语言。"
+      "subtitle": "准确且文化敏感的翻译服务，满足您的需求——涵盖10多种语言。",
+      "pauseAnimation": "暂停动画",
+      "playAnimation": "播放动画"
     },
     "portfolioShowcase": {
       "title": "我们的翻译作品集",
@@ -115,6 +123,12 @@
       "title": "准备好开始了吗？",
       "subtitle": "今天就联系我们，获取您的翻译项目的免费报价。",
       "button": "请求报价"
+    },
+    "stats": {
+      "languages": "种语言，由母语译者翻译",
+      "translators": "位团队首席译者",
+      "experts": "位专家负责每份文本：一人翻译，一人审校",
+      "founded": "创立于瑞士"
     }
   },
   "services": {
@@ -148,7 +162,8 @@
           "title": "交付",
           "description": "您的最终翻译将按时按预算以您偏好的格式交付。"
         }
-      ]
+      ],
+      "eyebrow": "我们的工作方式"
     },
     "categories": {
       "document": {
@@ -343,7 +358,8 @@
         "技术规格",
         "用户指南和说明手册"
       ]
-    }
+    },
+    "categoriesNav": "服务类别"
   },
   "portfolio": {
     "pageTitle": "我们的翻译作品集",
@@ -379,7 +395,13 @@
       "downloadTranslation": "下载翻译",
       "sideBySide": "并排",
       "original": "原文",
-      "translation": "翻译"
+      "translation": "翻译",
+      "close": "关闭",
+      "loading": "正在加载 PDF...",
+      "noData": "暂无 PDF",
+      "errorLoading": "PDF 加载出错",
+      "prevPage": "上一页",
+      "nextPage": "下一页"
     },
     "viewModes": {
       "comparison": "并排",
@@ -413,7 +435,8 @@
         "title": "文学翻译",
         "description": "从俄语到意大利语的文学翻译。"
       }
-    ]
+    ],
+    "filterLabel": "按类别筛选项目"
   },
   "team": {
     "pageTitle": "我们的团队",
@@ -627,7 +650,8 @@
         "experience": "10年以上",
         "education": "翻译学学士 – 沙特阿拉伯哈立德国王大学；翻译技术硕士 – 沙特阿拉伯电子大学；翻译与口译硕士 – 瑞士日内瓦大学"
       }
-    ]
+    ],
+    "closeProfile": "关闭简介"
   },
   "portfolioDetails": {
     "projectDescription": "项目描述",
@@ -854,7 +878,11 @@
       "title": "准备好开始了吗？",
       "subtitle": "今天就联系我们，获取您的翻译项目的免费报价。",
       "button": "请求报价"
-    }
+    },
+    "eyebrow": "以瑞士法郎计价，价格透明",
+    "mostPopular": "最受欢迎",
+    "included": "包含",
+    "notIncluded": "不包含"
   },
   "contact": {
     "pageTitle": "联系我们",
@@ -905,7 +933,8 @@
       "agreeTerms": "我同意",
       "termsAgreement": "我同意条款和条件以及隐私政策",
       "actions": {
-        "chooseFile": "选择文件"
+        "chooseFile": "选择文件",
+        "removeFile": "移除文件"
       },
       "sections": {
         "contactInfo": "联系信息",
@@ -945,9 +974,14 @@
         "fileTooBig": "文件大小超过10MB限制",
         "fileTypeInvalid": "无效的文件类型。请上传支持的文档格式",
         "termsRequired": "您必须同意条款",
-        "formHasErrors": "请更正表单中的错误"
+        "formHasErrors": "请更正表单中的错误",
+        "captchaRequired": "请验证您不是机器人"
       },
-      "success": "您的询问已成功提交！我们将尽快与您联系。"
+      "success": "您的询问已成功提交！我们将尽快与您联系。",
+      "sending": "正在发送您的请求…",
+      "error": "发生错误，请稍后再试。",
+      "rateLimited": "请求过于频繁。请稍候再试，或直接发送电子邮件给我们。",
+      "unavailable": "在线表单暂时无法使用。请直接发送电子邮件至"
     },
     "contactInfo": {
       "title": "联系信息",
@@ -1270,6 +1304,11 @@
       "documentTranslation": "文档翻译",
       "websiteLocalization": "网站本地化",
       "technicalTranslation": "技术翻译"
-    }
+    },
+    "tagline": "迷失在翻译中",
+    "oghamCaption": "用欧甘文字刻下的“Lost”（迷失）"
+  },
+  "legal": {
+    "onThisPage": "本页内容"
   }
 }

@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
-import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
   Container,
@@ -9,25 +8,87 @@ import {
   Grid,
   TextField,
   Button,
-  Paper,
-  FormControl,
+  Card,
   FormControlLabel,
-  FormLabel,
-  Radio,
-  RadioGroup,
   MenuItem,
   Checkbox,
   Alert,
   Snackbar,
-  Divider,
-  Card,
-  CardContent,
+  IconButton,
+  CircularProgress,
   Link
 } from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import { alpha } from '@mui/material/styles';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
+import UploadFileOutlinedIcon from '@mui/icons-material/UploadFileOutlined';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import PageHero from '../components/ui/PageHero';
+import Reveal from '../components/ui/Reveal';
+import OghamMark from '../components/ui/OghamMark';
+import FormStep from '../components/contact/FormStep';
+import ContactAside from '../components/contact/ContactAside';
+import ContactFaq from '../components/contact/ContactFaq';
+import { tokens, easing } from '../theme';
+
+// Shared look for every input inside the quote card (presentation only).
+const formFieldsSx = {
+  '& .MuiOutlinedInput-root': {
+    backgroundColor: '#fcfbf7',
+    transition: 'background-color .25s, box-shadow .25s',
+    '&:hover:not(.Mui-focused):not(.Mui-error) .MuiOutlinedInput-notchedOutline': {
+      borderColor: alpha(tokens.indigo, 0.45),
+    },
+    '&.Mui-focused': { backgroundColor: '#fff' },
+    '&.Mui-focused:not(.Mui-error) .MuiOutlinedInput-notchedOutline': { borderColor: tokens.indigo },
+  },
+  '& .MuiInputLabel-root.Mui-focused:not(.Mui-error)': { color: tokens.indigo },
+  '& .MuiFormHelperText-root.Mui-error': { fontWeight: 600 },
+  // No RTL stylis plugin: move the select chevron to the inline end so it never covers the label in Arabic.
+  '[dir="rtl"] & .MuiSelect-icon': { right: 'auto', left: 7 },
+  '[dir="rtl"] & .MuiOutlinedInput-root .MuiSelect-select.MuiSelect-outlined.MuiInputBase-input': {
+    paddingRight: '14px',
+    paddingLeft: '32px',
+  },
+  // MUI positions outlined labels from the left (translateX(+14px)); the global rtl.css
+  // anchors them to the right, which pushed the first glyphs past the border. Anchor to the
+  // inline end and translate inwards instead, and put the outline notch on the same side.
+  '[dir="rtl"] & .MuiInputLabel-root.MuiInputLabel-outlined': {
+    left: 'auto',
+    right: 0,
+    transformOrigin: 'top right',
+    transform: 'translate(-14px, 16px) scale(1)',
+  },
+  '[dir="rtl"] & .MuiInputLabel-root.MuiInputLabel-outlined.MuiInputLabel-shrink': {
+    transform: 'translate(-14px, -9px) scale(0.75)',
+  },
+  '[dir="rtl"] & .MuiOutlinedInput-notchedOutline': { textAlign: 'right' },
+  '[dir="rtl"] & .MuiFormHelperText-root': { textAlign: 'right' },
+};
+
+// MUI Alert spacing is physical (icon margin-right, action margin-left); mirror it in RTL.
+const alertLogicalSx = {
+  '& .MuiAlert-icon': { mr: 0, marginInlineEnd: '12px' },
+  '& .MuiAlert-action': { ml: 0, mr: 0, pl: 0, marginInlineStart: 'auto', marginInlineEnd: '-8px', paddingInlineStart: '16px' },
+};
+
+const heroPillSx = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 1,
+  minHeight: 44,
+  px: 2.25,
+  borderRadius: 999,
+  border: '1px solid rgba(255,255,255,0.22)',
+  bgcolor: 'rgba(255,255,255,0.06)',
+  color: '#fff',
+  fontWeight: 600,
+  fontSize: '0.95rem',
+  maxWidth: '100%',
+  '& svg': { fontSize: 19, color: tokens.mint, flex: '0 0 auto' },
+};
 
 // Languages and service types will be loaded from translation files
 const getLanguages = (t) => [
@@ -300,417 +361,523 @@ const Contact = () => {
 
   return (
     <Box>
-      {/* Hero Section */}
-      <Box sx={{ bgcolor: 'primary.main', color: 'white', py: 8 }}>
-        <Container maxWidth="lg">
-          <Typography variant="h2" component="h1" gutterBottom>
-            {t('contact.pageTitle')}
-          </Typography>
-          <Typography variant="h5" sx={{ mb: 4, fontWeight: 300 }}>
-            {t('contact.pageSubtitle')}
-          </Typography>
+      <PageHero
+        eyebrow={t('common.buttons.getQuote')}
+        title={t('contact.pageTitle')}
+        subtitle={t('contact.pageSubtitle')}
+        ogham="Contact"
+      >
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1.5 }}>
+          <Link
+            href="mailto:info@oghamtranslations.com"
+            underline="none"
+            sx={{
+              ...heroPillSx,
+              transition: `background-color .25s, border-color .25s, transform .3s ${easing.out}`,
+              '&:hover': { bgcolor: 'rgba(255,255,255,0.12)', borderColor: tokens.mint, transform: 'translateY(-2px)' },
+            }}
+          >
+            <MailOutlineIcon aria-hidden className="keep-direction" />
+            <Box component="span" sx={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis' }}>info@oghamtranslations.com</Box>
+          </Link>
+          <Box sx={{ ...heroPillSx, color: 'rgba(255,255,255,0.86)', borderStyle: 'dashed', py: 1 }}>
+            <PlaceOutlinedIcon aria-hidden className="keep-direction" />
+            <span>{t('contact.contactInfo.address')}</span>
+          </Box>
+        </Box>
+      </PageHero>
+
+      {/* Quote form + contact details */}
+      <Box component="section" sx={{ position: 'relative', pb: { xs: 9, md: 13 } }}>
+        <Container maxWidth="lg" sx={{ position: 'relative', mt: { xs: -5, md: -8 } }}>
+          <Grid container rowSpacing={{ xs: 4, md: 5 }} columnSpacing={{ xs: 0, lg: 5 }}>
+            {/* Side by side only from lg: at md the 7/12 column is too narrow for the two-up fields. */}
+            <Grid item xs={12} lg={7}>
+              <Reveal>
+                <Card
+                  sx={{
+                    position: 'relative',
+                    overflow: 'hidden',
+                    boxShadow: '0 1px 2px rgba(7,26,43,0.05), 0 40px 80px -40px rgba(7,26,43,0.45)',
+                    '&::before': {
+                      content: '""',
+                      position: 'absolute',
+                      insetInline: 0,
+                      top: 0,
+                      height: 4,
+                      background: tokens.gradient,
+                    },
+                  }}
+                >
+                  <Box sx={{ position: 'relative', px: { xs: 2.5, sm: 4, md: 5 }, pt: { xs: 4, md: 5 }, pb: { xs: 3, md: 4 } }}>
+                    <Box
+                      aria-hidden
+                      sx={{
+                        display: { xs: 'none', sm: 'block' },
+                        position: 'absolute',
+                        top: { sm: 36, md: 44 },
+                        insetInlineEnd: { sm: 28, md: 40 },
+                        width: 120,
+                        color: tokens.picton,
+                        opacity: 0.5,
+                      }}
+                    >
+                      <OghamMark text="Quote" strokeLength={13} strokeWidth={2} stagger={60} delay={300} sx={{ width: '100%', height: 'auto' }} />
+                    </Box>
+                    <Typography
+                      variant="h3"
+                      component="h2"
+                      sx={{ mb: 1.5, paddingInlineEnd: { sm: '150px' }, color: tokens.text }}
+                    >
+                      {t('contact.form.title')}
+                    </Typography>
+                    <Typography variant="body1" sx={{ color: tokens.textMuted, maxWidth: 560 }}>
+                      {t('contact.form.subtitle')}
+                    </Typography>
+                  </Box>
+
+                  <form onSubmit={handleSubmit} noValidate>
+                    <Box sx={{ px: { xs: 2.5, sm: 4, md: 5 }, pt: { xs: 2, md: 3 }, borderTop: `1px solid ${tokens.line}`, ...formFieldsSx }}>
+                      {snackbar.open && snackbar.severity !== 'info' && (
+                        <Alert severity={snackbar.severity} role="status" sx={{ mb: 3, borderRadius: '14px', ...alertLogicalSx }}>
+                          {snackbar.message}
+                        </Alert>
+                      )}
+
+                      <Box sx={{ pt: { xs: 2, md: 2.5 } }}>
+                        {/* Personal Information */}
+                        <FormStep number="01" title={t('contact.form.sections.contactInfo')}>
+                          <Grid container spacing={2.5}>
+                            <Grid item xs={12} sm={6}>
+                              <TextField
+                                required
+                                fullWidth
+                                label={t('contact.form.fields.firstName')}
+                                name="firstName"
+                                value={formData.firstName}
+                                onChange={handleChange}
+                                error={!!formErrors.firstName}
+                                helperText={formErrors.firstName}
+                              />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                              <TextField
+                                required
+                                fullWidth
+                                label={t('contact.form.fields.lastName')}
+                                name="lastName"
+                                value={formData.lastName}
+                                onChange={handleChange}
+                                error={!!formErrors.lastName}
+                                helperText={formErrors.lastName}
+                              />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                              <TextField
+                                required
+                                fullWidth
+                                label={t('contact.form.fields.email')}
+                                name="email"
+                                type="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                error={!!formErrors.email}
+                                helperText={formErrors.email}
+                              />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                              <TextField
+                                fullWidth
+                                label={t('contact.form.fields.phone')}
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                              />
+                            </Grid>
+                            <Grid item xs={12}>
+                              <TextField
+                                fullWidth
+                                label={t('contact.form.fields.company')}
+                                name="company"
+                                value={formData.company}
+                                onChange={handleChange}
+                              />
+                            </Grid>
+                          </Grid>
+                        </FormStep>
+
+                        {/* Project Requirements */}
+                        <FormStep number="02" title={t('contact.form.sections.projectDetails')}>
+                          <Grid container spacing={2.5}>
+                            <Grid item xs={12} sm={6}>
+                              <TextField
+                                required
+                                select
+                                fullWidth
+                                label={t('contact.form.fields.sourceLanguage')}
+                                name="sourceLanguage"
+                                value={formData.sourceLanguage}
+                                onChange={handleChange}
+                                error={!!formErrors.sourceLanguage}
+                                helperText={formErrors.sourceLanguage}
+                              >
+                                {languages.map((language) => (
+                                  <MenuItem key={language} value={language}>
+                                    {language}
+                                  </MenuItem>
+                                ))}
+                              </TextField>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                              <TextField
+                                required
+                                select
+                                fullWidth
+                                label={t('contact.form.fields.targetLanguage')}
+                                name="targetLanguage"
+                                value={formData.targetLanguage}
+                                onChange={handleChange}
+                                error={!!formErrors.targetLanguage}
+                                helperText={formErrors.targetLanguage}
+                              >
+                                {languages.map((language) => (
+                                  <MenuItem key={language} value={language}>
+                                    {language}
+                                  </MenuItem>
+                                ))}
+                              </TextField>
+                            </Grid>
+                            <Grid item xs={12}>
+                              <TextField
+                                required
+                                select
+                                fullWidth
+                                label={t('contact.form.fields.serviceType')}
+                                name="serviceType"
+                                value={formData.serviceType}
+                                onChange={handleChange}
+                                error={!!formErrors.serviceType}
+                                helperText={formErrors.serviceType}
+                              >
+                                {serviceTypes.map((serviceType) => (
+                                  <MenuItem key={serviceType} value={serviceType}>
+                                    {serviceType}
+                                  </MenuItem>
+                                ))}
+                              </TextField>
+                            </Grid>
+                            <Grid item xs={12}>
+                              <TextField
+                                required
+                                fullWidth
+                                multiline
+                                rows={4}
+                                label={t('contact.form.fields.projectDetails')}
+                                name="projectDetails"
+                                value={formData.projectDetails}
+                                onChange={handleChange}
+                                placeholder={t('contact.form.placeholders.projectDetails')}
+                                error={!!formErrors.projectDetails}
+                                helperText={formErrors.projectDetails}
+                              />
+                            </Grid>
+                          </Grid>
+                        </FormStep>
+
+                        {/* Additional information */}
+                        <FormStep number="03" title={t('contact.form.sections.additionalInfo')} last>
+                          <Grid container spacing={2.5}>
+                            {/* File Upload */}
+                            <Grid item xs={12}>
+                              <input
+                                type="file"
+                                ref={fileInputRef}
+                                onChange={handleFileChange}
+                                style={{ display: 'none' }}
+                                accept=".pdf,.doc,.docx,.txt,.xls,.xlsx,.ppt,.pptx,.odt,.rtf"
+                              />
+                              <Box
+                                sx={{
+                                  position: 'relative',
+                                  display: 'flex',
+                                  flexDirection: { xs: 'column', md: 'row' },
+                                  alignItems: { xs: 'stretch', md: 'center' },
+                                  gap: 2,
+                                  p: { xs: 2.25, sm: 2.5 },
+                                  borderRadius: '16px',
+                                  border: '1.5px dashed',
+                                  borderColor: formErrors.fileUpload ? 'error.main' : selectedFile ? tokens.shamrock : alpha(tokens.indigo, 0.25),
+                                  bgcolor: selectedFile ? alpha(tokens.mint, 0.12) : alpha(tokens.sky, 0.1),
+                                  transition: 'border-color .25s, background-color .25s',
+                                  '&:hover': { borderColor: formErrors.fileUpload ? 'error.main' : tokens.picton, bgcolor: alpha(tokens.sky, 0.18) },
+                                  '&:hover .file-drop__icon': { transform: 'translateY(-3px)' },
+                                }}
+                              >
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1, minWidth: 0 }}>
+                                  <Box
+                                    aria-hidden
+                                    className="file-drop__icon"
+                                    sx={{
+                                      width: 48,
+                                      height: 48,
+                                      flex: '0 0 48px',
+                                      borderRadius: '14px',
+                                      display: 'grid',
+                                      placeItems: 'center',
+                                      bgcolor: '#fff',
+                                      color: selectedFile ? tokens.shamrock : tokens.indigo,
+                                      border: `1px solid ${tokens.line}`,
+                                      boxShadow: '0 8px 18px -12px rgba(7,26,43,0.35)',
+                                      transition: `transform .4s ${easing.out}`,
+                                    }}
+                                  >
+                                    {selectedFile
+                                      ? <DescriptionOutlinedIcon className="keep-direction" />
+                                      : <UploadFileOutlinedIcon className="keep-direction" />}
+                                  </Box>
+                                  <Box sx={{ minWidth: 0, flex: 1 }}>
+                                    <Typography variant="subtitle1" component="p" sx={{ color: tokens.text, lineHeight: 1.4 }}>
+                                      {t('contact.form.fields.fileUpload')}
+                                    </Typography>
+                                    {selectedFile ? (
+                                      <Typography
+                                        variant="body2"
+                                        sx={{ color: tokens.text, fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+                                      >
+                                        {selectedFile.name}{' '}
+                                        <Box component="span" sx={{ color: tokens.textMuted, fontWeight: 500 }}>
+                                          ({Math.round(selectedFile.size / 1024)} KB)
+                                        </Box>
+                                      </Typography>
+                                    ) : (
+                                      <Typography variant="caption" sx={{ display: 'block', color: tokens.textMuted, lineHeight: 1.5, mt: 0.25 }}>
+                                        {t('contact.form.placeholders.fileUpload')}
+                                      </Typography>
+                                    )}
+                                  </Box>
+                                </Box>
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flex: '0 0 auto' }}>
+                                  {selectedFile && (
+                                    <IconButton
+                                      onClick={clearSelectedFile}
+                                      aria-label={t('contact.form.actions.removeFile', 'Remove file')}
+                                      sx={{ width: 44, height: 44, color: tokens.textMuted, '&:hover': { color: 'error.main', bgcolor: alpha('#b3261e', 0.08) } }}
+                                    >
+                                      <CloseIcon className="keep-direction" fontSize="small" />
+                                    </IconButton>
+                                  )}
+                                  <Button
+                                    variant="outlined"
+                                    onClick={handleFileButtonClick}
+                                    startIcon={<UploadFileOutlinedIcon className="keep-direction" />}
+                                    sx={{ minHeight: 44, bgcolor: '#fff', flex: { xs: 1, md: '0 0 auto' }, whiteSpace: 'nowrap' }}
+                                  >
+                                    {t('contact.form.actions.chooseFile')}
+                                  </Button>
+                                </Box>
+                              </Box>
+                              {formErrors.fileUpload && (
+                                <Typography variant="caption" color="error" sx={{ display: 'block', mt: 1, fontWeight: 600 }}>
+                                  {formErrors.fileUpload}
+                                </Typography>
+                              )}
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                              <TextField
+                                fullWidth
+                                label={t('contact.form.fields.deadline')}
+                                name="deadline"
+                                type="date"
+                                value={formData.deadline}
+                                onChange={handleChange}
+                                InputLabelProps={{
+                                  shrink: true,
+                                }}
+                              />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                              <TextField
+                                fullWidth
+                                label={t('contact.form.fields.budget')}
+                                name="budget"
+                                value={formData.budget}
+                                onChange={handleChange}
+                                placeholder={t('contact.form.placeholders.budget')}
+                              />
+                            </Grid>
+                            <Grid item xs={12}>
+                              <TextField
+                                fullWidth
+                                label={t('contact.form.fields.howDidYouHear')}
+                                name="howDidYouHear"
+                                value={formData.howDidYouHear}
+                                onChange={handleChange}
+                              />
+                            </Grid>
+                          </Grid>
+                        </FormStep>
+                      </Box>
+                    </Box>
+
+                    {/* Terms, CAPTCHA and Submit */}
+                    <Box
+                      sx={{
+                        mt: { xs: 4, md: 5 },
+                        px: { xs: 2.5, sm: 4, md: 5 },
+                        py: { xs: 3, md: 4 },
+                        bgcolor: tokens.paper,
+                        borderTop: `1px solid ${tokens.line}`,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: 2.5,
+                      }}
+                    >
+                      <Box>
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              name="agreeToTerms"
+                              checked={formData.agreeToTerms}
+                              onChange={handleChange}
+                              color="primary"
+                              sx={{ p: 1.25, mt: '-6px' }}
+                            />
+                          }
+                          label={t('contact.form.termsAgreement')}
+                          sx={{
+                            alignItems: 'flex-start',
+                            marginInlineStart: '-10px',
+                            marginInlineEnd: 0,
+                            '& .MuiFormControlLabel-label': { fontSize: '0.975rem', lineHeight: 1.55, color: tokens.text, pt: '4px' },
+                          }}
+                        />
+                        {formErrors.agreeToTerms && (
+                          <Typography variant="caption" color="error" sx={{ display: 'block', fontWeight: 600, paddingInlineStart: '34px' }}>
+                            {formErrors.agreeToTerms}
+                          </Typography>
+                        )}
+                      </Box>
+
+                      {!recaptchaConfigured && (
+                        <Alert
+                          severity="info"
+                          icon={<MailOutlineIcon className="keep-direction" fontSize="inherit" />}
+                          sx={{
+                            borderRadius: '14px',
+                            border: `1px solid ${alpha(tokens.picton, 0.35)}`,
+                            bgcolor: alpha(tokens.sky, 0.22),
+                            color: tokens.text,
+                            ...alertLogicalSx,
+                            '& .MuiAlert-icon': { ...alertLogicalSx['& .MuiAlert-icon'], color: tokens.indigo },
+                            '& a': { fontWeight: 700, color: tokens.indigo },
+                          }}
+                        >
+                          {t('contact.form.unavailable', { defaultValue: 'The online form is temporarily unavailable. Please email us directly at' })}{' '}
+                          <Link href="mailto:info@oghamtranslations.com" color="inherit" underline="always">
+                            info@oghamtranslations.com
+                          </Link>.
+                        </Alert>
+                      )}
+
+                      {/* reCAPTCHA is only mounted when the public site key is configured. */}
+                      {recaptchaConfigured && (
+                        <Box>
+                          <Box
+                            sx={{
+                              display: 'flex',
+                              justifyContent: 'center',
+                              '@media (max-width: 360px)': { transform: 'scale(0.86)', transformOrigin: 'center top', mb: '-12px' },
+                            }}
+                          >
+                            <ReCAPTCHA
+                              ref={recaptchaRef}
+                              sitekey={recaptchaSiteKey}
+                              onChange={(value) => {
+                                setCaptchaValue(value);
+                                if (formErrors.captcha) {
+                                  setFormErrors({
+                                    ...formErrors,
+                                    captcha: null
+                                  });
+                                }
+                              }}
+                              theme="light"
+                            />
+                          </Box>
+                          {formErrors.captcha && (
+                            <Typography variant="caption" color="error" sx={{ display: 'block', textAlign: 'center', mt: 1, fontWeight: 600 }}>
+                              {formErrors.captcha}
+                            </Typography>
+                          )}
+                        </Box>
+                      )}
+
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        color="primary"
+                        size="large"
+                        fullWidth
+                        disabled={!recaptchaConfigured || submitting}
+                        startIcon={submitting ? <CircularProgress size={18} thickness={5} color="inherit" /> : undefined}
+                        endIcon={submitting ? undefined : <ArrowForwardIcon className="flip-in-rtl" />}
+                        sx={{
+                          position: 'relative',
+                          overflow: 'hidden',
+                          minHeight: 56,
+                          py: 1.75,
+                          fontSize: '1.05rem',
+                          background: `linear-gradient(120deg, ${tokens.ink} 0%, ${tokens.indigo} 100%)`,
+                          // A soft highlight sweeps across on hover, like light over a carved stone.
+                          '&::after': {
+                            content: '""',
+                            position: 'absolute',
+                            inset: 0,
+                            background: 'linear-gradient(100deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%)',
+                            transform: 'translateX(-100%)',
+                            transition: `transform .8s ${easing.out}`,
+                          },
+                          '&:hover::after': { transform: 'translateX(100%)' },
+                          '& .MuiButton-endIcon': { transition: `transform .35s ${easing.out}` },
+                          '&:hover .MuiButton-endIcon': { transform: 'translateX(4px)' },
+                          '[dir="rtl"] &:hover .MuiButton-endIcon': { transform: 'translateX(-4px)' },
+                          '&.Mui-disabled': {
+                            background: tokens.paperDeep,
+                            color: tokens.textMuted,
+                            border: `1px solid ${tokens.line}`,
+                            boxShadow: 'none',
+                          },
+                        }}
+                      >
+                        {submitting ? t('contact.form.sending', 'Sending…') : t('contact.form.submitRequest')}
+                      </Button>
+                    </Box>
+                  </form>
+                </Card>
+              </Reveal>
+            </Grid>
+
+            {/* Contact Information */}
+            <Grid item xs={12} lg={5}>
+              <ContactAside />
+            </Grid>
+          </Grid>
         </Container>
       </Box>
 
-      {/* Contact Form and Info */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Grid container spacing={6}>
-          <Grid item xs={12} md={7}>
-            <Paper sx={{ p: 4, borderRadius: 2, boxShadow: 3 }}>
-              <Typography variant="h4" component="h2" gutterBottom>
-                {t('contact.form.title')}
-              </Typography>
-              <Typography variant="body1" paragraph sx={{ mb: 4 }}>
-                {t('contact.form.subtitle')}
-              </Typography>
-
-              <form onSubmit={handleSubmit} noValidate>
-                {snackbar.open && snackbar.severity !== 'info' && (
-                  <Alert severity={snackbar.severity} role="status" sx={{ mb: 2 }}>
-                    {snackbar.message}
-                  </Alert>
-                )}
-                <Grid container spacing={3}>
-                  {/* Personal Information */}
-                  <Grid item xs={12}>
-                    <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
-                      {t('contact.form.sections.contactInfo')}
-                    </Typography>
-                    <Divider sx={{ mb: 2 }} />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      required
-                      fullWidth
-                      label={t('contact.form.fields.firstName')}
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      error={!!formErrors.firstName}
-                      helperText={formErrors.firstName}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      required
-                      fullWidth
-                      label={t('contact.form.fields.lastName')}
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      error={!!formErrors.lastName}
-                      helperText={formErrors.lastName}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      required
-                      fullWidth
-                      label={t('contact.form.fields.email')}
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      error={!!formErrors.email}
-                      helperText={formErrors.email}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      fullWidth
-                      label={t('contact.form.fields.phone')}
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      fullWidth
-                      label={t('contact.form.fields.company')}
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-
-                  {/* Project Requirements */}
-                  <Grid item xs={12} sx={{ mt: 2 }}>
-                    <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
-                      {t('contact.form.sections.projectDetails')}
-                    </Typography>
-                    <Divider sx={{ mb: 2 }} />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      required
-                      select
-                      fullWidth
-                      label={t('contact.form.fields.sourceLanguage')}
-                      name="sourceLanguage"
-                      value={formData.sourceLanguage}
-                      onChange={handleChange}
-                      error={!!formErrors.sourceLanguage}
-                      helperText={formErrors.sourceLanguage}
-                    >
-                      {languages.map((language) => (
-                        <MenuItem key={language} value={language}>
-                          {language}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      required
-                      select
-                      fullWidth
-                      label={t('contact.form.fields.targetLanguage')}
-                      name="targetLanguage"
-                      value={formData.targetLanguage}
-                      onChange={handleChange}
-                      error={!!formErrors.targetLanguage}
-                      helperText={formErrors.targetLanguage}
-                    >
-                      {languages.map((language) => (
-                        <MenuItem key={language} value={language}>
-                          {language}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      required
-                      select
-                      fullWidth
-                      label={t('contact.form.fields.serviceType')}
-                      name="serviceType"
-                      value={formData.serviceType}
-                      onChange={handleChange}
-                      error={!!formErrors.serviceType}
-                      helperText={formErrors.serviceType}
-                    >
-                      {serviceTypes.map((serviceType) => (
-                        <MenuItem key={serviceType} value={serviceType}>
-                          {serviceType}
-                        </MenuItem>
-                      ))}
-                    </TextField>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      required
-                      fullWidth
-                      multiline
-                      rows={4}
-                      label={t('contact.form.fields.projectDetails')}
-                      name="projectDetails"
-                      value={formData.projectDetails}
-                      onChange={handleChange}
-                      placeholder={t('contact.form.placeholders.projectDetails')}
-                      error={!!formErrors.projectDetails}
-                      helperText={formErrors.projectDetails}
-                    />
-                  </Grid>
-                  
-                  {/* File Upload */}
-                  <Grid item xs={12}>
-                    <Typography variant="subtitle1" gutterBottom>
-                      {t('contact.form.fields.fileUpload')}
-                    </Typography>
-                    <input
-                      type="file"
-                      ref={fileInputRef}
-                      onChange={handleFileChange}
-                      style={{ display: 'none' }}
-                      accept=".pdf,.doc,.docx,.txt,.xls,.xlsx,.ppt,.pptx,.odt,.rtf"
-                    />
-                    <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
-                      <Button
-                        variant="outlined"
-                        onClick={handleFileButtonClick}
-                        startIcon={<i className="fas fa-file-upload"></i>}
-                      >
-                        {t('contact.form.actions.chooseFile')}
-                      </Button>
-                      
-                      {selectedFile && (
-                        <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, bgcolor: 'background.paper', p: 1, borderRadius: 1 }}>
-                          <Typography variant="body2" sx={{ mr: 1, flexGrow: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                            {selectedFile.name} ({Math.round(selectedFile.size / 1024)} KB)
-                          </Typography>
-                          <Button 
-                            size="small" 
-                            onClick={clearSelectedFile}
-                            sx={{ minWidth: 'auto', p: 0.5 }}
-                          >
-                            ✕
-                          </Button>
-                        </Box>
-                      )}
-                    </Box>
-                    {!selectedFile && (
-                      <Typography variant="caption" sx={{ display: 'block', mt: 1 }}>
-                        {t('contact.form.placeholders.fileUpload')}
-                      </Typography>
-                    )}
-                    {formErrors.fileUpload && (
-                      <Typography variant="caption" color="error">
-                        {formErrors.fileUpload}
-                      </Typography>
-                    )}
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      fullWidth
-                      label={t('contact.form.fields.deadline')}
-                      name="deadline"
-                      type="date"
-                      value={formData.deadline}
-                      onChange={handleChange}
-                      InputLabelProps={{
-                        shrink: true,
-                      }}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6}>
-                    <TextField
-                      fullWidth
-                      label={t('contact.form.fields.budget')}
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      placeholder={t('contact.form.placeholders.budget')}
-                    />
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      fullWidth
-                      label={t('contact.form.fields.howDidYouHear')}
-                      name="howDidYouHear"
-                      value={formData.howDidYouHear}
-                      onChange={handleChange}
-                    />
-                  </Grid>
-
-                  {/* Terms and Submit */}
-                  <Grid item xs={12} sx={{ mt: 2 }}>
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          name="agreeToTerms"
-                          checked={formData.agreeToTerms}
-                          onChange={handleChange}
-                          color="primary"
-                        />
-                      }
-                      label={t('contact.form.termsAgreement')}
-                    />
-                    {formErrors.agreeToTerms && (
-                      <Typography variant="caption" color="error">
-                        {formErrors.agreeToTerms}
-                      </Typography>
-                    )}
-                  </Grid>
-                  
-                  {!recaptchaConfigured && (
-                    <Grid item xs={12}>
-                      <Alert severity="info">
-                        {t('contact.form.unavailable', { defaultValue: 'The online form is temporarily unavailable. Please email us directly at' })}{' '}
-                        <Link href="mailto:info@oghamtranslations.com" color="inherit" underline="always">
-                          info@oghamtranslations.com
-                        </Link>.
-                      </Alert>
-                    </Grid>
-                  )}
-
-                  {/* reCAPTCHA is only mounted when the public site key is configured. */}
-                  <Grid item xs={12} sx={{ mt: 2 }}>
-                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                      {recaptchaConfigured && (
-                        <ReCAPTCHA
-                          ref={recaptchaRef}
-                          sitekey={recaptchaSiteKey}
-                          onChange={(value) => {
-                            setCaptchaValue(value);
-                            if (formErrors.captcha) {
-                              setFormErrors({
-                                ...formErrors,
-                                captcha: null
-                              });
-                            }
-                          }}
-                          theme="light"
-                        />
-                      )}
-                    </Box>
-                    {formErrors.captcha && (
-                      <Typography variant="caption" color="error" sx={{ display: 'block', textAlign: 'center', mt: 1 }}>
-                        {formErrors.captcha}
-                      </Typography>
-                    )}
-                  </Grid>
-                  <Grid item xs={12} sx={{ mt: 2 }}>
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      color="primary"
-                      size="large"
-                      fullWidth
-                      disabled={!recaptchaConfigured || submitting}
-                      sx={{ py: 1.5 }}
-                    >
-                      {submitting ? t('contact.form.sending') : t('contact.form.submitRequest')}
-                    </Button>
-                  </Grid>
-                </Grid>
-              </form>
-            </Paper>
-          </Grid>
-
-          {/* Contact Information */}
-          <Grid item xs={12} md={5}>
-            <Card sx={{ mb: 4, borderRadius: 2, boxShadow: 3 }}>
-              <CardContent>
-                <Typography variant="h4" component="h2" gutterBottom>
-                  {t('contact.contactInfo.title')}
-                </Typography>
-                <Typography variant="body1" paragraph sx={{ mb: 4 }}>
-                  {t('contact.contactInfo.reachOut')}
-                </Typography>
-
-                <Grid container spacing={3}>
-                  <Grid item xs={12}>
-                    <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-                      <EmailIcon sx={{ mr: 2, color: 'primary.main', fontSize: 28 }} />
-                      <Box>
-                        <Typography variant="h6" gutterBottom>
-                          {t('common.footer.email')}
-                        </Typography>
-                        <Typography variant="body1">
-                          <Link href="mailto:info@oghamtranslations.com" color="inherit" underline="hover">
-                            info@oghamtranslations.com
-                          </Link>
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-                      <AccessTimeIcon sx={{ mr: 2, color: 'primary.main', fontSize: 28 }} />
-                      <Box>
-                        <Typography variant="h6" gutterBottom>
-                          {t('contact.contactInfo.businessHours')}
-                        </Typography>
-                        <Typography variant="body1">
-                          {t('contact.contactInfo.weekdays')}
-                        </Typography>
-                        <Typography variant="body1">
-                          {t('contact.contactInfo.saturday')}
-                        </Typography>
-                        <Typography variant="body1">
-                          {t('contact.contactInfo.sunday')}
-                        </Typography>
-                      </Box>
-                    </Box>
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Card>
-
-            {/* FAQ or Support Box */}
-            <Paper sx={{ p: 4, borderRadius: 2, bgcolor: 'primary.light', color: 'white', boxShadow: 3 }}>
-              <Typography variant="h5" gutterBottom>
-                {t('contact.contactInfo.immediateAssistance')}
-              </Typography>
-              <Typography variant="body1" paragraph>
-                {t('contact.contactInfo.urgentNeeds')}
-              </Typography>
-              <Typography variant="body1" paragraph>
-                • <Link href="mailto:urgent@oghamtranslations.com" color="inherit" underline="hover">
-                    {t('contact.contactInfo.urgentEmail')}
-                  </Link>
-              </Typography>
-              <Typography variant="body1">
-                {t('contact.contactInfo.responseTime')}
-              </Typography>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
+      <ContactFaq />
 
       {/* Snackbar for form submission feedback */}
-      <Snackbar 
-        open={snackbar.open} 
-        autoHideDuration={6000} 
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
         onClose={handleCloseSnackbar}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <Alert 
-          onClose={handleCloseSnackbar} 
-          severity={snackbar.severity} 
-          sx={{ width: '100%' }}
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          sx={{ width: '100%', borderRadius: '14px', fontWeight: 600, boxShadow: '0 20px 50px -20px rgba(7,26,43,0.6)', ...alertLogicalSx }}
         >
           {snackbar.message}
         </Alert>

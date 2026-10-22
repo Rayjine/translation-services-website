@@ -1,8 +1,9 @@
-import { lazy, Suspense } from 'react';
+import { lazy, useMemo } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import CookieConsent from 'react-cookie-consent';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { createAppTheme, tokens, fonts } from './theme';
 import CssBaseline from '@mui/material/CssBaseline';
 import { DirectionProvider, useDirection } from './contexts/DirectionContext';
 
@@ -11,16 +12,17 @@ import MainLayout from './layouts/MainLayout';
 import ScrollToTop from './components/ScrollToTop';
 
 // Pages
+// Home ships in the main bundle; every other route is split into its own chunk.
 import Home from './pages/Home';
-import Services from './pages/Services';
-import Team from './pages/Team';
-import Pricing from './pages/Pricing';
-import Contact from './pages/Contact';
-// import Blog from './pages/Blog'; // Temporarily removed
-import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
+const Services = lazy(() => import('./pages/Services'));
+const Team = lazy(() => import('./pages/Team'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Contact = lazy(() => import('./pages/Contact'));
+// const Blog = lazy(() => import('./pages/Blog')); // Temporarily removed
+const Terms = lazy(() => import('./pages/Terms'));
+const Privacy = lazy(() => import('./pages/Privacy'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
-import NotFound from './pages/NotFound';
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // NotFound component is now imported from ./pages/NotFound
 
@@ -35,15 +37,19 @@ const LocationAwareCookieConsent = () => {
       declineButtonText={t('common.buttons.decline', 'Decline')}
       onAccept={() => window.dispatchEvent(new Event('ogham-consent-change'))}
       onDecline={() => window.dispatchEvent(new Event('ogham-consent-change'))}
-      declineButtonStyle={{ background: 'transparent', color: '#ffffff', border: '1px solid #ffffff', borderRadius: '4px', minHeight: '44px', padding: '10px 16px' }}
       cookieName="oghamTranslationsConsent"
-      style={{ background: '#03142a', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif' }}
-      buttonStyle={{ background: '#20fc8f', color: '#03142a', fontSize: '13px', fontWeight: 'bold', borderRadius: '4px', padding: '10px 16px', minHeight: '44px' }}
       expires={150}
       overlay={false}
+      disableStyles
+      containerClasses="ogham-consent"
+      contentClasses="ogham-consent__text"
+      buttonWrapperClasses="ogham-consent__actions"
+      buttonClasses="ogham-consent__accept"
+      declineButtonClasses="ogham-consent__decline"
+      style={{ fontFamily: fonts.body }}
     >
       {t('common.cookieConsent.message')}{" "}
-      <Link to="/privacy" style={{ color: '#00a8e8', textDecoration: 'underline' }}>
+      <Link to="/privacy" style={{ color: tokens.mint, textDecoration: 'underline' }}>
         {t('common.footer.privacyPolicy')}
       </Link>{" "}
       {t('common.cookieConsent.moreInfo')}
@@ -54,80 +60,7 @@ const LocationAwareCookieConsent = () => {
 const AppWithTheme = () => {
   const { direction } = useDirection();
   
-  // Create theme with direction
-  const theme = createTheme({
-    direction: direction,
-    palette: {
-      primary: {
-        main: '#0b476c', // indigo-dye
-        light: '#53a6cc', // picton-blue
-        dark: '#092d44' // darker variant of indigo-dye
-      },
-      secondary: {
-        main: '#3b9b5c', // shamrock-green
-        light: '#5bb97c', // lighter shamrock-green
-        dark: '#2a7043' // darker shamrock-green
-      },
-      error: {
-        main: '#ebbab9', // tea-rose-red
-        light: '#f1d0cf', // lighter tea-rose-red
-        dark: '#c99796' // darker tea-rose-red
-      },
-      background: {
-        default: '#fbfef9', // light-yellow
-        paper: '#ffffff'
-      }
-    },
-    typography: {
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-      h1: {
-        fontSize: '2.5rem',
-        fontWeight: 600,
-        '@media (min-width:600px)': {
-          fontSize: '3.5rem',
-        },
-      },
-      h2: {
-        fontSize: '2rem',
-        fontWeight: 600,
-        '@media (min-width:600px)': {
-          fontSize: '2.5rem',
-        },
-      },
-      h3: {
-        fontSize: '1.5rem',
-        fontWeight: 500,
-        '@media (min-width:600px)': {
-          fontSize: '1.75rem',
-        },
-      },
-      h4: {
-        fontSize: '1.25rem',
-        fontWeight: 500,
-        '@media (min-width:600px)': {
-          fontSize: '1.35rem',
-        },
-      }
-    },
-    components: {
-      MuiButton: {
-        styleOverrides: {
-          root: {
-            borderRadius: 8,
-            textTransform: 'none',
-            fontWeight: 500
-          }
-        }
-      },
-      MuiCard: {
-        styleOverrides: {
-          root: {
-            borderRadius: 8
-          }
-        }
-      }
-    }
-  });
+  const theme = useMemo(() => createAppTheme(direction), [direction]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -143,7 +76,7 @@ const AppWithTheme = () => {
           <Route path="contact" element={<Contact />} />
           {/* Blog route temporarily removed */}
           <Route path="terms" element={<Terms />} />
-          <Route path="portfolio" element={<Suspense fallback={<div role="status" style={{ padding: '3rem', textAlign: 'center' }}>Loading portfolio…</div>}><Portfolio /></Suspense>} />
+          <Route path="portfolio" element={<Portfolio />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
         </Route>

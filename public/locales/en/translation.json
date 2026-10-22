@@ -10,7 +10,9 @@
       "team": "Team",
       "portfolio": "Portfolio",
       "pricing": "Pricing",
-      "contact": "Contact"
+      "contact": "Contact",
+      "close": "Close navigation menu",
+      "mainNav": "Main navigation"
     },
     "footer": {
       "about": "Professional translation services in multiple languages. Quality, accuracy, and timeliness guaranteed.",
@@ -35,12 +37,17 @@
     "cookieConsent": {
       "message": "This website uses cookies to enhance the user experience. See our",
       "moreInfo": "for more information."
-    }
+    },
+    "languageSelector": "Language",
+    "breadcrumb": "Breadcrumb",
+    "skipToContent": "Skip to content"
   },
   "home": {
     "hero": {
       "title": "Bridging Languages, Preserving Cultures",
-      "subtitle": "Accurate, culturally attuned translation services tailored to your needs — in over 10 languages."
+      "subtitle": "Accurate, culturally attuned translation services tailored to your needs — in over 10 languages.",
+      "pauseAnimation": "Pause animation",
+      "playAnimation": "Play animation"
     },
     "portfolioShowcase": {
       "title": "Our Translation Portfolio",
@@ -116,6 +123,12 @@
       "title": "Ready to Get Started?",
       "subtitle": "Contact us today for a free quote on your translation project.",
       "button": "Request a Quote"
+    },
+    "stats": {
+      "languages": "Languages translated by native speakers",
+      "translators": "Lead translators on the team",
+      "experts": "Experts on every text: one translates, one reviews",
+      "founded": "Founded in Switzerland"
     }
   },
   "services": {
@@ -131,7 +144,8 @@
         { "step": 4, "title": "Quality Assurance", "description": "Rigorous quality checks ensure your translation meets our high standards." },
         { "step": 5, "title": "Client Review", "description": "We implement your feedback and make any necessary adjustments." },
         { "step": 6, "title": "Delivery", "description": "Your finalized translation is delivered in your preferred format, on time and on budget." }
-      ]
+      ],
+      "eyebrow": "How we work"
     },
     "categories": {
       "document": {
@@ -326,7 +340,8 @@
         "Technical specifications",
         "User guides and instruction manuals"
       ]
-    }
+    },
+    "categoriesNav": "Service categories"
   },
   "portfolio": {
     "pageTitle": "Our Translation Portfolio",
@@ -367,7 +382,8 @@
       "noData": "No PDF available",
       "errorLoading": "Error loading PDF",
       "prevPage": "Previous",
-      "nextPage": "Next"
+      "nextPage": "Next",
+      "close": "Close"
     },
     "viewModes": {
       "comparison": "Side by Side",
@@ -401,9 +417,9 @@
         "title": "Literary Translation",
         "description": "Literary translation from Russian to Italian."
       }
-    ]
+    ],
+    "filterLabel": "Filter projects by category"
   },
-
   "team": {
     "pageTitle": "Our Team",
     "pageSubtitle": "Meet our dedicated team of professional translators and language specialists.",
@@ -539,7 +555,8 @@
         "experience": "10+ years",
         "education": "Bachelor's in Translation – King Khalid University, Saudi Arabia; Master's in Translation Technologies – Saudi Electronic University, Saudi Arabia; Master's in Translation and Interpreting – University of Geneva, Switzerland"
       }
-    ]
+    ],
+    "closeProfile": "Close profile"
   },
   "portfolioDetails": {
     "projectDescription": "Project Description",
@@ -694,7 +711,11 @@
       "title": "Ready to Get Started?",
       "subtitle": "Contact us today for a free quote on your translation project.",
       "button": "Request a Quote"
-    }
+    },
+    "eyebrow": "Transparent rates in Swiss francs",
+    "mostPopular": "Most popular",
+    "included": "Included",
+    "notIncluded": "Not included"
   },
   "contact": {
     "pageTitle": "Contact Us",
@@ -746,7 +767,8 @@
       "agreeTerms": "I agree to",
       "termsAgreement": "I agree to the Terms & Conditions and the Privacy Policy",
       "actions": {
-        "chooseFile": "Choose File"
+        "chooseFile": "Choose File",
+        "removeFile": "Remove file"
       },
       "sections": {
         "contactInfo": "Contact Information",
@@ -786,9 +808,13 @@
         "fileTooBig": "File size exceeds the 10MB limit",
         "fileTypeInvalid": "Invalid file type. Please upload a supported document format",
         "termsRequired": "You must agree to the terms",
-        "formHasErrors": "Please correct the errors in the form"
+        "formHasErrors": "Please correct the errors in the form",
+        "captchaRequired": "Please verify that you are not a robot"
       },
-      "success": "Your inquiry has been submitted successfully! We will contact you soon."
+      "success": "Your inquiry has been submitted successfully! We will contact you soon.",
+      "sending": "Sending your request…",
+      "error": "An error occurred. Please try again later.",
+      "rateLimited": "Too many requests. Please wait before trying again, or email us directly."
     },
     "contactInfo": {
       "title": "Contact Information",
@@ -1111,6 +1137,11 @@
       "documentTranslation": "Document Translation",
       "websiteLocalization": "Website Localization",
       "technicalTranslation": "Technical Translation"
-    }
+    },
+    "tagline": "Lost in translation",
+    "oghamCaption": "“Lost”, carved in Ogham"
+  },
+  "legal": {
+    "onThisPage": "On this page"
   }
 }
